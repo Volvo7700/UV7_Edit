@@ -82,6 +82,8 @@ namespace UV7_Edit
             this.mi_something = new System.Windows.Forms.MenuItem();
             this.statusBar = new System.Windows.Forms.StatusBar();
             this.dirPanel = new UV7_Edit.DirPanel();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // panel3
@@ -446,8 +448,18 @@ namespace UV7_Edit
             this.dirPanel.Size = new System.Drawing.Size(199, 296);
             this.dirPanel.TabIndex = 0;
             this.dirPanel.Title = "DirPanel";
-            this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.OpenFile);
+            this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
+            this.saveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileSaveAs_OK);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileOpen_OK);
             // 
             // Form_main
             // 
@@ -520,6 +532,8 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_splitVert;
         private System.Windows.Forms.MenuItem mi_arrangeIcons;
         private System.Windows.Forms.MenuItem mi_sep7;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
