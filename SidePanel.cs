@@ -22,11 +22,11 @@ namespace UV7_Edit
         {
             get
             {
-                return label_text.Text;
+                return label_title.Text;
             }
             set
             {
-                label_text.Text = value;
+                label_title.Text = value;
             }
         }
 
