@@ -96,9 +96,6 @@
     <EmbeddedResource Include="Form_main.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_main.resx">
-      <DependentUpon>Form_main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_tempCss.resx">
       <DependentUpon>Form_tempCss.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,5 +122,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
