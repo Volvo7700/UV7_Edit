@@ -14,4 +14,8 @@
 * Editor with syntax highlighting
 * folder-based stylesheets
 
+
 * more coming soon
+
+### Feature ideas (currently not (yet) planned):
+* Markdown Editor library for use in other projects
