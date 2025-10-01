@@ -13,7 +13,7 @@
 * Replacement for Internet Explorer-based WebBrowser control
 * Editor with syntax highlighting
 * folder-based stylesheets
-
+* German Localization
 
 * more coming soon
 
