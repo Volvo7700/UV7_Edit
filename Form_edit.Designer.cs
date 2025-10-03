@@ -87,7 +87,8 @@ namespace UV7_Edit
             this.DoubleBuffered = true;
             this.Name = "Form_edit";
             this.ShowIcon = false;
-            this.Text = "Document";
+            this.Text = "New Document";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_edit_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

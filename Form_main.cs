@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace UV7_Edit
 {
-    public partial class Form_main : Form
+    public partial class Form_main : Form, CancelClosing
     {
+        private bool cancelClosing = false;
         public Form_main()
         {
             InitializeComponent();
@@ -22,7 +23,8 @@ namespace UV7_Edit
         #region File
         private void FileNew(object sender, EventArgs e)
         {
-            NewForm(null);
+            Form_edit f = NewForm(null);
+            f.Show();
         }
 
         private void FileOpen(object sender, EventArgs e)
@@ -36,41 +38,52 @@ namespace UV7_Edit
             OpenFile(new FileInfo(openFileDialog.FileName));
         }
 
+        // File Save Menu
         private void FileSave(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
             {
                 if (ActiveMdiChild is Form_edit)
                 {
-                    Form_edit f = (Form_edit)ActiveMdiChild;
-                    if (f.Doc.File != null)
-                    {
-                        SaveFile((Form_edit)ActiveMdiChild);
-                    }
-                    else
-                    {
-                        saveFileDialog.ShowDialog();
-                    }
+                    Save((Form_edit)ActiveMdiChild);
                 }
             }
         }
 
+        // File Save Logic
+        public void Save(Form_edit form)
+        {
+            if (form.Doc.File != null)
+            {
+                SaveFile(form);
+            }
+            else
+            {
+                SaveAs(form);
+            }
+        }
+
+        // File Save Menu
         private void FileSaveAs(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
             {
                 if (ActiveMdiChild is Form_edit)
                 {
-                    saveFileDialog.ShowDialog();
-                    SaveFile((Form_edit)ActiveMdiChild);
+                    SaveAs((Form_edit)ActiveMdiChild);
                 }
             }
         }
 
         // SaveFileDialog
-        private void FileSaveAs_OK(object sender, CancelEventArgs e)
+        private void SaveAs(Form_edit form)
         {
-
+            DialogResult result = saveFileDialog.ShowDialog(); 
+            if (result == DialogResult.OK)
+            {
+                form.Doc.File = new FileInfo(saveFileDialog.FileName);
+                SaveFile(form);
+            }
         }
 
         private void FilePageSetup(object sender, EventArgs e)
@@ -97,7 +110,6 @@ namespace UV7_Edit
             mi_print.Enabled = activeMdiExists;
             mi_pageSetup.Enabled = activeMdiExists;
             mi_close.Enabled = activeMdiExists;
-            
         }
 
         private void FileExit(object sender, EventArgs e)
@@ -208,5 +220,19 @@ namespace UV7_Edit
             }
         }
         #endregion File
+
+        private void Form_main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cancelClosing)
+            {
+                e.Cancel = true;
+                cancelClosing = false;
+            }
+        }
+
+        public void CancelClosing()
+        {
+            cancelClosing = true;
+        }
     }
 }

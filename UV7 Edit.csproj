@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CancelClosing.cs" />
+    <Compile Include="ClosingCanceller.cs" />
     <Compile Include="DirPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

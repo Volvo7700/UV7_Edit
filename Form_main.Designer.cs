@@ -81,9 +81,11 @@ namespace UV7_Edit
             this.mi_sep5 = new System.Windows.Forms.MenuItem();
             this.mi_something = new System.Windows.Forms.MenuItem();
             this.statusBar = new System.Windows.Forms.StatusBar();
-            this.dirPanel = new UV7_Edit.DirPanel();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.dirPanel = new UV7_Edit.DirPanel();
+            this.mi_editor = new System.Windows.Forms.MenuItem();
+            this.mi_viewer = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // panel3
@@ -100,6 +102,8 @@ namespace UV7_Edit
             this.mi_file,
             this.mi_edit,
             this.mi_format,
+            this.mi_editor,
+            this.mi_viewer,
             this.mi_view,
             this.mi_windows,
             this.mi_help,
@@ -209,12 +213,14 @@ namespace UV7_Edit
             // 
             // mi_undo
             // 
+            this.mi_undo.Enabled = false;
             this.mi_undo.Index = 0;
             this.mi_undo.Shortcut = System.Windows.Forms.Shortcut.CtrlZ;
             this.mi_undo.Text = "Undo";
             // 
             // mi_redo
             // 
+            this.mi_redo.Enabled = false;
             this.mi_redo.Index = 1;
             this.mi_redo.Shortcut = System.Windows.Forms.Shortcut.CtrlY;
             this.mi_redo.Text = "Redo";
@@ -226,18 +232,21 @@ namespace UV7_Edit
             // 
             // mi_cut
             // 
+            this.mi_cut.Enabled = false;
             this.mi_cut.Index = 3;
             this.mi_cut.Shortcut = System.Windows.Forms.Shortcut.CtrlX;
             this.mi_cut.Text = "Cut";
             // 
             // mi_copy
             // 
+            this.mi_copy.Enabled = false;
             this.mi_copy.Index = 4;
             this.mi_copy.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
             this.mi_copy.Text = "Copy";
             // 
             // mi_paste
             // 
+            this.mi_paste.Enabled = false;
             this.mi_paste.Index = 5;
             this.mi_paste.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
             this.mi_paste.Text = "Paste";
@@ -249,18 +258,21 @@ namespace UV7_Edit
             // 
             // mi_find
             // 
+            this.mi_find.Enabled = false;
             this.mi_find.Index = 7;
             this.mi_find.Shortcut = System.Windows.Forms.Shortcut.CtrlF;
             this.mi_find.Text = "Find...";
             // 
             // mi_findAgain
             // 
+            this.mi_findAgain.Enabled = false;
             this.mi_findAgain.Index = 8;
             this.mi_findAgain.Shortcut = System.Windows.Forms.Shortcut.F3;
             this.mi_findAgain.Text = "Find again";
             // 
             // mi_replace
             // 
+            this.mi_replace.Enabled = false;
             this.mi_replace.Index = 9;
             this.mi_replace.Shortcut = System.Windows.Forms.Shortcut.CtrlH;
             this.mi_replace.Text = "Replace...";
@@ -275,17 +287,19 @@ namespace UV7_Edit
             // 
             // mi_lineWrap
             // 
+            this.mi_lineWrap.Enabled = false;
             this.mi_lineWrap.Index = 0;
             this.mi_lineWrap.Text = "Line Wrap";
             // 
             // mi_font
             // 
+            this.mi_font.Enabled = false;
             this.mi_font.Index = 1;
             this.mi_font.Text = "Font...";
             // 
             // mi_view
             // 
-            this.mi_view.Index = 3;
+            this.mi_view.Index = 5;
             this.mi_view.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_showEditor,
             this.mi_showViewer,
@@ -301,12 +315,14 @@ namespace UV7_Edit
             // 
             // mi_showEditor
             // 
+            this.mi_showEditor.Enabled = false;
             this.mi_showEditor.Index = 0;
             this.mi_showEditor.RadioCheck = true;
             this.mi_showEditor.Text = "Show Editor";
             // 
             // mi_showViewer
             // 
+            this.mi_showViewer.Enabled = false;
             this.mi_showViewer.Index = 1;
             this.mi_showViewer.RadioCheck = true;
             this.mi_showViewer.Text = "Show Viewer";
@@ -314,6 +330,7 @@ namespace UV7_Edit
             // mi_showBoth
             // 
             this.mi_showBoth.Checked = true;
+            this.mi_showBoth.Enabled = false;
             this.mi_showBoth.Index = 2;
             this.mi_showBoth.RadioCheck = true;
             this.mi_showBoth.Text = "Show Both";
@@ -344,22 +361,25 @@ namespace UV7_Edit
             // 
             // mi_zoomIn
             // 
+            this.mi_zoomIn.Enabled = false;
             this.mi_zoomIn.Index = 7;
             this.mi_zoomIn.Text = "Zoom in";
             // 
             // mi_zoomOut
             // 
+            this.mi_zoomOut.Enabled = false;
             this.mi_zoomOut.Index = 8;
             this.mi_zoomOut.Text = "Zoom out";
             // 
             // mi_resetZoom
             // 
+            this.mi_resetZoom.Enabled = false;
             this.mi_resetZoom.Index = 9;
             this.mi_resetZoom.Text = "Reset zoom";
             // 
             // mi_windows
             // 
-            this.mi_windows.Index = 4;
+            this.mi_windows.Index = 6;
             this.mi_windows.MdiList = true;
             this.mi_windows.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cascade,
@@ -397,7 +417,7 @@ namespace UV7_Edit
             // 
             // mi_help
             // 
-            this.mi_help.Index = 5;
+            this.mi_help.Index = 7;
             this.mi_help.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_about});
             this.mi_help.Text = "Help";
@@ -409,7 +429,7 @@ namespace UV7_Edit
             // 
             // mi_dev
             // 
-            this.mi_dev.Index = 6;
+            this.mi_dev.Index = 8;
             this.mi_dev.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cssStyler,
             this.mi_sep5,
@@ -440,6 +460,15 @@ namespace UV7_Edit
             this.statusBar.TabIndex = 4;
             this.statusBar.Text = "statusBar1";
             // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileOpen_OK);
+            // 
             // dirPanel
             // 
             this.dirPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -451,15 +480,17 @@ namespace UV7_Edit
             this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
             // 
-            // saveFileDialog
+            // mi_editor
             // 
-            this.saveFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
-            this.saveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileSaveAs_OK);
+            this.mi_editor.Index = 3;
+            this.mi_editor.Text = "Editor";
+            this.mi_editor.Visible = false;
             // 
-            // openFileDialog
+            // mi_viewer
             // 
-            this.openFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
-            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileOpen_OK);
+            this.mi_viewer.Index = 4;
+            this.mi_viewer.Text = "Viewer";
+            this.mi_viewer.Visible = false;
             // 
             // Form_main
             // 
@@ -474,6 +505,7 @@ namespace UV7_Edit
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Form_main";
             this.Text = "UV7 Edit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_main_FormClosing);
             this.MdiChildActivate += new System.EventHandler(this.Form_main_MdiChildActivate);
             this.ResumeLayout(false);
 
@@ -534,6 +566,8 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_sep7;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.MenuItem mi_editor;
+        private System.Windows.Forms.MenuItem mi_viewer;
     }
 }
 

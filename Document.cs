@@ -39,8 +39,11 @@ namespace UV7_Edit
             if (newContent != Content)
             {
                 content = newContent;
-                Modified = true;
-                OnSavedChanged();
+                if (!Modified)
+                {
+                    Modified = true;
+                    OnSavedChanged();
+                }
             }
         }
 

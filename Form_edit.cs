@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace UV7_Edit
 {
-    public partial class Form_edit : Form
+    public partial class Form_edit : Form, CancelClosing
     {
+        private bool cancelClosing = false;
         private Document doc;
         public Document Doc
         {
@@ -26,6 +27,11 @@ namespace UV7_Edit
             }
         }
 
+        /// <summary>
+        /// Creates a new Form_edit
+        /// Requires a Form_main as parent!
+        /// </summary>
+        /// <param name="file"></param>
         public Form_edit(FileInfo file)
         {
             InitializeComponent();
@@ -40,12 +46,14 @@ namespace UV7_Edit
         }
         private void SavedChanged(object sender, EventArgs e)
         {
-            string title = Doc.File.Name;
+            if (Doc.File != null)
+                this.Text = Doc.File.Name;
+            else
+                this.Text = "New Document";
             if (!Doc.Saved)
             {
-                title += "*";
+                this.Text += "*";
             }
-            this.Text = title;
         }
 
         private void UpdateEditor()
@@ -87,5 +95,46 @@ namespace UV7_Edit
             viewer.DocumentText = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertMDtoHTML(editor.Text)}</body></html>";
         }
         #endregion Preview
+
+        private void Form_edit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cancelClosing)
+            {
+                // If closing has to be cancelled, cancel the closing and reset the value
+                e.Cancel = true;
+                cancelClosing = false;
+            }
+            else
+            {
+                if (!Doc.Saved)
+                {
+                    string fileName = "New Document";
+                    if (Doc.FileValid)
+                        fileName = Doc.File.Name;
+                    DialogResult result = MessageBox.Show($"Do you want to save changes to {fileName}?", "Unsaved changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        ((Form_main)Parent.Parent).Save(this);
+                    }
+                    else if (result == DialogResult.No)
+                    {
+
+                    }
+                    else
+                    {
+                        // If cancel is selected, cancel the closing of this form and all other forms that implement CancelClosing.
+                        ClosingCanceller.CancelClosingAll();
+                        // Because cancelClosing was also set true for this form, closing has to manually be cancelled and cancelClosing has to manually be reset here.
+                        e.Cancel = true;
+                        this.cancelClosing = false;
+                    }
+                }
+            }
+        }
+
+        public void CancelClosing()
+        {
+            cancelClosing = true;
+        }
     }
 }
