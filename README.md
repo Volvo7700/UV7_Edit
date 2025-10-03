@@ -13,5 +13,9 @@
 * Replacement for Internet Explorer-based WebBrowser control
 * Editor with syntax highlighting
 * folder-based stylesheets
+* German Localization
 
 * more coming soon
+
+### Feature ideas (currently not (yet) planned):
+* Markdown Editor library for use in other projects
