@@ -137,6 +137,14 @@ namespace UV7_Edit
         }
         #endregion View
 
+        #region Help
+        private void HelpAbout(object sender, EventArgs e)
+        {
+            Form_about f = new Form_about();
+            f.ShowDialog(this);
+        }
+        #endregion Help
+
         #region Dev
         Form_tempCss cssStyler = new Form_tempCss();
         private void DevCssStyler(object sender, EventArgs e)

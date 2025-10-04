@@ -57,6 +57,8 @@ namespace UV7_Edit
             this.mi_format = new System.Windows.Forms.MenuItem();
             this.mi_lineWrap = new System.Windows.Forms.MenuItem();
             this.mi_font = new System.Windows.Forms.MenuItem();
+            this.mi_editor = new System.Windows.Forms.MenuItem();
+            this.mi_viewer = new System.Windows.Forms.MenuItem();
             this.mi_view = new System.Windows.Forms.MenuItem();
             this.mi_showEditor = new System.Windows.Forms.MenuItem();
             this.mi_showViewer = new System.Windows.Forms.MenuItem();
@@ -84,8 +86,6 @@ namespace UV7_Edit
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dirPanel = new UV7_Edit.DirPanel();
-            this.mi_editor = new System.Windows.Forms.MenuItem();
-            this.mi_viewer = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // panel3
@@ -297,6 +297,18 @@ namespace UV7_Edit
             this.mi_font.Index = 1;
             this.mi_font.Text = "Font...";
             // 
+            // mi_editor
+            // 
+            this.mi_editor.Index = 3;
+            this.mi_editor.Text = "Editor";
+            this.mi_editor.Visible = false;
+            // 
+            // mi_viewer
+            // 
+            this.mi_viewer.Index = 4;
+            this.mi_viewer.Text = "Viewer";
+            this.mi_viewer.Visible = false;
+            // 
             // mi_view
             // 
             this.mi_view.Index = 5;
@@ -426,6 +438,7 @@ namespace UV7_Edit
             // 
             this.mi_about.Index = 0;
             this.mi_about.Text = "About";
+            this.mi_about.Click += new System.EventHandler(this.HelpAbout);
             // 
             // mi_dev
             // 
@@ -479,18 +492,6 @@ namespace UV7_Edit
             this.dirPanel.Title = "DirPanel";
             this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
-            // 
-            // mi_editor
-            // 
-            this.mi_editor.Index = 3;
-            this.mi_editor.Text = "Editor";
-            this.mi_editor.Visible = false;
-            // 
-            // mi_viewer
-            // 
-            this.mi_viewer.Index = 4;
-            this.mi_viewer.Text = "Viewer";
-            this.mi_viewer.Visible = false;
             // 
             // Form_main
             // 
