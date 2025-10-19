@@ -26,6 +26,12 @@ namespace UV7_Edit
                 return new ArrayList(dir.GetFileSystemInfos());
             };
 
+            UpdateData();
+        }
+
+        public void UpdateData()
+        {
+            //this.treeListView.Clear();
             this.treeListView.SetObjects(new FileSystemInfo[] { new DirectoryInfo(Application.StartupPath) });
             this.treeListView.ExpandAll();
             this.treeListView.SmallImageList = fileIcons;

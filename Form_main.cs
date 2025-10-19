@@ -17,6 +17,24 @@ namespace UV7_Edit
         public Form_main()
         {
             InitializeComponent();
+
+            FileSystemWatcher watcher = new FileSystemWatcher();
+            watcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.Security
+                                 | NotifyFilters.Size;
+            watcher.Changed += OnFileSystemEvent;
+            watcher.Created += OnFileSystemEvent;
+            watcher.Deleted += OnFileSystemEvent;
+            watcher.Renamed += OnFileSystemEvent;
+
+            watcher.Path = Application.StartupPath;
+            watcher.IncludeSubdirectories = true;
+            watcher.EnableRaisingEvents = true;
         }
 
         #region Menu Bar
@@ -118,6 +136,14 @@ namespace UV7_Edit
         }
         #endregion File
 
+        #region Edit
+        private void EditPrefs(object sender, EventArgs e)
+        {
+            Form_preferences f = new Form_preferences();
+            f.Show();
+        }
+        #endregion Edit
+
         #region View
         private void ViewShowSidebar(object sender, EventArgs e)
         {
@@ -161,6 +187,20 @@ namespace UV7_Edit
         }
         #endregion Dev
         #endregion Menu
+
+        #region File System Events
+        private void OnFileSystemEvent(object sender, FileSystemEventArgs e)
+        {
+            if (dirPanel.InvokeRequired)
+            {
+                dirPanel.Invoke(new MethodInvoker(delegate
+                {
+                    dirPanel.UpdateData();
+                }));
+            }
+            else dirPanel.UpdateData();
+        }
+        #endregion File System Events
 
         #region Forms Logic
         private Form_edit NewForm(FileInfo file)

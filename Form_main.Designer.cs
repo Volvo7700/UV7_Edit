@@ -54,6 +54,8 @@ namespace UV7_Edit
             this.mi_find = new System.Windows.Forms.MenuItem();
             this.mi_findAgain = new System.Windows.Forms.MenuItem();
             this.mi_replace = new System.Windows.Forms.MenuItem();
+            this.mi_sep8 = new System.Windows.Forms.MenuItem();
+            this.mi_prefs = new System.Windows.Forms.MenuItem();
             this.mi_format = new System.Windows.Forms.MenuItem();
             this.mi_lineWrap = new System.Windows.Forms.MenuItem();
             this.mi_font = new System.Windows.Forms.MenuItem();
@@ -208,7 +210,9 @@ namespace UV7_Edit
             this.mi_sep0,
             this.mi_find,
             this.mi_findAgain,
-            this.mi_replace});
+            this.mi_replace,
+            this.mi_sep8,
+            this.mi_prefs});
             this.mi_edit.Text = "Edit";
             // 
             // mi_undo
@@ -276,6 +280,17 @@ namespace UV7_Edit
             this.mi_replace.Index = 9;
             this.mi_replace.Shortcut = System.Windows.Forms.Shortcut.CtrlH;
             this.mi_replace.Text = "Replace...";
+            // 
+            // mi_sep8
+            // 
+            this.mi_sep8.Index = 10;
+            this.mi_sep8.Text = "-";
+            // 
+            // mi_prefs
+            // 
+            this.mi_prefs.Index = 11;
+            this.mi_prefs.Text = "Preferences";
+            this.mi_prefs.Click += new System.EventHandler(this.EditPrefs);
             // 
             // mi_format
             // 
@@ -569,6 +584,8 @@ namespace UV7_Edit
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.MenuItem mi_editor;
         private System.Windows.Forms.MenuItem mi_viewer;
+        private System.Windows.Forms.MenuItem mi_sep8;
+        private System.Windows.Forms.MenuItem mi_prefs;
     }
 }
 
