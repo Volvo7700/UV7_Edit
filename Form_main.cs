@@ -35,17 +35,19 @@ namespace UV7_Edit
             watcher.Path = Application.StartupPath;
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
+
+            ShowStartForm();
         }
 
         #region Menu Bar
         #region File
-        private void FileNew(object sender, EventArgs e)
+        public void FileNew(object sender, EventArgs e)
         {
             Form_edit f = NewForm(null);
             f.Show();
         }
 
-        private void FileOpen(object sender, EventArgs e)
+        public void FileOpen(object sender, EventArgs e)
         {
             openFileDialog.ShowDialog();
         }
@@ -102,6 +104,11 @@ namespace UV7_Edit
                 form.Doc.File = new FileInfo(saveFileDialog.FileName);
                 SaveFile(form);
             }
+        }
+
+        private void FileStartScreen(object sender, EventArgs e)
+        {
+            ShowStartForm();
         }
 
         private void FilePageSetup(object sender, EventArgs e)
@@ -172,18 +179,17 @@ namespace UV7_Edit
         #endregion Help
 
         #region Dev
-        Form_tempCss cssStyler = new Form_tempCss();
         private void DevCssStyler(object sender, EventArgs e)
         {
-            //if (Application.OpenForms.OfType<Form_tempCss>() != null)
-            //{
-            //    cssStyler.Focus();
-            //}
-            //else
-            //{
-            //    cssStyler.Show();
-            //}
-            cssStyler.Show();
+            if (Application.OpenForms.OfType<Form_tempCss>().Count() > 0)
+            {
+                Application.OpenForms.OfType<Form_tempCss>().First().Focus();
+            }
+            else
+            {
+                Form_tempCss ft = new Form_tempCss();
+                ft.Show();
+            }
         }
         #endregion Dev
         #endregion Menu
@@ -203,19 +209,37 @@ namespace UV7_Edit
         #endregion File System Events
 
         #region Forms Logic
-        private Form_edit NewForm(FileInfo file)
+
+        private void ShowStartForm()
         {
-            Form_edit f = new Form_edit(file);
-            f.MdiParent = this;
-            f.WindowState = FormWindowState.Maximized;
-            return f;
+            if (Application.OpenForms.OfType<Form_start>().Count() > 0)
+            {
+                Application.OpenForms.OfType<Form_start>().First().WindowState = FormWindowState.Maximized;
+                Application.OpenForms.OfType<Form_start>().First().Focus();
+            }
+            else
+            {
+                Form_start fs = new Form_start();
+                fs.MdiParent = this;
+                fs.WindowState = FormWindowState.Maximized;
+                fs.Show();
+            }
         }
+
         public void ChangeCSS(string css)
         {
             foreach (Form_edit f in Application.OpenForms.OfType<Form_edit>())
             {
                 f.ChangeCSS(css);
             }
+        }
+
+        private Form_edit NewForm(FileInfo file)
+        {
+            Form_edit f = new Form_edit(file);
+            f.MdiParent = this;
+            f.WindowState = FormWindowState.Maximized;
+            return f;
         }
 
         public void Open(object sender, FileInfoEventArgs e)

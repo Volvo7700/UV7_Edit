@@ -88,6 +88,8 @@ namespace UV7_Edit
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dirPanel = new UV7_Edit.DirPanel();
+            this.mi_startScreen = new System.Windows.Forms.MenuItem();
+            this.mi_sep9 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // panel3
@@ -119,6 +121,8 @@ namespace UV7_Edit
             this.mi_open,
             this.mi_save,
             this.mi_saveAs,
+            this.mi_sep9,
+            this.mi_startScreen,
             this.mi_sep1,
             this.mi_pageSetup,
             this.mi_print,
@@ -159,40 +163,40 @@ namespace UV7_Edit
             // 
             // mi_sep1
             // 
-            this.mi_sep1.Index = 4;
+            this.mi_sep1.Index = 6;
             this.mi_sep1.Text = "-";
             // 
             // mi_pageSetup
             // 
             this.mi_pageSetup.Enabled = false;
-            this.mi_pageSetup.Index = 5;
+            this.mi_pageSetup.Index = 7;
             this.mi_pageSetup.Text = "Page setup...";
             this.mi_pageSetup.Click += new System.EventHandler(this.FilePageSetup);
             // 
             // mi_print
             // 
             this.mi_print.Enabled = false;
-            this.mi_print.Index = 6;
+            this.mi_print.Index = 8;
             this.mi_print.Shortcut = System.Windows.Forms.Shortcut.CtrlP;
             this.mi_print.Text = "Print...";
             this.mi_print.Click += new System.EventHandler(this.FilePrint);
             // 
             // mi_sep2
             // 
-            this.mi_sep2.Index = 7;
+            this.mi_sep2.Index = 9;
             this.mi_sep2.Text = "-";
             // 
             // mi_close
             // 
             this.mi_close.Enabled = false;
-            this.mi_close.Index = 8;
+            this.mi_close.Index = 10;
             this.mi_close.Shortcut = System.Windows.Forms.Shortcut.CtrlW;
             this.mi_close.Text = "Close";
             this.mi_close.Click += new System.EventHandler(this.FileClose);
             // 
             // mi_exit
             // 
-            this.mi_exit.Index = 9;
+            this.mi_exit.Index = 11;
             this.mi_exit.Shortcut = System.Windows.Forms.Shortcut.AltF4;
             this.mi_exit.Text = "Exit";
             this.mi_exit.Click += new System.EventHandler(this.FileExit);
@@ -482,7 +486,7 @@ namespace UV7_Edit
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 339);
+            this.statusBar.Location = new System.Drawing.Point(0, 351);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(884, 22);
             this.statusBar.TabIndex = 4;
@@ -502,17 +506,28 @@ namespace UV7_Edit
             this.dirPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.dirPanel.Location = new System.Drawing.Point(0, 43);
             this.dirPanel.Name = "dirPanel";
-            this.dirPanel.Size = new System.Drawing.Size(199, 296);
+            this.dirPanel.Size = new System.Drawing.Size(199, 308);
             this.dirPanel.TabIndex = 0;
             this.dirPanel.Title = "DirPanel";
             this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
             // 
+            // mi_startScreen
+            // 
+            this.mi_startScreen.Index = 5;
+            this.mi_startScreen.Text = "Start Screen";
+            this.mi_startScreen.Click += new System.EventHandler(this.FileStartScreen);
+            // 
+            // mi_sep9
+            // 
+            this.mi_sep9.Index = 4;
+            this.mi_sep9.Text = "-";
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 361);
+            this.ClientSize = new System.Drawing.Size(884, 373);
             this.Controls.Add(this.dirPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.statusBar);
@@ -586,6 +601,8 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_viewer;
         private System.Windows.Forms.MenuItem mi_sep8;
         private System.Windows.Forms.MenuItem mi_prefs;
+        private System.Windows.Forms.MenuItem mi_sep9;
+        private System.Windows.Forms.MenuItem mi_startScreen;
     }
 }
 
