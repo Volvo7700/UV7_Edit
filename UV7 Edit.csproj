@@ -10,7 +10,7 @@
     <AssemblyName>UV7 Edit</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -168,6 +168,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon\branding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\page_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\page_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\folder_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\folder_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\page16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\folder16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,7 @@ namespace UV7_Edit
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_about));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_ok = new System.Windows.Forms.Button();
             this.label_version = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@ namespace UV7_Edit
             this.pictureBox1.Image = global::UV7_Edit.Properties.Resources.branding;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(516, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(524, 138);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -101,9 +102,9 @@ namespace UV7_Edit
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Location = new System.Drawing.Point(0, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(516, 24);
+            this.label5.Size = new System.Drawing.Size(524, 24);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Desktop Markdown Editor";
+            this.label5.Text = "Win32 Desktop Markdown Editor";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox1
@@ -111,16 +112,16 @@ namespace UV7_Edit
             this.textBox1.Location = new System.Drawing.Point(43, 197);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(430, 129);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "License: GNU General Public License v3\r\n\r\nCredits:\r\nObjectListView by Philip Pipe" +
-    "r (GNU General Public License v3)";
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // Form_about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 389);
+            this.ClientSize = new System.Drawing.Size(524, 401);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label_bitness);
@@ -132,6 +133,7 @@ namespace UV7_Edit
             this.MaximumSize = new System.Drawing.Size(532, 428);
             this.MinimumSize = new System.Drawing.Size(532, 428);
             this.Name = "Form_about";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
