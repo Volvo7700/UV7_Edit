@@ -37,6 +37,8 @@ namespace UV7_Edit
             this.mi_open = new System.Windows.Forms.MenuItem();
             this.mi_save = new System.Windows.Forms.MenuItem();
             this.mi_saveAs = new System.Windows.Forms.MenuItem();
+            this.mi_sep9 = new System.Windows.Forms.MenuItem();
+            this.mi_startScreen = new System.Windows.Forms.MenuItem();
             this.mi_sep1 = new System.Windows.Forms.MenuItem();
             this.mi_pageSetup = new System.Windows.Forms.MenuItem();
             this.mi_print = new System.Windows.Forms.MenuItem();
@@ -88,8 +90,6 @@ namespace UV7_Edit
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dirPanel = new UV7_Edit.DirPanel();
-            this.mi_startScreen = new System.Windows.Forms.MenuItem();
-            this.mi_sep9 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // panel3
@@ -160,6 +160,17 @@ namespace UV7_Edit
             this.mi_saveAs.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS;
             this.mi_saveAs.Text = "Save as...";
             this.mi_saveAs.Click += new System.EventHandler(this.FileSaveAs);
+            // 
+            // mi_sep9
+            // 
+            this.mi_sep9.Index = 4;
+            this.mi_sep9.Text = "-";
+            // 
+            // mi_startScreen
+            // 
+            this.mi_startScreen.Index = 5;
+            this.mi_startScreen.Text = "Start Screen";
+            this.mi_startScreen.Click += new System.EventHandler(this.FileStartScreen);
             // 
             // mi_sep1
             // 
@@ -511,17 +522,6 @@ namespace UV7_Edit
             this.dirPanel.Title = "DirPanel";
             this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
-            // 
-            // mi_startScreen
-            // 
-            this.mi_startScreen.Index = 5;
-            this.mi_startScreen.Text = "Start Screen";
-            this.mi_startScreen.Click += new System.EventHandler(this.FileStartScreen);
-            // 
-            // mi_sep9
-            // 
-            this.mi_sep9.Index = 4;
-            this.mi_sep9.Text = "-";
             // 
             // Form_main
             // 
