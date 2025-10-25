@@ -1,12 +1,8 @@
 ﻿using MarkdownDeep;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace UV7_Edit
@@ -14,9 +10,14 @@ namespace UV7_Edit
     public partial class Form_main : Form, CancelClosing
     {
         private bool cancelClosing = false;
+
+
         public Form_main()
         {
             InitializeComponent();
+
+            Version ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            this.Text += $" {ver.Major}.{ver.Minor}";
 
             FileSystemWatcher watcher = new FileSystemWatcher();
             watcher.NotifyFilter = NotifyFilters.Attributes
