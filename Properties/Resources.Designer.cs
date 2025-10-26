@@ -71,6 +71,60 @@ namespace UV7_Edit.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Window ähnelt.
+        /// </summary>
+        internal static string C_Window {
+            get {
+                return ResourceManager.GetString("C_Window", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Workspace ähnelt.
+        /// </summary>
+        internal static string C_Workspace {
+            get {
+                return ResourceManager.GetString("C_Workspace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The location of the window ähnelt.
+        /// </summary>
+        internal static string D_Location {
+            get {
+                return ResourceManager.GetString("D_Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Start Screen on startup ähnelt.
+        /// </summary>
+        internal static string D_ShowStartScreen {
+            get {
+                return ResourceManager.GetString("D_ShowStartScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Whether visual styles are enabled ähnelt.
+        /// </summary>
+        internal static string D_VisualStyleState {
+            get {
+                return ResourceManager.GetString("D_VisualStyleState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Whether the window is windowed, maximized or minimized ähnelt.
+        /// </summary>
+        internal static string D_WindowState {
+            get {
+                return ResourceManager.GetString("D_WindowState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap folder {
@@ -107,6 +161,42 @@ namespace UV7_Edit.Properties {
             get {
                 object obj = ResourceManager.GetObject("folder16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Window Location ähnelt.
+        /// </summary>
+        internal static string N_Location {
+            get {
+                return ResourceManager.GetString("N_Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Start Screen ähnelt.
+        /// </summary>
+        internal static string N_ShowStartScreen {
+            get {
+                return ResourceManager.GetString("N_ShowStartScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Visual Style State ähnelt.
+        /// </summary>
+        internal static string N_VisualStyleState {
+            get {
+                return ResourceManager.GetString("N_VisualStyleState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Window State ähnelt.
+        /// </summary>
+        internal static string N_WindowState {
+            get {
+                return ResourceManager.GetString("N_WindowState", resourceCulture);
             }
         }
         

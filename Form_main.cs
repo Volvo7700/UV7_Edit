@@ -10,7 +10,7 @@ namespace UV7_Edit
     public partial class Form_main : Form, CancelClosing
     {
         private bool cancelClosing = false;
-
+        Config config;
 
         public Form_main()
         {
@@ -148,7 +148,7 @@ namespace UV7_Edit
         private void EditPrefs(object sender, EventArgs e)
         {
             Form_preferences f = new Form_preferences();
-            f.Show();
+            f.ShowDialog(this);
         }
         #endregion Edit
 
