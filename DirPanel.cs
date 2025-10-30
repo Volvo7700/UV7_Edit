@@ -26,6 +26,8 @@ namespace UV7_Edit
                 return new ArrayList(dir.GetFileSystemInfos());
             };
 
+            this.treeListView.TreeColumnRenderer = new SystemColorsTreeRenderer();
+
             UpdateData();
         }
 
