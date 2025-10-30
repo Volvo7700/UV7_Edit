@@ -6,6 +6,7 @@
 * Basic loading/saving of files
 
 ### Currently WIP:
+* Config framework
 * Selectable folder *(notebook)* treeview
 
 ### Planned features:
