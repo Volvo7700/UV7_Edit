@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace UV7_Edit
 {
-    public class LocalizedAttributes
+    public class CustomAttributes
     {
         [AttributeUsage(AttributeTargets.Property)]
         public class LocalizedDisplayNameAttribute : DisplayNameAttribute
@@ -14,7 +14,7 @@ namespace UV7_Edit
                 ResourceKey = resourceKey;
             }
             public override string DisplayName =>
-                Properties.Resources.ResourceManager.GetString(ResourceKey)
+                Resources.Prefs.Names.ResourceManager.GetString(ResourceKey)
                 ?? ResourceKey;
         }
 
@@ -27,19 +27,41 @@ namespace UV7_Edit
                 ResourceKey = resourceKey;
             }
             public override string Description =>
-                Properties.Resources.ResourceManager.GetString(ResourceKey)
+                Resources.Prefs.Descriptions.ResourceManager.GetString(ResourceKey)
                 ?? ResourceKey;
         }
 
-        [AttributeUsage(AttributeTargets.Property)]
+        [AttributeUsage(AttributeTargets.Class)]
         public class LocalizedCategoryAttribute : CategoryAttribute
         {
             public LocalizedCategoryAttribute(string resourceKey) : base(resourceKey) { }
 
             protected override string GetLocalizedString(string value)
             {
-                return Properties.Resources.ResourceManager.GetString(value) ?? value;
+                return Resources.Prefs.Categories.ResourceManager.GetString(value) ?? value;
             }
+        }
+
+        [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
+        public class LabelAttribute : Attribute
+        {
+            public virtual string Label { get; }
+            public LabelAttribute(string label = "")
+            {
+                Label = label;
+            }
+        }
+        [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
+        public class LocalizedLabelAttribute : LabelAttribute
+        {
+            public string ResourceKey { get; }
+            public LocalizedLabelAttribute(string resourceKey)
+            {
+                ResourceKey = resourceKey;
+            }
+            public override string Label =>
+                Resources.Prefs.Labels.ResourceManager.GetString(ResourceKey)
+                ?? ResourceKey;
         }
 
         [AttributeUsage(AttributeTargets.Property)]

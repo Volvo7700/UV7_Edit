@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using static UV7_Edit.LocalizedAttributes;
+using static UV7_Edit.CustomAttributes;
 
 namespace UV7_Edit
 {

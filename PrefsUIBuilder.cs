@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using UV7_Edit;
-using static UV7_Edit.LocalizedAttributes;
+using static UV7_Edit.CustomAttributes;
 
 public static class PrefsUIBuilder
 {

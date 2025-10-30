@@ -106,18 +106,41 @@
     <Compile Include="ListBoxTabControl.Designer.cs">
       <DependentUpon>ListBoxTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocalizedAttributes.cs" />
+    <Compile Include="CustomAttributes.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="PrefManager.cs" />
     <Compile Include="PrefsUIBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionExtensions.cs" />
+    <Compile Include="Resources\Prefs\Categories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Categories.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Prefs\Descriptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Descriptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Prefs\Labels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Labels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Prefs\Names.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Names.resx</DependentUpon>
+    </Compile>
     <Compile Include="SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemColorsTreeRenderer.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="DirPanel.resx">
       <DependentUpon>DirPanel.cs</DependentUpon>
@@ -154,6 +177,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Prefs\Categories.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Categories.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Prefs\Descriptions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Descriptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Prefs\Labels.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Prefs\Names.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Names.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
