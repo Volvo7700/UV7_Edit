@@ -30,6 +30,7 @@ namespace UV7_Edit
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
             this.panel3 = new System.Windows.Forms.Panel();
             this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.mi_file = new System.Windows.Forms.MenuItem();
@@ -79,13 +80,14 @@ namespace UV7_Edit
             this.mi_splitHorz = new System.Windows.Forms.MenuItem();
             this.mi_splitVert = new System.Windows.Forms.MenuItem();
             this.mi_arrangeIcons = new System.Windows.Forms.MenuItem();
-            this.mi_sep7 = new System.Windows.Forms.MenuItem();
             this.mi_help = new System.Windows.Forms.MenuItem();
             this.mi_about = new System.Windows.Forms.MenuItem();
             this.mi_dev = new System.Windows.Forms.MenuItem();
             this.mi_cssStyler = new System.Windows.Forms.MenuItem();
             this.mi_sep5 = new System.Windows.Forms.MenuItem();
             this.mi_something = new System.Windows.Forms.MenuItem();
+            this.mi_devChangeLang = new System.Windows.Forms.MenuItem();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.statusBar = new System.Windows.Forms.StatusBar();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -94,11 +96,8 @@ namespace UV7_Edit
             // 
             // panel3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(884, 43);
-            this.panel3.TabIndex = 2;
             // 
             // mainMenu
             // 
@@ -129,87 +128,75 @@ namespace UV7_Edit
             this.mi_sep2,
             this.mi_close,
             this.mi_exit});
-            this.mi_file.Text = "File";
+            resources.ApplyResources(this.mi_file, "mi_file");
             // 
             // mi_new
             // 
             this.mi_new.Index = 0;
-            this.mi_new.Shortcut = System.Windows.Forms.Shortcut.CtrlN;
-            this.mi_new.Text = "New";
+            resources.ApplyResources(this.mi_new, "mi_new");
             this.mi_new.Click += new System.EventHandler(this.FileNew);
             // 
             // mi_open
             // 
             this.mi_open.Index = 1;
-            this.mi_open.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
-            this.mi_open.Text = "Open...";
+            resources.ApplyResources(this.mi_open, "mi_open");
             this.mi_open.Click += new System.EventHandler(this.FileOpen);
             // 
             // mi_save
             // 
-            this.mi_save.Enabled = false;
+            resources.ApplyResources(this.mi_save, "mi_save");
             this.mi_save.Index = 2;
-            this.mi_save.Shortcut = System.Windows.Forms.Shortcut.CtrlS;
-            this.mi_save.Text = "Save";
             this.mi_save.Click += new System.EventHandler(this.FileSave);
             // 
             // mi_saveAs
             // 
-            this.mi_saveAs.Enabled = false;
+            resources.ApplyResources(this.mi_saveAs, "mi_saveAs");
             this.mi_saveAs.Index = 3;
-            this.mi_saveAs.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS;
-            this.mi_saveAs.Text = "Save as...";
             this.mi_saveAs.Click += new System.EventHandler(this.FileSaveAs);
             // 
             // mi_sep9
             // 
             this.mi_sep9.Index = 4;
-            this.mi_sep9.Text = "-";
+            resources.ApplyResources(this.mi_sep9, "mi_sep9");
             // 
             // mi_startScreen
             // 
             this.mi_startScreen.Index = 5;
-            this.mi_startScreen.Text = "Start Screen";
+            resources.ApplyResources(this.mi_startScreen, "mi_startScreen");
             this.mi_startScreen.Click += new System.EventHandler(this.FileStartScreen);
             // 
             // mi_sep1
             // 
             this.mi_sep1.Index = 6;
-            this.mi_sep1.Text = "-";
+            resources.ApplyResources(this.mi_sep1, "mi_sep1");
             // 
             // mi_pageSetup
             // 
-            this.mi_pageSetup.Enabled = false;
+            resources.ApplyResources(this.mi_pageSetup, "mi_pageSetup");
             this.mi_pageSetup.Index = 7;
-            this.mi_pageSetup.Text = "Page setup...";
             this.mi_pageSetup.Click += new System.EventHandler(this.FilePageSetup);
             // 
             // mi_print
             // 
-            this.mi_print.Enabled = false;
+            resources.ApplyResources(this.mi_print, "mi_print");
             this.mi_print.Index = 8;
-            this.mi_print.Shortcut = System.Windows.Forms.Shortcut.CtrlP;
-            this.mi_print.Text = "Print...";
             this.mi_print.Click += new System.EventHandler(this.FilePrint);
             // 
             // mi_sep2
             // 
             this.mi_sep2.Index = 9;
-            this.mi_sep2.Text = "-";
+            resources.ApplyResources(this.mi_sep2, "mi_sep2");
             // 
             // mi_close
             // 
-            this.mi_close.Enabled = false;
+            resources.ApplyResources(this.mi_close, "mi_close");
             this.mi_close.Index = 10;
-            this.mi_close.Shortcut = System.Windows.Forms.Shortcut.CtrlW;
-            this.mi_close.Text = "Close";
             this.mi_close.Click += new System.EventHandler(this.FileClose);
             // 
             // mi_exit
             // 
             this.mi_exit.Index = 11;
-            this.mi_exit.Shortcut = System.Windows.Forms.Shortcut.AltF4;
-            this.mi_exit.Text = "Exit";
+            resources.ApplyResources(this.mi_exit, "mi_exit");
             this.mi_exit.Click += new System.EventHandler(this.FileExit);
             // 
             // mi_edit
@@ -228,83 +215,67 @@ namespace UV7_Edit
             this.mi_replace,
             this.mi_sep8,
             this.mi_prefs});
-            this.mi_edit.Text = "Edit";
+            resources.ApplyResources(this.mi_edit, "mi_edit");
             // 
             // mi_undo
             // 
-            this.mi_undo.Enabled = false;
+            resources.ApplyResources(this.mi_undo, "mi_undo");
             this.mi_undo.Index = 0;
-            this.mi_undo.Shortcut = System.Windows.Forms.Shortcut.CtrlZ;
-            this.mi_undo.Text = "Undo";
             // 
             // mi_redo
             // 
-            this.mi_redo.Enabled = false;
+            resources.ApplyResources(this.mi_redo, "mi_redo");
             this.mi_redo.Index = 1;
-            this.mi_redo.Shortcut = System.Windows.Forms.Shortcut.CtrlY;
-            this.mi_redo.Text = "Redo";
             // 
             // mi_sep3
             // 
             this.mi_sep3.Index = 2;
-            this.mi_sep3.Text = "-";
+            resources.ApplyResources(this.mi_sep3, "mi_sep3");
             // 
             // mi_cut
             // 
-            this.mi_cut.Enabled = false;
+            resources.ApplyResources(this.mi_cut, "mi_cut");
             this.mi_cut.Index = 3;
-            this.mi_cut.Shortcut = System.Windows.Forms.Shortcut.CtrlX;
-            this.mi_cut.Text = "Cut";
             // 
             // mi_copy
             // 
-            this.mi_copy.Enabled = false;
+            resources.ApplyResources(this.mi_copy, "mi_copy");
             this.mi_copy.Index = 4;
-            this.mi_copy.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
-            this.mi_copy.Text = "Copy";
             // 
             // mi_paste
             // 
-            this.mi_paste.Enabled = false;
+            resources.ApplyResources(this.mi_paste, "mi_paste");
             this.mi_paste.Index = 5;
-            this.mi_paste.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
-            this.mi_paste.Text = "Paste";
             // 
             // mi_sep0
             // 
             this.mi_sep0.Index = 6;
-            this.mi_sep0.Text = "-";
+            resources.ApplyResources(this.mi_sep0, "mi_sep0");
             // 
             // mi_find
             // 
-            this.mi_find.Enabled = false;
+            resources.ApplyResources(this.mi_find, "mi_find");
             this.mi_find.Index = 7;
-            this.mi_find.Shortcut = System.Windows.Forms.Shortcut.CtrlF;
-            this.mi_find.Text = "Find...";
             // 
             // mi_findAgain
             // 
-            this.mi_findAgain.Enabled = false;
+            resources.ApplyResources(this.mi_findAgain, "mi_findAgain");
             this.mi_findAgain.Index = 8;
-            this.mi_findAgain.Shortcut = System.Windows.Forms.Shortcut.F3;
-            this.mi_findAgain.Text = "Find again";
             // 
             // mi_replace
             // 
-            this.mi_replace.Enabled = false;
+            resources.ApplyResources(this.mi_replace, "mi_replace");
             this.mi_replace.Index = 9;
-            this.mi_replace.Shortcut = System.Windows.Forms.Shortcut.CtrlH;
-            this.mi_replace.Text = "Replace...";
             // 
             // mi_sep8
             // 
             this.mi_sep8.Index = 10;
-            this.mi_sep8.Text = "-";
+            resources.ApplyResources(this.mi_sep8, "mi_sep8");
             // 
             // mi_prefs
             // 
             this.mi_prefs.Index = 11;
-            this.mi_prefs.Text = "Preferences";
+            resources.ApplyResources(this.mi_prefs, "mi_prefs");
             this.mi_prefs.Click += new System.EventHandler(this.EditPrefs);
             // 
             // mi_format
@@ -313,31 +284,27 @@ namespace UV7_Edit
             this.mi_format.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_lineWrap,
             this.mi_font});
-            this.mi_format.Text = "Format";
+            resources.ApplyResources(this.mi_format, "mi_format");
             // 
             // mi_lineWrap
             // 
-            this.mi_lineWrap.Enabled = false;
+            resources.ApplyResources(this.mi_lineWrap, "mi_lineWrap");
             this.mi_lineWrap.Index = 0;
-            this.mi_lineWrap.Text = "Line Wrap";
             // 
             // mi_font
             // 
-            this.mi_font.Enabled = false;
+            resources.ApplyResources(this.mi_font, "mi_font");
             this.mi_font.Index = 1;
-            this.mi_font.Text = "Font...";
             // 
             // mi_editor
             // 
             this.mi_editor.Index = 3;
-            this.mi_editor.Text = "Editor";
-            this.mi_editor.Visible = false;
+            resources.ApplyResources(this.mi_editor, "mi_editor");
             // 
             // mi_viewer
             // 
             this.mi_viewer.Index = 4;
-            this.mi_viewer.Text = "Viewer";
-            this.mi_viewer.Visible = false;
+            resources.ApplyResources(this.mi_viewer, "mi_viewer");
             // 
             // mi_view
             // 
@@ -353,71 +320,65 @@ namespace UV7_Edit
             this.mi_zoomIn,
             this.mi_zoomOut,
             this.mi_resetZoom});
-            this.mi_view.Text = "View";
+            resources.ApplyResources(this.mi_view, "mi_view");
             // 
             // mi_showEditor
             // 
-            this.mi_showEditor.Enabled = false;
+            resources.ApplyResources(this.mi_showEditor, "mi_showEditor");
             this.mi_showEditor.Index = 0;
             this.mi_showEditor.RadioCheck = true;
-            this.mi_showEditor.Text = "Show Editor";
             // 
             // mi_showViewer
             // 
-            this.mi_showViewer.Enabled = false;
+            resources.ApplyResources(this.mi_showViewer, "mi_showViewer");
             this.mi_showViewer.Index = 1;
             this.mi_showViewer.RadioCheck = true;
-            this.mi_showViewer.Text = "Show Viewer";
             // 
             // mi_showBoth
             // 
             this.mi_showBoth.Checked = true;
-            this.mi_showBoth.Enabled = false;
+            resources.ApplyResources(this.mi_showBoth, "mi_showBoth");
             this.mi_showBoth.Index = 2;
             this.mi_showBoth.RadioCheck = true;
-            this.mi_showBoth.Text = "Show Both";
             // 
             // mi_sep4
             // 
             this.mi_sep4.Index = 3;
-            this.mi_sep4.Text = "-";
+            resources.ApplyResources(this.mi_sep4, "mi_sep4");
             // 
             // mi_showSidebar
             // 
             this.mi_showSidebar.Checked = true;
             this.mi_showSidebar.Index = 4;
-            this.mi_showSidebar.Text = "Show Sidebar";
+            resources.ApplyResources(this.mi_showSidebar, "mi_showSidebar");
             this.mi_showSidebar.Click += new System.EventHandler(this.ViewShowSidebar);
             // 
             // mi_showStatusbar
             // 
             this.mi_showStatusbar.Checked = true;
             this.mi_showStatusbar.Index = 5;
-            this.mi_showStatusbar.Text = "Show Statusbar";
+            resources.ApplyResources(this.mi_showStatusbar, "mi_showStatusbar");
             this.mi_showStatusbar.Click += new System.EventHandler(this.ViewShowStatusbar);
             // 
             // mi_sep6
             // 
             this.mi_sep6.Index = 6;
-            this.mi_sep6.Text = "-";
+            resources.ApplyResources(this.mi_sep6, "mi_sep6");
             // 
             // mi_zoomIn
             // 
-            this.mi_zoomIn.Enabled = false;
+            resources.ApplyResources(this.mi_zoomIn, "mi_zoomIn");
             this.mi_zoomIn.Index = 7;
-            this.mi_zoomIn.Text = "Zoom in";
             // 
             // mi_zoomOut
             // 
-            this.mi_zoomOut.Enabled = false;
+            resources.ApplyResources(this.mi_zoomOut, "mi_zoomOut");
             this.mi_zoomOut.Index = 8;
-            this.mi_zoomOut.Text = "Zoom out";
             // 
             // mi_resetZoom
             // 
-            this.mi_resetZoom.Enabled = false;
+            resources.ApplyResources(this.mi_resetZoom, "mi_resetZoom");
             this.mi_resetZoom.Index = 9;
-            this.mi_resetZoom.Text = "Reset zoom";
             // 
             // mi_windows
             // 
@@ -427,47 +388,40 @@ namespace UV7_Edit
             this.mi_cascade,
             this.mi_splitHorz,
             this.mi_splitVert,
-            this.mi_arrangeIcons,
-            this.mi_sep7});
-            this.mi_windows.Text = "Windows";
+            this.mi_arrangeIcons});
+            resources.ApplyResources(this.mi_windows, "mi_windows");
             // 
             // mi_cascade
             // 
             this.mi_cascade.Index = 0;
-            this.mi_cascade.Text = "Cascade";
+            resources.ApplyResources(this.mi_cascade, "mi_cascade");
             // 
             // mi_splitHorz
             // 
             this.mi_splitHorz.Index = 1;
-            this.mi_splitHorz.Text = "Split Horizontal";
+            resources.ApplyResources(this.mi_splitHorz, "mi_splitHorz");
             // 
             // mi_splitVert
             // 
             this.mi_splitVert.Index = 2;
-            this.mi_splitVert.Text = "Split Vertical";
+            resources.ApplyResources(this.mi_splitVert, "mi_splitVert");
             // 
             // mi_arrangeIcons
             // 
             this.mi_arrangeIcons.Index = 3;
-            this.mi_arrangeIcons.Text = "Arrange Icons";
-            // 
-            // mi_sep7
-            // 
-            this.mi_sep7.Index = 4;
-            this.mi_sep7.MdiList = true;
-            this.mi_sep7.Text = "-";
+            resources.ApplyResources(this.mi_arrangeIcons, "mi_arrangeIcons");
             // 
             // mi_help
             // 
             this.mi_help.Index = 7;
             this.mi_help.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_about});
-            this.mi_help.Text = "Help";
+            resources.ApplyResources(this.mi_help, "mi_help");
             // 
             // mi_about
             // 
             this.mi_about.Index = 0;
-            this.mi_about.Text = "About";
+            resources.ApplyResources(this.mi_about, "mi_about");
             this.mi_about.Click += new System.EventHandler(this.HelpAbout);
             // 
             // mi_dev
@@ -476,66 +430,71 @@ namespace UV7_Edit
             this.mi_dev.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cssStyler,
             this.mi_sep5,
-            this.mi_something});
-            this.mi_dev.Text = "Dev";
+            this.mi_something,
+            this.mi_devChangeLang,
+            this.menuItem1});
+            resources.ApplyResources(this.mi_dev, "mi_dev");
             // 
             // mi_cssStyler
             // 
             this.mi_cssStyler.Index = 0;
-            this.mi_cssStyler.Text = "CSS Styler";
+            resources.ApplyResources(this.mi_cssStyler, "mi_cssStyler");
             this.mi_cssStyler.Click += new System.EventHandler(this.DevCssStyler);
             // 
             // mi_sep5
             // 
             this.mi_sep5.Index = 1;
-            this.mi_sep5.Text = "-";
+            resources.ApplyResources(this.mi_sep5, "mi_sep5");
             // 
             // mi_something
             // 
             this.mi_something.Index = 2;
-            this.mi_something.Text = "Something";
+            resources.ApplyResources(this.mi_something, "mi_something");
+            // 
+            // mi_devChangeLang
+            // 
+            this.mi_devChangeLang.Index = 3;
+            resources.ApplyResources(this.mi_devChangeLang, "mi_devChangeLang");
+            this.mi_devChangeLang.Click += new System.EventHandler(this.DevChangeLang);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 4;
+            resources.ApplyResources(this.menuItem1, "menuItem1");
+            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 351);
+            resources.ApplyResources(this.statusBar, "statusBar");
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(884, 22);
-            this.statusBar.TabIndex = 4;
-            this.statusBar.Text = "statusBar1";
             // 
             // saveFileDialog
             // 
-            this.saveFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
+            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
             // 
             // openFileDialog
             // 
-            this.openFileDialog.Filter = "Markdown File|*.md|Text File|*.txt|All files|*.*";
+            resources.ApplyResources(this.openFileDialog, "openFileDialog");
             this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileOpen_OK);
             // 
             // dirPanel
             // 
-            this.dirPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dirPanel.Location = new System.Drawing.Point(0, 43);
+            resources.ApplyResources(this.dirPanel, "dirPanel");
             this.dirPanel.Name = "dirPanel";
-            this.dirPanel.Size = new System.Drawing.Size(199, 308);
-            this.dirPanel.TabIndex = 0;
             this.dirPanel.Title = "DirPanel";
             this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
             // 
             // Form_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 373);
             this.Controls.Add(this.dirPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.statusBar);
             this.IsMdiContainer = true;
             this.Menu = this.mainMenu;
-            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Form_main";
-            this.Text = "UV7 Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_main_FormClosing);
             this.MdiChildActivate += new System.EventHandler(this.Form_main_MdiChildActivate);
             this.ResumeLayout(false);
@@ -594,7 +553,6 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_splitHorz;
         private System.Windows.Forms.MenuItem mi_splitVert;
         private System.Windows.Forms.MenuItem mi_arrangeIcons;
-        private System.Windows.Forms.MenuItem mi_sep7;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.MenuItem mi_editor;
@@ -603,6 +561,8 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_prefs;
         private System.Windows.Forms.MenuItem mi_sep9;
         private System.Windows.Forms.MenuItem mi_startScreen;
+        private System.Windows.Forms.MenuItem mi_devChangeLang;
+        private System.Windows.Forms.MenuItem menuItem1;
     }
 }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UV7_Edit.Resources.Prefs {
+namespace UV7_Edit.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace UV7_Edit.Resources.Prefs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Names {
+    internal class Misc {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Names() {
+        internal Misc() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace UV7_Edit.Resources.Prefs {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UV7_Edit.Resources.Prefs.Names", typeof(Names).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UV7_Edit.Resources.Misc", typeof(Misc).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,29 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Background Color ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die New Document ähnelt.
         /// </summary>
-        internal static string BackColor {
+        internal static string NewDocument {
             get {
-                return ResourceManager.GetString("BackColor", resourceCulture);
+                return ResourceManager.GetString("NewDocument", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Background Image ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Do you want to save changes made to {0}? ähnelt.
         /// </summary>
-        internal static string BackImage {
+        internal static string UnsavedChangesText {
             get {
-                return ResourceManager.GetString("BackImage", resourceCulture);
+                return ResourceManager.GetString("UnsavedChangesText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Background Image Layout ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unsaved changes ähnelt.
         /// </summary>
-        internal static string BackImageLayout {
+        internal static string UnsavedChangesTitle {
             get {
-                return ResourceManager.GetString("BackImageLayout", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Desktop Compositing ähnelt.
-        /// </summary>
-        internal static string DesktopCompositing {
-            get {
-                return ResourceManager.GetString("DesktopCompositing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show Start Screen ähnelt.
-        /// </summary>
-        internal static string ShowStartScreen {
-            get {
-                return ResourceManager.GetString("ShowStartScreen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show as top most ähnelt.
-        /// </summary>
-        internal static string TopMost {
-            get {
-                return ResourceManager.GetString("TopMost", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Visual Style Mode ähnelt.
-        /// </summary>
-        internal static string VisualStyleState {
-            get {
-                return ResourceManager.GetString("VisualStyleState", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Window State ähnelt.
-        /// </summary>
-        internal static string WindowState {
-            get {
-                return ResourceManager.GetString("WindowState", resourceCulture);
+                return ResourceManager.GetString("UnsavedChangesTitle", resourceCulture);
             }
         }
     }

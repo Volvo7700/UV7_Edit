@@ -112,18 +112,753 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>884, 43</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="saveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+  <data name="mi_new.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlN</value>
+  </data>
+  <data name="mi_new.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="mi_open.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlO</value>
+  </data>
+  <data name="mi_open.Text" xml:space="preserve">
+    <value>Open...</value>
+  </data>
+  <data name="mi_save.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_save.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlS</value>
+  </data>
+  <data name="mi_save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="mi_saveAs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_saveAs.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftS</value>
+  </data>
+  <data name="mi_saveAs.Text" xml:space="preserve">
+    <value>Save as...</value>
+  </data>
+  <data name="mi_sep9.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_startScreen.Text" xml:space="preserve">
+    <value>Start Screen</value>
+  </data>
+  <data name="mi_sep1.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_pageSetup.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_pageSetup.Text" xml:space="preserve">
+    <value>Page setup...</value>
+  </data>
+  <data name="mi_print.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_print.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlP</value>
+  </data>
+  <data name="mi_print.Text" xml:space="preserve">
+    <value>Print...</value>
+  </data>
+  <data name="mi_sep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_close.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_close.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlW</value>
+  </data>
+  <data name="mi_close.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="mi_exit.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>AltF4</value>
+  </data>
+  <data name="mi_exit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="mi_file.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="mi_undo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlZ</value>
+  </data>
+  <data name="mi_undo.Text" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="mi_redo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlY</value>
+  </data>
+  <data name="mi_redo.Text" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="mi_sep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_cut.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_cut.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlX</value>
+  </data>
+  <data name="mi_cut.Text" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="mi_copy.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlC</value>
+  </data>
+  <data name="mi_copy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="mi_paste.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlV</value>
+  </data>
+  <data name="mi_paste.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="mi_sep0.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_find.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_find.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlF</value>
+  </data>
+  <data name="mi_find.Text" xml:space="preserve">
+    <value>Find...</value>
+  </data>
+  <data name="mi_findAgain.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_findAgain.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>F3</value>
+  </data>
+  <data name="mi_findAgain.Text" xml:space="preserve">
+    <value>Find again</value>
+  </data>
+  <data name="mi_replace.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlH</value>
+  </data>
+  <data name="mi_replace.Text" xml:space="preserve">
+    <value>Replace...</value>
+  </data>
+  <data name="mi_sep8.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_prefs.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlP</value>
+  </data>
+  <data name="mi_prefs.Text" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="mi_edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="mi_lineWrap.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_lineWrap.Text" xml:space="preserve">
+    <value>Line Wrap</value>
+  </data>
+  <data name="mi_font.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_font.Text" xml:space="preserve">
+    <value>Font...</value>
+  </data>
+  <data name="mi_format.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="mi_editor.Text" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="mi_editor.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_viewer.Text" xml:space="preserve">
+    <value>Viewer</value>
+  </data>
+  <data name="mi_viewer.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_showEditor.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_showEditor.Text" xml:space="preserve">
+    <value>Show Editor</value>
+  </data>
+  <data name="mi_showViewer.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_showViewer.Text" xml:space="preserve">
+    <value>Show Viewer</value>
+  </data>
+  <data name="mi_showBoth.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_showBoth.Text" xml:space="preserve">
+    <value>Show Both</value>
+  </data>
+  <data name="mi_sep4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_showSidebar.Text" xml:space="preserve">
+    <value>Show Sidebar</value>
+  </data>
+  <data name="mi_showStatusbar.Text" xml:space="preserve">
+    <value>Show Statusbar</value>
+  </data>
+  <data name="mi_sep6.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_zoomIn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_zoomIn.Text" xml:space="preserve">
+    <value>Zoom in</value>
+  </data>
+  <data name="mi_zoomOut.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_zoomOut.Text" xml:space="preserve">
+    <value>Zoom out</value>
+  </data>
+  <data name="mi_resetZoom.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_resetZoom.Text" xml:space="preserve">
+    <value>Reset Zoom</value>
+  </data>
+  <data name="mi_view.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="mi_cascade.Text" xml:space="preserve">
+    <value>Cascade</value>
+  </data>
+  <data name="mi_splitHorz.Text" xml:space="preserve">
+    <value>Split horizontal</value>
+  </data>
+  <data name="mi_splitVert.Text" xml:space="preserve">
+    <value>Split vertical</value>
+  </data>
+  <data name="mi_arrangeIcons.Text" xml:space="preserve">
+    <value>Arrange Icons</value>
+  </data>
+  <data name="mi_windows.Text" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="mi_about.Text" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="mi_help.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="mi_cssStyler.Text" xml:space="preserve">
+    <value>CSS Styler</value>
+  </data>
+  <data name="mi_sep5.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mi_something.Text" xml:space="preserve">
+    <value>Something</value>
+  </data>
+  <data name="mi_devChangeLang.Text" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+  <data name="menuItem1.Text" xml:space="preserve">
+    <value>Show Language</value>
+  </data>
+  <data name="mi_dev.Text" xml:space="preserve">
+    <value>Dev</value>
+  </data>
+  <data name="statusBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="statusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 339</value>
+  </data>
+  <data name="statusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>884, 22</value>
+  </data>
+  <data name="statusBar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="statusBar.Text" xml:space="preserve">
+    <value>statusBar1</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Name" xml:space="preserve">
+    <value>statusBar</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="saveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>127, 17</value>
   </metadata>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+  <data name="saveFileDialog.Filter" xml:space="preserve">
+    <value>Markdown File|*.md|Text File|*.txt|All files|*.*</value>
+  </data>
+  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>256, 17</value>
   </metadata>
+  <data name="openFileDialog.Filter" xml:space="preserve">
+    <value>Markdown File|*.md|Text File|*.txt|All files|*.*</value>
+  </data>
+  <data name="dirPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="dirPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 43</value>
+  </data>
+  <data name="dirPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 296</value>
+  </data>
+  <data name="dirPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.Name" xml:space="preserve">
+    <value>dirPanel</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
+    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9465.1370, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>884, 361</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 400</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>UV7 Edit</value>
+  </data>
+  <data name="&gt;&gt;mainMenu.Name" xml:space="preserve">
+    <value>mainMenu</value>
+  </data>
+  <data name="&gt;&gt;mainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_file.Name" xml:space="preserve">
+    <value>mi_file</value>
+  </data>
+  <data name="&gt;&gt;mi_file.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_new.Name" xml:space="preserve">
+    <value>mi_new</value>
+  </data>
+  <data name="&gt;&gt;mi_new.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_open.Name" xml:space="preserve">
+    <value>mi_open</value>
+  </data>
+  <data name="&gt;&gt;mi_open.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_save.Name" xml:space="preserve">
+    <value>mi_save</value>
+  </data>
+  <data name="&gt;&gt;mi_save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_saveAs.Name" xml:space="preserve">
+    <value>mi_saveAs</value>
+  </data>
+  <data name="&gt;&gt;mi_saveAs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep9.Name" xml:space="preserve">
+    <value>mi_sep9</value>
+  </data>
+  <data name="&gt;&gt;mi_sep9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_startScreen.Name" xml:space="preserve">
+    <value>mi_startScreen</value>
+  </data>
+  <data name="&gt;&gt;mi_startScreen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep1.Name" xml:space="preserve">
+    <value>mi_sep1</value>
+  </data>
+  <data name="&gt;&gt;mi_sep1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_pageSetup.Name" xml:space="preserve">
+    <value>mi_pageSetup</value>
+  </data>
+  <data name="&gt;&gt;mi_pageSetup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_print.Name" xml:space="preserve">
+    <value>mi_print</value>
+  </data>
+  <data name="&gt;&gt;mi_print.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep2.Name" xml:space="preserve">
+    <value>mi_sep2</value>
+  </data>
+  <data name="&gt;&gt;mi_sep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_close.Name" xml:space="preserve">
+    <value>mi_close</value>
+  </data>
+  <data name="&gt;&gt;mi_close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_exit.Name" xml:space="preserve">
+    <value>mi_exit</value>
+  </data>
+  <data name="&gt;&gt;mi_exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_edit.Name" xml:space="preserve">
+    <value>mi_edit</value>
+  </data>
+  <data name="&gt;&gt;mi_edit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_undo.Name" xml:space="preserve">
+    <value>mi_undo</value>
+  </data>
+  <data name="&gt;&gt;mi_undo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_redo.Name" xml:space="preserve">
+    <value>mi_redo</value>
+  </data>
+  <data name="&gt;&gt;mi_redo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep3.Name" xml:space="preserve">
+    <value>mi_sep3</value>
+  </data>
+  <data name="&gt;&gt;mi_sep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_cut.Name" xml:space="preserve">
+    <value>mi_cut</value>
+  </data>
+  <data name="&gt;&gt;mi_cut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_copy.Name" xml:space="preserve">
+    <value>mi_copy</value>
+  </data>
+  <data name="&gt;&gt;mi_copy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_paste.Name" xml:space="preserve">
+    <value>mi_paste</value>
+  </data>
+  <data name="&gt;&gt;mi_paste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep0.Name" xml:space="preserve">
+    <value>mi_sep0</value>
+  </data>
+  <data name="&gt;&gt;mi_sep0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_find.Name" xml:space="preserve">
+    <value>mi_find</value>
+  </data>
+  <data name="&gt;&gt;mi_find.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_findAgain.Name" xml:space="preserve">
+    <value>mi_findAgain</value>
+  </data>
+  <data name="&gt;&gt;mi_findAgain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_replace.Name" xml:space="preserve">
+    <value>mi_replace</value>
+  </data>
+  <data name="&gt;&gt;mi_replace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep8.Name" xml:space="preserve">
+    <value>mi_sep8</value>
+  </data>
+  <data name="&gt;&gt;mi_sep8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_prefs.Name" xml:space="preserve">
+    <value>mi_prefs</value>
+  </data>
+  <data name="&gt;&gt;mi_prefs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_format.Name" xml:space="preserve">
+    <value>mi_format</value>
+  </data>
+  <data name="&gt;&gt;mi_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_lineWrap.Name" xml:space="preserve">
+    <value>mi_lineWrap</value>
+  </data>
+  <data name="&gt;&gt;mi_lineWrap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_font.Name" xml:space="preserve">
+    <value>mi_font</value>
+  </data>
+  <data name="&gt;&gt;mi_font.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_editor.Name" xml:space="preserve">
+    <value>mi_editor</value>
+  </data>
+  <data name="&gt;&gt;mi_editor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_viewer.Name" xml:space="preserve">
+    <value>mi_viewer</value>
+  </data>
+  <data name="&gt;&gt;mi_viewer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_view.Name" xml:space="preserve">
+    <value>mi_view</value>
+  </data>
+  <data name="&gt;&gt;mi_view.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showEditor.Name" xml:space="preserve">
+    <value>mi_showEditor</value>
+  </data>
+  <data name="&gt;&gt;mi_showEditor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showViewer.Name" xml:space="preserve">
+    <value>mi_showViewer</value>
+  </data>
+  <data name="&gt;&gt;mi_showViewer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showBoth.Name" xml:space="preserve">
+    <value>mi_showBoth</value>
+  </data>
+  <data name="&gt;&gt;mi_showBoth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep4.Name" xml:space="preserve">
+    <value>mi_sep4</value>
+  </data>
+  <data name="&gt;&gt;mi_sep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showSidebar.Name" xml:space="preserve">
+    <value>mi_showSidebar</value>
+  </data>
+  <data name="&gt;&gt;mi_showSidebar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showStatusbar.Name" xml:space="preserve">
+    <value>mi_showStatusbar</value>
+  </data>
+  <data name="&gt;&gt;mi_showStatusbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep6.Name" xml:space="preserve">
+    <value>mi_sep6</value>
+  </data>
+  <data name="&gt;&gt;mi_sep6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_zoomIn.Name" xml:space="preserve">
+    <value>mi_zoomIn</value>
+  </data>
+  <data name="&gt;&gt;mi_zoomIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_zoomOut.Name" xml:space="preserve">
+    <value>mi_zoomOut</value>
+  </data>
+  <data name="&gt;&gt;mi_zoomOut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_resetZoom.Name" xml:space="preserve">
+    <value>mi_resetZoom</value>
+  </data>
+  <data name="&gt;&gt;mi_resetZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_windows.Name" xml:space="preserve">
+    <value>mi_windows</value>
+  </data>
+  <data name="&gt;&gt;mi_windows.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_cascade.Name" xml:space="preserve">
+    <value>mi_cascade</value>
+  </data>
+  <data name="&gt;&gt;mi_cascade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_splitHorz.Name" xml:space="preserve">
+    <value>mi_splitHorz</value>
+  </data>
+  <data name="&gt;&gt;mi_splitHorz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_splitVert.Name" xml:space="preserve">
+    <value>mi_splitVert</value>
+  </data>
+  <data name="&gt;&gt;mi_splitVert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_arrangeIcons.Name" xml:space="preserve">
+    <value>mi_arrangeIcons</value>
+  </data>
+  <data name="&gt;&gt;mi_arrangeIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_help.Name" xml:space="preserve">
+    <value>mi_help</value>
+  </data>
+  <data name="&gt;&gt;mi_help.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_about.Name" xml:space="preserve">
+    <value>mi_about</value>
+  </data>
+  <data name="&gt;&gt;mi_about.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_dev.Name" xml:space="preserve">
+    <value>mi_dev</value>
+  </data>
+  <data name="&gt;&gt;mi_dev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_cssStyler.Name" xml:space="preserve">
+    <value>mi_cssStyler</value>
+  </data>
+  <data name="&gt;&gt;mi_cssStyler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep5.Name" xml:space="preserve">
+    <value>mi_sep5</value>
+  </data>
+  <data name="&gt;&gt;mi_sep5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_something.Name" xml:space="preserve">
+    <value>mi_something</value>
+  </data>
+  <data name="&gt;&gt;mi_something.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_devChangeLang.Name" xml:space="preserve">
+    <value>mi_devChangeLang</value>
+  </data>
+  <data name="&gt;&gt;mi_devChangeLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
+    <value>menuItem1</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Name" xml:space="preserve">
+    <value>saveFileDialog</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
+    <value>openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form_main</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

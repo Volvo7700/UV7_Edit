@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using static UV7_Edit.CustomAttributes;
 
-namespace UV7_Edit
+namespace UV7_Edit.Config
 {
     public class PrefManager<T> where T : new()
     {
@@ -34,7 +30,7 @@ namespace UV7_Edit
                 try
                 {
                     object converted = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromString(val);
-                    prop.SetValue(Prefs, converted);
+                    prop.SetValue(Prefs, converted, null);
                 }
                 catch { }
             }
@@ -46,7 +42,7 @@ namespace UV7_Edit
             {
                 string section = GetCategory(prop);
                 string key = prop.Name;
-                string val = Convert.ToString(prop.GetValue(Prefs)) ?? "";
+                string val = Convert.ToString(prop.GetValue(Prefs, null)) ?? "";
                 ini.Write(section, key, val);
             }
         }

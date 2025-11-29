@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.Config
 {
-    public partial class ListBoxTabControl : UserControl
+    public partial class PointSelector : UserControl
     {
-        public ListBoxTabControl()
+        public PointSelector()
         {
             InitializeComponent();
         }
-
-        public List<Panel> Pages { get; set; }
     }
 }

@@ -22,14 +22,14 @@ namespace UV7_Edit.Resources.Prefs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Names {
+    internal class Types {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Names() {
+        internal Types() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace UV7_Edit.Resources.Prefs {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UV7_Edit.Resources.Prefs.Names", typeof(Names).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UV7_Edit.Resources.Prefs.Types", typeof(Types).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,20 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Background Color ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Height ähnelt.
         /// </summary>
-        internal static string BackColor {
+        internal static string Height {
             get {
-                return ResourceManager.GetString("BackColor", resourceCulture);
+                return ResourceManager.GetString("Height", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Background Image ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Width ähnelt.
         /// </summary>
-        internal static string BackImage {
+        internal static string Width {
             get {
-                return ResourceManager.GetString("BackImage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Background Image Layout ähnelt.
-        /// </summary>
-        internal static string BackImageLayout {
-            get {
-                return ResourceManager.GetString("BackImageLayout", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Desktop Compositing ähnelt.
-        /// </summary>
-        internal static string DesktopCompositing {
-            get {
-                return ResourceManager.GetString("DesktopCompositing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show Start Screen ähnelt.
-        /// </summary>
-        internal static string ShowStartScreen {
-            get {
-                return ResourceManager.GetString("ShowStartScreen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Show as top most ähnelt.
-        /// </summary>
-        internal static string TopMost {
-            get {
-                return ResourceManager.GetString("TopMost", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Visual Style Mode ähnelt.
-        /// </summary>
-        internal static string VisualStyleState {
-            get {
-                return ResourceManager.GetString("VisualStyleState", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Window State ähnelt.
-        /// </summary>
-        internal static string WindowState {
-            get {
-                return ResourceManager.GetString("WindowState", resourceCulture);
+                return ResourceManager.GetString("Width", resourceCulture);
             }
         }
     }

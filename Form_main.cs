@@ -1,6 +1,7 @@
 ﻿using MarkdownDeep;
 using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,10 +11,12 @@ namespace UV7_Edit
     public partial class Form_main : Form, CancelClosing
     {
         private bool cancelClosing = false;
-        Config config;
+        Config.Config config;
 
         public Form_main()
         {
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");
+
             InitializeComponent();
 
             Version ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
@@ -38,6 +41,36 @@ namespace UV7_Edit
             watcher.EnableRaisingEvents = true;
 
             ShowStartForm();
+        }
+
+        private void changeLanguage(string language)
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(language);
+            ComponentResourceManager resources = new ComponentResourceManager(this.GetType());
+            resources.ApplyResources(this, "$this");
+            applyResources(resources, this.Controls, new CultureInfo(language));
+        }
+
+        private void applyResources(ComponentResourceManager resources, Control.ControlCollection ctls, CultureInfo cultureInfo)
+        {
+            foreach (Control ctl in ctls)
+            {
+                resources.ApplyResources(ctl, ctl.Name, cultureInfo);
+                applyResources(resources, ctl.Controls, cultureInfo);
+            }
+        }
+
+        private void ApplyResourceToControl(
+   Control control,
+   ComponentResourceManager cmp,
+   CultureInfo cultureInfo)
+        {
+            cmp.ApplyResources(control, control.Name, cultureInfo);
+
+            foreach (Control child in control.Controls)
+            {
+                ApplyResourceToControl(child, cmp, cultureInfo);
+            }
         }
 
         #region Menu Bar
@@ -147,7 +180,7 @@ namespace UV7_Edit
         #region Edit
         private void EditPrefs(object sender, EventArgs e)
         {
-            Form_preferences f = new Form_preferences();
+            Config.Form_preferences f = new Config.Form_preferences();
             f.ShowDialog(this);
         }
         #endregion Edit
@@ -195,7 +228,7 @@ namespace UV7_Edit
 
         private void DevChangeLang(object sender, EventArgs e)
         {
-            changeLanguage("de");
+            changeLanguage("de-DE");
         }
         #endregion Dev
         #endregion Menu
@@ -315,6 +348,14 @@ namespace UV7_Edit
         public void ClearCancelClosing()
         {
             cancelClosing = false;
+        }
+
+        private void menuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(System.Threading.Thread.CurrentThread.CurrentUICulture.Name);
+            var rm = new ComponentResourceManager(typeof(Config.Form_preferences));
+            string title = rm.GetString("$this.Text");
+            MessageBox.Show(title);
         }
     }
 }

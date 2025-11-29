@@ -112,9 +112,123 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="mi_new.Text" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="mi_open.Text" xml:space="preserve">
+    <value>Öffnen...</value>
+  </data>
+  <data name="mi_save.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="mi_saveAs.Text" xml:space="preserve">
+    <value>Speichern als...</value>
+  </data>
+  <data name="mi_startScreen.Text" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="mi_pageSetup.Text" xml:space="preserve">
+    <value>Seite einrichten...</value>
+  </data>
+  <data name="mi_print.Text" xml:space="preserve">
+    <value>Drucken...</value>
+  </data>
+  <data name="mi_close.Text" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="mi_exit.Text" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
+  <data name="mi_file.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="mi_undo.Text" xml:space="preserve">
+    <value>Rückgängig</value>
+  </data>
+  <data name="mi_redo.Text" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="mi_cut.Text" xml:space="preserve">
+    <value>Ausschneiden</value>
+  </data>
+  <data name="mi_copy.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="mi_paste.Text" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="mi_find.Text" xml:space="preserve">
+    <value>Suchen...</value>
+  </data>
+  <data name="mi_findAgain.Text" xml:space="preserve">
+    <value>Erneut suchen</value>
+  </data>
+  <data name="mi_replace.Text" xml:space="preserve">
+    <value>Ersetzen...</value>
+  </data>
+  <data name="mi_prefs.Text" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="mi_edit.Text" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="mi_lineWrap.Text" xml:space="preserve">
+    <value>Zeilenumbruch</value>
+  </data>
+  <data name="mi_font.Text" xml:space="preserve">
+    <value>Schriftart...</value>
+  </data>
+  <data name="mi_showEditor.Text" xml:space="preserve">
+    <value>Editor anzeigen</value>
+  </data>
+  <data name="mi_showViewer.Text" xml:space="preserve">
+    <value>Viewer anzeigen</value>
+  </data>
+  <data name="mi_showBoth.Text" xml:space="preserve">
+    <value>Beide anzeigen</value>
+  </data>
+  <data name="mi_showSidebar.Text" xml:space="preserve">
+    <value>Seitenleiste anzeigen</value>
+  </data>
+  <data name="mi_showStatusbar.Text" xml:space="preserve">
+    <value>Statusleiste anzeigen</value>
+  </data>
+  <data name="mi_zoomIn.Text" xml:space="preserve">
+    <value>Vergrößern</value>
+  </data>
+  <data name="mi_zoomOut.Text" xml:space="preserve">
+    <value>Verkleinern</value>
+  </data>
+  <data name="mi_resetZoom.Text" xml:space="preserve">
+    <value>Zoom zurücksetzen</value>
+  </data>
+  <data name="mi_view.Text" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="mi_cascade.Text" xml:space="preserve">
+    <value>Kacheln</value>
+  </data>
+  <data name="mi_splitHorz.Text" xml:space="preserve">
+    <value>Horizontal teilen</value>
+  </data>
+  <data name="mi_splitVert.Text" xml:space="preserve">
+    <value>Vertikal teilen</value>
+  </data>
+  <data name="mi_arrangeIcons.Text" xml:space="preserve">
+    <value>Symbole ausrichten</value>
+  </data>
+  <data name="mi_windows.Text" xml:space="preserve">
+    <value>Fenster</value>
+  </data>
+  <data name="mi_about.Text" xml:space="preserve">
+    <value>Über...</value>
+  </data>
+  <data name="mi_help.Text" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
 </root>
