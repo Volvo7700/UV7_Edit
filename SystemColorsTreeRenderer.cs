@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using static BrightIdeasSoftware.TreeListView;
 
 namespace UV7_Edit
 {
+    [ToolboxItem(false)]
     public class SystemColorsTreeRenderer : TreeRenderer
     {
         protected override void DrawLines(Graphics g, Rectangle r, Pen p, Branch br, int glyphMidVertical)
