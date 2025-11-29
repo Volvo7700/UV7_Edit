@@ -8,5 +8,6 @@ namespace UV7_Edit
     public interface CancelClosing
     {
         void CancelClosing();
+        void ClearCancelClosing();
     }
 }

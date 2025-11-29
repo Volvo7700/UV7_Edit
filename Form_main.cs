@@ -192,6 +192,11 @@ namespace UV7_Edit
                 ft.Show();
             }
         }
+
+        private void DevChangeLang(object sender, EventArgs e)
+        {
+            changeLanguage("de");
+        }
         #endregion Dev
         #endregion Menu
 
@@ -298,14 +303,18 @@ namespace UV7_Edit
         {
             if (cancelClosing)
             {
-                e.Cancel = true;
-                cancelClosing = false;
+                ClosingCanceller.ClearAll();
             }
         }
 
         public void CancelClosing()
         {
             cancelClosing = true;
+        }
+
+        public void ClearCancelClosing()
+        {
+            cancelClosing = false;
         }
     }
 }

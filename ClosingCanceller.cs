@@ -15,5 +15,13 @@ namespace UV7_Edit
                 f.CancelClosing();
             }
         }
+
+        public static void ClearAll()
+        {
+            foreach (CancelClosing f in Application.OpenForms.OfType<CancelClosing>())
+            {
+                f.ClearCancelClosing();
+            }
+        }
     }
 }
