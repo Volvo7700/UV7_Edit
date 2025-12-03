@@ -11,10 +11,12 @@
 ### Implemented Features:
 * Editor/Viewer Split View
 * Basic loading/saving of files
+* Localization support, translations for English and German
 
 ### Currently WIP:
 * Config framework
 * Selectable folder *(notebook)* treeview
+* Language switching
 
 ### Planned features:
 * WYSIWYG Editor
