@@ -24,7 +24,6 @@
 * Editor with syntax highlighting
 * folder-based stylesheets
 * German Localization
-
 * more coming soon
 
 ### Feature ideas (currently not (yet) planned):
