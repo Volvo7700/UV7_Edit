@@ -59,5 +59,14 @@ namespace UV7_Edit.Resources.Prefs {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Localization / Language ähnelt.
+        /// </summary>
+        internal static string Localization {
+            get {
+                return ResourceManager.GetString("Localization", resourceCulture);
+            }
+        }
     }
 }

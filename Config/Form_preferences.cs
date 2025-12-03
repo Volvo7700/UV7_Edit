@@ -80,7 +80,12 @@ namespace UV7_Edit.Config
 
         private void SaveConfig()
         {
-
+            foreach (KeyValuePair<string, Panel> pair in categoryPanels)
+            {
+                //manager.Prefs.
+                
+            }
+            manager.Save();
         }
 
         private void BuildControls()

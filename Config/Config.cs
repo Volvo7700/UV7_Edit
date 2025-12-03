@@ -3,9 +3,16 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Xml.Serialization;
 
 namespace UV7_Edit.Config
 {
+    /// <summary>
+    /// Config Definition.
+    /// 
+    /// A config category is represented with an own class definition and instance inside the root class (here Config).
+    /// Every category needs a LocalizedCategory attribute, the root classes' LocalizedCategory attribute must have the value "Config".
+    /// </summary>
     [LocalizedCategory("Config")]
     public class Config
     {
@@ -18,81 +25,21 @@ namespace UV7_Edit.Config
         [LocalizedCategory("General")]
         public class ConfigGeneral : ConfigElement
         {
-            [LocalizedDisplayName("Language")]
-            [LocalizedDescription("Language")]
-            public string Language { get; set; } = "en-US";
+            [LocalizedDisplayName("Font")]
+            [LocalizedDescription("Font")]
+            [XmlIgnore]
+            public Font Font { get; set; } = Defaults.FontUI;
+            private SerializableFont SFont => SerializableFont.FromFont(Font);
 
             public ConfigLocalization Localization { get; set; } = new ConfigLocalization();
             
             [LocalizedCategory("Localization")]
             public class ConfigLocalization : ConfigElement
             {
-                [LocalizedDisplayName("Location")]
-                [LocalizedDescription("Location")]
-                [SettingVisible(false)]
-                public Point Location { get; set; } = Point.Empty;
+                [LocalizedDisplayName("Language")]
+                [LocalizedDescription("Language")]
+                public string Language { get; set; } = "en-US";
             }
-
-#if DEBUG
-            public ConfigTests Tests { get; set; } = new ConfigTests();
-
-            [LocalizedCategory("Tests")]
-            public class ConfigTests : ConfigElement
-            {
-                public ConfigTest0 Test0 { get; set; } = new ConfigTest0();
-                
-                [LocalizedCategory("Test0")]
-                public class ConfigTest0 : ConfigElement
-                {
-                    [LocalizedDisplayName("Location")]
-                    [LocalizedDescription("Location")]
-                    [SettingVisible(false)]
-                    public Point Location { get; set; } = Point.Empty;
-                }
-
-                public ConfigTest1 Test1 { get; set; } = new ConfigTest1();
-                
-                [LocalizedCategory("Test1")]
-                public class ConfigTest1 : ConfigElement
-                {
-                    [LocalizedDisplayName("Location")]
-                    [LocalizedDescription("Location")]
-                    [SettingVisible(false)]
-                    public Point Location { get; set; } = Point.Empty;
-                }
-
-                public ConfigTest2 Test2 { get; set; } = new ConfigTest2();
-
-                [LocalizedCategory("Test2")]
-                public class ConfigTest2 : ConfigElement
-                {
-                    public Point Location { get; set; } = Point.Empty;
-                }
-
-                public ConfigTest3 Test3 { get; set; } = new ConfigTest3();
-
-                [LocalizedCategory("Test3")]
-                public class ConfigTest3 : ConfigElement
-                {
-                    
-                }
-
-                public ConfigTest4 Test4 { get; set; } = new ConfigTest4();
-
-                [LocalizedCategory("Test4")]
-                public class ConfigTest4 : ConfigElement
-                {
-                    [LocalizedDisplayName("Location")]
-                    [LocalizedDescription("Location")]
-                    [SettingVisible(false)]
-                    public Point Location { get; set; } = Point.Empty;
-                }
-            }
-#endif
-
-            [LocalizedDisplayName("Font")]
-            [LocalizedDescription("Font")]
-            public Font Font { get; set; } = new Font("Microsoft Sans Serif", 8);
         }
 
         [LocalizedCategory("Window")]
@@ -164,6 +111,12 @@ namespace UV7_Edit.Config
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]
             public ImageLayout BackImageLayout { get; set; } = ImageLayout.Zoom;
+
+            [LocalizedDisplayName("Font")]
+            [LocalizedDescription("Font")]
+            [XmlIgnore]
+            public Font Font { get; set; } = Defaults.FontEditor;
+            private SerializableFont SFont => SerializableFont.FromFont(Font);
         }
 
         [LocalizedCategory("Viewer")]

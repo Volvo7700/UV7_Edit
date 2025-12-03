@@ -11,8 +11,7 @@ namespace UV7_Edit
     public partial class Form_main : Form, CancelClosing
     {
         private bool cancelClosing = false;
-        Config.Config config;
-
+        
         public Form_main()
         {
             //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");

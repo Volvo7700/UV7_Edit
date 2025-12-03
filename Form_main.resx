@@ -484,7 +484,7 @@
     <value>dirPanel</value>
   </data>
   <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
-    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9465.1370, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9468.33921, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
     <value>$this</value>
