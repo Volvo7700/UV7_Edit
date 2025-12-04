@@ -6,17 +6,19 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     public partial class Form_preferences : Form
     {
-        private readonly PrefManager<Config> manager; 
+        private readonly PrefManager<Config> manager;
         private readonly Dictionary<string, Panel> categoryPanels = new Dictionary<string, Panel>();
+        private readonly Dictionary<string, object> categoryObjects = new Dictionary<string, object>();
         
         public Form_preferences()
         {
             InitializeComponent();
-            manager = new PrefManager<Config>(Path.Combine(Application.StartupPath, "config.ini"));
+            manager = new PrefManager<Config>();
+
             this.treeListView_categories.CanExpandGetter = delegate (object x) {
                 if (x is Node<string>)
                 {
@@ -63,6 +65,7 @@ namespace UV7_Edit.Config
                         // Panel hinzufügen (im Container, z. B. panelSettings)
                         panel_prefs.Controls.Add(catPanel);
                         categoryPanels[catStr] = catPanel;
+                        categoryObjects[catStr] = catObj;
                     }
                 }
 
@@ -82,64 +85,9 @@ namespace UV7_Edit.Config
         {
             foreach (KeyValuePair<string, Panel> pair in categoryPanels)
             {
-                //manager.Prefs.
-                
+                PrefsUIBuilder.SaveUI(pair.Value, categoryObjects[pair.Key]);
             }
             manager.Save();
-        }
-
-        private void BuildControls()
-        {
-            var grouped = typeof(Config).GetProperties().GroupBy(p =>
-                p.GetCustomAttribute<LocalizedCategoryAttribute>()?.Category
-                    ?? p.GetCustomAttribute<CategoryAttribute>()?.Category
-                    ?? "Sonstige");
-
-            //foreach (var group in grouped)
-            //{
-            //    var tab = new TabPage(group.Key);
-                
-            //    var panel = new TableLayoutPanel
-            //    {
-            //        Dock = DockStyle.Fill,
-            //        AutoSize = true,
-            //        ColumnCount = 2,
-            //        Padding = new Padding(10)
-            //    };
-
-            //    foreach (var prop in group)
-            //    {
-            //        // Lokalisierte Texte abrufen
-            //        string displayName =
-            //            prop.GetCustomAttribute<LocalizedDisplayNameAttribute>()?.DisplayName
-            //            ?? prop.GetCustomAttribute<DisplayNameAttribute>()?.DisplayName
-            //            ?? prop.Name;
-
-            //        string description =
-            //            prop.GetCustomAttribute<LocalizedDescriptionAttribute>()?.Description
-            //            ?? prop.GetCustomAttribute<DescriptionAttribute>()?.Description;
-
-            //        var label = new Label
-            //        {
-            //            Text = displayName,
-            //            AutoSize = true,
-            //            Anchor = AnchorStyles.Left,
-            //            Padding = new Padding(0, 5, 0, 5)
-            //        };
-
-            //        toolTip.SetToolTip(label, description);
-
-            //        Control editor = CreateEditorForProperty(prop);
-            //        toolTip.SetToolTip(editor, description);
-
-            //        panel.Controls.Add(label);
-            //        panel.Controls.Add(editor);
-            //    }
-
-            //    tab.Controls.Add(panel);
-            //    tabControl.TabPages.Add(tab);
-            //}
-
         }
 
         private void button_ok_Click(object sender, EventArgs e)
@@ -158,24 +106,12 @@ namespace UV7_Edit.Config
             SaveConfig();
         }
 
-        private void treeListView_categories_ItemActivate(object sender, EventArgs e)
-        {
-            //foreach (var kvp in categoryPanels)
-            //    kvp.Value.Visible = false;
-
-            //var panel = categoryPanels[selectedCat];
-            //panel.Visible = true;
-            //panel.BringToFront();
-        }
-
         private void treeListView_categories_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             if (treeListView_categories.SelectedObjects.Count > 0)
             {
-                if (treeListView_categories.SelectedObject is Node<string>)
+                if (treeListView_categories.SelectedObject is Node<string> selectedCat)
                 {
-                    Node<string> selectedCat = (Node<string>)treeListView_categories.SelectedObject;
-
                     foreach (var kvp in categoryPanels)
                         kvp.Value.Visible = false;
 

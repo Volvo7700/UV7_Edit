@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class LocalizedDisplayNameAttribute : DisplayNameAttribute
@@ -26,7 +26,7 @@ namespace UV7_Edit.Config
         }
         public override string Description =>
             Resources.Prefs.Descriptions.ResourceManager.GetString(ResourceKey)
-            ?? ResourceKey;
+            ?? "";
     }
 
     [AttributeUsage(AttributeTargets.Class)]

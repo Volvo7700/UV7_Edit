@@ -55,31 +55,32 @@
   <ItemGroup>
     <Compile Include="CancelClosing.cs" />
     <Compile Include="ClosingCanceller.cs" />
-    <Compile Include="Config\ColorEditor.cs">
+    <Compile Include="Preferences\ColorEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Config\ColorEditor.Designer.cs">
+    <Compile Include="Preferences\ColorEditor.Designer.cs">
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config\Defaults.cs" />
-    <Compile Include="Config\FontEditor.cs">
+    <Compile Include="Preferences\Defaults.cs" />
+    <Compile Include="Preferences\FontEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Config\FontEditor.Designer.cs">
+    <Compile Include="Preferences\FontEditor.Designer.cs">
       <DependentUpon>FontEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config\Node.cs" />
-    <Compile Include="Config\PointEditor.cs">
+    <Compile Include="Preferences\Node.cs" />
+    <Compile Include="Preferences\PointEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Config\PointEditor.Designer.cs">
+    <Compile Include="Preferences\PointEditor.Designer.cs">
       <DependentUpon>PointEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config\SerializableFont.cs" />
-    <Compile Include="Config\SizeEditor.cs">
+    <Compile Include="Preferences\PrefBinding.cs" />
+    <Compile Include="Preferences\SerializableFont.cs" />
+    <Compile Include="Preferences\SizeEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Config\SizeEditor.Designer.cs">
+    <Compile Include="Preferences\SizeEditor.Designer.cs">
       <DependentUpon>SizeEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="DirPanel.cs">
@@ -108,10 +109,10 @@
     <Compile Include="Form_main.Designer.cs">
       <DependentUpon>Form_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config\Form_preferences.cs">
+    <Compile Include="Preferences\Form_preferences.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Config\Form_preferences.Designer.cs">
+    <Compile Include="Preferences\Form_preferences.Designer.cs">
       <DependentUpon>Form_preferences.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_start.cs">
@@ -133,10 +134,10 @@
     <Compile Include="ListBoxTabControl.Designer.cs">
       <DependentUpon>ListBoxTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config\CustomAttributes.cs" />
-    <Compile Include="Config\Config.cs" />
-    <Compile Include="Config\PrefManager.cs" />
-    <Compile Include="Config\PrefsUIBuilder.cs" />
+    <Compile Include="Preferences\CustomAttributes.cs" />
+    <Compile Include="Preferences\Config.cs" />
+    <Compile Include="Preferences\PrefManager.cs" />
+    <Compile Include="Preferences\PrefsUIBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionExtensions.cs" />
@@ -199,28 +200,28 @@
     <Compile Include="SystemColorsTreeRenderer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Config\ColorEditor.de.resx">
+    <EmbeddedResource Include="Preferences\ColorEditor.de.resx">
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\ColorEditor.resx">
+    <EmbeddedResource Include="Preferences\ColorEditor.resx">
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\FontEditor.de.resx">
+    <EmbeddedResource Include="Preferences\FontEditor.de.resx">
       <DependentUpon>FontEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\FontEditor.resx">
+    <EmbeddedResource Include="Preferences\FontEditor.resx">
       <DependentUpon>FontEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\Form_preferences.de.resx">
+    <EmbeddedResource Include="Preferences\Form_preferences.de.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\PointEditor.resx">
+    <EmbeddedResource Include="Preferences\PointEditor.resx">
       <DependentUpon>PointEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\SizeEditor.de.resx">
+    <EmbeddedResource Include="Preferences\SizeEditor.de.resx">
       <DependentUpon>SizeEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\SizeEditor.resx">
+    <EmbeddedResource Include="Preferences\SizeEditor.resx">
       <DependentUpon>SizeEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DirPanel.resx">
@@ -238,7 +239,7 @@
     <EmbeddedResource Include="Form_main.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\Form_preferences.resx">
+    <EmbeddedResource Include="Preferences\Form_preferences.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_start.resx">

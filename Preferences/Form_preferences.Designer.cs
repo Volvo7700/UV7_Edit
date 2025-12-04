@@ -1,5 +1,5 @@
 ﻿
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     partial class Form_preferences
     {
@@ -95,7 +95,6 @@ namespace UV7_Edit.Config
             this.treeListView_categories.UseExplorerTheme = true;
             this.treeListView_categories.View = System.Windows.Forms.View.Details;
             this.treeListView_categories.VirtualMode = true;
-            this.treeListView_categories.ItemActivate += new System.EventHandler(this.treeListView_categories_ItemActivate);
             this.treeListView_categories.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.treeListView_categories_ItemSelectionChanged);
             // 
             // olvc_category

@@ -1,5 +1,5 @@
 ﻿
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     partial class PointEditor
     {

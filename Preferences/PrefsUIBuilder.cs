@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     public static class PrefsUIBuilder
     {
@@ -191,6 +191,22 @@ namespace UV7_Edit.Config
                         editor = ce;
                     }
 
+                    else if (prop.PropertyType == typeof(string))
+                    {
+                        var txt = new TextBox { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
+                        txt.Text = Convert.ToString(prop.GetValue(category, null));
+                        txt.TextChanged += (s, e) =>
+                        {
+                            try
+                            {
+                                var converted = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromString(txt.Text);
+                                prop.SetValue(category, converted, null);
+                            }
+                            catch { }
+                        };
+                        editor = txt;
+                    }
+
                     else if (prop.PropertyType.IsEnum)
                     {
                         Enum enumValue = (Enum)prop.GetValue(category, null);
@@ -212,24 +228,21 @@ namespace UV7_Edit.Config
                         };
                         editor = cb;
                     }
+
                     else
                     {
-                        var txt = new TextBox { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
+                        var txt = new Label { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right, TextAlign = ContentAlignment.MiddleLeft };
                         txt.Text = Convert.ToString(prop.GetValue(category, null));
-                        txt.TextChanged += (s, e) =>
-                        {
-                            try
-                            {
-                                var converted = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromString(txt.Text);
-                                prop.SetValue(category, converted, null);
-                            }
-                            catch { }
-                        };
                         editor = txt;
                     }
 
-                    //ToolTip tip = new ToolTip();
-                    //tip.SetToolTip(editor, desc);
+                    editor.Tag = new PrefBinding(category, prop);
+
+                    if (!string.IsNullOrEmpty(desc))
+                    {
+                        ToolTip tip = new ToolTip();
+                        tip.SetToolTip(lbl, desc);
+                    }
 
                     panel.Controls.Add(lbl);
                     panel.Controls.Add(editor);
@@ -239,6 +252,54 @@ namespace UV7_Edit.Config
             }
         }
         
+        public static void SaveUI(Panel panel, object category)
+        {
+            object GetControlValue(Control c)
+            {
+                if (c is CheckBox cb)
+                {
+                    return cb.Checked;
+                }
+                else if (c is NumericUpDown nud)
+                {
+                    return nud.Value;
+                }
+                else if (c is PointEditor pe)
+                {
+                    return pe.Point;
+                }
+                else if (c is SizeEditor se)
+                {
+                    return se.Size;
+                }
+                else if (c is FontEditor fe)
+                {
+                    return fe.Font;
+                }
+                else if (c is ColorEditor ce)
+                {
+                    return ce.Color;
+                }
+                else if (c is ComboBox cm)
+                {
+                    return cm.SelectedIndex;
+                }
+                else if (c is TextBox tb)
+                {
+                    return tb.Text;
+                }
+                return null;
+            }
+            
+            foreach (Control c in panel.Controls)
+            {
+                if (c.Tag is PrefBinding binding)
+                {
+                    binding.Property.SetValue(binding.Category, GetControlValue(c), null);
+                }
+            }
+        }
+
         public static Dictionary<string, string> GetCategoryDict(object settings)
         {
             if (settings == null)
@@ -442,42 +503,6 @@ namespace UV7_Edit.Config
                         }
                     }
                 }
-                //Node<string> result = null;
-                //foreach (PropertyInfo prop in categoryObj.GetType().GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance))
-                //{
-                //    CategoryAttribute categoryAttr =
-                //        prop.GetCustomAttributes(typeof(CategoryAttribute), true)
-                //        .Cast<CategoryAttribute>()
-                //        .FirstOrDefault()
-                //        ?? prop.PropertyType
-                //        .GetCustomAttributes(typeof(CategoryAttribute), true)
-                //        .Cast<CategoryAttribute>()
-                //        .FirstOrDefault();
-
-                //    string category = categoryAttr != null ? categoryAttr.Category : null;
-
-                //    if (!string.IsNullOrEmpty(category))
-                //    {
-                //        result =
-                //    }
-
-                //    if (prop.PropertyType.IsClass && prop.PropertyType != typeof(string))
-                //    {
-                //        try
-                //        {
-                //            object childCategory = prop.GetValue(categoryObj, null);
-                //            if (childCategory != null)
-                //            {
-                //                BrowseCategory(childCategory);
-                //                continue;
-                //            }
-                //        }
-                //        catch
-                //        {
-
-                //        }
-                //    }
-                //}
                 return result;
             }
             return BrowseCategory(settings);

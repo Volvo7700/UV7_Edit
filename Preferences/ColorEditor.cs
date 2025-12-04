@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     public partial class ColorEditor : UserControl
     {

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Serialization;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     /// <summary>
     /// Config Definition.
@@ -31,6 +31,14 @@ namespace UV7_Edit.Config
             public Font Font { get; set; } = Defaults.FontUI;
             private SerializableFont SFont => SerializableFont.FromFont(Font);
 
+            [LocalizedDisplayName("VisualStyleState")]
+            [LocalizedDescription("VisualStyleState")]
+            public VisualStyleState VisualStyleState { get; set; } = VisualStyleState.ClientAndNonClientAreasEnabled;
+
+            [LocalizedDisplayName("DesktopCompositing")]
+            [LocalizedDescription("DesktopCompositing")]
+            public bool DesktopCompositing { get; set; } = true;
+
             public ConfigLocalization Localization { get; set; } = new ConfigLocalization();
             
             [LocalizedCategory("Localization")]
@@ -54,14 +62,6 @@ namespace UV7_Edit.Config
             [LocalizedDescription("Location")]
             [SettingVisible(false)]
             public Point Location { get; set; } = Point.Empty;
-
-            [LocalizedDisplayName("VisualStyleState")]
-            [LocalizedDescription("VisualStyleState")]
-            public VisualStyleState VisualStyleState { get; set; } = VisualStyleState.ClientAndNonClientAreasEnabled;
-
-            [LocalizedDisplayName("DesktopCompositing")]
-            [LocalizedDescription("DesktopCompositing")]
-            public bool DesktopCompositing { get; set; } = true;
 
             [LocalizedDisplayName("TopMost")]
             [LocalizedDescription("TopMost")]

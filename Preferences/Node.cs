@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     public class Node<T>
     {

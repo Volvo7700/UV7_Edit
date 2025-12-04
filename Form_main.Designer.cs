@@ -496,6 +496,7 @@ namespace UV7_Edit
             this.Menu = this.mainMenu;
             this.Name = "Form_main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_main_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_main_FormClosed);
             this.MdiChildActivate += new System.EventHandler(this.Form_main_MdiChildActivate);
             this.ResumeLayout(false);
 

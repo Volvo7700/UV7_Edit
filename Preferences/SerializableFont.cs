@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     // Source - https://stackoverflow.com/a/1940396
     // Posted by Massimiliano, modified by community. See post 'Timeline' for change history

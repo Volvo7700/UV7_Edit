@@ -1,7 +1,7 @@
 ﻿
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
-    partial class FontEditor
+    partial class ColorEditor
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -29,11 +29,10 @@ namespace UV7_Edit.Config
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FontEditor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorEditor));
             this.button_selectFont = new System.Windows.Forms.Button();
-            this.label_font = new System.Windows.Forms.Label();
-            this.label_fontSize = new System.Windows.Forms.Label();
-            this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.panel_color = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // button_selectFont
@@ -41,33 +40,26 @@ namespace UV7_Edit.Config
             resources.ApplyResources(this.button_selectFont, "button_selectFont");
             this.button_selectFont.Name = "button_selectFont";
             this.button_selectFont.UseVisualStyleBackColor = true;
-            this.button_selectFont.Click += new System.EventHandler(this.SelectFont);
+            this.button_selectFont.Click += new System.EventHandler(this.SelectColor);
             // 
-            // label_font
+            // colorDialog
             // 
-            resources.ApplyResources(this.label_font, "label_font");
-            this.label_font.AutoEllipsis = true;
-            this.label_font.Name = "label_font";
-            this.label_font.UseMnemonic = false;
+            this.colorDialog.AnyColor = true;
+            this.colorDialog.FullOpen = true;
             // 
-            // label_fontSize
+            // panel_color
             // 
-            resources.ApplyResources(this.label_fontSize, "label_fontSize");
-            this.label_fontSize.Name = "label_fontSize";
-            this.label_fontSize.UseMnemonic = false;
+            resources.ApplyResources(this.panel_color, "panel_color");
+            this.panel_color.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_color.Name = "panel_color";
             // 
-            // fontDialog
-            // 
-            this.fontDialog.FontMustExist = true;
-            // 
-            // FontEditor
+            // ColorEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label_font);
-            this.Controls.Add(this.label_fontSize);
+            this.Controls.Add(this.panel_color);
             this.Controls.Add(this.button_selectFont);
-            this.Name = "FontEditor";
+            this.Name = "ColorEditor";
             this.ResumeLayout(false);
 
         }
@@ -75,8 +67,7 @@ namespace UV7_Edit.Config
         #endregion
 
         private System.Windows.Forms.Button button_selectFont;
-        private System.Windows.Forms.Label label_font;
-        private System.Windows.Forms.Label label_fontSize;
-        private System.Windows.Forms.FontDialog fontDialog;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Panel panel_color;
     }
 }

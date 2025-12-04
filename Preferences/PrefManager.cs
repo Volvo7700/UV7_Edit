@@ -7,20 +7,21 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace UV7_Edit.Config
+namespace UV7_Edit.Preferences
 {
     public class PrefManager<T> where T : new()
     {
-        private readonly IniFile ini;
-        public T Prefs { get; }
+        public T Prefs { get; private set; }
 
-        private string configPath;
+        private string configPath = Path.Combine(Application.StartupPath, "Config.xml");
 
-        public PrefManager(string filePath)
+        public PrefManager()
         {
-            configPath = Path.Combine(Application.StartupPath, "Config.xml");
             Prefs = new T();
-            Load();
+#if DEBUG
+            if (!Load())
+                MessageBox.Show("Config load error");
+#endif
         }
 
         /// <summary>
@@ -35,16 +36,13 @@ namespace UV7_Edit.Config
                 {
                     using (FileStream stream = new FileStream(configPath, FileMode.Open, FileAccess.Read))
                     {
-                        using (XmlReader reader = XmlReader.Create(stream))
+                        XmlSerializer xml = new XmlSerializer(typeof(T));
+                        object preferences = xml.Deserialize(stream);
+                        if (preferences is T t)
                         {
-
-                            XmlSerializer xml = new XmlSerializer(typeof(T));
-                            if (xml.CanDeserialize(reader))
-                            {
-                                xml.Deserialize(stream);
-                                return true;
-                            }
+                            Prefs = t;
                         }
+                        return true;
                     }
                 }
                 catch { }
@@ -59,7 +57,7 @@ namespace UV7_Edit.Config
         {
             try
             {
-                using (FileStream stream = new FileStream(configPath, FileMode.OpenOrCreate, FileAccess.Write))
+                using (FileStream stream = new FileStream(configPath, FileMode.Create, FileAccess.Write))
                 {
                     XmlSerializer xml = new XmlSerializer(typeof(T));
                     xml.Serialize(stream, Prefs);

@@ -5,19 +5,20 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using UV7_Edit.Preferences;
 
 namespace UV7_Edit
 {
     public partial class Form_main : Form, CancelClosing
     {
         private bool cancelClosing = false;
+        PrefManager<Config> prefManager = new PrefManager<Config>();
         
         public Form_main()
         {
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");
-
             InitializeComponent();
-
+            LoadConfig();
+            
             Version ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
 
@@ -40,6 +41,28 @@ namespace UV7_Edit
             watcher.EnableRaisingEvents = true;
 
             ShowStartForm();
+        }
+
+        private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SaveConfig();
+        }
+
+        private void LoadConfig()
+        {
+
+            prefManager.Load();
+            this.TopMost = prefManager.Prefs.Window.TopMost;
+            this.WindowState = prefManager.Prefs.Window.WindowState;
+            this.Location = prefManager.Prefs.Window.Location;
+        }
+
+        private void SaveConfig()
+        {
+            prefManager.Prefs.Window.TopMost = this.TopMost;
+            prefManager.Prefs.Window.WindowState = this.WindowState;
+            prefManager.Prefs.Window.Location = this.Location;
+            prefManager.Save();
         }
 
         private void changeLanguage(string language)
@@ -179,7 +202,7 @@ namespace UV7_Edit
         #region Edit
         private void EditPrefs(object sender, EventArgs e)
         {
-            Config.Form_preferences f = new Config.Form_preferences();
+            Preferences.Form_preferences f = new Preferences.Form_preferences();
             f.ShowDialog(this);
         }
         #endregion Edit
@@ -352,7 +375,7 @@ namespace UV7_Edit
         private void menuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(System.Threading.Thread.CurrentThread.CurrentUICulture.Name);
-            var rm = new ComponentResourceManager(typeof(Config.Form_preferences));
+            var rm = new ComponentResourceManager(typeof(Preferences.Form_preferences));
             string title = rm.GetString("$this.Text");
             MessageBox.Show(title);
         }
