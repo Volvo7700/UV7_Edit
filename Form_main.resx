@@ -147,9 +147,6 @@
   <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="mi_file.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
   <data name="mi_new.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlN</value>
   </data>
@@ -222,8 +219,8 @@
   <data name="mi_exit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="mi_edit.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="mi_file.Text" xml:space="preserve">
+    <value>File</value>
   </data>
   <data name="mi_undo.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -312,8 +309,8 @@
   <data name="mi_prefs.Text" xml:space="preserve">
     <value>Preferences</value>
   </data>
-  <data name="mi_format.Text" xml:space="preserve">
-    <value>Format</value>
+  <data name="mi_edit.Text" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="mi_lineWrap.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -327,6 +324,9 @@
   <data name="mi_font.Text" xml:space="preserve">
     <value>Font...</value>
   </data>
+  <data name="mi_format.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
   <data name="mi_editor.Text" xml:space="preserve">
     <value>Editor</value>
   </data>
@@ -338,9 +338,6 @@
   </data>
   <data name="mi_viewer.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="mi_view.Text" xml:space="preserve">
-    <value>View</value>
   </data>
   <data name="mi_showEditor.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -390,8 +387,8 @@
   <data name="mi_resetZoom.Text" xml:space="preserve">
     <value>Reset Zoom</value>
   </data>
-  <data name="mi_windows.Text" xml:space="preserve">
-    <value>Window</value>
+  <data name="mi_view.Text" xml:space="preserve">
+    <value>View</value>
   </data>
   <data name="mi_cascade.Text" xml:space="preserve">
     <value>Cascade</value>
@@ -405,14 +402,14 @@
   <data name="mi_arrangeIcons.Text" xml:space="preserve">
     <value>Arrange Icons</value>
   </data>
-  <data name="mi_help.Text" xml:space="preserve">
-    <value>Help</value>
+  <data name="mi_windows.Text" xml:space="preserve">
+    <value>Window</value>
   </data>
   <data name="mi_about.Text" xml:space="preserve">
     <value>About...</value>
   </data>
-  <data name="mi_dev.Text" xml:space="preserve">
-    <value>Dev</value>
+  <data name="mi_help.Text" xml:space="preserve">
+    <value>Help</value>
   </data>
   <data name="mi_cssStyler.Text" xml:space="preserve">
     <value>CSS Styler</value>
@@ -428,6 +425,9 @@
   </data>
   <data name="menuItem1.Text" xml:space="preserve">
     <value>Show Language</value>
+  </data>
+  <data name="mi_dev.Text" xml:space="preserve">
+    <value>Dev</value>
   </data>
   <data name="statusBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -484,7 +484,7 @@
     <value>dirPanel</value>
   </data>
   <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
-    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9470.516, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9484.35633, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
     <value>$this</value>

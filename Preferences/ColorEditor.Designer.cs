@@ -49,8 +49,8 @@ namespace UV7_Edit.Preferences
             // 
             // panel_color
             // 
-            resources.ApplyResources(this.panel_color, "panel_color");
             this.panel_color.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.panel_color, "panel_color");
             this.panel_color.Name = "panel_color";
             // 
             // ColorEditor

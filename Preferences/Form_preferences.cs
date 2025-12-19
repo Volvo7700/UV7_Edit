@@ -10,15 +10,15 @@ namespace UV7_Edit.Preferences
 {
     public partial class Form_preferences : Form
     {
-        private readonly PrefManager<Config> manager;
         private readonly Dictionary<string, Panel> categoryPanels = new Dictionary<string, Panel>();
         private readonly Dictionary<string, object> categoryObjects = new Dictionary<string, object>();
-        
+
+        private Preferences.Config originalPrefs;
+
         public Form_preferences()
         {
             InitializeComponent();
-            manager = new PrefManager<Config>();
-
+            
             this.treeListView_categories.CanExpandGetter = delegate (object x) {
                 if (x is Node<string>)
                 {
@@ -38,18 +38,20 @@ namespace UV7_Edit.Preferences
 
         private void Form_preferences_Load(object sender, EventArgs e)
         {
-            List<object> catObjsList = PrefsUIBuilder.GetCategoryObjList(manager.Prefs);
+            originalPrefs = Pref.Prefs; 
+            List<object> catObjsList = PrefsUIBuilder.GetCategoryObjList(Pref.Prefs);
             if (catObjsList.Count > 0)
             {
                 foreach (var catObj in catObjsList)
                 {
                     // Neues Panel für Kategorie
-                    var catPanel = new Panel
+                    PropertyPanel catPanel = new PropertyPanel
                     {
                         Dock = DockStyle.Fill,
                         Visible = false,
                         AutoScroll = true
                     };
+                    catPanel.PropertyChanged += (op, ep) => OnPropertyChanged(op, ep);
 
                     // Controls dynamisch erzeugen
                     PrefsUIBuilder.BuildUI(catPanel, catObj);
@@ -64,19 +66,20 @@ namespace UV7_Edit.Preferences
                     {
                         // Panel hinzufügen (im Container, z. B. panelSettings)
                         panel_prefs.Controls.Add(catPanel);
+
                         categoryPanels[catStr] = catPanel;
                         categoryObjects[catStr] = catObj;
                     }
                 }
 
-                Node<string> catsTree = PrefsUIBuilder.GetCategoryTree(manager.Prefs);
+                Node<string> catsTree = PrefsUIBuilder.GetCategoryTree(Pref.Prefs);
                 treeListView_categories.SetObjects(catsTree.Children);
                 if (catsTree.Children.Count > 0)
                 {
                     treeListView_categories.ExpandAll();
                     treeListView_categories.SelectedIndex = 0;
                     treeListView_categories.TreeColumnRenderer.IsShowGlyphs = true;
-                    treeListView_categories.TreeColumnRenderer.UseTriangles = true;
+                    treeListView_categories.TreeColumnRenderer.UseTriangles = false;
                 }
             }
         }
@@ -87,7 +90,7 @@ namespace UV7_Edit.Preferences
             {
                 PrefsUIBuilder.SaveUI(pair.Value, categoryObjects[pair.Key]);
             }
-            manager.Save();
+            Pref.Save();
         }
 
         private void button_ok_Click(object sender, EventArgs e)
@@ -98,12 +101,14 @@ namespace UV7_Edit.Preferences
 
         private void button_cancel_Click(object sender, EventArgs e)
         {
+            Pref.Prefs = originalPrefs;
             this.Close();
         }
 
         private void button_apply_Click(object sender, EventArgs e)
         {
             SaveConfig();
+            button_apply.Enabled = false;
         }
 
         private void treeListView_categories_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -127,6 +132,11 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
+        }
+
+        protected internal void OnPropertyChanged(object sender, EventArgs e)
+        {
+            button_apply.Enabled = true;
         }
     }
 }

@@ -19,15 +19,9 @@ namespace UV7_Edit
             System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoadConfig();
+            Pref.Load();
+            Application.VisualStyleState = Pref.Prefs.General.VisualStyleState;
             Application.Run(new Form_main());
-        }
-
-        static void LoadConfig()
-        {
-            PrefManager<Config> prefManager = new PrefManager<Config>();
-            prefManager.Load();
-            Application.VisualStyleState = prefManager.Prefs.General.VisualStyleState;
         }
     }
 }

@@ -47,13 +47,14 @@ namespace UV7_Edit
             this.pictureBox1.Image = global::UV7_Edit.Properties.Resources.branding;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(526, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(516, 138);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // button_ok
             // 
             this.button_ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_ok.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button_ok.Location = new System.Drawing.Point(400, 348);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(75, 23);
@@ -102,7 +103,7 @@ namespace UV7_Edit
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Location = new System.Drawing.Point(0, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(526, 24);
+            this.label5.Size = new System.Drawing.Size(516, 24);
             this.label5.TabIndex = 6;
             this.label5.Text = "Win32 Desktop Markdown Editor";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -121,7 +122,7 @@ namespace UV7_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 403);
+            this.ClientSize = new System.Drawing.Size(516, 389);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label_bitness);

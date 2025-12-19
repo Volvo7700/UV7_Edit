@@ -53,8 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dev\BorderlessToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CancelClosing.cs" />
     <Compile Include="ClosingCanceller.cs" />
+    <Compile Include="Preferences\ApplyTimeAttribute.cs" />
     <Compile Include="Preferences\ColorEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -68,6 +72,12 @@
     <Compile Include="Preferences\FontEditor.Designer.cs">
       <DependentUpon>FontEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preferences\Form_devPrefs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferences\Form_devPrefs.Designer.cs">
+      <DependentUpon>Form_devPrefs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Preferences\Node.cs" />
     <Compile Include="Preferences\PointEditor.cs">
       <SubType>UserControl</SubType>
@@ -76,6 +86,10 @@
       <DependentUpon>PointEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Preferences\PrefBinding.cs" />
+    <Compile Include="Preferences\Pref.cs" />
+    <Compile Include="Preferences\PropertyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Preferences\SerializableFont.cs" />
     <Compile Include="Preferences\SizeEditor.cs">
       <SubType>UserControl</SubType>
@@ -128,12 +142,6 @@
       <DependentUpon>Form_tempCss.cs</DependentUpon>
     </Compile>
     <Compile Include="IniFile.cs" />
-    <Compile Include="ListBoxTabControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ListBoxTabControl.Designer.cs">
-      <DependentUpon>ListBoxTabControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Preferences\CustomAttributes.cs" />
     <Compile Include="Preferences\Config.cs" />
     <Compile Include="Preferences\PrefManager.cs" />
@@ -200,6 +208,9 @@
     <Compile Include="SystemColorsTreeRenderer.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Dev\ToolBarStyledButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Preferences\ColorEditor.de.resx">
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\FontEditor.resx">
       <DependentUpon>FontEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences\Form_devPrefs.resx">
+      <DependentUpon>Form_devPrefs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\Form_preferences.de.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
@@ -247,9 +261,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_tempCss.resx">
       <DependentUpon>Form_tempCss.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListBoxTabControl.resx">
-      <DependentUpon>ListBoxTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

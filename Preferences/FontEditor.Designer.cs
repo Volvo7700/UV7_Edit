@@ -45,8 +45,8 @@ namespace UV7_Edit.Preferences
             // 
             // label_font
             // 
-            resources.ApplyResources(this.label_font, "label_font");
             this.label_font.AutoEllipsis = true;
+            resources.ApplyResources(this.label_font, "label_font");
             this.label_font.Name = "label_font";
             this.label_font.UseMnemonic = false;
             // 

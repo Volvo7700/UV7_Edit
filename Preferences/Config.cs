@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Serialization;
@@ -63,9 +64,21 @@ namespace UV7_Edit.Preferences
             [SettingVisible(false)]
             public Point Location { get; set; } = Point.Empty;
 
+            private bool topMost = false;
             [LocalizedDisplayName("TopMost")]
             [LocalizedDescription("TopMost")]
-            public bool TopMost { get; set; } = false;
+            public bool TopMost
+            {
+                get { return topMost; }
+                set 
+                {
+                    topMost = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        f.TopMost = value;
+                    }
+                }
+            }
         }
 
         [LocalizedCategory("Workspace")]
@@ -73,6 +86,7 @@ namespace UV7_Edit.Preferences
         {
             [LocalizedDisplayName("ShowStartScreen")]
             [LocalizedDescription("ShowStartScreen")]
+            [ApplyTime(ApplyTimeState.AfterRestart)]
             public bool ShowStartScreen { get; set; } = true;
 
             [LocalizedDisplayName("BackColor")]

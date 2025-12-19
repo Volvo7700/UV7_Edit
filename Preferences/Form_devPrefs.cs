@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.Preferences
 {
-    public partial class ListBoxTabControl : UserControl
+    public partial class Form_devPrefs : Form
     {
-        public ListBoxTabControl()
+        public Form_devPrefs()
         {
             InitializeComponent();
         }
-
-        public List<Panel> Pages { get; set; }
     }
 }

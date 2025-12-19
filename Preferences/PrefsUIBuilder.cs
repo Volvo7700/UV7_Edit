@@ -10,13 +10,14 @@ namespace UV7_Edit.Preferences
 {
     public static class PrefsUIBuilder
     {
-        public static void BuildUI(Panel panel, object category)
+        public static void BuildUI(PropertyPanel panel, object category)
         {
             panel.Controls.Clear();
             int y = 10;
             int x = 170;
             int w = panel.Width - x - 20;
             int p = 20;
+            
             
             var catAttr = category.GetType().GetCustomAttribute<LocalizedCategoryAttribute>();
             if (catAttr != null)
@@ -51,7 +52,7 @@ namespace UV7_Edit.Preferences
                     string desc = prop.GetCustomAttributes(typeof(LocalizedDescriptionAttribute), true)
                         .Cast<LocalizedDescriptionAttribute>()
                         .FirstOrDefault()?.Description ?? "";
-
+                    
                     Label lbl = new Label
                     {
                         Text = displayName,
@@ -63,65 +64,101 @@ namespace UV7_Edit.Preferences
 
                     if (prop.PropertyType == typeof(bool))
                     {
-                        var chk = new CheckBox { Left = x, Top = y, Width = w, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
+                        var chk = new CheckBox { Left = x, Top = y, Width = w, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right, FlatStyle = FlatStyle.System };
                         chk.Checked = (bool)(prop.GetValue(category, null) ?? false);
-                        chk.CheckedChanged += (s, e) => prop.SetValue(category, chk.Checked, null);
+                        chk.CheckedChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, chk.Checked, null);
+                            panel.RaisePropertyChanged(chk.Name);
+                        };
                         editor = chk;
                     }
                     else if (prop.PropertyType == typeof(sbyte))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = sbyte.MinValue, Maximum = sbyte.MaxValue };
                         nud.Value = (sbyte)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(byte))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = byte.MinValue, Maximum = byte.MaxValue };
                         nud.Value = (byte)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(short))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = short.MinValue, Maximum = short.MaxValue };
                         nud.Value = (short)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(ushort))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = ushort.MinValue, Maximum = ushort.MaxValue };
                         nud.Value = (ushort)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(int))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = int.MinValue, Maximum = int.MaxValue };
                         nud.Value = (int)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(uint))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = uint.MinValue, Maximum = uint.MaxValue };
                         nud.Value = (uint)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(long))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = long.MinValue, Maximum = long.MaxValue };
                         nud.Value = (long)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
                     else if (prop.PropertyType == typeof(ulong))
                     {
                         var nud = new NumericUpDown { Left = x, Top = y, Width = 30, Minimum = ulong.MinValue, Maximum = ulong.MaxValue };
                         nud.Value = (ulong)(prop.GetValue(category, null) ?? 0);
-                        nud.ValueChanged += (s, e) => prop.SetValue(category, nud.Value, null);
+                        nud.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, nud.Value, null);
+                            panel.RaisePropertyChanged(nud.Name);
+                        };
                         editor = nud;
                     }
 
@@ -137,7 +174,11 @@ namespace UV7_Edit.Preferences
                             value = Point.Empty;
                         }
                         PointEditor pe = new PointEditor(value) { Left = x, Top = y, Width = panel.Width - x - p, Height = 21, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
-                        pe.ValueChanged += (s, e) => prop.SetValue(category, pe.Point, null);
+                        pe.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, pe.Point, null);
+                            panel.RaisePropertyChanged(pe.Name);
+                        };
                         editor = pe;
                     }
 
@@ -153,7 +194,11 @@ namespace UV7_Edit.Preferences
                             value = Size.Empty;
                         }
                         SizeEditor se = new SizeEditor(value) { Left = x, Top = y, Width = panel.Width - x - p, Height = 21, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
-                        se.ValueChanged += (s, e) => prop.SetValue(category, se.Size, null);
+                        se.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, se.Size, null);
+                            panel.RaisePropertyChanged(se.Name);
+                        };
                         editor = se;
                     }
 
@@ -170,7 +215,11 @@ namespace UV7_Edit.Preferences
                         }
 
                         FontEditor fe = new FontEditor(value) { Left = x, Top = y, Width = panel.Width - x - p, Height = 21, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
-                        fe.ValueChanged += (s, e) => prop.SetValue(category, fe.FontValue, null);
+                        fe.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, fe.FontValue, null);
+                            panel.RaisePropertyChanged(fe.Name);
+                        };
                         editor = fe;
                     }
 
@@ -187,7 +236,11 @@ namespace UV7_Edit.Preferences
                         }
 
                         ColorEditor ce = new ColorEditor(value) { Left = x, Top = y, Width = panel.Width - x - p, Height = 21, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
-                        ce.ValueChanged += (s, e) => prop.SetValue(category, ce.Color, null);
+                        ce.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, ce.Color, null);
+                            panel.RaisePropertyChanged(ce.Name);
+                        };
                         editor = ce;
                     }
 
@@ -195,12 +248,14 @@ namespace UV7_Edit.Preferences
                     {
                         var txt = new TextBox { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
                         txt.Text = Convert.ToString(prop.GetValue(category, null));
-                        txt.TextChanged += (s, e) =>
+                        txt.TextChanged += (o, e) =>
                         {
                             try
                             {
                                 var converted = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromString(txt.Text);
                                 prop.SetValue(category, converted, null);
+
+                                panel.RaisePropertyChanged(txt.Name);
                             }
                             catch { }
                         };
@@ -215,16 +270,18 @@ namespace UV7_Edit.Preferences
                             continue;
                         Array enumValues = Enum.GetValues(enumType);
 
-                        ComboBox cb = new ComboBox { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right, DropDownStyle = ComboBoxStyle.DropDownList };
+                        ComboBox cb = new ComboBox { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right, DropDownStyle = ComboBoxStyle.DropDownList, FlatStyle = FlatStyle.System };
                         foreach (object value in enumValues)
                         {
                             cb.Items.Add(value);
                         }
                         cb.SelectedItem = enumValue;
                         
-                        cb.SelectedValueChanged += (s, e) => {
+                        cb.SelectedValueChanged += (o, e) => {
                             object value = Enum.Parse(enumType, cb.SelectedItem.ToString());
                             prop.SetValue(category, cb.SelectedItem, null);
+
+                            panel.RaisePropertyChanged(cb.Name);
                         };
                         editor = cb;
                     }
@@ -233,6 +290,7 @@ namespace UV7_Edit.Preferences
                     {
                         var txt = new Label { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right, TextAlign = ContentAlignment.MiddleLeft };
                         txt.Text = Convert.ToString(prop.GetValue(category, null));
+                        //txt.TextChanged += (o, e) => { panel.RaisePropertyChanged(txt.Name); };
                         editor = txt;
                     }
 
@@ -282,7 +340,7 @@ namespace UV7_Edit.Preferences
                 }
                 else if (c is ComboBox cm)
                 {
-                    return cm.SelectedIndex;
+                    return cm.SelectedItem;
                 }
                 else if (c is TextBox tb)
                 {

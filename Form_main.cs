@@ -12,7 +12,6 @@ namespace UV7_Edit
     public partial class Form_main : Form, CancelClosing
     {
         private bool cancelClosing = false;
-        PrefManager<Config> prefManager = new PrefManager<Config>();
         
         public Form_main()
         {
@@ -50,19 +49,18 @@ namespace UV7_Edit
 
         private void LoadConfig()
         {
+            this.WindowState = Pref.Prefs.Window.WindowState;
+            this.Location = Pref.Prefs.Window.Location;
+            this.TopMost = Pref.Prefs.Window.TopMost;
 
-            prefManager.Load();
-            this.TopMost = prefManager.Prefs.Window.TopMost;
-            this.WindowState = prefManager.Prefs.Window.WindowState;
-            this.Location = prefManager.Prefs.Window.Location;
         }
 
         private void SaveConfig()
         {
-            prefManager.Prefs.Window.TopMost = this.TopMost;
-            prefManager.Prefs.Window.WindowState = this.WindowState;
-            prefManager.Prefs.Window.Location = this.Location;
-            prefManager.Save();
+            Pref.Prefs.Window.TopMost = this.TopMost;
+            Pref.Prefs.Window.WindowState = this.WindowState;
+            Pref.Prefs.Window.Location = this.Location;
+            Pref.Save();
         }
 
         private void changeLanguage(string language)
