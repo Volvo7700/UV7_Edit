@@ -70,6 +70,25 @@ namespace UV7_Edit.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Do you really want to reset all preferences to defaults?
+        ///This requires an immediate program restart. ähnelt.
+        /// </summary>
+        internal static string ResetPrefsText {
+            get {
+                return ResourceManager.GetString("ResetPrefsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Reset Preferences ähnelt.
+        /// </summary>
+        internal static string ResetPrefsTitle {
+            get {
+                return ResourceManager.GetString("ResetPrefsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Do you want to save changes made to {0}? ähnelt.
         /// </summary>
         internal static string UnsavedChangesText {

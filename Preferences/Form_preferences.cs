@@ -51,7 +51,6 @@ namespace UV7_Edit.Preferences
                         Visible = false,
                         AutoScroll = true
                     };
-                    catPanel.PropertyChanged += (op, ep) => OnPropertyChanged(op, ep);
 
                     // Controls dynamisch erzeugen
                     PrefsUIBuilder.BuildUI(catPanel, catObj);
@@ -93,22 +92,16 @@ namespace UV7_Edit.Preferences
             Pref.Save();
         }
 
-        private void button_ok_Click(object sender, EventArgs e)
+        private void Ok(object sender, EventArgs e)
         {
             SaveConfig();
             this.Close();
         }
 
-        private void button_cancel_Click(object sender, EventArgs e)
+        private void Cancel(object sender, EventArgs e)
         {
             Pref.Prefs = originalPrefs;
             this.Close();
-        }
-
-        private void button_apply_Click(object sender, EventArgs e)
-        {
-            SaveConfig();
-            button_apply.Enabled = false;
         }
 
         private void treeListView_categories_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -134,9 +127,20 @@ namespace UV7_Edit.Preferences
             }
         }
 
-        protected internal void OnPropertyChanged(object sender, EventArgs e)
+        private void ShowHelp(object sender, EventArgs e)
         {
-            button_apply.Enabled = true;
+            panel_help.Visible = checkBox_help.Checked;
+        }
+
+        private void Reset(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(Resources.Misc.ResetPrefsText, Resources.Misc.ResetPrefsTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                Pref.Prefs = new Config();
+                Pref.Save();
+                Application.Restart();
+            }
         }
     }
 }

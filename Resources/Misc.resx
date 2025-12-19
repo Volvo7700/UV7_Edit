@@ -120,6 +120,13 @@
   <data name="NewDocument" xml:space="preserve">
     <value>New Document</value>
   </data>
+  <data name="ResetPrefsText" xml:space="preserve">
+    <value>Do you really want to reset all preferences to defaults?
+This requires an immediate program restart.</value>
+  </data>
+  <data name="ResetPrefsTitle" xml:space="preserve">
+    <value>Reset Preferences</value>
+  </data>
   <data name="UnsavedChangesText" xml:space="preserve">
     <value>Do you want to save changes made to {0}?</value>
   </data>

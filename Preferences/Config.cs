@@ -22,22 +22,46 @@ namespace UV7_Edit.Preferences
         public ConfigWorkspace Workspace { get; set; } = new ConfigWorkspace();
         public ConfigEditor Editor { get; set; } = new ConfigEditor();
         public ConfigViewer Viewer { get; set; } = new ConfigViewer();
+        public ConfigDocuments Documents { get; set; } = new ConfigDocuments();
+        public ConfigWorkFolder WorkFolder { get; set; } = new ConfigWorkFolder();
 
         [LocalizedCategory("General")]
         public class ConfigGeneral : ConfigElement
         {
             [LocalizedDisplayName("Font")]
             [LocalizedDescription("Font")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             [XmlIgnore]
-            public Font Font { get; set; } = Defaults.FontUI;
-            private SerializableFont SFont => SerializableFont.FromFont(Font);
+            public Font Font { get; set; } = Defaults.FontEditor;
 
+            [Visible(false)]
+            public SerializableFont SFont
+            {
+                get => SerializableFont.FromFont(Font);
+                set
+                {
+                    if (value != null)
+                        Font = new Font(value.FontFamily, value.Size, value.Style, value.GraphicsUnit);
+                }
+            }
+
+            private VisualStyleState visualStyleState = VisualStyleState.ClientAndNonClientAreasEnabled;
             [LocalizedDisplayName("VisualStyleState")]
             [LocalizedDescription("VisualStyleState")]
-            public VisualStyleState VisualStyleState { get; set; } = VisualStyleState.ClientAndNonClientAreasEnabled;
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public VisualStyleState VisualStyleState
+            {
+                get => visualStyleState;
+                set
+                {
+                    visualStyleState = value;
+                    Application.VisualStyleState = value;
+                }
+            }
 
             [LocalizedDisplayName("DesktopCompositing")]
             [LocalizedDescription("DesktopCompositing")]
+            [ApplyTime(ApplyTimeState.AfterRestart)]
             public bool DesktopCompositing { get; set; } = true;
 
             public ConfigLocalization Localization { get; set; } = new ConfigLocalization();
@@ -47,6 +71,7 @@ namespace UV7_Edit.Preferences
             {
                 [LocalizedDisplayName("Language")]
                 [LocalizedDescription("Language")]
+                [ApplyTime(ApplyTimeState.OnNextCall)]
                 public string Language { get; set; } = "en-US";
             }
         }
@@ -56,20 +81,21 @@ namespace UV7_Edit.Preferences
         {
             [LocalizedDisplayName("WindowState")]
             [LocalizedDescription("WindowState")]
-            [SettingVisible(false)]
+            [Visible(false)]
             public FormWindowState WindowState { get; set; } = FormWindowState.Normal;
 
             [LocalizedDisplayName("Location")]
             [LocalizedDescription("Location")]
-            [SettingVisible(false)]
+            [Visible(false)]
             public Point Location { get; set; } = Point.Empty;
 
             private bool topMost = false;
             [LocalizedDisplayName("TopMost")]
             [LocalizedDescription("TopMost")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public bool TopMost
             {
-                get { return topMost; }
+                get => topMost;
                 set 
                 {
                     topMost = value;
@@ -89,48 +115,145 @@ namespace UV7_Edit.Preferences
             [ApplyTime(ApplyTimeState.AfterRestart)]
             public bool ShowStartScreen { get; set; } = true;
 
+            private Color backColor = SystemColors.Window;
             [LocalizedDisplayName("BackColor")]
             [LocalizedDescription("BackColor")]
-            public Color BackColor { get; set; } = SystemColors.Control;
+            [ApplyTime(ApplyTimeState.Immediate)]
+            [XmlIgnore]
+            public Color BackColor
+            {
+                get => backColor;
+                set
+                {
+                    backColor = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (MdiClient c in f.Controls.OfType<MdiClient>())
+                        {
+                            c.BackColor = value;
+                        }
+                    }
+                    foreach (Form_start f in Application.OpenForms.OfType<Form_start>())
+                    {
+                        f.BackColor = value;
+                    }
+                }
+            }
+            [Visible(false)]
+            public string SBackColor
+            {
+                get => ColorTranslator.ToHtml(BackColor);
+                set { BackColor = ColorTranslator.FromHtml(value); }
+            }
 
             [LocalizedDisplayName("BackImage")]
             [LocalizedDescription("BackImage")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public Image BackImage { get; set; } = null;
 
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public ImageLayout BackImageLayout { get; set; } = ImageLayout.Zoom;
 
+            private bool showSidebar = true;
             [LocalizedDisplayName("ShowSidebar")]
             [LocalizedDescription("ShowSidebar")]
-            public bool ShowSidebar { get; set; } = true;
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowSidebar
+            {
+                get => showSidebar;
+                set
+                {
+                    showSidebar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
+                        {
+                            d.Visible = value;
+                        }
+                    }
+                }
+            }
 
+            private bool showStatusbar = true;
             [LocalizedDisplayName("ShowStatusbar")]
             [LocalizedDescription("ShowStatusbar")]
-            public bool ShowStatusbar { get; set; } = true;
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowStatusbar
+            {
+                get => showStatusbar;
+                set
+                {
+                    showStatusbar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (StatusBar s in f.Controls.OfType<StatusBar>())
+                        {
+                            s.Visible = value;
+                        }
+                    }
+                }
+            }
 
         }
 
         [LocalizedCategory("Editor")]
         public class ConfigEditor : ConfigElement
         {
+            private Color backColor = SystemColors.Window;
             [LocalizedDisplayName("BackColor")]
             [LocalizedDescription("BackColor")]
-            public Color BackColor { get; set; } = SystemColors.Window;
+            [ApplyTime(ApplyTimeState.Immediate)]
+            [XmlIgnore]
+            public Color BackColor
+            {
+                get => backColor;
+                set
+                {
+                    backColor = value;
+                    foreach (Form_edit f in Application.OpenForms.OfType<Form_edit>())
+                    {
+                        foreach (TextBox t in f.Controls)
+                        {
+                            t.BackColor = Pref.Prefs.Editor.BackColor;
+                        }
+                    }
+                }
+            }
+            [Visible(false)]
+            public string SBackColor
+            {
+                get => ColorTranslator.ToHtml(BackColor);
+                set { BackColor = ColorTranslator.FromHtml(value); }
+            }
 
             [LocalizedDisplayName("BackImage")]
             [LocalizedDescription("BackImage")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public Image BackImage { get; set; } = null;
 
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public ImageLayout BackImageLayout { get; set; } = ImageLayout.Zoom;
 
             [LocalizedDisplayName("Font")]
             [LocalizedDescription("Font")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             [XmlIgnore]
             public Font Font { get; set; } = Defaults.FontEditor;
-            private SerializableFont SFont => SerializableFont.FromFont(Font);
+
+            [Visible(false)]
+            public SerializableFont SFont
+            { 
+                get => SerializableFont.FromFont(Font); 
+                set 
+                { 
+                    if (value != null)
+                        Font = new Font(value.FontFamily, value.Size, value.Style, value.GraphicsUnit); 
+                }
+            }
         }
 
         [LocalizedCategory("Viewer")]
@@ -138,15 +261,53 @@ namespace UV7_Edit.Preferences
         {
             [LocalizedDisplayName("BackColor")]
             [LocalizedDescription("BackColor")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            [XmlIgnore]
             public Color BackColor { get; set; } = SystemColors.Window;
+            [Visible(false)]
+            public string SBackColor
+            {
+                get => ColorTranslator.ToHtml(BackColor);
+                set { BackColor = ColorTranslator.FromHtml(value); }
+            }
 
             [LocalizedDisplayName("BackImage")]
             [LocalizedDescription("BackImage")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public Image BackImage { get; set; } = null;
 
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]
+            [ApplyTime(ApplyTimeState.Immediate)]
             public ImageLayout BackImageLayout { get; set; } = ImageLayout.Zoom;
+        }
+
+        public class ConfigDocuments
+        {
+
+        }
+
+        public class ConfigWorkFolder
+        {
+            private string path = Application.StartupPath;
+            public string Path
+            {
+                get
+                {
+                    return path;
+                }
+                set
+                {
+                    path = value;
+                    foreach(Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
+                        {
+                            d.Path = value;
+                        }
+                    }
+                }
+            }
         }
     }
 

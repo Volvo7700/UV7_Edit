@@ -16,7 +16,7 @@ namespace UV7_Edit.Preferences
             int y = 10;
             int x = 170;
             int w = panel.Width - x - 20;
-            int p = 20;
+            int p = 25;
             
             
             var catAttr = category.GetType().GetCustomAttribute<LocalizedCategoryAttribute>();
@@ -29,8 +29,8 @@ namespace UV7_Edit.Preferences
 
                 foreach (var prop in props)
                 {
-                    SettingVisibleAttribute visibleAttr = prop.GetCustomAttributes(typeof(SettingVisibleAttribute), true)
-                        .Cast<SettingVisibleAttribute>()
+                    VisibleAttribute visibleAttr = prop.GetCustomAttributes(typeof(VisibleAttribute), true)
+                        .Cast<VisibleAttribute>()
                         .FirstOrDefault();
                     if (visibleAttr != null)
                     {
@@ -60,6 +60,32 @@ namespace UV7_Edit.Preferences
                         Top = y + 3,
                         Width = 150
                     };
+
+                    ApplyTimeState? applyTime = prop.GetCustomAttributes(typeof(ApplyTimeAttribute), true)
+                        .Cast<ApplyTimeAttribute>()
+                        .FirstOrDefault()?.ApplyTime;
+
+                    if (applyTime != null)
+                    {
+                        PictureBox pb_applyIcon = new PictureBox() { Left = panel.Width - 20, Top = y + 1, Width = 20, Height = 20, Anchor = AnchorStyles.Top | AnchorStyles.Right, SizeMode = PictureBoxSizeMode.Normal };
+                        switch (applyTime)
+                        {
+                            case ApplyTimeState.Immediate:
+                                pb_applyIcon.Image = Properties.Resources.state_green;
+                                break;
+                            case ApplyTimeState.OnNextCall:
+                                pb_applyIcon.Image = Properties.Resources.state_yellow;
+                                break;
+                            case ApplyTimeState.AfterRestart:
+                                pb_applyIcon.Image = Properties.Resources.state_orange;
+                                break;
+                            case ApplyTimeState.RestartRequired:
+                                pb_applyIcon.Image = Properties.Resources.state_red;
+                                break;
+                        }
+                        panel.Controls.Add(pb_applyIcon);
+                    }
+
                     Control editor;
 
                     if (prop.PropertyType == typeof(bool))

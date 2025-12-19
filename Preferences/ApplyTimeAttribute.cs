@@ -10,6 +10,7 @@ namespace UV7_Edit.Preferences
         Immediate,
         OnNextCall,
         AfterRestart,
+        RestartRequired
     }
     
     public class ApplyTimeAttribute : Attribute

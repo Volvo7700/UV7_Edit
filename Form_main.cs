@@ -38,8 +38,6 @@ namespace UV7_Edit
             watcher.Path = Application.StartupPath;
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
-
-            ShowStartForm();
         }
 
         private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
@@ -49,10 +47,19 @@ namespace UV7_Edit
 
         private void LoadConfig()
         {
+            // Window
             this.WindowState = Pref.Prefs.Window.WindowState;
             this.Location = Pref.Prefs.Window.Location;
             this.TopMost = Pref.Prefs.Window.TopMost;
-
+            // Workspace
+            if (Pref.Prefs.Workspace.ShowStartScreen)
+                ShowStartForm();
+            foreach (MdiClient m in this.Controls.OfType<MdiClient>())
+            {
+                m.BackColor = Pref.Prefs.Workspace.BackColor;
+            }
+            // WorkFolder
+            dirPanel.Path = Pref.Prefs.WorkFolder.Path;
         }
 
         private void SaveConfig()
@@ -281,6 +288,7 @@ namespace UV7_Edit
                 Form_start fs = new Form_start();
                 fs.MdiParent = this;
                 fs.WindowState = FormWindowState.Maximized;
+                fs.BackColor = Pref.Prefs.Workspace.BackColor;
                 fs.Show();
             }
         }

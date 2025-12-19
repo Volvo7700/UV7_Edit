@@ -19,7 +19,7 @@ namespace UV7_Edit.Preferences
         {
             Prefs = new T();
 #if DEBUG
-            if (!Load())
+            if (!LoadFile())
                 MessageBox.Show("Config load error");
 #endif
         }
@@ -28,7 +28,7 @@ namespace UV7_Edit.Preferences
         /// Loads the config from file. Returns true if successful, false if not.
         /// </summary>
         /// <returns></returns>
-        public bool Load()
+        public bool LoadFile()
         {
             if (File.Exists(configPath))
             {
@@ -50,10 +50,20 @@ namespace UV7_Edit.Preferences
             return false;
         }
 
+        public void LoadDefaults()
+        {
+            Prefs = new T();
+        }
+
+        public void LoadObject(T config)
+        {
+            Prefs = config;
+        }
+
         /// <summary>
         /// Save the config to file.
         /// </summary>
-        public void Save()
+        public void SaveFile()
         {
             try
             {
@@ -64,14 +74,6 @@ namespace UV7_Edit.Preferences
                 }
             }
             catch { }
-        }
-
-        private string GetCategory(PropertyInfo prop)
-        {
-            var cat = prop.GetCustomAttributes(true)
-                          .OfType<LocalizedCategoryAttribute>()
-                          .FirstOrDefault()?.Category;
-            return cat ?? "General";
         }
     }
 }

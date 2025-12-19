@@ -31,7 +31,7 @@ namespace UV7_Edit
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_toolBar = new System.Windows.Forms.Panel();
             this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.mi_file = new System.Windows.Forms.MenuItem();
             this.mi_new = new System.Windows.Forms.MenuItem();
@@ -94,10 +94,10 @@ namespace UV7_Edit
             this.dirPanel = new UV7_Edit.DirPanel();
             this.SuspendLayout();
             // 
-            // panel3
+            // panel_toolBar
             // 
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
+            resources.ApplyResources(this.panel_toolBar, "panel_toolBar");
+            this.panel_toolBar.Name = "panel_toolBar";
             // 
             // mainMenu
             // 
@@ -490,7 +490,7 @@ namespace UV7_Edit
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dirPanel);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel_toolBar);
             this.Controls.Add(this.statusBar);
             this.IsMdiContainer = true;
             this.Menu = this.mainMenu;
@@ -503,7 +503,7 @@ namespace UV7_Edit
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_toolBar;
         private System.Windows.Forms.MainMenu mainMenu;
         private System.Windows.Forms.MenuItem mi_file;
         private System.Windows.Forms.MenuItem mi_new;

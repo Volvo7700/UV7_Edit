@@ -109,10 +109,10 @@ namespace UV7_Edit.Preferences
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SettingVisibleAttribute : Attribute
+    public class VisibleAttribute : Attribute
     {
         public bool Visible { get; }
-        public SettingVisibleAttribute(bool visible = true)
+        public VisibleAttribute(bool visible = true)
         {
             Visible = visible;
         }

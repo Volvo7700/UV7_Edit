@@ -120,6 +120,13 @@
   <data name="NewDocument" xml:space="preserve">
     <value>Neues Dokument</value>
   </data>
+  <data name="ResetPrefsText" xml:space="preserve">
+    <value>Sollen wirklich alle Einstellungen auf Standardwerte zurückgesetzt werden?
+Dies erfordert einen sofortigen Programmneustart.</value>
+  </data>
+  <data name="ResetPrefsTitle" xml:space="preserve">
+    <value>Einstellungen zurücksetzen</value>
+  </data>
   <data name="UnsavedChangesText" xml:space="preserve">
     <value>Sollen die Änderungen an {0} gespeichert werden?</value>
   </data>

@@ -16,18 +16,28 @@ namespace UV7_Edit.Preferences
             }
             set
             {
-
+                
             }
         }
 
         public static void Load()
         {
-            prefManager.Load();
+            prefManager.LoadFile();
         }
 
         public static void Save()
         {
-            prefManager.Save();
+            prefManager.SaveFile();
+        }
+
+        public static void Reset()
+        {
+            prefManager.LoadDefaults();
+        }
+
+        public static void Override(Config prefs)
+        {
+            prefManager.LoadObject(prefs);
         }
     }
 }

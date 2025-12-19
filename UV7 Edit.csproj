@@ -356,5 +356,17 @@
   <ItemGroup>
     <None Include="icon\folder16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\state_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\state_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\state_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\state_orange.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

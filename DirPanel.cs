@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace UV7_Edit
 {
     public partial class DirPanel : UV7_Edit.SidePanel
     {
+        private string path = Application.StartupPath;
+        public string Path
+        {
+            get => path;
+            set
+            {
+                path = value;
+                UpdateData();
+            }
+        }
+
         public DirPanel()
         {
             InitializeComponent();
@@ -22,7 +28,7 @@ namespace UV7_Edit
 
             this.treeListView.ChildrenGetter = delegate (object x) {
                 DirectoryInfo dir = (DirectoryInfo)x;
-                var temp = dir.GetFileSystemInfos();
+                // Hier deemnächst Fehlerbehandlung einfügen, z.B: Zugriffsfehler vermeiden, restliche Dateien aber einlesen
                 return new ArrayList(dir.GetFileSystemInfos());
             };
 
@@ -34,7 +40,7 @@ namespace UV7_Edit
         public void UpdateData()
         {
             //this.treeListView.Clear();
-            this.treeListView.SetObjects(new FileSystemInfo[] { new DirectoryInfo(Application.StartupPath) });
+            this.treeListView.SetObjects(new FileSystemInfo[] { new DirectoryInfo(Path) });
             this.treeListView.ExpandAll();
             this.treeListView.SmallImageList = fileIcons;
             this.olvc_name.ImageGetter = delegate (object row)
