@@ -97,11 +97,29 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Sidebar ähnelt.
+        /// </summary>
+        internal static string ShowSidebar {
+            get {
+                return ResourceManager.GetString("ShowSidebar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show Start Screen ähnelt.
         /// </summary>
         internal static string ShowStartScreen {
             get {
                 return ResourceManager.GetString("ShowStartScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Statusbar ähnelt.
+        /// </summary>
+        internal static string ShowStatusbar {
+            get {
+                return ResourceManager.GetString("ShowStatusbar", resourceCulture);
             }
         }
         
@@ -120,15 +138,6 @@ namespace UV7_Edit.Resources.Prefs {
         internal static string VisualStyleState {
             get {
                 return ResourceManager.GetString("VisualStyleState", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Window State ähnelt.
-        /// </summary>
-        internal static string WindowState {
-            get {
-                return ResourceManager.GetString("WindowState", resourceCulture);
             }
         }
     }

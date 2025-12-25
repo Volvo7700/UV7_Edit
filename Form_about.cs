@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace UV7_Edit
 {
-    public partial class Form_about : Form
+    public partial class Form_about : DwmCompositingControllableForm
     {
-        public Form_about()
+        public Form_about() : base()
         {
             InitializeComponent();
             label_version.Text = "Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();

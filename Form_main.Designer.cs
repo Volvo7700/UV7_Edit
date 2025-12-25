@@ -481,6 +481,7 @@ namespace UV7_Edit
             // 
             resources.ApplyResources(this.dirPanel, "dirPanel");
             this.dirPanel.Name = "dirPanel";
+            this.dirPanel.Path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE";
             this.dirPanel.Title = "DirPanel";
             this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
             this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);

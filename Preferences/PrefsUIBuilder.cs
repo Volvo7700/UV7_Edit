@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
@@ -270,6 +271,27 @@ namespace UV7_Edit.Preferences
                         editor = ce;
                     }
 
+                    else if (prop.PropertyType == typeof(ImagePath))
+                    {
+                        ImagePath value;
+                        try
+                        {
+                            // Es gibt Probleme mit der Config und Bildern - werden zwar gespeichert aber bei Schließung von Form_pref passieren komische Dinge
+                            value = (ImagePath)prop.GetValue(category, null);
+                        }
+                        catch
+                        {
+                            value = new ImagePath();
+                        }
+                        var ipe = new ImagePathEditor(value.Path) { Left = x, Top = y, Width = panel.Width - x - p, Height = 21, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
+                        ipe.ValueChanged += (o, e) =>
+                        {
+                            prop.SetValue(category, ipe.ImagePath, null);
+                            panel.RaisePropertyChanged(ipe.Name);
+                        };
+                        editor = ipe;
+                    }
+
                     else if (prop.PropertyType == typeof(string))
                     {
                         var txt = new TextBox { Left = x, Top = y, Width = panel.Width - x - p, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
@@ -364,13 +386,17 @@ namespace UV7_Edit.Preferences
                 {
                     return ce.Color;
                 }
-                else if (c is ComboBox cm)
+                else if (c is ImagePathEditor ipe)
                 {
-                    return cm.SelectedItem;
+                    return ipe.ImagePath;
                 }
                 else if (c is TextBox tb)
                 {
                     return tb.Text;
+                }
+                else if (c is ComboBox cm)
+                {
+                    return cm.SelectedItem;
                 }
                 return null;
             }

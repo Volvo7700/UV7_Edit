@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace UV7_Edit
 {
-    public partial class Form_edit : Form, CancelClosing
+    public partial class Form_edit : DwmCompositingControllableForm, CancelClosing
     {
         private bool cancelClosing = false;
         private Document doc;

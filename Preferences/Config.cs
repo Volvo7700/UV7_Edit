@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -35,7 +36,7 @@ namespace UV7_Edit.Preferences
             public Font Font { get; set; } = Defaults.FontEditor;
 
             [Visible(false)]
-            public SerializableFont SFont
+            public SerializableFont XFont
             {
                 get => SerializableFont.FromFont(Font);
                 set
@@ -140,21 +141,75 @@ namespace UV7_Edit.Preferences
                 }
             }
             [Visible(false)]
-            public string SBackColor
+            public string XBackColor
             {
                 get => ColorTranslator.ToHtml(BackColor);
                 set { BackColor = ColorTranslator.FromHtml(value); }
             }
 
+            [Visible(false)]
+            [XmlIgnore]
+            public Bitmap BackImage
+            {
+                get
+                {
+                    try
+                    {
+                        if (BackImagePath == null)
+                            throw new Exception();
+                        using (var stream = new FileStream(BackImagePath.Path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var tempImage = Image.FromStream(stream))
+                        {
+                            return new Bitmap(tempImage);
+                        }
+                    }
+                    catch
+                    {
+                        return Properties.Resources.background_missing;
+                    }
+                }
+            }
+
+            private ImagePath backImagePath = new ImagePath();
+
             [LocalizedDisplayName("BackImage")]
             [LocalizedDescription("BackImage")]
             [ApplyTime(ApplyTimeState.Immediate)]
-            public Image BackImage { get; set; } = null;
+            public ImagePath BackImagePath
+            {
+                get => backImagePath;
+                set
+                {
+                    backImagePath = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (MdiClient m in f.Controls.OfType<MdiClient>())
+                        {
+                            m.BackgroundImage = BackImage;
+                        }
+                    }
+                }
+            }
 
+            private ImageLayout backImageLayout = ImageLayout.Tile;
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]
             [ApplyTime(ApplyTimeState.Immediate)]
-            public ImageLayout BackImageLayout { get; set; } = ImageLayout.Zoom;
+            public ImageLayout BackImageLayout
+            {
+                get => backImageLayout;
+                set
+                {
+                    backImageLayout = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (MdiClient m in f.Controls.OfType<MdiClient>())
+                        {
+                            m.BackgroundImageLayout = value;
+                        }
+                    }
+                }
+            }
 
             private bool showSidebar = true;
             [LocalizedDisplayName("ShowSidebar")]
@@ -222,7 +277,7 @@ namespace UV7_Edit.Preferences
                 }
             }
             [Visible(false)]
-            public string SBackColor
+            public string XBackColor
             {
                 get => ColorTranslator.ToHtml(BackColor);
                 set { BackColor = ColorTranslator.FromHtml(value); }
@@ -231,7 +286,7 @@ namespace UV7_Edit.Preferences
             [LocalizedDisplayName("BackImage")]
             [LocalizedDescription("BackImage")]
             [ApplyTime(ApplyTimeState.Immediate)]
-            public Image BackImage { get; set; } = null;
+            public Bitmap BackImage { get; set; } = null;
 
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]
@@ -265,7 +320,7 @@ namespace UV7_Edit.Preferences
             [XmlIgnore]
             public Color BackColor { get; set; } = SystemColors.Window;
             [Visible(false)]
-            public string SBackColor
+            public string XBackColor
             {
                 get => ColorTranslator.ToHtml(BackColor);
                 set { BackColor = ColorTranslator.FromHtml(value); }
@@ -274,7 +329,7 @@ namespace UV7_Edit.Preferences
             [LocalizedDisplayName("BackImage")]
             [LocalizedDescription("BackImage")]
             [ApplyTime(ApplyTimeState.Immediate)]
-            public Image BackImage { get; set; } = null;
+            public Bitmap BackImage { get; set; } = null;
 
             [LocalizedDisplayName("BackImageLayout")]
             [LocalizedDescription("BackImageLayout")]

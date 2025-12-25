@@ -129,7 +129,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>589, 414</value>
+    <value>596, 405</value>
   </data>
   <data name="button_cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 24</value>
@@ -166,7 +166,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_reset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 414</value>
+    <value>12, 405</value>
   </data>
   <data name="button_reset.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 24</value>
@@ -196,7 +196,7 @@
     <value>208, 13</value>
   </data>
   <data name="panel_prefs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 391</value>
+    <value>464, 381</value>
   </data>
   <data name="panel_prefs.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -223,7 +223,7 @@
     <value>12, 13</value>
   </data>
   <data name="treeListView_categories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 390</value>
+    <value>190, 381</value>
   </data>
   <data name="treeListView_categories.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -250,7 +250,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>507, 414</value>
+    <value>514, 405</value>
   </data>
   <data name="button_ok.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 24</value>
@@ -273,272 +273,122 @@
   <data name="&gt;&gt;button_ok.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="panel_help.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 176</value>
+  <data name="&gt;&gt;label_helpAvail3.Name" xml:space="preserve">
+    <value>label_helpAvail3</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 32</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Changes to this setting require an immediate program restart</value>
-  </data>
-  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail3.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;pictureBox_helpAvail3.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail3</value>
   </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 176</value>
-  </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail3.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail3.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  <data name="&gt;&gt;label_helpAvailTitle.Name" xml:space="preserve">
+    <value>label_helpAvailTitle</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 19</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 32</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Availability of Preferences Changes</value>
-  </data>
-  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvailTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvailTitle.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvailTitle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label_helpAvail2.Name" xml:space="preserve">
+    <value>label_helpAvail2</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 138</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 32</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Changes to this setting take effect on the next program start</value>
-  </data>
-  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail2.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label_helpAvail1.Name" xml:space="preserve">
+    <value>label_helpAvail1</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 100</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 32</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Changes to this setting can take longer or do not take effect completely</value>
-  </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail1.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label_helpAvail0.Name" xml:space="preserve">
+    <value>label_helpAvail0</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 62</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 32</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Changes to this setting are applied immediately</value>
-  </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail0.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail0.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_helpAvail0.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;pictureBox_helpAvail2.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail2</value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 138</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail2.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail2.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail2.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;pictureBox_helpAvail1.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail1</value>
   </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 100</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail1.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;pictureBox_helpAvail0.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail0</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 62</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail0.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail0.Parent" xml:space="preserve">
     <value>panel_help</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox_helpAvail0.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="panel_help.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 13</value>
   </data>
   <data name="panel_help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 390</value>
+    <value>464, 381</value>
   </data>
   <data name="panel_help.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -558,6 +408,267 @@
   <data name="&gt;&gt;panel_help.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="label_helpAvail3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_helpAvail3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 176</value>
+  </data>
+  <data name="label_helpAvail3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 32</value>
+  </data>
+  <data name="label_helpAvail3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label_helpAvail3.Text" xml:space="preserve">
+    <value>Changes to this setting require an immediate program restart</value>
+  </data>
+  <data name="label_helpAvail3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail3.Name" xml:space="preserve">
+    <value>label_helpAvail3</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail3.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox_helpAvail3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox_helpAvail3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 176</value>
+  </data>
+  <data name="pictureBox_helpAvail3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureBox_helpAvail3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox_helpAvail3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail3.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail3.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_helpAvailTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="label_helpAvailTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_helpAvailTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 19</value>
+  </data>
+  <data name="label_helpAvailTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 32</value>
+  </data>
+  <data name="label_helpAvailTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label_helpAvailTitle.Text" xml:space="preserve">
+    <value>Availability of Preferences Changes</value>
+  </data>
+  <data name="label_helpAvailTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvailTitle.Name" xml:space="preserve">
+    <value>label_helpAvailTitle</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvailTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvailTitle.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvailTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_helpAvail2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_helpAvail2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 138</value>
+  </data>
+  <data name="label_helpAvail2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 32</value>
+  </data>
+  <data name="label_helpAvail2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label_helpAvail2.Text" xml:space="preserve">
+    <value>Changes to this setting take effect on the next program start</value>
+  </data>
+  <data name="label_helpAvail2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail2.Name" xml:space="preserve">
+    <value>label_helpAvail2</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail2.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label_helpAvail1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_helpAvail1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 100</value>
+  </data>
+  <data name="label_helpAvail1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 32</value>
+  </data>
+  <data name="label_helpAvail1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label_helpAvail1.Text" xml:space="preserve">
+    <value>Changes to this setting can take longer or do not take effect completely</value>
+  </data>
+  <data name="label_helpAvail1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail1.Name" xml:space="preserve">
+    <value>label_helpAvail1</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail1.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label_helpAvail0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_helpAvail0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 62</value>
+  </data>
+  <data name="label_helpAvail0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 32</value>
+  </data>
+  <data name="label_helpAvail0.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label_helpAvail0.Text" xml:space="preserve">
+    <value>Changes to this setting are applied immediately</value>
+  </data>
+  <data name="label_helpAvail0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail0.Name" xml:space="preserve">
+    <value>label_helpAvail0</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail0.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;label_helpAvail0.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pictureBox_helpAvail2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox_helpAvail2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 138</value>
+  </data>
+  <data name="pictureBox_helpAvail2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureBox_helpAvail2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox_helpAvail2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail2.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail2.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pictureBox_helpAvail1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox_helpAvail1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 100</value>
+  </data>
+  <data name="pictureBox_helpAvail1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureBox_helpAvail1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox_helpAvail1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail1.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail1.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pictureBox_helpAvail0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox_helpAvail0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 62</value>
+  </data>
+  <data name="pictureBox_helpAvail0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureBox_helpAvail0.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox_helpAvail0.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail0.Name" xml:space="preserve">
+    <value>pictureBox_helpAvail0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail0.Parent" xml:space="preserve">
+    <value>panel_help</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_helpAvail0.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="checkBox_help.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -565,7 +676,7 @@
     <value>Button</value>
   </data>
   <data name="checkBox_help.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 414</value>
+    <value>98, 405</value>
   </data>
   <data name="checkBox_help.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 24</value>
@@ -598,7 +709,10 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>677, 450</value>
+    <value>684, 441</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>700, 480</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

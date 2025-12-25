@@ -129,16 +129,19 @@
   <data name="DesktopCompositing" xml:space="preserve">
     <value>Desktop-Compositing</value>
   </data>
+  <data name="ShowSidebar" xml:space="preserve">
+    <value>Seitenleiste anzeigen</value>
+  </data>
   <data name="ShowStartScreen" xml:space="preserve">
     <value>Startbildschirm anzeigen</value>
+  </data>
+  <data name="ShowStatusbar" xml:space="preserve">
+    <value>Statusleiste anzeigen</value>
   </data>
   <data name="TopMost" xml:space="preserve">
     <value>Als oberstes anzeigen</value>
   </data>
   <data name="VisualStyleState" xml:space="preserve">
     <value>Visueller Stilmodus</value>
-  </data>
-  <data name="WindowState" xml:space="preserve">
-    <value>Fensterzustand</value>
   </data>
 </root>

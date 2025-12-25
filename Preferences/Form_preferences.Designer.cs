@@ -38,22 +38,22 @@ namespace UV7_Edit.Preferences
             this.olvc_category = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.button_ok = new System.Windows.Forms.Button();
             this.panel_help = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_helpAvail3 = new System.Windows.Forms.Label();
+            this.pictureBox_helpAvail3 = new System.Windows.Forms.PictureBox();
+            this.label_helpAvailTitle = new System.Windows.Forms.Label();
+            this.label_helpAvail2 = new System.Windows.Forms.Label();
+            this.label_helpAvail1 = new System.Windows.Forms.Label();
+            this.label_helpAvail0 = new System.Windows.Forms.Label();
+            this.pictureBox_helpAvail2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_helpAvail1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_helpAvail0 = new System.Windows.Forms.PictureBox();
             this.checkBox_help = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.treeListView_categories)).BeginInit();
             this.panel_help.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail0)).BeginInit();
             this.SuspendLayout();
             // 
             // button_cancel
@@ -114,70 +114,70 @@ namespace UV7_Edit.Preferences
             // 
             // panel_help
             // 
-            this.panel_help.Controls.Add(this.label5);
-            this.panel_help.Controls.Add(this.pictureBox4);
-            this.panel_help.Controls.Add(this.label4);
-            this.panel_help.Controls.Add(this.label3);
-            this.panel_help.Controls.Add(this.label2);
-            this.panel_help.Controls.Add(this.label1);
-            this.panel_help.Controls.Add(this.pictureBox3);
-            this.panel_help.Controls.Add(this.pictureBox2);
-            this.panel_help.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.panel_help, "panel_help");
+            this.panel_help.Controls.Add(this.label_helpAvail3);
+            this.panel_help.Controls.Add(this.pictureBox_helpAvail3);
+            this.panel_help.Controls.Add(this.label_helpAvailTitle);
+            this.panel_help.Controls.Add(this.label_helpAvail2);
+            this.panel_help.Controls.Add(this.label_helpAvail1);
+            this.panel_help.Controls.Add(this.label_helpAvail0);
+            this.panel_help.Controls.Add(this.pictureBox_helpAvail2);
+            this.panel_help.Controls.Add(this.pictureBox_helpAvail1);
+            this.panel_help.Controls.Add(this.pictureBox_helpAvail0);
             this.panel_help.Name = "panel_help";
             // 
-            // label5
+            // label_helpAvail3
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.label_helpAvail3, "label_helpAvail3");
+            this.label_helpAvail3.Name = "label_helpAvail3";
             // 
-            // pictureBox4
+            // pictureBox_helpAvail3
             // 
-            this.pictureBox4.Image = global::UV7_Edit.Properties.Resources.state_red;
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
+            this.pictureBox_helpAvail3.Image = global::UV7_Edit.Properties.Resources.state_red;
+            resources.ApplyResources(this.pictureBox_helpAvail3, "pictureBox_helpAvail3");
+            this.pictureBox_helpAvail3.Name = "pictureBox_helpAvail3";
+            this.pictureBox_helpAvail3.TabStop = false;
             // 
-            // label4
+            // label_helpAvailTitle
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.label_helpAvailTitle, "label_helpAvailTitle");
+            this.label_helpAvailTitle.Name = "label_helpAvailTitle";
             // 
-            // label3
+            // label_helpAvail2
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.label_helpAvail2, "label_helpAvail2");
+            this.label_helpAvail2.Name = "label_helpAvail2";
             // 
-            // label2
+            // label_helpAvail1
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.label_helpAvail1, "label_helpAvail1");
+            this.label_helpAvail1.Name = "label_helpAvail1";
             // 
-            // label1
+            // label_helpAvail0
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.label_helpAvail0, "label_helpAvail0");
+            this.label_helpAvail0.Name = "label_helpAvail0";
             // 
-            // pictureBox3
+            // pictureBox_helpAvail2
             // 
-            this.pictureBox3.Image = global::UV7_Edit.Properties.Resources.state_orange;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            this.pictureBox_helpAvail2.Image = global::UV7_Edit.Properties.Resources.state_orange;
+            resources.ApplyResources(this.pictureBox_helpAvail2, "pictureBox_helpAvail2");
+            this.pictureBox_helpAvail2.Name = "pictureBox_helpAvail2";
+            this.pictureBox_helpAvail2.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBox_helpAvail1
             // 
-            this.pictureBox2.Image = global::UV7_Edit.Properties.Resources.state_yellow;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.pictureBox_helpAvail1.Image = global::UV7_Edit.Properties.Resources.state_yellow;
+            resources.ApplyResources(this.pictureBox_helpAvail1, "pictureBox_helpAvail1");
+            this.pictureBox_helpAvail1.Name = "pictureBox_helpAvail1";
+            this.pictureBox_helpAvail1.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBox_helpAvail0
             // 
-            this.pictureBox1.Image = global::UV7_Edit.Properties.Resources.state_green;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_helpAvail0.Image = global::UV7_Edit.Properties.Resources.state_green;
+            resources.ApplyResources(this.pictureBox_helpAvail0, "pictureBox_helpAvail0");
+            this.pictureBox_helpAvail0.Name = "pictureBox_helpAvail0";
+            this.pictureBox_helpAvail0.TabStop = false;
             // 
             // checkBox_help
             // 
@@ -207,10 +207,10 @@ namespace UV7_Edit.Preferences
             this.Load += new System.EventHandler(this.Form_preferences_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeListView_categories)).EndInit();
             this.panel_help.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helpAvail0)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,15 +223,15 @@ namespace UV7_Edit.Preferences
         private BrightIdeasSoftware.TreeListView treeListView_categories;
         private System.Windows.Forms.Button button_ok;
         private System.Windows.Forms.Panel panel_help;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label_helpAvail2;
+        private System.Windows.Forms.Label label_helpAvail1;
+        private System.Windows.Forms.Label label_helpAvail0;
+        private System.Windows.Forms.PictureBox pictureBox_helpAvail2;
+        private System.Windows.Forms.PictureBox pictureBox_helpAvail1;
+        private System.Windows.Forms.PictureBox pictureBox_helpAvail0;
+        private System.Windows.Forms.Label label_helpAvailTitle;
+        private System.Windows.Forms.Label label_helpAvail3;
+        private System.Windows.Forms.PictureBox pictureBox_helpAvail3;
         private System.Windows.Forms.CheckBox checkBox_help;
     }
 }

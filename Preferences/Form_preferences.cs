@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace UV7_Edit.Preferences
 {
-    public partial class Form_preferences : Form
+    public partial class Form_preferences : DwmCompositingControllableForm
     {
         private readonly Dictionary<string, Panel> categoryPanels = new Dictionary<string, Panel>();
         private readonly Dictionary<string, object> categoryObjects = new Dictionary<string, object>();

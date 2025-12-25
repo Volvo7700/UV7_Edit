@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
 
@@ -39,6 +40,10 @@ namespace UV7_Edit
 
         public void UpdateData()
         {
+            bool designMode = (LicenseManager.UsageMode == LicenseUsageMode.Designtime);
+            if (designMode)
+                return;
+
             //this.treeListView.Clear();
             this.treeListView.SetObjects(new FileSystemInfo[] { new DirectoryInfo(Path) });
             this.treeListView.ExpandAll();

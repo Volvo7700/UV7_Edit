@@ -4,12 +4,13 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UV7_Edit.Preferences;
 
 namespace UV7_Edit
 {
-    public partial class Form_main : Form, CancelClosing
+    public partial class Form_main : DwmCompositingControllableForm, CancelClosing
     {
         private bool cancelClosing = false;
         
@@ -17,7 +18,7 @@ namespace UV7_Edit
         {
             InitializeComponent();
             LoadConfig();
-            
+
             Version ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
 
@@ -57,7 +58,13 @@ namespace UV7_Edit
             foreach (MdiClient m in this.Controls.OfType<MdiClient>())
             {
                 m.BackColor = Pref.Prefs.Workspace.BackColor;
+                m.BackgroundImage = Pref.Prefs.Workspace.BackImage;
             }
+            dirPanel.Visible = Pref.Prefs.Workspace.ShowSidebar;
+            mi_showSidebar.Checked = Pref.Prefs.Workspace.ShowSidebar;
+            statusBar.Visible = Pref.Prefs.Workspace.ShowStatusbar;
+            mi_showStatusbar.Checked = Pref.Prefs.Workspace.ShowStatusbar;
+
             // WorkFolder
             dirPanel.Path = Pref.Prefs.WorkFolder.Path;
         }
@@ -216,7 +223,8 @@ namespace UV7_Edit
         private void ViewShowSidebar(object sender, EventArgs e)
         {
             mi_showSidebar.Checked = !mi_showSidebar.Checked;
-            dirPanel.Visible = mi_showSidebar.Checked;
+            Pref.Prefs.Workspace.ShowSidebar = mi_showSidebar.Checked;
+            //dirPanel.Visible = mi_showSidebar.Checked;
         }
 
         private void dirPanel_VisibleChanged(object sender, EventArgs e)
@@ -227,7 +235,8 @@ namespace UV7_Edit
         private void ViewShowStatusbar(object sender, EventArgs e)
         {
             mi_showStatusbar.Checked = !mi_showStatusbar.Checked;
-            statusBar.Visible = mi_showStatusbar.Checked;
+            Pref.Prefs.Workspace.ShowStatusbar = mi_showStatusbar.Checked;
+            //statusBar.Visible = mi_showStatusbar.Checked;
         }
         #endregion View
 

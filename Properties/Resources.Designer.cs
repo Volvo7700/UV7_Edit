@@ -63,6 +63,16 @@ namespace UV7_Edit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_missing {
+            get {
+                object obj = ResourceManager.GetObject("background_missing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap branding {
             get {
                 object obj = ResourceManager.GetObject("branding", resourceCulture);

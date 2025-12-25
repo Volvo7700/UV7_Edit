@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace UV7_Edit
 {
-    public partial class Form_start : Form
+    public partial class Form_start : DwmCompositingControllableForm
     {
         public Form_start()
         {

@@ -58,6 +58,9 @@
     </Compile>
     <Compile Include="CancelClosing.cs" />
     <Compile Include="ClosingCanceller.cs" />
+    <Compile Include="DwmCompositingControllableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Preferences\ApplyTimeAttribute.cs" />
     <Compile Include="Preferences\ColorEditor.cs">
       <SubType>UserControl</SubType>
@@ -77,6 +80,13 @@
     </Compile>
     <Compile Include="Preferences\Form_devPrefs.Designer.cs">
       <DependentUpon>Form_devPrefs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences\ImagePath.cs" />
+    <Compile Include="Preferences\ImagePathEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Preferences\ImagePathEditor.Designer.cs">
+      <DependentUpon>ImagePathEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Preferences\Node.cs" />
     <Compile Include="Preferences\PointEditor.cs">
@@ -229,6 +239,9 @@
     <EmbeddedResource Include="Preferences\Form_preferences.de.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Preferences\ImagePathEditor.resx">
+      <DependentUpon>ImagePathEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Preferences\PointEditor.resx">
       <DependentUpon>PointEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,6 +380,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon\state_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\background_missing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
