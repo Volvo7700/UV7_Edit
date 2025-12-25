@@ -90,6 +90,11 @@ namespace UV7_Edit.Preferences
             [Visible(false)]
             public Point Location { get; set; } = Point.Empty;
 
+            [LocalizedDisplayName("Size")]
+            [LocalizedDescription("Size")]
+            [Visible(false)]
+            public Size Size { get; set; } = new Size(800, 500);
+
             private bool topMost = false;
             [LocalizedDisplayName("TopMost")]
             [LocalizedDescription("TopMost")]
@@ -269,7 +274,7 @@ namespace UV7_Edit.Preferences
                     backColor = value;
                     foreach (Form_edit f in Application.OpenForms.OfType<Form_edit>())
                     {
-                        foreach (TextBox t in f.Controls)
+                        foreach (TextBox t in f.Controls.OfType<TextBox>())
                         {
                             t.BackColor = Pref.Prefs.Editor.BackColor;
                         }
@@ -300,7 +305,7 @@ namespace UV7_Edit.Preferences
             public Font Font { get; set; } = Defaults.FontEditor;
 
             [Visible(false)]
-            public SerializableFont SFont
+            public SerializableFont XFont
             { 
                 get => SerializableFont.FromFont(Font); 
                 set 
@@ -314,11 +319,26 @@ namespace UV7_Edit.Preferences
         [LocalizedCategory("Viewer")]
         public class ConfigViewer : ConfigElement
         {
+            private Color backColor = SystemColors.Window;
             [LocalizedDisplayName("BackColor")]
             [LocalizedDescription("BackColor")]
             [ApplyTime(ApplyTimeState.Immediate)]
             [XmlIgnore]
-            public Color BackColor { get; set; } = SystemColors.Window;
+            public Color BackColor
+            {
+                get => backColor;
+                set
+                {
+                    backColor = value;
+                    foreach (Form_edit f in Application.OpenForms.OfType<Form_edit>())
+                    {
+                        foreach (TextBox t in f.Controls.OfType<TextBox>())
+                        {
+                            t.BackColor = Pref.Prefs.Editor.BackColor;
+                        }
+                    }
+                }
+            }
             [Visible(false)]
             public string XBackColor
             {

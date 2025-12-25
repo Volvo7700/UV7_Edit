@@ -126,7 +126,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel_toolBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 43</value>
+    <value>784, 43</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel_toolBar.TabIndex" type="System.Int32, mscorlib">
@@ -433,10 +433,10 @@
     <value>NoControl</value>
   </data>
   <data name="statusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 339</value>
+    <value>0, 418</value>
   </data>
   <data name="statusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 22</value>
+    <value>784, 22</value>
   </data>
   <data name="statusBar.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -475,7 +475,7 @@
     <value>0, 43</value>
   </data>
   <data name="dirPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 296</value>
+    <value>199, 375</value>
   </data>
   <data name="dirPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -484,7 +484,7 @@
     <value>dirPanel</value>
   </data>
   <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
-    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9488.25057, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9491.539, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -499,7 +499,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>884, 361</value>
+    <value>784, 440</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>600, 400</value>
@@ -862,6 +862,6 @@
     <value>Form_main</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9488.25057, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9491.539, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

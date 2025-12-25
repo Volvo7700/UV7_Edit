@@ -38,7 +38,32 @@ namespace UV7_Edit
             Doc = new Document(file);
             Doc.ContentChanged += ContentChanged;
             Doc.SavedChanged += SavedChanged;
+
+            // MDI Optimization
+            this.DoubleBuffered = true;
+            this.SetStyle(
+                ControlStyles.AllPaintingInWmPaint |
+                ControlStyles.UserPaint |
+                ControlStyles.OptimizedDoubleBuffer,
+                true);
+
+            this.UpdateStyles();
         }
+
+        // MDI Optimization
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            
+        }
+
+        //// MDI Optimization
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+        //    Rectangle clip = e.ClipRectangle;
+
+        //    // Nur sichtbaren Bereich zeichnen
+        //    DrawContent(e.Graphics, clip);
+        //}
 
         private void ContentChanged(object sender, EventArgs e)
         {

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UV7_Edit.Preferences;
@@ -39,6 +40,25 @@ namespace UV7_Edit
             watcher.Path = Application.StartupPath;
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
+
+            // MDI Optimization
+            var mdiClient = this.Controls.OfType<MdiClient>().First();
+
+            typeof(Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance)
+                .SetValue(mdiClient, true, null);
+
+            //mdiClient.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
+        }
+
+        // MDI Optimization
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000; // WS_EX_COMPOSITED
+                return cp;
+            }
         }
 
         private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
@@ -51,6 +71,7 @@ namespace UV7_Edit
             // Window
             this.WindowState = Pref.Prefs.Window.WindowState;
             this.Location = Pref.Prefs.Window.Location;
+            this.Size = Pref.Prefs.Window.Size;
             this.TopMost = Pref.Prefs.Window.TopMost;
             // Workspace
             if (Pref.Prefs.Workspace.ShowStartScreen)
@@ -71,9 +92,10 @@ namespace UV7_Edit
 
         private void SaveConfig()
         {
-            Pref.Prefs.Window.TopMost = this.TopMost;
             Pref.Prefs.Window.WindowState = this.WindowState;
             Pref.Prefs.Window.Location = this.Location;
+            Pref.Prefs.Window.Size = this.Size;
+            Pref.Prefs.Window.TopMost = this.TopMost;
             Pref.Save();
         }
 
