@@ -69,6 +69,7 @@
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Preferences\Defaults.cs" />
+    <Compile Include="Preferences\DocumentViewMode.cs" />
     <Compile Include="Preferences\FontEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>

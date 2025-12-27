@@ -21,6 +21,7 @@ namespace UV7_Edit.Preferences
         public ConfigGeneral General { get; set; } = new ConfigGeneral();
         public ConfigWindow Window { get; set; } = new ConfigWindow();
         public ConfigWorkspace Workspace { get; set; } = new ConfigWorkspace();
+        public ConfigDocumentWindow DocumentWindow { get; set; } = new ConfigDocumentWindow();
         public ConfigEditor Editor { get; set; } = new ConfigEditor();
         public ConfigViewer Viewer { get; set; } = new ConfigViewer();
         public ConfigDocuments Documents { get; set; } = new ConfigDocuments();
@@ -236,6 +237,27 @@ namespace UV7_Edit.Preferences
                 }
             }
 
+            private int sidebarWidth = 200;
+            [LocalizedDisplayName("SidebarWidth")]
+            [LocalizedDescription("SidebarWidth")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            [Visible(false)]
+            public int SidebarWidth
+            {
+                get => sidebarWidth;
+                set
+                {
+                    sidebarWidth = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
+                        {
+                            d.Width = value;
+                        }
+                    }
+                }
+            }
+
             private bool showStatusbar = true;
             [LocalizedDisplayName("ShowStatusbar")]
             [LocalizedDescription("ShowStatusbar")]
@@ -256,6 +278,24 @@ namespace UV7_Edit.Preferences
                 }
             }
 
+        }
+
+        [LocalizedCategory("DocumentWindow")]
+        public class ConfigDocumentWindow : ConfigElement
+        {
+            private DocumentViewMode viewMode = DocumentViewMode.Both;
+            public DocumentViewMode ViewMode
+            {
+                get => viewMode;
+                set
+                {
+                    viewMode = value;
+                    foreach (Form_edit fe in Application.OpenForms.OfType<Form_edit>())
+                    {
+                        fe.ChangeViewMode(viewMode);
+                    }
+                }
+            }
         }
 
         [LocalizedCategory("Editor")]

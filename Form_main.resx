@@ -342,27 +342,6 @@
   <data name="mi_view.Text" xml:space="preserve">
     <value>View</value>
   </data>
-  <data name="mi_showEditor.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mi_showEditor.Text" xml:space="preserve">
-    <value>Show Editor</value>
-  </data>
-  <data name="mi_showViewer.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mi_showViewer.Text" xml:space="preserve">
-    <value>Show Viewer</value>
-  </data>
-  <data name="mi_showBoth.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mi_showBoth.Text" xml:space="preserve">
-    <value>Show Both</value>
-  </data>
-  <data name="mi_sep4.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
   <data name="mi_showSidebar.Text" xml:space="preserve">
     <value>Show Sidebar</value>
   </data>
@@ -468,29 +447,8 @@
   <data name="openFileDialog.Filter" xml:space="preserve">
     <value>Markdown File|*.md|Text File|*.txt|All files|*.*</value>
   </data>
-  <data name="dirPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="dirPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 43</value>
-  </data>
-  <data name="dirPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 296</value>
-  </data>
-  <data name="dirPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;dirPanel.Name" xml:space="preserve">
-    <value>dirPanel</value>
-  </data>
-  <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
-    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9492.40144, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dirPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="splitter1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>261, 43</value>
@@ -512,6 +470,42 @@
   </data>
   <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="dirPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="dirPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 43</value>
+  </data>
+  <data name="dirPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 296</value>
+  </data>
+  <data name="dirPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.Name" xml:space="preserve">
+    <value>dirPanel</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
+    <value>UV7_Edit.DirPanel, UV7 Edit, Version=0.2.9492.41438, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dirPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mi_docView.Text" xml:space="preserve">
+    <value>Doc View</value>
+  </data>
+  <data name="mi_showEditor.Text" xml:space="preserve">
+    <value>Show Editor</value>
+  </data>
+  <data name="mi_showViewer.Text" xml:space="preserve">
+    <value>Show Viewer</value>
+  </data>
+  <data name="mi_showBoth.Text" xml:space="preserve">
+    <value>Show Both</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -729,30 +723,6 @@
   <data name="&gt;&gt;mi_view.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mi_showEditor.Name" xml:space="preserve">
-    <value>mi_showEditor</value>
-  </data>
-  <data name="&gt;&gt;mi_showEditor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mi_showViewer.Name" xml:space="preserve">
-    <value>mi_showViewer</value>
-  </data>
-  <data name="&gt;&gt;mi_showViewer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mi_showBoth.Name" xml:space="preserve">
-    <value>mi_showBoth</value>
-  </data>
-  <data name="&gt;&gt;mi_showBoth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mi_sep4.Name" xml:space="preserve">
-    <value>mi_sep4</value>
-  </data>
-  <data name="&gt;&gt;mi_sep4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;mi_showSidebar.Name" xml:space="preserve">
     <value>mi_showSidebar</value>
   </data>
@@ -879,10 +849,34 @@
   <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;mi_docView.Name" xml:space="preserve">
+    <value>mi_docView</value>
+  </data>
+  <data name="&gt;&gt;mi_docView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showEditor.Name" xml:space="preserve">
+    <value>mi_showEditor</value>
+  </data>
+  <data name="&gt;&gt;mi_showEditor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showViewer.Name" xml:space="preserve">
+    <value>mi_showViewer</value>
+  </data>
+  <data name="&gt;&gt;mi_showViewer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_showBoth.Name" xml:space="preserve">
+    <value>mi_showBoth</value>
+  </data>
+  <data name="&gt;&gt;mi_showBoth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form_main</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9492.39525, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9492.41438, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

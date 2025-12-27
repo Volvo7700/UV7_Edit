@@ -65,10 +65,6 @@ namespace UV7_Edit
             this.mi_editor = new System.Windows.Forms.MenuItem();
             this.mi_viewer = new System.Windows.Forms.MenuItem();
             this.mi_view = new System.Windows.Forms.MenuItem();
-            this.mi_showEditor = new System.Windows.Forms.MenuItem();
-            this.mi_showViewer = new System.Windows.Forms.MenuItem();
-            this.mi_showBoth = new System.Windows.Forms.MenuItem();
-            this.mi_sep4 = new System.Windows.Forms.MenuItem();
             this.mi_showSidebar = new System.Windows.Forms.MenuItem();
             this.mi_showStatusbar = new System.Windows.Forms.MenuItem();
             this.mi_sep6 = new System.Windows.Forms.MenuItem();
@@ -91,8 +87,12 @@ namespace UV7_Edit
             this.statusBar = new System.Windows.Forms.StatusBar();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.dirPanel = new UV7_Edit.DirPanel();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.dirPanel = new UV7_Edit.DirPanel();
+            this.mi_docView = new System.Windows.Forms.MenuItem();
+            this.mi_showEditor = new System.Windows.Forms.MenuItem();
+            this.mi_showViewer = new System.Windows.Forms.MenuItem();
+            this.mi_showBoth = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // panel_toolBar
@@ -106,9 +106,10 @@ namespace UV7_Edit
             this.mi_file,
             this.mi_edit,
             this.mi_format,
+            this.mi_view,
             this.mi_editor,
             this.mi_viewer,
-            this.mi_view,
+            this.mi_docView,
             this.mi_windows,
             this.mi_help,
             this.mi_dev});
@@ -299,22 +300,18 @@ namespace UV7_Edit
             // 
             // mi_editor
             // 
-            this.mi_editor.Index = 3;
+            this.mi_editor.Index = 4;
             resources.ApplyResources(this.mi_editor, "mi_editor");
             // 
             // mi_viewer
             // 
-            this.mi_viewer.Index = 4;
+            this.mi_viewer.Index = 5;
             resources.ApplyResources(this.mi_viewer, "mi_viewer");
             // 
             // mi_view
             // 
-            this.mi_view.Index = 5;
+            this.mi_view.Index = 3;
             this.mi_view.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.mi_showEditor,
-            this.mi_showViewer,
-            this.mi_showBoth,
-            this.mi_sep4,
             this.mi_showSidebar,
             this.mi_showStatusbar,
             this.mi_sep6,
@@ -323,67 +320,43 @@ namespace UV7_Edit
             this.mi_resetZoom});
             resources.ApplyResources(this.mi_view, "mi_view");
             // 
-            // mi_showEditor
-            // 
-            resources.ApplyResources(this.mi_showEditor, "mi_showEditor");
-            this.mi_showEditor.Index = 0;
-            this.mi_showEditor.RadioCheck = true;
-            // 
-            // mi_showViewer
-            // 
-            resources.ApplyResources(this.mi_showViewer, "mi_showViewer");
-            this.mi_showViewer.Index = 1;
-            this.mi_showViewer.RadioCheck = true;
-            // 
-            // mi_showBoth
-            // 
-            this.mi_showBoth.Checked = true;
-            resources.ApplyResources(this.mi_showBoth, "mi_showBoth");
-            this.mi_showBoth.Index = 2;
-            this.mi_showBoth.RadioCheck = true;
-            // 
-            // mi_sep4
-            // 
-            this.mi_sep4.Index = 3;
-            resources.ApplyResources(this.mi_sep4, "mi_sep4");
-            // 
             // mi_showSidebar
             // 
             this.mi_showSidebar.Checked = true;
-            this.mi_showSidebar.Index = 4;
+            this.mi_showSidebar.Index = 0;
             resources.ApplyResources(this.mi_showSidebar, "mi_showSidebar");
             this.mi_showSidebar.Click += new System.EventHandler(this.ViewShowSidebar);
             // 
             // mi_showStatusbar
             // 
             this.mi_showStatusbar.Checked = true;
-            this.mi_showStatusbar.Index = 5;
+            this.mi_showStatusbar.Index = 1;
             resources.ApplyResources(this.mi_showStatusbar, "mi_showStatusbar");
             this.mi_showStatusbar.Click += new System.EventHandler(this.ViewShowStatusbar);
             // 
             // mi_sep6
             // 
-            this.mi_sep6.Index = 6;
+            this.mi_sep6.Index = 2;
             resources.ApplyResources(this.mi_sep6, "mi_sep6");
             // 
             // mi_zoomIn
             // 
             resources.ApplyResources(this.mi_zoomIn, "mi_zoomIn");
-            this.mi_zoomIn.Index = 7;
+            this.mi_zoomIn.Index = 3;
             // 
             // mi_zoomOut
             // 
             resources.ApplyResources(this.mi_zoomOut, "mi_zoomOut");
-            this.mi_zoomOut.Index = 8;
+            this.mi_zoomOut.Index = 4;
             // 
             // mi_resetZoom
             // 
             resources.ApplyResources(this.mi_resetZoom, "mi_resetZoom");
-            this.mi_resetZoom.Index = 9;
+            this.mi_resetZoom.Index = 5;
             // 
             // mi_windows
             // 
-            this.mi_windows.Index = 6;
+            this.mi_windows.Index = 7;
             this.mi_windows.MdiList = true;
             this.mi_windows.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cascade,
@@ -396,25 +369,29 @@ namespace UV7_Edit
             // 
             this.mi_cascade.Index = 0;
             resources.ApplyResources(this.mi_cascade, "mi_cascade");
+            this.mi_cascade.Click += new System.EventHandler(this.WindowCascade);
             // 
             // mi_splitHorz
             // 
             this.mi_splitHorz.Index = 1;
             resources.ApplyResources(this.mi_splitHorz, "mi_splitHorz");
+            this.mi_splitHorz.Click += new System.EventHandler(this.WindowSplitHorizontal);
             // 
             // mi_splitVert
             // 
             this.mi_splitVert.Index = 2;
             resources.ApplyResources(this.mi_splitVert, "mi_splitVert");
+            this.mi_splitVert.Click += new System.EventHandler(this.WindowSplitVertical);
             // 
             // mi_arrangeIcons
             // 
             this.mi_arrangeIcons.Index = 3;
             resources.ApplyResources(this.mi_arrangeIcons, "mi_arrangeIcons");
+            this.mi_arrangeIcons.Click += new System.EventHandler(this.WindowArrangeIcons);
             // 
             // mi_help
             // 
-            this.mi_help.Index = 7;
+            this.mi_help.Index = 8;
             this.mi_help.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_about});
             resources.ApplyResources(this.mi_help, "mi_help");
@@ -427,7 +404,7 @@ namespace UV7_Edit
             // 
             // mi_dev
             // 
-            this.mi_dev.Index = 8;
+            this.mi_dev.Index = 9;
             this.mi_dev.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cssStyler,
             this.mi_sep5,
@@ -478,6 +455,14 @@ namespace UV7_Edit
             resources.ApplyResources(this.openFileDialog, "openFileDialog");
             this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FileOpen_OK);
             // 
+            // splitter1
+            // 
+            this.splitter1.Cursor = System.Windows.Forms.Cursors.SizeWE;
+            resources.ApplyResources(this.splitter1, "splitter1");
+            this.splitter1.Name = "splitter1";
+            this.splitter1.TabStop = false;
+            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
+            // 
             // dirPanel
             // 
             resources.ApplyResources(this.dirPanel, "dirPanel");
@@ -485,12 +470,35 @@ namespace UV7_Edit
             this.dirPanel.Path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE";
             this.dirPanel.Title = "DirPanel";
             // 
-            // splitter1
+            // mi_docView
             // 
-            this.splitter1.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            resources.ApplyResources(this.splitter1, "splitter1");
-            this.splitter1.Name = "splitter1";
-            this.splitter1.TabStop = false;
+            this.mi_docView.Index = 6;
+            this.mi_docView.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.mi_showEditor,
+            this.mi_showViewer,
+            this.mi_showBoth});
+            resources.ApplyResources(this.mi_docView, "mi_docView");
+            // 
+            // mi_showEditor
+            // 
+            this.mi_showEditor.Index = 0;
+            this.mi_showEditor.RadioCheck = true;
+            resources.ApplyResources(this.mi_showEditor, "mi_showEditor");
+            this.mi_showEditor.Click += new System.EventHandler(this.DocViewShowEditor);
+            // 
+            // mi_showViewer
+            // 
+            this.mi_showViewer.Index = 1;
+            this.mi_showViewer.RadioCheck = true;
+            resources.ApplyResources(this.mi_showViewer, "mi_showViewer");
+            this.mi_showViewer.Click += new System.EventHandler(this.DocViewShowViewer);
+            // 
+            // mi_showBoth
+            // 
+            this.mi_showBoth.Index = 2;
+            this.mi_showBoth.RadioCheck = true;
+            resources.ApplyResources(this.mi_showBoth, "mi_showBoth");
+            this.mi_showBoth.Click += new System.EventHandler(this.DocViewShowBoth);
             // 
             // Form_main
             // 
@@ -538,12 +546,8 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_find;
         private System.Windows.Forms.MenuItem mi_findAgain;
         private System.Windows.Forms.MenuItem mi_replace;
-        private System.Windows.Forms.MenuItem mi_showEditor;
-        private System.Windows.Forms.MenuItem mi_showViewer;
         private System.Windows.Forms.MenuItem mi_lineWrap;
         private System.Windows.Forms.MenuItem mi_font;
-        private System.Windows.Forms.MenuItem mi_showBoth;
-        private System.Windows.Forms.MenuItem mi_sep4;
         private System.Windows.Forms.MenuItem mi_showSidebar;
         private System.Windows.Forms.MenuItem mi_showStatusbar;
         private System.Windows.Forms.MenuItem mi_sep6;
@@ -556,11 +560,6 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_cssStyler;
         private System.Windows.Forms.MenuItem mi_sep5;
         private System.Windows.Forms.MenuItem mi_something;
-        private System.Windows.Forms.MenuItem mi_windows;
-        private System.Windows.Forms.MenuItem mi_cascade;
-        private System.Windows.Forms.MenuItem mi_splitHorz;
-        private System.Windows.Forms.MenuItem mi_splitVert;
-        private System.Windows.Forms.MenuItem mi_arrangeIcons;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.MenuItem mi_editor;
@@ -573,6 +572,15 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem menuItem1;
         private DirPanel dirPanel;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.MenuItem mi_windows;
+        private System.Windows.Forms.MenuItem mi_cascade;
+        private System.Windows.Forms.MenuItem mi_splitHorz;
+        private System.Windows.Forms.MenuItem mi_splitVert;
+        private System.Windows.Forms.MenuItem mi_arrangeIcons;
+        private System.Windows.Forms.MenuItem mi_docView;
+        private System.Windows.Forms.MenuItem mi_showEditor;
+        private System.Windows.Forms.MenuItem mi_showViewer;
+        private System.Windows.Forms.MenuItem mi_showBoth;
     }
 }
 
