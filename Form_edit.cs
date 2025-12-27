@@ -117,7 +117,8 @@ namespace UV7_Edit
 
         private void UpdateViewer()
         {
-            viewer.DocumentText = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertMDtoHTML(editor.Text)}</body></html>";
+            //viewer.DocumentText = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertMDtoHTML(editor.Text)}</body></html>";
+            viewer.Text = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertMDtoHTML(editor.Text)}</body></html>";
         }
         #endregion Preview
 

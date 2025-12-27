@@ -31,7 +31,8 @@ namespace UV7_Edit
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.editor = new System.Windows.Forms.TextBox();
-            this.viewer = new System.Windows.Forms.WebBrowser();
+            this.viewer = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -68,15 +69,16 @@ namespace UV7_Edit
             // 
             // viewer
             // 
+            this.viewer.AutoScroll = true;
+            this.viewer.BackColor = System.Drawing.SystemColors.Window;
+            this.viewer.BaseStylesheet = null;
+            this.viewer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewer.IsWebBrowserContextMenuEnabled = false;
             this.viewer.Location = new System.Drawing.Point(0, 0);
-            this.viewer.MinimumSize = new System.Drawing.Size(20, 20);
             this.viewer.Name = "viewer";
-            this.viewer.ScriptErrorsSuppressed = true;
             this.viewer.Size = new System.Drawing.Size(421, 450);
-            this.viewer.TabIndex = 0;
-            this.viewer.WebBrowserShortcutsEnabled = false;
+            this.viewer.TabIndex = 1;
+            this.viewer.Text = null;
             // 
             // Form_edit
             // 
@@ -92,6 +94,7 @@ namespace UV7_Edit
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -101,6 +104,6 @@ namespace UV7_Edit
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox editor;
-        private System.Windows.Forms.WebBrowser viewer;
+        private TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel viewer;
     }
 }
