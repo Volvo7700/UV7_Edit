@@ -17,13 +17,12 @@ namespace UV7_Edit.Preferences
             InitializeComponent();
             try
             {
-                
+                ImageFileInfo = new FileInfo(imagePath);
             }
             catch
             {
                 ImageFileInfo = null;
             }
-            ImageFileInfo = new FileInfo(imagePath);
         }
 
         private FileInfo imageFileInfo;

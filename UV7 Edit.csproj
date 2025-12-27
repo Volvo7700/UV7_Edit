@@ -239,6 +239,9 @@
     <EmbeddedResource Include="Preferences\Form_preferences.de.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Preferences\ImagePathEditor.de.resx">
+      <DependentUpon>ImagePathEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Preferences\ImagePathEditor.resx">
       <DependentUpon>ImagePathEditor.cs</DependentUpon>
     </EmbeddedResource>
