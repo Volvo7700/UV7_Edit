@@ -92,6 +92,7 @@ namespace UV7_Edit
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dirPanel = new UV7_Edit.DirPanel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.SuspendLayout();
             // 
             // panel_toolBar
@@ -483,13 +484,19 @@ namespace UV7_Edit
             this.dirPanel.Name = "dirPanel";
             this.dirPanel.Path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE";
             this.dirPanel.Title = "DirPanel";
-            this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.FileInfoEventArgs>(this.Open);
-            this.dirPanel.VisibleChanged += new System.EventHandler(this.dirPanel_VisibleChanged);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Cursor = System.Windows.Forms.Cursors.SizeWE;
+            resources.ApplyResources(this.splitter1, "splitter1");
+            this.splitter1.Name = "splitter1";
+            this.splitter1.TabStop = false;
             // 
             // Form_main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.dirPanel);
             this.Controls.Add(this.panel_toolBar);
             this.Controls.Add(this.statusBar);
@@ -521,7 +528,6 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_edit;
         private System.Windows.Forms.MenuItem mi_view;
         private System.Windows.Forms.MenuItem mi_help;
-        private DirPanel dirPanel;
         private System.Windows.Forms.MenuItem mi_undo;
         private System.Windows.Forms.MenuItem mi_redo;
         private System.Windows.Forms.MenuItem mi_sep3;
@@ -565,6 +571,8 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_startScreen;
         private System.Windows.Forms.MenuItem mi_devChangeLang;
         private System.Windows.Forms.MenuItem menuItem1;
+        private DirPanel dirPanel;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }
 

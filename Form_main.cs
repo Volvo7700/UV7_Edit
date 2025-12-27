@@ -42,12 +42,14 @@ namespace UV7_Edit
             watcher.EnableRaisingEvents = true;
 
             // MDI Optimization
-            var mdiClient = this.Controls.OfType<MdiClient>().First();
+            MdiClient mdiClient = this.Controls.OfType<MdiClient>().First();
 
             typeof(Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance)
                 .SetValue(mdiClient, true, null);
 
             //mdiClient.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
+
+            Tools.MDIClientSupport.SetBevel(this, false);            
         }
 
         // MDI Optimization
@@ -117,9 +119,9 @@ namespace UV7_Edit
         }
 
         private void ApplyResourceToControl(
-   Control control,
-   ComponentResourceManager cmp,
-   CultureInfo cultureInfo)
+            Control control,
+            ComponentResourceManager cmp,
+            CultureInfo cultureInfo)
         {
             cmp.ApplyResources(control, control.Name, cultureInfo);
 
@@ -130,6 +132,7 @@ namespace UV7_Edit
         }
 
         #region Menu Bar
+
         #region File
         public void FileNew(object sender, EventArgs e)
         {
@@ -415,6 +418,11 @@ namespace UV7_Edit
             var rm = new ComponentResourceManager(typeof(Preferences.Form_preferences));
             string title = rm.GetString("$this.Text");
             MessageBox.Show(title);
+        }
+
+        private void dirPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
