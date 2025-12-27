@@ -129,6 +129,12 @@
   <data name="DesktopCompositing" xml:space="preserve">
     <value>Desktop-Compositing</value>
   </data>
+  <data name="Font" xml:space="preserve">
+    <value>Schriftart</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
   <data name="ShowSidebar" xml:space="preserve">
     <value>Seitenleiste anzeigen</value>
   </data>
