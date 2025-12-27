@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace UV7_Edit.Preferences
@@ -14,11 +9,11 @@ namespace UV7_Edit.Preferences
         public SizeEditor(Size size)
         {
             InitializeComponent();
-            Size = size;
+            SizeValue = size;
         }
 
         private Size size;
-        public Size Size
+        public Size SizeValue
         {
             get
             {
@@ -27,8 +22,8 @@ namespace UV7_Edit.Preferences
             set
             {
                 size = value;
-                nud_width.Value = Size.Width;
-                nud_height.Value = Size.Height;
+                nud_width.Value = SizeValue.Width;
+                nud_height.Value = SizeValue.Height;
             }
         }
 
