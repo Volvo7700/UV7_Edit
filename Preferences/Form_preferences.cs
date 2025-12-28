@@ -31,7 +31,7 @@ namespace UV7_Edit.Preferences
                 }
                 return new List<Node<string>>();
             };
-            this.treeListView_categories.TreeColumnRenderer = new SystemColorsTreeRenderer();
+            this.treeListView_categories.TreeColumnRenderer = new Tools.SystemColorsTreeRenderer();
         }
 
         private void Form_preferences_Load(object sender, EventArgs e)

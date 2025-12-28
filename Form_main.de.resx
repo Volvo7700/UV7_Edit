@@ -112,11 +112,14 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="mi_file.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
   <data name="mi_new.Text" xml:space="preserve">
     <value>Neu</value>
   </data>
@@ -144,8 +147,8 @@
   <data name="mi_exit.Text" xml:space="preserve">
     <value>Beenden</value>
   </data>
-  <data name="mi_file.Text" xml:space="preserve">
-    <value>Datei</value>
+  <data name="mi_edit.Text" xml:space="preserve">
+    <value>Bearbeiten</value>
   </data>
   <data name="mi_undo.Text" xml:space="preserve">
     <value>Rückgängig</value>
@@ -174,23 +177,14 @@
   <data name="mi_prefs.Text" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
-  <data name="mi_edit.Text" xml:space="preserve">
-    <value>Bearbeiten</value>
-  </data>
   <data name="mi_lineWrap.Text" xml:space="preserve">
     <value>Zeilenumbruch</value>
   </data>
   <data name="mi_font.Text" xml:space="preserve">
     <value>Schriftart...</value>
   </data>
-  <data name="mi_showEditor.Text" xml:space="preserve">
-    <value>Editor anzeigen</value>
-  </data>
-  <data name="mi_showViewer.Text" xml:space="preserve">
-    <value>Viewer anzeigen</value>
-  </data>
-  <data name="mi_showBoth.Text" xml:space="preserve">
-    <value>Beide anzeigen</value>
+  <data name="mi_view.Text" xml:space="preserve">
+    <value>Ansicht</value>
   </data>
   <data name="mi_showSidebar.Text" xml:space="preserve">
     <value>Seitenleiste anzeigen</value>
@@ -207,8 +201,17 @@
   <data name="mi_resetZoom.Text" xml:space="preserve">
     <value>Zoom zurücksetzen</value>
   </data>
-  <data name="mi_view.Text" xml:space="preserve">
-    <value>Ansicht</value>
+  <data name="mi_showEditor.Text" xml:space="preserve">
+    <value>Editor anzeigen</value>
+  </data>
+  <data name="mi_showViewer.Text" xml:space="preserve">
+    <value>Viewer anzeigen</value>
+  </data>
+  <data name="mi_showBoth.Text" xml:space="preserve">
+    <value>Beide anzeigen</value>
+  </data>
+  <data name="mi_windows.Text" xml:space="preserve">
+    <value>Fenster</value>
   </data>
   <data name="mi_cascade.Text" xml:space="preserve">
     <value>Kacheln</value>
@@ -222,13 +225,10 @@
   <data name="mi_arrangeIcons.Text" xml:space="preserve">
     <value>Symbole ausrichten</value>
   </data>
-  <data name="mi_windows.Text" xml:space="preserve">
-    <value>Fenster</value>
+  <data name="mi_help.Text" xml:space="preserve">
+    <value>Hilfe</value>
   </data>
   <data name="mi_about.Text" xml:space="preserve">
     <value>Über...</value>
-  </data>
-  <data name="mi_help.Text" xml:space="preserve">
-    <value>Hilfe</value>
   </data>
 </root>

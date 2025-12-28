@@ -32,12 +32,22 @@ namespace UV7_Edit
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
             this.panel_toolBar = new System.Windows.Forms.Panel();
+            this.toolBar_main = new System.Windows.Forms.ToolBar();
+            this.tb_newFile = new System.Windows.Forms.ToolBarButton();
+            this.tb_openFile = new System.Windows.Forms.ToolBarButton();
+            this.tb_saveFile = new System.Windows.Forms.ToolBarButton();
+            this.tb_saveAll = new System.Windows.Forms.ToolBarButton();
+            this.tb_sep1 = new System.Windows.Forms.ToolBarButton();
+            this.tb_newFolder = new System.Windows.Forms.ToolBarButton();
+            this.tb_openFolder = new System.Windows.Forms.ToolBarButton();
+            this.imageList_toolBar = new System.Windows.Forms.ImageList(this.components);
             this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.mi_file = new System.Windows.Forms.MenuItem();
             this.mi_new = new System.Windows.Forms.MenuItem();
             this.mi_open = new System.Windows.Forms.MenuItem();
             this.mi_save = new System.Windows.Forms.MenuItem();
             this.mi_saveAs = new System.Windows.Forms.MenuItem();
+            this.mi_saveAll = new System.Windows.Forms.MenuItem();
             this.mi_sep9 = new System.Windows.Forms.MenuItem();
             this.mi_startScreen = new System.Windows.Forms.MenuItem();
             this.mi_sep1 = new System.Windows.Forms.MenuItem();
@@ -46,6 +56,9 @@ namespace UV7_Edit
             this.mi_sep2 = new System.Windows.Forms.MenuItem();
             this.mi_close = new System.Windows.Forms.MenuItem();
             this.mi_exit = new System.Windows.Forms.MenuItem();
+            this.mi_folder = new System.Windows.Forms.MenuItem();
+            this.fi_newFolder = new System.Windows.Forms.MenuItem();
+            this.mi_openFolder = new System.Windows.Forms.MenuItem();
             this.mi_edit = new System.Windows.Forms.MenuItem();
             this.mi_undo = new System.Windows.Forms.MenuItem();
             this.mi_redo = new System.Windows.Forms.MenuItem();
@@ -93,17 +106,83 @@ namespace UV7_Edit
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.dirPanel = new UV7_Edit.DirPanel();
+            this.betterFolderBrowser = new WK.Libraries.BetterFolderBrowserNS.BetterFolderBrowser(this.components);
+            this.panel_toolBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_toolBar
             // 
+            this.panel_toolBar.Controls.Add(this.toolBar_main);
             resources.ApplyResources(this.panel_toolBar, "panel_toolBar");
             this.panel_toolBar.Name = "panel_toolBar";
+            // 
+            // toolBar_main
+            // 
+            resources.ApplyResources(this.toolBar_main, "toolBar_main");
+            this.toolBar_main.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+            this.tb_newFile,
+            this.tb_openFile,
+            this.tb_saveFile,
+            this.tb_saveAll,
+            this.tb_sep1,
+            this.tb_newFolder,
+            this.tb_openFolder});
+            this.toolBar_main.Divider = false;
+            this.toolBar_main.ImageList = this.imageList_toolBar;
+            this.toolBar_main.Name = "toolBar_main";
+            this.toolBar_main.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar_main_ButtonClick);
+            // 
+            // tb_newFile
+            // 
+            resources.ApplyResources(this.tb_newFile, "tb_newFile");
+            this.tb_newFile.Name = "tb_newFile";
+            // 
+            // tb_openFile
+            // 
+            resources.ApplyResources(this.tb_openFile, "tb_openFile");
+            this.tb_openFile.Name = "tb_openFile";
+            // 
+            // tb_saveFile
+            // 
+            resources.ApplyResources(this.tb_saveFile, "tb_saveFile");
+            this.tb_saveFile.Name = "tb_saveFile";
+            // 
+            // tb_saveAll
+            // 
+            resources.ApplyResources(this.tb_saveAll, "tb_saveAll");
+            this.tb_saveAll.Name = "tb_saveAll";
+            // 
+            // tb_sep1
+            // 
+            this.tb_sep1.Name = "tb_sep1";
+            this.tb_sep1.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
+            // 
+            // tb_newFolder
+            // 
+            resources.ApplyResources(this.tb_newFolder, "tb_newFolder");
+            this.tb_newFolder.Name = "tb_newFolder";
+            // 
+            // tb_openFolder
+            // 
+            resources.ApplyResources(this.tb_openFolder, "tb_openFolder");
+            this.tb_openFolder.Name = "tb_openFolder";
+            // 
+            // imageList_toolBar
+            // 
+            this.imageList_toolBar.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_toolBar.ImageStream")));
+            this.imageList_toolBar.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_toolBar.Images.SetKeyName(0, "NewFile");
+            this.imageList_toolBar.Images.SetKeyName(1, "OpenFile");
+            this.imageList_toolBar.Images.SetKeyName(2, "SaveFile");
+            this.imageList_toolBar.Images.SetKeyName(3, "SaveAll");
+            this.imageList_toolBar.Images.SetKeyName(4, "NewFolder");
+            this.imageList_toolBar.Images.SetKeyName(5, "OpenFolder");
             // 
             // mainMenu
             // 
             this.mainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_file,
+            this.mi_folder,
             this.mi_edit,
             this.mi_format,
             this.mi_view,
@@ -122,6 +201,7 @@ namespace UV7_Edit
             this.mi_open,
             this.mi_save,
             this.mi_saveAs,
+            this.mi_saveAll,
             this.mi_sep9,
             this.mi_startScreen,
             this.mi_sep1,
@@ -156,54 +236,80 @@ namespace UV7_Edit
             this.mi_saveAs.Index = 3;
             this.mi_saveAs.Click += new System.EventHandler(this.FileSaveAs);
             // 
+            // mi_saveAll
+            // 
+            this.mi_saveAll.Index = 4;
+            resources.ApplyResources(this.mi_saveAll, "mi_saveAll");
+            this.mi_saveAll.Click += new System.EventHandler(this.FileSaveAll);
+            // 
             // mi_sep9
             // 
-            this.mi_sep9.Index = 4;
+            this.mi_sep9.Index = 5;
             resources.ApplyResources(this.mi_sep9, "mi_sep9");
             // 
             // mi_startScreen
             // 
-            this.mi_startScreen.Index = 5;
+            this.mi_startScreen.Index = 6;
             resources.ApplyResources(this.mi_startScreen, "mi_startScreen");
             this.mi_startScreen.Click += new System.EventHandler(this.FileStartScreen);
             // 
             // mi_sep1
             // 
-            this.mi_sep1.Index = 6;
+            this.mi_sep1.Index = 7;
             resources.ApplyResources(this.mi_sep1, "mi_sep1");
             // 
             // mi_pageSetup
             // 
             resources.ApplyResources(this.mi_pageSetup, "mi_pageSetup");
-            this.mi_pageSetup.Index = 7;
+            this.mi_pageSetup.Index = 8;
             this.mi_pageSetup.Click += new System.EventHandler(this.FilePageSetup);
             // 
             // mi_print
             // 
             resources.ApplyResources(this.mi_print, "mi_print");
-            this.mi_print.Index = 8;
+            this.mi_print.Index = 9;
             this.mi_print.Click += new System.EventHandler(this.FilePrint);
             // 
             // mi_sep2
             // 
-            this.mi_sep2.Index = 9;
+            this.mi_sep2.Index = 10;
             resources.ApplyResources(this.mi_sep2, "mi_sep2");
             // 
             // mi_close
             // 
             resources.ApplyResources(this.mi_close, "mi_close");
-            this.mi_close.Index = 10;
+            this.mi_close.Index = 11;
             this.mi_close.Click += new System.EventHandler(this.FileClose);
             // 
             // mi_exit
             // 
-            this.mi_exit.Index = 11;
+            this.mi_exit.Index = 12;
             resources.ApplyResources(this.mi_exit, "mi_exit");
             this.mi_exit.Click += new System.EventHandler(this.FileExit);
             // 
+            // mi_folder
+            // 
+            this.mi_folder.Index = 1;
+            this.mi_folder.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.fi_newFolder,
+            this.mi_openFolder});
+            resources.ApplyResources(this.mi_folder, "mi_folder");
+            // 
+            // fi_newFolder
+            // 
+            this.fi_newFolder.Index = 0;
+            resources.ApplyResources(this.fi_newFolder, "fi_newFolder");
+            this.fi_newFolder.Click += new System.EventHandler(this.FolderNew);
+            // 
+            // mi_openFolder
+            // 
+            this.mi_openFolder.Index = 1;
+            resources.ApplyResources(this.mi_openFolder, "mi_openFolder");
+            this.mi_openFolder.Click += new System.EventHandler(this.FolderOpen);
+            // 
             // mi_edit
             // 
-            this.mi_edit.Index = 1;
+            this.mi_edit.Index = 2;
             this.mi_edit.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_undo,
             this.mi_redo,
@@ -282,7 +388,7 @@ namespace UV7_Edit
             // 
             // mi_format
             // 
-            this.mi_format.Index = 2;
+            this.mi_format.Index = 3;
             this.mi_format.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_lineWrap,
             this.mi_font});
@@ -300,7 +406,7 @@ namespace UV7_Edit
             // 
             // mi_view
             // 
-            this.mi_view.Index = 3;
+            this.mi_view.Index = 4;
             this.mi_view.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_showSidebar,
             this.mi_showStatusbar,
@@ -346,17 +452,17 @@ namespace UV7_Edit
             // 
             // mi_editor
             // 
-            this.mi_editor.Index = 4;
+            this.mi_editor.Index = 5;
             resources.ApplyResources(this.mi_editor, "mi_editor");
             // 
             // mi_viewer
             // 
-            this.mi_viewer.Index = 5;
+            this.mi_viewer.Index = 6;
             resources.ApplyResources(this.mi_viewer, "mi_viewer");
             // 
             // mi_docView
             // 
-            this.mi_docView.Index = 6;
+            this.mi_docView.Index = 7;
             this.mi_docView.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_showEditor,
             this.mi_showViewer,
@@ -386,7 +492,7 @@ namespace UV7_Edit
             // 
             // mi_windows
             // 
-            this.mi_windows.Index = 7;
+            this.mi_windows.Index = 8;
             this.mi_windows.MdiList = true;
             this.mi_windows.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cascade,
@@ -421,7 +527,7 @@ namespace UV7_Edit
             // 
             // mi_help
             // 
-            this.mi_help.Index = 8;
+            this.mi_help.Index = 9;
             this.mi_help.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_about});
             resources.ApplyResources(this.mi_help, "mi_help");
@@ -434,7 +540,7 @@ namespace UV7_Edit
             // 
             // mi_dev
             // 
-            this.mi_dev.Index = 9;
+            this.mi_dev.Index = 10;
             this.mi_dev.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mi_cssStyler,
             this.mi_sep5,
@@ -500,6 +606,12 @@ namespace UV7_Edit
             this.dirPanel.Path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE";
             this.dirPanel.Title = "DirPanel";
             // 
+            // betterFolderBrowser
+            // 
+            this.betterFolderBrowser.Multiselect = false;
+            this.betterFolderBrowser.RootFolder = "Application.StartupPath";
+            this.betterFolderBrowser.Title = "Open Folder";
+            // 
             // Form_main
             // 
             resources.ApplyResources(this, "$this");
@@ -514,6 +626,7 @@ namespace UV7_Edit
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_main_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_main_FormClosed);
             this.MdiChildActivate += new System.EventHandler(this.Form_main_MdiChildActivate);
+            this.panel_toolBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -581,6 +694,20 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_showEditor;
         private System.Windows.Forms.MenuItem mi_showViewer;
         private System.Windows.Forms.MenuItem mi_showBoth;
+        private System.Windows.Forms.ToolBar toolBar_main;
+        private System.Windows.Forms.ToolBarButton tb_newFile;
+        private System.Windows.Forms.ToolBarButton tb_openFile;
+        private System.Windows.Forms.ToolBarButton tb_saveFile;
+        private System.Windows.Forms.ImageList imageList_toolBar;
+        private System.Windows.Forms.ToolBarButton tb_newFolder;
+        private System.Windows.Forms.ToolBarButton tb_saveAll;
+        private System.Windows.Forms.ToolBarButton tb_sep1;
+        private System.Windows.Forms.ToolBarButton tb_openFolder;
+        private System.Windows.Forms.MenuItem mi_folder;
+        private System.Windows.Forms.MenuItem fi_newFolder;
+        private System.Windows.Forms.MenuItem mi_openFolder;
+        private System.Windows.Forms.MenuItem mi_saveAll;
+        private WK.Libraries.BetterFolderBrowserNS.BetterFolderBrowser betterFolderBrowser;
     }
 }
 

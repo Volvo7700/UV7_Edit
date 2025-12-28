@@ -37,6 +37,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BetterFolderBrowser, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\BetterFolderBrowser.1.2.0\lib\BetterFolderBrowser.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlRenderer, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\HtmlRenderer.Core.1.5.2\lib\net462\HtmlRenderer.dll</HintPath>
     </Reference>
@@ -97,6 +100,9 @@
     <Compile Include="DwmCompositingControllableForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_main.Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Preferences\ApplyTimeAttribute.cs" />
     <Compile Include="Preferences\ColorEditor.cs">
       <SubType>UserControl</SubType>
@@ -151,7 +157,7 @@
       <DependentUpon>DirPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Document.cs" />
-    <Compile Include="FileInfoEventArgs.cs" />
+    <Compile Include="Tools\FileInfoEventArgs.cs" />
     <Compile Include="Form_about.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,14 +194,13 @@
     <Compile Include="Form_tempCss.Designer.cs">
       <DependentUpon>Form_tempCss.cs</DependentUpon>
     </Compile>
-    <Compile Include="IniFile.cs" />
     <Compile Include="Preferences\CustomAttributes.cs" />
     <Compile Include="Preferences\Config.cs" />
     <Compile Include="Preferences\PrefManager.cs" />
     <Compile Include="Preferences\PrefsUIBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReflectionExtensions.cs" />
+    <Compile Include="Tools\ReflectionExtensions.cs" />
     <Compile Include="Resources\Misc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,7 +257,7 @@
     <Compile Include="SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemColorsTreeRenderer.cs">
+    <Compile Include="Tools\SystemColorsTreeRenderer.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Dev\ToolBarStyledButton.cs">

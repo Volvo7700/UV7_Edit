@@ -67,10 +67,10 @@ namespace UV7_Edit
             // 
             this.fileIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("fileIcons.ImageStream")));
             this.fileIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.fileIcons.Images.SetKeyName(0, "folder.png");
-            this.fileIcons.Images.SetKeyName(1, "page.png");
-            this.fileIcons.Images.SetKeyName(2, "page_white_text.png");
-            this.fileIcons.Images.SetKeyName(3, "file_extension_txt.png");
+            this.fileIcons.Images.SetKeyName(0, "Folder");
+            this.fileIcons.Images.SetKeyName(1, "File");
+            this.fileIcons.Images.SetKeyName(2, "FileTXT");
+            this.fileIcons.Images.SetKeyName(3, "FileMD");
             // 
             // DirPanel
             // 

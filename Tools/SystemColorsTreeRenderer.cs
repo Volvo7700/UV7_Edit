@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using static BrightIdeasSoftware.TreeListView;
 
-namespace UV7_Edit
+namespace UV7_Edit.Tools
 {
     [ToolboxItem(false)]
     public class SystemColorsTreeRenderer : TreeRenderer

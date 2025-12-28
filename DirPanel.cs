@@ -15,6 +15,14 @@ namespace UV7_Edit
             set
             {
                 path = value;
+                try
+                {
+                    this.Title = System.IO.Path.GetFileName(value);
+                }
+                catch
+                {
+                    this.Title = "[Error]";
+                }
                 UpdateData();
             }
         }
@@ -33,7 +41,7 @@ namespace UV7_Edit
                 return new ArrayList(dir.GetFileSystemInfos());
             };
 
-            this.treeListView.TreeColumnRenderer = new SystemColorsTreeRenderer();
+            this.treeListView.TreeColumnRenderer = new Tools.SystemColorsTreeRenderer();
 
             UpdateData();
         }
@@ -50,21 +58,21 @@ namespace UV7_Edit
                 {
                     if (row is DirectoryInfo)
                     {
-                        return 0;
+                        return "Folder";
                     }
                     else if (row is File)
                     {
                         FileInfo file = row as FileInfo;
                         if (file.Extension == "txt")
                         {
-                            return 2;
+                            return "FileTXT";
                         }
                         else if (file.Extension == "md")
                         {
-                            return 3;
+                            return "FileMD";
                         }
                     }
-                    return 1;
+                    return "File";
                 };
             }
         }
