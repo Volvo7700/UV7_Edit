@@ -15,8 +15,6 @@ namespace UV7_Edit
         [STAThread]
         static void Main()
         {
-            System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("de-DE");
-            System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Pref.Load();

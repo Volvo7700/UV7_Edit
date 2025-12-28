@@ -42,12 +42,14 @@ namespace UV7_Edit
             watcher.EnableRaisingEvents = true;
 
             // MDI Optimization
-            var mdiClient = this.Controls.OfType<MdiClient>().First();
+            MdiClient mdiClient = this.Controls.OfType<MdiClient>().First();
 
             typeof(Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance)
                 .SetValue(mdiClient, true, null);
 
             //mdiClient.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
+
+            Tools.MDIClientSupport.SetBevel(this, false);            
         }
 
         // MDI Optimization
@@ -73,18 +75,38 @@ namespace UV7_Edit
             this.Location = Pref.Prefs.Window.Location;
             this.Size = Pref.Prefs.Window.Size;
             this.TopMost = Pref.Prefs.Window.TopMost;
+            
             // Workspace
             if (Pref.Prefs.Workspace.ShowStartScreen)
                 ShowStartForm();
+            
             foreach (MdiClient m in this.Controls.OfType<MdiClient>())
             {
                 m.BackColor = Pref.Prefs.Workspace.BackColor;
                 m.BackgroundImage = Pref.Prefs.Workspace.BackImage;
             }
+            
             dirPanel.Visible = Pref.Prefs.Workspace.ShowSidebar;
             mi_showSidebar.Checked = Pref.Prefs.Workspace.ShowSidebar;
+            
+            if (Pref.Prefs.Workspace.SidebarWidth >= dirPanel.MinimumSize.Width)
+                dirPanel.Width = Pref.Prefs.Workspace.SidebarWidth;
+            
             statusBar.Visible = Pref.Prefs.Workspace.ShowStatusbar;
             mi_showStatusbar.Checked = Pref.Prefs.Workspace.ShowStatusbar;
+
+            switch (Pref.Prefs.DocumentWindow.ViewMode)
+            {
+                case DocumentViewMode.Both:
+                    mi_showBoth.Checked = true;
+                    break;
+                case DocumentViewMode.Editor:
+                    mi_showEditor.Checked = true;
+                    break;
+                case DocumentViewMode.Viewer:
+                    mi_showViewer.Checked = true;
+                    break;
+            }
 
             // WorkFolder
             dirPanel.Path = Pref.Prefs.WorkFolder.Path;
@@ -117,9 +139,9 @@ namespace UV7_Edit
         }
 
         private void ApplyResourceToControl(
-   Control control,
-   ComponentResourceManager cmp,
-   CultureInfo cultureInfo)
+            Control control,
+            ComponentResourceManager cmp,
+            CultureInfo cultureInfo)
         {
             cmp.ApplyResources(control, control.Name, cultureInfo);
 
@@ -130,6 +152,7 @@ namespace UV7_Edit
         }
 
         #region Menu Bar
+
         #region File
         public void FileNew(object sender, EventArgs e)
         {
@@ -220,11 +243,14 @@ namespace UV7_Edit
         private void Form_main_MdiChildActivate(object sender, EventArgs e)
         {
             bool activeMdiExists = ActiveMdiChild != null;
-            mi_save.Enabled = activeMdiExists;
-            mi_saveAs.Enabled = activeMdiExists;
-            mi_print.Enabled = activeMdiExists;
-            mi_pageSetup.Enabled = activeMdiExists;
-            mi_close.Enabled = activeMdiExists;
+            if (ActiveMdiChild is Form_edit)
+            {
+                mi_save.Enabled = activeMdiExists;
+                mi_saveAs.Enabled = activeMdiExists;
+                mi_print.Enabled = activeMdiExists;
+                mi_pageSetup.Enabled = activeMdiExists;
+                mi_close.Enabled = activeMdiExists;
+            }
         }
 
         private void FileExit(object sender, EventArgs e)
@@ -246,21 +272,69 @@ namespace UV7_Edit
         {
             mi_showSidebar.Checked = !mi_showSidebar.Checked;
             Pref.Prefs.Workspace.ShowSidebar = mi_showSidebar.Checked;
-            //dirPanel.Visible = mi_showSidebar.Checked;
-        }
-
-        private void dirPanel_VisibleChanged(object sender, EventArgs e)
-        {
-            mi_showSidebar.Checked = dirPanel.Visible;
         }
 
         private void ViewShowStatusbar(object sender, EventArgs e)
         {
             mi_showStatusbar.Checked = !mi_showStatusbar.Checked;
             Pref.Prefs.Workspace.ShowStatusbar = mi_showStatusbar.Checked;
-            //statusBar.Visible = mi_showStatusbar.Checked;
         }
         #endregion View
+
+        #region Editor
+        #endregion Editor
+
+        #region Viewer
+        #endregion Viewer
+
+        #region DocView
+        private void DocViewShowEditor(object sender, EventArgs e)
+        {
+            mi_showEditor.Checked = true;
+            mi_showViewer.Checked = false;
+            mi_showBoth.Checked = false;
+            Pref.Prefs.DocumentWindow.ViewMode = DocumentViewMode.Editor;
+        }
+
+        private void DocViewShowViewer(object sender, EventArgs e)
+        {
+            mi_showEditor.Checked = false;
+            mi_showViewer.Checked = true;
+            mi_showBoth.Checked = false;
+            Pref.Prefs.DocumentWindow.ViewMode = DocumentViewMode.Viewer;
+        }
+
+        private void DocViewShowBoth(object sender, EventArgs e)
+        {
+            mi_showEditor.Checked = false;
+            mi_showViewer.Checked = false;
+            mi_showBoth.Checked = true;
+            Pref.Prefs.DocumentWindow.ViewMode = DocumentViewMode.Both;
+        }
+        #endregion DocView
+
+        #region Window
+
+        private void WindowCascade(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void WindowSplitHorizontal(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void WindowSplitVertical(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void WindowArrangeIcons(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+        #endregion Window
 
         #region Help
         private void HelpAbout(object sender, EventArgs e)
@@ -415,6 +489,11 @@ namespace UV7_Edit
             var rm = new ComponentResourceManager(typeof(Preferences.Form_preferences));
             string title = rm.GetString("$this.Text");
             MessageBox.Show(title);
+        }
+
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+            Pref.Prefs.Workspace.SidebarWidth = dirPanel.Width;
         }
     }
 }

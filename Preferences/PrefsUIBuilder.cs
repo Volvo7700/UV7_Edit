@@ -223,7 +223,7 @@ namespace UV7_Edit.Preferences
                         SizeEditor se = new SizeEditor(value) { Left = x, Top = y, Width = panel.Width - x - p, Height = 21, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
                         se.ValueChanged += (o, e) =>
                         {
-                            prop.SetValue(category, se.Size, null);
+                            prop.SetValue(category, se.SizeValue, null);
                             panel.RaisePropertyChanged(se.Name);
                         };
                         editor = se;
@@ -376,7 +376,7 @@ namespace UV7_Edit.Preferences
                 }
                 else if (c is SizeEditor se)
                 {
-                    return se.Size;
+                    return se.SizeValue;
                 }
                 else if (c is FontEditor fe)
                 {

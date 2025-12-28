@@ -1,13 +1,8 @@
 ﻿using MarkdownDeep;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using UV7_Edit.Preferences;
 
 namespace UV7_Edit
 {
@@ -48,6 +43,8 @@ namespace UV7_Edit
                 true);
 
             this.UpdateStyles();
+
+            LoadConfig();
         }
 
         // MDI Optimization
@@ -64,6 +61,11 @@ namespace UV7_Edit
         //    // Nur sichtbaren Bereich zeichnen
         //    DrawContent(e.Graphics, clip);
         //}
+
+        private void LoadConfig()
+        {
+            ChangeViewMode(Pref.Prefs.DocumentWindow.ViewMode);
+        }
 
         private void ContentChanged(object sender, EventArgs e)
         {
@@ -161,6 +163,26 @@ namespace UV7_Edit
                 }
             }
         }
+
+        public void ChangeViewMode(DocumentViewMode viewMode)
+        {
+            if (viewMode == DocumentViewMode.Both)
+            {
+                splitContainer1.Panel1Collapsed = false;
+                splitContainer1.Panel2Collapsed = false;
+            }
+            else if (viewMode == DocumentViewMode.Editor)
+            {
+                splitContainer1.Panel1Collapsed = false;
+                splitContainer1.Panel2Collapsed = true;
+            }
+            else if (viewMode == DocumentViewMode.Viewer)
+            {
+                splitContainer1.Panel1Collapsed = true;
+                splitContainer1.Panel2Collapsed = false;
+            }
+        }
+
 
         public void CancelClosing()
         {

@@ -41,33 +41,32 @@ namespace UV7_Edit
         public void UpdateData()
         {
             bool designMode = (LicenseManager.UsageMode == LicenseUsageMode.Designtime);
-            if (designMode)
-                return;
-
-            //this.treeListView.Clear();
-            this.treeListView.SetObjects(new FileSystemInfo[] { new DirectoryInfo(Path) });
-            this.treeListView.ExpandAll();
-            this.treeListView.SmallImageList = fileIcons;
-            this.olvc_name.ImageGetter = delegate (object row)
+            if (!designMode)
             {
-                if (row is DirectoryInfo)
+                this.treeListView.SetObjects(new FileSystemInfo[] { new DirectoryInfo(Path) });
+                this.treeListView.ExpandAll();
+                this.treeListView.SmallImageList = fileIcons;
+                this.olvc_name.ImageGetter = delegate (object row)
                 {
-                    return 0;
-                }
-                else if (row is File)
-                {
-                    FileInfo file = row as FileInfo;
-                    if (file.Extension == "txt")
+                    if (row is DirectoryInfo)
                     {
-                        return 2;
+                        return 0;
                     }
-                    else if (file.Extension == "md")
+                    else if (row is File)
                     {
-                        return 3;
+                        FileInfo file = row as FileInfo;
+                        if (file.Extension == "txt")
+                        {
+                            return 2;
+                        }
+                        else if (file.Extension == "md")
+                        {
+                            return 3;
+                        }
                     }
-                }
-                return 1;
-            };
+                    return 1;
+                };
+            }
         }
 
         private void treeListView_ItemActivate(object sender, EventArgs e)

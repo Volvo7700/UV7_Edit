@@ -51,8 +51,8 @@ namespace UV7_Edit
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.viewer);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 375;
+            this.splitContainer1.Size = new System.Drawing.Size(803, 450);
+            this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.TabIndex = 1;
             // 
             // editor
@@ -63,7 +63,7 @@ namespace UV7_Edit
             this.editor.Multiline = true;
             this.editor.Name = "editor";
             this.editor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.editor.Size = new System.Drawing.Size(375, 450);
+            this.editor.Size = new System.Drawing.Size(360, 450);
             this.editor.TabIndex = 0;
             this.editor.TextChanged += new System.EventHandler(this.EditorChanged);
             // 

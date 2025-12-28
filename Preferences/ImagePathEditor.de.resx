@@ -117,37 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BackColor" xml:space="preserve">
-    <value>Hintergrundfarbe</value>
-  </data>
-  <data name="BackImage" xml:space="preserve">
-    <value>Hintergrundbild</value>
-  </data>
-  <data name="BackImageLayout" xml:space="preserve">
-    <value>Hintergrundbild-Layout</value>
-  </data>
-  <data name="DesktopCompositing" xml:space="preserve">
-    <value>Desktop-Compositing</value>
-  </data>
-  <data name="Font" xml:space="preserve">
-    <value>Schriftart</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Sprache</value>
-  </data>
-  <data name="ShowSidebar" xml:space="preserve">
-    <value>Seitenleiste anzeigen</value>
-  </data>
-  <data name="ShowStartScreen" xml:space="preserve">
-    <value>Startbildschirm anzeigen</value>
-  </data>
-  <data name="ShowStatusbar" xml:space="preserve">
-    <value>Statusleiste anzeigen</value>
-  </data>
-  <data name="TopMost" xml:space="preserve">
-    <value>Als oberstes anzeigen</value>
-  </data>
-  <data name="VisualStyleState" xml:space="preserve">
-    <value>Visueller Stilmodus</value>
+  <data name="button_selectFont.Text" xml:space="preserve">
+    <value>Anpassen</value>
   </data>
 </root>

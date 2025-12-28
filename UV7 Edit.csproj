@@ -105,6 +105,7 @@
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Preferences\Defaults.cs" />
+    <Compile Include="Preferences\DocumentViewMode.cs" />
     <Compile Include="Preferences\FontEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +258,7 @@
     <Compile Include="Dev\ToolBarStyledButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\MDIClientSupport.cs" />
     <EmbeddedResource Include="Preferences\ColorEditor.de.resx">
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\Form_preferences.de.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences\ImagePathEditor.de.resx">
+      <DependentUpon>ImagePathEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\ImagePathEditor.resx">
       <DependentUpon>ImagePathEditor.cs</DependentUpon>
@@ -298,9 +303,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_main.de.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_main.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\Form_preferences.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
@@ -358,6 +365,7 @@
     <EmbeddedResource Include="Resources\Prefs\Names.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Names.de.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Prefs\Names.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -368,6 +376,7 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\UV7_Edit.Preferences.Pref.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
