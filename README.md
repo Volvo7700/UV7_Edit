@@ -19,6 +19,7 @@
 * Language switching
 
 ### Planned features:
+* **Update this list**
 * WYSIWYG Editor
 * Replacement for Internet Explorer-based WebBrowser control
 * Editor with syntax highlighting
