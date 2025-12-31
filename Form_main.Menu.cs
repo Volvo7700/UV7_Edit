@@ -104,13 +104,49 @@ namespace UV7_Edit
         private void Form_main_MdiChildActivate(object sender, EventArgs e)
         {
             bool activeMdiExists = ActiveMdiChild != null;
-            if (ActiveMdiChild is Form_edit)
+            if (activeMdiExists)
             {
-                mi_save.Enabled = activeMdiExists;
-                mi_saveAs.Enabled = activeMdiExists;
-                mi_print.Enabled = activeMdiExists;
-                mi_pageSetup.Enabled = activeMdiExists;
-                mi_close.Enabled = activeMdiExists;
+                if (ActiveMdiChild is Form_edit fe)
+                {
+                    mi_saveAs.Enabled = true;
+                    mi_print.Enabled = true;
+                    mi_pageSetup.Enabled = true;
+                    mi_close.Enabled = true;
+
+                    mi_save.Enabled = !fe.Doc.Saved;
+                    tb_saveFile.Enabled = !fe.Doc.Saved;
+                }
+                else
+                {
+                    mi_saveAs.Enabled = false;
+                    mi_print.Enabled = false;
+                    mi_pageSetup.Enabled = false;
+                    mi_close.Enabled = false;
+
+                    mi_save.Enabled = false;
+                    tb_saveFile.Enabled = false;
+                }
+            }
+            else
+            {
+                mi_saveAs.Enabled = false;
+                mi_print.Enabled = false;
+                mi_pageSetup.Enabled = false;
+                mi_close.Enabled = false;
+
+                mi_save.Enabled = false;
+                tb_saveFile.Enabled = false;
+            }
+
+            if (Application.OpenForms.OfType<Form_edit>().Count<Form_edit>() > 0)
+            {
+                mi_saveAll.Enabled = true;
+                tb_saveAll.Enabled = true;
+            }
+            else
+            {
+                mi_saveAll.Enabled = false;
+                tb_saveAll.Enabled = false;
             }
         }
 
