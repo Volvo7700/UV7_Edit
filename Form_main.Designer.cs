@@ -105,7 +105,7 @@ namespace UV7_Edit
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.dirPanel = new UV7_Edit.DirPanel();
+            this.dirPanel = new UV7_Edit.CustomControls.DirPanel();
             this.betterFolderBrowser = new WK.Libraries.BetterFolderBrowserNS.BetterFolderBrowser(this.components);
             this.panel_toolBar.SuspendLayout();
             this.SuspendLayout();
@@ -683,7 +683,7 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem mi_startScreen;
         private System.Windows.Forms.MenuItem mi_devChangeLang;
         private System.Windows.Forms.MenuItem menuItem1;
-        private DirPanel dirPanel;
+        private UV7_Edit.CustomControls.DirPanel dirPanel;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.MenuItem mi_windows;
         private System.Windows.Forms.MenuItem mi_cascade;

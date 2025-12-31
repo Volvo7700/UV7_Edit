@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using UV7_Edit.Preferences;
+using UV7_Edit.Tools;
 
 namespace UV7_Edit
 {

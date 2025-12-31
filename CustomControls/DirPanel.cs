@@ -3,10 +3,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using UV7_Edit.Tools;
 
-namespace UV7_Edit
+namespace UV7_Edit.CustomControls
 {
-    public partial class DirPanel : UV7_Edit.SidePanel
+    public partial class DirPanel : SidePanel
     {
         private string path = Application.StartupPath;
         public string Path

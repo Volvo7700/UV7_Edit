@@ -95,8 +95,8 @@
     <Compile Include="Dev\BorderlessToolbar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CancelClosing.cs" />
-    <Compile Include="ClosingCanceller.cs" />
+    <Compile Include="Tools\CancelClosing.cs" />
+    <Compile Include="Tools\ClosingCanceller.cs" />
     <Compile Include="DwmCompositingControllableForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,13 +150,13 @@
     <Compile Include="Preferences\SizeEditor.Designer.cs">
       <DependentUpon>SizeEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirPanel.cs">
+    <Compile Include="CustomControls\DirPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DirPanel.Designer.cs">
+    <Compile Include="CustomControls\DirPanel.Designer.cs">
       <DependentUpon>DirPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Document.cs" />
+    <Compile Include="Tools\Document.cs" />
     <Compile Include="Tools\FileInfoEventArgs.cs" />
     <Compile Include="Form_about.cs">
       <SubType>Form</SubType>
@@ -251,10 +251,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Names.resx</DependentUpon>
     </Compile>
-    <Compile Include="SidePanel.cs">
+    <Compile Include="CustomControls\SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SidePanel.Designer.cs">
+    <Compile Include="CustomControls\SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\SystemColorsTreeRenderer.cs">
@@ -297,7 +297,7 @@
     <EmbeddedResource Include="Preferences\SizeEditor.resx">
       <DependentUpon>SizeEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirPanel.resx">
+    <EmbeddedResource Include="CustomControls\DirPanel.resx">
       <DependentUpon>DirPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_about.resx">
@@ -376,7 +376,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Names.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SidePanel.resx">
+    <EmbeddedResource Include="CustomControls\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />

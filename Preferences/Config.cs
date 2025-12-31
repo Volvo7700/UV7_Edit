@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Serialization;
+using UV7_Edit.CustomControls;
 
 namespace UV7_Edit.Preferences
 {

@@ -126,7 +126,7 @@ namespace UV7_Edit
 
         }
 
-        private void FolderOpen(object sender, EventArgs e)
+        public void FolderOpen(object sender, EventArgs e)
         {
             DialogResult result = betterFolderBrowser.ShowDialog();
             if (result == DialogResult.OK)

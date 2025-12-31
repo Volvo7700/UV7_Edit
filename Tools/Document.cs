@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace UV7_Edit
+namespace UV7_Edit.Tools
 {
     public class Document
     {

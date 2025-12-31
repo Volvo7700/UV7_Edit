@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.CustomControls
 {
     public partial class SidePanel : UserControl
     {
