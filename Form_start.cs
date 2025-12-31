@@ -47,10 +47,10 @@ namespace UV7_Edit
 
         private void OpenFolder(object sender, EventArgs e)
         {
-            //if (this.TopLevelControl is Form_main)
-            //{
-            //    ((Form_main)this.TopLevelControl).FolderOpen(this, EventArgs.Empty);
-            //}
+            if (this.TopLevelControl is Form_main)
+            {
+                ((Form_main)this.TopLevelControl).FolderOpen(this, EventArgs.Empty);
+            }
         }
     }
 }
