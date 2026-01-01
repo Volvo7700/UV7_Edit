@@ -157,12 +157,12 @@ namespace UV7_Edit
         #endregion File
 
         #region Folder
-        private void FolderNew(object sender, EventArgs e)
+        private void FileNewFolder(object sender, EventArgs e)
         {
 
         }
 
-        public void FolderOpen(object sender, EventArgs e)
+        public void FileOpenFolder(object sender, EventArgs e)
         {
             DialogResult result = betterFolderBrowser.ShowDialog();
             if (result == DialogResult.OK)
@@ -289,7 +289,7 @@ namespace UV7_Edit
             }
             else if (e.Button == tb_newFolder)
             {
-                FolderNew(sender, e);
+                FileNewFolder(sender, e);
             }
             else if (e.Button == tb_openFile)
             {
@@ -297,7 +297,7 @@ namespace UV7_Edit
             }
             else if (e.Button == tb_openFolder)
             {
-                FolderOpen(sender, e);
+                FileOpenFolder(sender, e);
             }
             else if (e.Button == tb_saveFile)
             {

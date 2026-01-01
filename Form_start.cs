@@ -42,7 +42,7 @@ namespace UV7_Edit
         {
             if (this.TopLevelControl is Form_main)
             {
-                ((Form_main)this.TopLevelControl).FolderOpen(this, EventArgs.Empty);
+                ((Form_main)this.TopLevelControl).FileOpenFolder(this, EventArgs.Empty);
             }
         }
     }
