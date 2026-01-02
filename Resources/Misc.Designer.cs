@@ -61,6 +61,26 @@ namespace UV7_Edit.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The selected file appears to be a binary or system file with the file extension &quot;{0}&quot;.
+        ///Opening this file can cause problems like freezing, crashes and memory leaks!
+        ///Do you really want to proceed? ähnelt.
+        /// </summary>
+        internal static string BinaryFileExtText {
+            get {
+                return ResourceManager.GetString("BinaryFileExtText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Binary or System File Extension ähnelt.
+        /// </summary>
+        internal static string BinaryFileExtTitle {
+            get {
+                return ResourceManager.GetString("BinaryFileExtTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die New Document ähnelt.
         /// </summary>
         internal static string NewDocument {

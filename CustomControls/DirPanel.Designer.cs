@@ -45,6 +45,7 @@ namespace UV7_Edit.CustomControls
             this.olvc_name});
             this.treeListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeListView.FullRowSelect = true;
             this.treeListView.HideSelection = false;
             this.treeListView.Location = new System.Drawing.Point(0, 32);
             this.treeListView.MultiSelect = false;

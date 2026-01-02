@@ -14,16 +14,17 @@ namespace UV7_Edit
     public partial class Form_main : DwmCompositingControllableForm, CancelClosing
     {
         private bool cancelClosing = false;
-        
+        private FileSystemWatcher watcher = new FileSystemWatcher();
+
         public Form_main()
         {
             InitializeComponent();
             LoadConfig();
 
-            Version ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            Version ver = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
 
-            FileSystemWatcher watcher = new FileSystemWatcher();
+            watcher.Path = Pref.Prefs.WorkFolder.Path;
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime
                                  | NotifyFilters.DirectoryName
@@ -205,26 +206,51 @@ namespace UV7_Edit
         #region File
         public void OpenFile(FileInfo file)
         {
-            Form_edit f = NewForm(file);
-
-            if (f.Doc.FileValid)
+            if (BinaryFileChecker.FileExtIsBinaryFile(file.Extension))
             {
-                f.Text = f.Doc.File.Name;
-                retry:
-                try
-                {
-                    StreamReader reader = f.Doc.File.OpenText();
-                    f.Doc.Content = reader.ReadToEnd();
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    DialogResult result = MessageBox.Show($"The file \"{f.Doc.File.Name}\" could not be saved.{Environment.NewLine}{ex.Message} ({ex})", Application.ProductName, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                    if (result == DialogResult.Retry) goto retry;
-                }
-
+                DialogResult result = MessageBox.Show(
+                    string.Format(Resources.Misc.BinaryFileExtText, file.Extension), 
+                    Resources.Misc.BinaryFileExtTitle, 
+                    MessageBoxButtons.YesNo, 
+                    MessageBoxIcon.Warning, 
+                    MessageBoxDefaultButton.Button2
+                );
+                if (result == DialogResult.Yes)
+                    OpenFileAction();
             }
-            f.Show();
+            else
+            {
+                OpenFileAction();
+            }
+
+            void OpenFileAction()
+            {
+                Form_edit f = NewForm(file);
+
+                if (f.Doc.FileValid)
+                {
+                    f.Text = f.Doc.File.Name;
+                retry:
+                    try
+                    {
+                        StreamReader reader = f.Doc.File.OpenText();
+                        f.Doc.Content = reader.ReadToEnd();
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        DialogResult result = MessageBox.Show(
+                            $"The file \"{f.Doc.File.Name}\" could not be saved.{Environment.NewLine}{ex.Message} ({ex})", 
+                            Application.ProductName, 
+                            MessageBoxButtons.RetryCancel, 
+                            MessageBoxIcon.Error, 
+                            MessageBoxDefaultButton.Button1);
+                        if (result == DialogResult.Retry) goto retry;
+                    }
+
+                }
+                f.Show();
+            }
         }
 
         public void SaveFile(Form_edit f)
@@ -276,6 +302,16 @@ namespace UV7_Edit
         private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
         {
             Pref.Prefs.Workspace.SidebarWidth = dirPanel.Width;
+        }
+
+        private void dirPanel_OpenFileRequest(object sender, FileInfoEventArgs e)
+        {
+            OpenFile(e.FileInfo);
+        }
+
+        public void UpdateWorkFolderPath(string path)
+        {
+            watcher.Path = path;
         }
     }
 }

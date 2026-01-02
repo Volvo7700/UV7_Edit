@@ -38,7 +38,7 @@ namespace UV7_Edit.CustomControls
 
             this.treeListView.ChildrenGetter = delegate (object x) {
                 DirectoryInfo dir = (DirectoryInfo)x;
-                // Hier deemnächst Fehlerbehandlung einfügen, z.B: Zugriffsfehler vermeiden, restliche Dateien aber einlesen
+                // Hier demnächst Fehlerbehandlung einfügen, z.B: Zugriffsfehler vermeiden, restliche Dateien aber einlesen
                 return new ArrayList(dir.GetFileSystemInfos());
             };
 
@@ -61,14 +61,13 @@ namespace UV7_Edit.CustomControls
                     {
                         return "Folder";
                     }
-                    else if (row is File)
+                    else if (row is FileInfo file)
                     {
-                        FileInfo file = row as FileInfo;
-                        if (file.Extension == "txt")
+                        if (file.Extension.Equals(".txt"))
                         {
                             return "FileTXT";
                         }
-                        else if (file.Extension == "md")
+                        else if (file.Extension.Equals(".md") /*file.Extension.Equals(".adoc") || file.Extension.Equals(".asciidoc")*/)
                         {
                             return "FileMD";
                         }
@@ -100,7 +99,8 @@ namespace UV7_Edit.CustomControls
 
         protected virtual void OnOpenFileRequest(FileInfo fileInfo)
         {
-            OpenFileRequest.Invoke(this, new FileInfoEventArgs(fileInfo));
+            if (OpenFileRequest != null)
+                OpenFileRequest.Invoke(this, new FileInfoEventArgs(fileInfo));
         }
     }
 }

@@ -624,6 +624,7 @@ namespace UV7_Edit
             this.dirPanel.Name = "dirPanel";
             this.dirPanel.Path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE";
             this.dirPanel.Title = "DirPanel";
+            this.dirPanel.OpenFileRequest += new System.EventHandler<UV7_Edit.Tools.FileInfoEventArgs>(this.dirPanel_OpenFileRequest);
             // 
             // betterFolderBrowser
             // 

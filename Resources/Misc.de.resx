@@ -112,11 +112,19 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BinaryFileExtText" xml:space="preserve">
+    <value>Die ausgewählte Datei scheint eine binäre Datei oder Systemdatei mit der Dateiendung "{0}" zu sein.
+Das Öffnen dieser Datei kann Probleme wie Einfrieren, Abstürze und Speicherlecks verursachen!
+Soll wirklich fortgefahren werden?</value>
+  </data>
+  <data name="BinaryFileExtTitle" xml:space="preserve">
+    <value>Binäre oder System-Dateiendung</value>
+  </data>
   <data name="NewDocument" xml:space="preserve">
     <value>Neues Dokument</value>
   </data>

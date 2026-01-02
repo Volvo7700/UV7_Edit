@@ -421,6 +421,7 @@ namespace UV7_Edit.Preferences
                         {
                             d.Path = value;
                         }
+                        f.UpdateWorkFolderPath(value);
                     }
                 }
             }
