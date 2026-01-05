@@ -15,10 +15,16 @@ namespace UV7_Edit
     {
         private bool cancelClosing = false;
         private FileSystemWatcher watcher = new FileSystemWatcher();
+        private Form_empty form_empty;
 
         public Form_main()
         {
             InitializeComponent();
+            form_empty = new Form_empty();
+            form_empty.MdiParent = this;
+            form_empty.WindowState = FormWindowState.Maximized;
+            form_empty.Show();
+
             LoadConfig();
 
             Version ver = Assembly.GetExecutingAssembly().GetName().Version;
@@ -69,17 +75,35 @@ namespace UV7_Edit
             SaveConfig();
         }
 
-        private void LoadConfig()
+        private void Form_main_Load(object sender, EventArgs e)
         {
-            // Window
+            // WinForms MDI MainMenu Bugfix
+            // Due to bugs in WinForms' MainMenu and MDI implementation, a maximized MDI child must exist on initialization and the MDI container cannot be maximized  on initialization.
+            
+            // Therefore, the WindowState stays normal and, when needed, is set to maximized right before the form is shown.
             this.WindowState = Pref.Prefs.Window.WindowState;
             this.Location = Pref.Prefs.Window.Location;
             this.Size = Pref.Prefs.Window.Size;
+
+            // In any case, an invisible empty form is created to make WinForms happy, which is closed and, when needed, replaced by startscreen right before the form is shown.
+            form_empty.Close();
+            if (Pref.Prefs.Workspace.ShowStartScreen)
+            {
+                ShowStartForm();
+            }
+        }
+
+        private void Form_main_Shown(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadConfig()
+        {
+            // Window
             this.TopMost = Pref.Prefs.Window.TopMost;
             
             // Workspace
-            if (Pref.Prefs.Workspace.ShowStartScreen)
-                ShowStartForm();
             
             foreach (MdiClient m in this.Controls.OfType<MdiClient>())
             {

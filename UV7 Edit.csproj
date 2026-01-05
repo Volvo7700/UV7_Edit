@@ -95,6 +95,18 @@
     <Compile Include="Dev\BorderlessToolbar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form_empty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_empty.Designer.cs">
+      <DependentUpon>Form_empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolbarSingleButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolbarSingleButton.Designer.cs">
+      <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CancelClosing.cs" />
     <Compile Include="Tools\ClosingCanceller.cs" />
     <Compile Include="DwmCompositingControllableForm.cs">
@@ -264,6 +276,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\MDIClientSupport.cs" />
+    <Compile Include="Tools\BinaryFileChecker.cs" />
+    <EmbeddedResource Include="Form_empty.resx">
+      <DependentUpon>Form_empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_start.resx">
+      <DependentUpon>Form_start.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Preferences\ColorEditor.de.resx">
       <DependentUpon>ColorEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,9 +335,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\Form_preferences.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_start.resx">
-      <DependentUpon>Form_start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_tempCss.resx">
       <DependentUpon>Form_tempCss.cs</DependentUpon>
@@ -378,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolbarSingleButton.resx">
+      <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
