@@ -325,6 +325,7 @@ namespace UV7_Edit
             // 
             this.mi_exit.Index = 15;
             resources.ApplyResources(this.mi_exit, "mi_exit");
+            this.mi_exit.Click += new System.EventHandler(this.FileExit);
             // 
             // mi_edit
             // 
