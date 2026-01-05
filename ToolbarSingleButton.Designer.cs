@@ -37,23 +37,21 @@ namespace UV7_Edit
             // 
             // toolBar1
             // 
-            this.toolBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.toolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
             this.toolBar1.AutoSize = false;
             this.toolBar1.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
             this.toolBarButton});
             this.toolBar1.ButtonSize = new System.Drawing.Size(150, 85);
             this.toolBar1.Divider = false;
-            this.toolBar1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolBar1.DropDownArrows = true;
             this.toolBar1.ImageList = this.imageList1;
             this.toolBar1.Location = new System.Drawing.Point(0, 0);
             this.toolBar1.Name = "toolBar1";
             this.toolBar1.ShowToolTips = true;
-            this.toolBar1.Size = new System.Drawing.Size(152, 85);
+            this.toolBar1.Size = new System.Drawing.Size(152, 34);
             this.toolBar1.TabIndex = 0;
+            this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
             // 
             // toolBarButton
             // 
@@ -72,7 +70,7 @@ namespace UV7_Edit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.toolBar1);
             this.Name = "ToolbarSingleButton";
-            this.Size = new System.Drawing.Size(152, 87);
+            this.Size = new System.Drawing.Size(152, 64);
             this.ResumeLayout(false);
 
         }

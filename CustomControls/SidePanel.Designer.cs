@@ -30,14 +30,14 @@ namespace UV7_Edit.CustomControls
         private void InitializeComponent()
         {
             this.panel_title = new System.Windows.Forms.Panel();
-            this.button_hide = new System.Windows.Forms.Button();
+            this.tsb_hide = new UV7_Edit.ToolbarSingleButton();
             this.label_title = new System.Windows.Forms.Label();
             this.panel_title.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_title
             // 
-            this.panel_title.Controls.Add(this.button_hide);
+            this.panel_title.Controls.Add(this.tsb_hide);
             this.panel_title.Controls.Add(this.label_title);
             this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_title.Location = new System.Drawing.Point(0, 0);
@@ -46,20 +46,18 @@ namespace UV7_Edit.CustomControls
             this.panel_title.Size = new System.Drawing.Size(150, 32);
             this.panel_title.TabIndex = 1;
             // 
-            // button_hide
+            // tsb_hide
             // 
-            this.button_hide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_hide.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button_hide.FlatAppearance.BorderSize = 0;
-            this.button_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hide.Font = new System.Drawing.Font("Marlett", 7F);
-            this.button_hide.Location = new System.Drawing.Point(119, 4);
-            this.button_hide.Name = "button_hide";
-            this.button_hide.Size = new System.Drawing.Size(27, 24);
-            this.button_hide.TabIndex = 1;
-            this.button_hide.Text = "r";
-            this.button_hide.UseVisualStyleBackColor = true;
-            this.button_hide.Click += new System.EventHandler(this.button_hide_Click);
+            this.tsb_hide.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tsb_hide.Font = new System.Drawing.Font("Marlett", 7F);
+            this.tsb_hide.Location = new System.Drawing.Point(119, 4);
+            this.tsb_hide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tsb_hide.Name = "tsb_hide";
+            this.tsb_hide.Size = new System.Drawing.Size(27, 24);
+            this.tsb_hide.TabIndex = 2;
+            this.tsb_hide.Text = "r";
+            this.tsb_hide.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+            this.tsb_hide.Click += new System.EventHandler(this.button_hide_Click);
             // 
             // label_title
             // 
@@ -90,7 +88,7 @@ namespace UV7_Edit.CustomControls
         #endregion
 
         private System.Windows.Forms.Panel panel_title;
-        private System.Windows.Forms.Button button_hide;
         private System.Windows.Forms.Label label_title;
+        private ToolbarSingleButton tsb_hide;
     }
 }
