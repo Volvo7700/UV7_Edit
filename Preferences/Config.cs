@@ -22,7 +22,7 @@ namespace UV7_Edit.Preferences
         public ConfigGeneral General { get; set; } = new ConfigGeneral();
         public ConfigWindow Window { get; set; } = new ConfigWindow();
         public ConfigWorkspace Workspace { get; set; } = new ConfigWorkspace();
-        public ConfigDocumentWindow DocumentWindow { get; set; } = new ConfigDocumentWindow();
+        public ConfigDocumentView DocumentView { get; set; } = new ConfigDocumentView();
         public ConfigEditor Editor { get; set; } = new ConfigEditor();
         public ConfigViewer Viewer { get; set; } = new ConfigViewer();
         public ConfigDocuments Documents { get; set; } = new ConfigDocuments();
@@ -281,10 +281,13 @@ namespace UV7_Edit.Preferences
 
         }
 
-        [LocalizedCategory("DocumentWindow")]
-        public class ConfigDocumentWindow : ConfigElement
+        [LocalizedCategory("DocumentView")]
+        public class ConfigDocumentView : ConfigElement
         {
             private DocumentViewMode viewMode = DocumentViewMode.Both;
+
+            [LocalizedDisplayName("ViewMode")]
+            [LocalizedDescription("ViewMode")]
             public DocumentViewMode ViewMode
             {
                 get => viewMode;
@@ -425,6 +428,12 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
+
+            [XmlIgnore]
+            public bool Exists => Directory.Exists(path);
+
+            [XmlIgnore]
+            public string FallbackPath => Application.StartupPath;
         }
     }
 

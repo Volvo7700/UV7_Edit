@@ -133,6 +133,15 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die View Mode ähnelt.
+        /// </summary>
+        internal static string ViewMode {
+            get {
+                return ResourceManager.GetString("ViewMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Visual Style Mode ähnelt.
         /// </summary>
         internal static string VisualStyleState {

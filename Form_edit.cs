@@ -65,7 +65,7 @@ namespace UV7_Edit
 
         private void LoadConfig()
         {
-            ChangeViewMode(Pref.Prefs.DocumentWindow.ViewMode);
+            ChangeViewMode(Pref.Prefs.DocumentView.ViewMode);
         }
 
         private void ContentChanged(object sender, EventArgs e)

@@ -125,6 +125,12 @@ Soll wirklich fortgefahren werden?</value>
   <data name="BinaryFileExtTitle" xml:space="preserve">
     <value>Binäre oder System-Dateiendung</value>
   </data>
+  <data name="DirPanelTitleDirectoryNotFound" xml:space="preserve">
+    <value>[Verzeichnis nicht gefunden]</value>
+  </data>
+  <data name="DirPanelTitleError" xml:space="preserve">
+    <value>[Fehler]</value>
+  </data>
   <data name="NewDocument" xml:space="preserve">
     <value>Neues Dokument</value>
   </data>

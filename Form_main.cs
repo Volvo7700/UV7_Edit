@@ -30,7 +30,11 @@ namespace UV7_Edit
             Version ver = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
 
-            watcher.Path = Pref.Prefs.WorkFolder.Path;
+
+            if (Pref.Prefs.WorkFolder.Exists)
+                watcher.Path = Pref.Prefs.WorkFolder.Path;
+            else
+                watcher.Path = Pref.Prefs.WorkFolder.FallbackPath;
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime
                                  | NotifyFilters.DirectoryName
@@ -120,7 +124,7 @@ namespace UV7_Edit
             statusBar.Visible = Pref.Prefs.Workspace.ShowStatusbar;
             mi_showStatusbar.Checked = Pref.Prefs.Workspace.ShowStatusbar;
 
-            switch (Pref.Prefs.DocumentWindow.ViewMode)
+            switch (Pref.Prefs.DocumentView.ViewMode)
             {
                 case DocumentViewMode.Both:
                     mi_showBoth.Checked = true;
@@ -277,7 +281,7 @@ namespace UV7_Edit
             }
         }
 
-        public void SaveFile(Form_edit f)
+        public bool SaveFile(Form_edit f)
         {
             retry:
             try
@@ -288,11 +292,13 @@ namespace UV7_Edit
                 writer.Close();
 
                 f.Doc.Save(f.Doc.File.FullName);
+                return true;
             }
             catch (Exception ex)
             {
                 DialogResult result = MessageBox.Show($"The file \"{f.Doc.File.Name}\" could not be saved.{Environment.NewLine}{ex.Message} ({ex})", Application.ProductName, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 if (result == DialogResult.Retry) goto retry;
+                return false;
             }
         }
         #endregion File
@@ -335,7 +341,8 @@ namespace UV7_Edit
 
         public void UpdateWorkFolderPath(string path)
         {
-            watcher.Path = path;
+            if (Directory.Exists(path))
+                watcher.Path = path;
         }
     }
 }

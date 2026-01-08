@@ -125,6 +125,12 @@ Do you really want to proceed?</value>
   <data name="BinaryFileExtTitle" xml:space="preserve">
     <value>Binary or System File Extension</value>
   </data>
+  <data name="DirPanelTitleDirectoryNotFound" xml:space="preserve">
+    <value>[Directory not found]</value>
+  </data>
+  <data name="DirPanelTitleError" xml:space="preserve">
+    <value>[Error]</value>
+  </data>
   <data name="NewDocument" xml:space="preserve">
     <value>New Document</value>
   </data>

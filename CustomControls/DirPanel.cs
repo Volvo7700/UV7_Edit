@@ -3,28 +3,36 @@ using System.Collections;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using UV7_Edit.Preferences;
 using UV7_Edit.Tools;
 
 namespace UV7_Edit.CustomControls
 {
     public partial class DirPanel : SidePanel
     {
-        private string path = Application.StartupPath;
+        private string path = Pref.Prefs.WorkFolder.FallbackPath;
         public string Path
         {
             get => path;
             set
             {
                 path = value;
-                try
+                if (Pref.Prefs.WorkFolder.Exists)
                 {
-                    this.Title = System.IO.Path.GetFileName(value);
+                    try
+                    {
+                        this.Title = System.IO.Path.GetFileName(value);
+                        UpdateData();
+                    }
+                    catch
+                    {
+                        this.Title = Resources.Misc.DirPanelTitleError;
+                    }
                 }
-                catch
+                else
                 {
-                    this.Title = "[Error]";
+                    this.Title = Resources.Misc.DirPanelTitleDirectoryNotFound;
                 }
-                UpdateData();
             }
         }
 

@@ -81,6 +81,24 @@ namespace UV7_Edit.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die [Directory not found] ähnelt.
+        /// </summary>
+        internal static string DirPanelTitleDirectoryNotFound {
+            get {
+                return ResourceManager.GetString("DirPanelTitleDirectoryNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die [Error] ähnelt.
+        /// </summary>
+        internal static string DirPanelTitleError {
+            get {
+                return ResourceManager.GetString("DirPanelTitleError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die New Document ähnelt.
         /// </summary>
         internal static string NewDocument {

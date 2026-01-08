@@ -112,18 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_apply.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="button_apply.Text" xml:space="preserve">
-    <value>Übernehmen</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button_cancel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -139,12 +133,26 @@
   <data name="panel_prefs.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="treeListView_categories.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="label_helpAvail3.Text" xml:space="preserve">
+    <value>Änderungen an dieser Einstellung erfordern einen umgehenden Programmneustart</value>
+  </data>
+  <data name="label_helpAvailTitle.Text" xml:space="preserve">
+    <value>Verfügbarkeit von Einstellungsänderungen</value>
+  </data>
+  <data name="label_helpAvail2.Text" xml:space="preserve">
+    <value>Änderungen an dieser Einstellung werden beim nächsten Start angewandt</value>
+  </data>
+  <data name="label_helpAvail1.Text" xml:space="preserve">
+    <value>Änderungen an dieser Einstellung brauchen länger oder werden nur teilweise angewandt</value>
+  </data>
+  <data name="label_helpAvail0.Text" xml:space="preserve">
+    <value>Änderungen an dieser Einstellung werden sofort angewandt</value>
+  </data>
+  <data name="checkBox_help.Text" xml:space="preserve">
+    <value>Hilfe</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Einstellungen</value>

@@ -81,8 +81,8 @@ namespace UV7_Edit.Preferences
             // 
             // treeListView_categories
             // 
-            this.treeListView_categories.AllColumns.Add(this.olvc_category);
             resources.ApplyResources(this.treeListView_categories, "treeListView_categories");
+            this.treeListView_categories.AllColumns.Add(this.olvc_category);
             this.treeListView_categories.CellEditUseWholeCell = false;
             this.treeListView_categories.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvc_category});
@@ -92,6 +92,7 @@ namespace UV7_Edit.Preferences
             this.treeListView_categories.HideSelection = false;
             this.treeListView_categories.MultiSelect = false;
             this.treeListView_categories.Name = "treeListView_categories";
+            this.treeListView_categories.OverlayText.Text = resources.GetString("resource.Text");
             this.treeListView_categories.ShowGroups = false;
             this.treeListView_categories.UseCompatibleStateImageBehavior = false;
             this.treeListView_categories.UseExplorerTheme = true;
@@ -133,8 +134,8 @@ namespace UV7_Edit.Preferences
             // 
             // pictureBox_helpAvail3
             // 
-            this.pictureBox_helpAvail3.Image = global::UV7_Edit.Properties.Resources.state_red;
             resources.ApplyResources(this.pictureBox_helpAvail3, "pictureBox_helpAvail3");
+            this.pictureBox_helpAvail3.Image = global::UV7_Edit.Properties.Resources.state_red;
             this.pictureBox_helpAvail3.Name = "pictureBox_helpAvail3";
             this.pictureBox_helpAvail3.TabStop = false;
             // 
@@ -160,22 +161,22 @@ namespace UV7_Edit.Preferences
             // 
             // pictureBox_helpAvail2
             // 
-            this.pictureBox_helpAvail2.Image = global::UV7_Edit.Properties.Resources.state_orange;
             resources.ApplyResources(this.pictureBox_helpAvail2, "pictureBox_helpAvail2");
+            this.pictureBox_helpAvail2.Image = global::UV7_Edit.Properties.Resources.state_orange;
             this.pictureBox_helpAvail2.Name = "pictureBox_helpAvail2";
             this.pictureBox_helpAvail2.TabStop = false;
             // 
             // pictureBox_helpAvail1
             // 
-            this.pictureBox_helpAvail1.Image = global::UV7_Edit.Properties.Resources.state_yellow;
             resources.ApplyResources(this.pictureBox_helpAvail1, "pictureBox_helpAvail1");
+            this.pictureBox_helpAvail1.Image = global::UV7_Edit.Properties.Resources.state_yellow;
             this.pictureBox_helpAvail1.Name = "pictureBox_helpAvail1";
             this.pictureBox_helpAvail1.TabStop = false;
             // 
             // pictureBox_helpAvail0
             // 
-            this.pictureBox_helpAvail0.Image = global::UV7_Edit.Properties.Resources.state_green;
             resources.ApplyResources(this.pictureBox_helpAvail0, "pictureBox_helpAvail0");
+            this.pictureBox_helpAvail0.Image = global::UV7_Edit.Properties.Resources.state_green;
             this.pictureBox_helpAvail0.Name = "pictureBox_helpAvail0";
             this.pictureBox_helpAvail0.TabStop = false;
             // 

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -45,7 +44,11 @@ namespace UV7_Edit
         {
             if (form.Doc.File != null)
             {
-                SaveFile(form);
+                if (SaveFile(form))
+                {
+                    mi_save.Enabled = false;
+                    tb_saveFile.Enabled = false;
+                }
             }
             else
             {
@@ -58,22 +61,24 @@ namespace UV7_Edit
         {
             if (ActiveMdiChild != null)
             {
-                if (ActiveMdiChild is Form_edit)
+                if (ActiveMdiChild is Form_edit fe)
                 {
-                    SaveAs((Form_edit)ActiveMdiChild);
+                    bool saved = SaveAs(fe);
+
                 }
             }
         }
 
         // SaveFileDialog
-        private void SaveAs(Form_edit form)
+        private bool SaveAs(Form_edit form)
         {
             DialogResult result = saveFileDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
                 form.Doc.File = new FileInfo(saveFileDialog.FileName);
-                SaveFile(form);
+                return SaveFile(form);
             }
+            return false;
         }
 
         private void FileSaveAll(object sender, EventArgs e)
@@ -100,55 +105,6 @@ namespace UV7_Edit
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
-        }
-
-        private void Form_main_MdiChildActivate(object sender, EventArgs e)
-        {
-            bool activeMdiExists = ActiveMdiChild != null;
-            if (activeMdiExists)
-            {
-                if (ActiveMdiChild is Form_edit fe)
-                {
-                    mi_saveAs.Enabled = true;
-                    mi_print.Enabled = true;
-                    mi_pageSetup.Enabled = true;
-                    mi_close.Enabled = true;
-
-                    mi_save.Enabled = !fe.Doc.Saved;
-                    tb_saveFile.Enabled = !fe.Doc.Saved;
-                }
-                else
-                {
-                    mi_saveAs.Enabled = false;
-                    mi_print.Enabled = false;
-                    mi_pageSetup.Enabled = false;
-                    mi_close.Enabled = false;
-
-                    mi_save.Enabled = false;
-                    tb_saveFile.Enabled = false;
-                }
-            }
-            else
-            {
-                mi_saveAs.Enabled = false;
-                mi_print.Enabled = false;
-                mi_pageSetup.Enabled = false;
-                mi_close.Enabled = false;
-
-                mi_save.Enabled = false;
-                tb_saveFile.Enabled = false;
-            }
-
-            if (Application.OpenForms.OfType<Form_edit>().Count<Form_edit>() > 0)
-            {
-                mi_saveAll.Enabled = true;
-                tb_saveAll.Enabled = true;
-            }
-            else
-            {
-                mi_saveAll.Enabled = false;
-                tb_saveAll.Enabled = false;
-            }
         }
 
         private void FileExit(object sender, EventArgs e)
@@ -210,7 +166,7 @@ namespace UV7_Edit
             mi_showEditor.Checked = true;
             mi_showViewer.Checked = false;
             mi_showBoth.Checked = false;
-            Pref.Prefs.DocumentWindow.ViewMode = DocumentViewMode.Editor;
+            Pref.Prefs.DocumentView.ViewMode = DocumentViewMode.Editor;
         }
 
         private void DocViewShowViewer(object sender, EventArgs e)
@@ -218,7 +174,7 @@ namespace UV7_Edit
             mi_showEditor.Checked = false;
             mi_showViewer.Checked = true;
             mi_showBoth.Checked = false;
-            Pref.Prefs.DocumentWindow.ViewMode = DocumentViewMode.Viewer;
+            Pref.Prefs.DocumentView.ViewMode = DocumentViewMode.Viewer;
         }
 
         private void DocViewShowBoth(object sender, EventArgs e)
@@ -226,7 +182,7 @@ namespace UV7_Edit
             mi_showEditor.Checked = false;
             mi_showViewer.Checked = false;
             mi_showBoth.Checked = true;
-            Pref.Prefs.DocumentWindow.ViewMode = DocumentViewMode.Both;
+            Pref.Prefs.DocumentView.ViewMode = DocumentViewMode.Both;
         }
         #endregion DocView
 
@@ -310,5 +266,50 @@ namespace UV7_Edit
             }
         }
         #endregion ToolBar
+
+        #region Logic
+
+
+        private void Form_main_MdiChildActivate(object sender, EventArgs e)
+        {
+            toolBar_main.SuspendLayout();
+            bool activeMdiExists = ActiveMdiChild != null;
+            
+            mi_saveAs.Enabled = false;
+            mi_print.Enabled = false;
+            mi_pageSetup.Enabled = false;
+            mi_close.Enabled = false;
+
+            mi_save.Enabled = false;
+            tb_saveFile.Enabled = false;
+
+            if (activeMdiExists)
+            {
+                mi_close.Enabled = true;
+
+                if (ActiveMdiChild is Form_edit fe)
+                {
+                    mi_saveAs.Enabled = true;
+                    mi_print.Enabled = true;
+                    mi_pageSetup.Enabled = true;
+
+                    mi_save.Enabled = !fe.Doc.Saved;
+                    tb_saveFile.Enabled = !fe.Doc.Saved;
+                }
+            }
+
+
+            mi_saveAll.Enabled = false;
+            tb_saveAll.Enabled = false;
+
+            if (Application.OpenForms.OfType<Form_edit>().Count<Form_edit>() > 0)
+            {
+                mi_saveAll.Enabled = true;
+                tb_saveAll.Enabled = true;
+            }
+
+            toolBar_main.ResumeLayout();
+        }
+        #endregion Logic
     }
 }

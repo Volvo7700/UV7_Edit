@@ -61,6 +61,15 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Document  View ähnelt.
+        /// </summary>
+        internal static string DocumentView {
+            get {
+                return ResourceManager.GetString("DocumentView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Localization / Language ähnelt.
         /// </summary>
         internal static string Localization {
