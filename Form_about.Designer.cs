@@ -34,10 +34,10 @@ namespace UV7_Edit
             this.button_ok = new System.Windows.Forms.Button();
             this.label_version = new System.Windows.Forms.Label();
             this.label_language = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_creator = new System.Windows.Forms.Label();
             this.label_bitness = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label_desc = new System.Windows.Forms.Label();
+            this.textBox_credits = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,14 +81,14 @@ namespace UV7_Edit
             this.label_language.Text = "Language";
             this.label_language.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label3
+            // label_creator
             // 
-            this.label3.Location = new System.Drawing.Point(43, 346);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(349, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Made 2025 by UV7 / Volvo7700";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_creator.Location = new System.Drawing.Point(43, 346);
+            this.label_creator.Name = "label_creator";
+            this.label_creator.Size = new System.Drawing.Size(349, 23);
+            this.label_creator.TabIndex = 4;
+            this.label_creator.Text = "Made 2025-2026 by UV7 / Volvo7700";
+            this.label_creator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label_bitness
             // 
@@ -98,36 +98,36 @@ namespace UV7_Edit
             this.label_bitness.TabIndex = 5;
             this.label_bitness.Text = "32bit / 64bit AnyCPU";
             // 
-            // label5
+            // label_desc
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(0, 138);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(516, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Win32 Desktop Markdown Editor";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_desc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_desc.Location = new System.Drawing.Point(0, 138);
+            this.label_desc.Name = "label_desc";
+            this.label_desc.Size = new System.Drawing.Size(516, 24);
+            this.label_desc.TabIndex = 6;
+            this.label_desc.Text = "Win32 Desktop Markdown Editor";
+            this.label_desc.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // textBox_credits
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(43, 197);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(430, 129);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox_credits.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_credits.Location = new System.Drawing.Point(43, 197);
+            this.textBox_credits.Multiline = true;
+            this.textBox_credits.Name = "textBox_credits";
+            this.textBox_credits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_credits.Size = new System.Drawing.Size(430, 129);
+            this.textBox_credits.TabIndex = 7;
+            this.textBox_credits.Text = resources.GetString("textBox_credits.Text");
             // 
             // Form_about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 389);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_credits);
+            this.Controls.Add(this.label_desc);
             this.Controls.Add(this.label_bitness);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_creator);
             this.Controls.Add(this.label_language);
             this.Controls.Add(this.label_version);
             this.Controls.Add(this.button_ok);
@@ -153,9 +153,9 @@ namespace UV7_Edit
         private System.Windows.Forms.Button button_ok;
         private System.Windows.Forms.Label label_version;
         private System.Windows.Forms.Label label_language;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_creator;
         private System.Windows.Forms.Label label_bitness;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label_desc;
+        private System.Windows.Forms.TextBox textBox_credits;
     }
 }

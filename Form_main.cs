@@ -26,6 +26,9 @@ namespace UV7_Edit
             form_empty.Show();
 
             LoadConfig();
+#if DEBUG
+            mi_dev.Visible = true;
+#endif
 
             Version ver = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
