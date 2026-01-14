@@ -63,6 +63,8 @@ namespace UV7_Edit
             Tools.MDIClientSupport.SetBevel(this, false);            
         }
 
+        #region Form
+
         // MDI Optimization
         protected override CreateParams CreateParams
         {
@@ -96,12 +98,34 @@ namespace UV7_Edit
                 ShowStartForm();
             }
         }
-
+        
         private void Form_main_Shown(object sender, EventArgs e)
         {
 
         }
+        private void Form_main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cancelClosing)
+            {
+                ClosingCanceller.ClearAll();
+            }
 
+            watcher.EnableRaisingEvents = false;
+            watcher.Dispose();
+        }
+
+        public void CancelClosing()
+        {
+            cancelClosing = true;
+        }
+
+        public void ClearCancelClosing()
+        {
+            cancelClosing = false;
+        }
+        #endregion Form
+
+        #region Config
         private void LoadConfig()
         {
             // Window
@@ -179,6 +203,7 @@ namespace UV7_Edit
                 ApplyResourceToControl(child, cmp, cultureInfo);
             }
         }
+        #endregion Config
 
         #region File System Events
         private void OnFileSystemEvent(object sender, FileSystemEventArgs e)
@@ -303,24 +328,6 @@ namespace UV7_Edit
         }
         #endregion File
 
-        private void Form_main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (cancelClosing)
-            {
-                ClosingCanceller.ClearAll();
-            }
-        }
-
-        public void CancelClosing()
-        {
-            cancelClosing = true;
-        }
-
-        public void ClearCancelClosing()
-        {
-            cancelClosing = false;
-        }
-
         private void menuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(System.Threading.Thread.CurrentThread.CurrentUICulture.Name);
@@ -337,6 +344,12 @@ namespace UV7_Edit
         private void dirPanel_OpenFileRequest(object sender, FileInfoEventArgs e)
         {
             OpenFile(e.FileInfo);
+        }
+
+        private void dirPanel_Collapsed(object sender, EventArgs e)
+        {
+            mi_showStatusbar.Checked = false;
+            Pref.Prefs.Workspace.ShowSidebar = false;
         }
 
         public void UpdateWorkFolderPath(string path)

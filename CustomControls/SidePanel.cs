@@ -34,6 +34,7 @@ namespace UV7_Edit.CustomControls
         private void button_hide_Click(object sender, EventArgs e)
         {
             Hide();
+            OnCollapsed();
         }
 
         bool drag = false;
@@ -62,6 +63,14 @@ namespace UV7_Edit.CustomControls
             {
                 this.Width = e.X + dragOffset;
             }
+        }
+
+        public event EventHandler Collapsed;
+
+        private void OnCollapsed()
+        {
+            if (this.Collapsed != null)
+                this.Collapsed(this, EventArgs.Empty);
         }
     }
 }

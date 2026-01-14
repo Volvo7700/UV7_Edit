@@ -268,8 +268,6 @@ namespace UV7_Edit
         #endregion ToolBar
 
         #region Logic
-
-
         private void Form_main_MdiChildActivate(object sender, EventArgs e)
         {
             toolBar_main.SuspendLayout();
