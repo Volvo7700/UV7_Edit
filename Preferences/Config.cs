@@ -218,16 +218,16 @@ namespace UV7_Edit.Preferences
                 }
             }
 
-            private bool showSidebar = true;
-            [LocalizedDisplayName("ShowSidebar")]
-            [LocalizedDescription("ShowSidebar")]
+            private bool showSideBar = true;
+            [LocalizedDisplayName("ShowSideBar")]
+            [LocalizedDescription("ShowSideBar")]
             [ApplyTime(ApplyTimeState.Immediate)]
-            public bool ShowSidebar
+            public bool ShowSideBar
             {
-                get => showSidebar;
+                get => showSideBar;
                 set
                 {
-                    showSidebar = value;
+                    showSideBar = value;
                     foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
                     {
                         foreach (DirPanel d in f.Controls.OfType<DirPanel>())
@@ -238,17 +238,17 @@ namespace UV7_Edit.Preferences
                 }
             }
 
-            private int sidebarWidth = 200;
-            [LocalizedDisplayName("SidebarWidth")]
-            [LocalizedDescription("SidebarWidth")]
+            private int sideBarWidth = 200;
+            [LocalizedDisplayName("SideBarWidth")]
+            [LocalizedDescription("SideBarWidth")]
             [ApplyTime(ApplyTimeState.Immediate)]
             [Visible(false)]
-            public int SidebarWidth
+            public int SideBarWidth
             {
-                get => sidebarWidth;
+                get => sideBarWidth;
                 set
                 {
-                    sidebarWidth = value;
+                    sideBarWidth = value;
                     foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
                     {
                         foreach (DirPanel d in f.Controls.OfType<DirPanel>())
@@ -259,16 +259,16 @@ namespace UV7_Edit.Preferences
                 }
             }
 
-            private bool showStatusbar = true;
-            [LocalizedDisplayName("ShowStatusbar")]
-            [LocalizedDescription("ShowStatusbar")]
+            private bool showStatusBar = true;
+            [LocalizedDisplayName("ShowStatusBar")]
+            [LocalizedDescription("ShowStatusBar")]
             [ApplyTime(ApplyTimeState.Immediate)]
-            public bool ShowStatusbar
+            public bool ShowStatusBar
             {
-                get => showStatusbar;
+                get => showStatusBar;
                 set
                 {
-                    showStatusbar = value;
+                    showStatusBar = value;
                     foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
                     {
                         foreach (StatusBar s in f.Controls.OfType<StatusBar>())
@@ -278,6 +278,44 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
+
+            private bool showTabBar = true;
+            [LocalizedDisplayName("ShowTabBar")]
+            [LocalizedDescription("ShowTabBar")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowTabBar
+            {
+                get => showTabBar;
+                set
+                {
+                    showTabBar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (MdiTabBar m in f.Controls.OfType<MdiTabBar>())
+                        {
+                            m.Visible = value;
+                        }
+                    }
+                }
+            }
+
+            private bool showTabBarClose = true;
+            [LocalizedDisplayName("ShowTabBarClose")]
+            [LocalizedDescription("ShowTabBarClose")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowTabBarClose
+            {
+                get => showTabBarClose;
+                set
+                {
+                    showTabBarClose = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        f.UpdateTabBarClose();
+                    }
+                }
+            }
+
 
         }
 

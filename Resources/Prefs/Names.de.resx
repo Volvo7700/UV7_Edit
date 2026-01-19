@@ -135,14 +135,20 @@
   <data name="Language" xml:space="preserve">
     <value>Sprache</value>
   </data>
-  <data name="ShowSidebar" xml:space="preserve">
+  <data name="ShowSideBar" xml:space="preserve">
     <value>Seitenleiste anzeigen</value>
   </data>
   <data name="ShowStartScreen" xml:space="preserve">
     <value>Startbildschirm anzeigen</value>
   </data>
-  <data name="ShowStatusbar" xml:space="preserve">
+  <data name="ShowStatusBar" xml:space="preserve">
     <value>Statusleiste anzeigen</value>
+  </data>
+  <data name="ShowTabBar" xml:space="preserve">
+    <value>Tableiste anzeigen</value>
+  </data>
+  <data name="ShowTabBarClose" xml:space="preserve">
+    <value>Tab-Schließschaltfläche anzeigen</value>
   </data>
   <data name="TopMost" xml:space="preserve">
     <value>Als oberstes anzeigen</value>

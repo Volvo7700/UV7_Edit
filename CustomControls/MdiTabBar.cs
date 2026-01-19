@@ -15,6 +15,8 @@ namespace UV7_Edit.CustomControls
         public MdiTabBar()
         {
             InitializeComponent();
+            Visible = Preferences.Pref.Prefs.Workspace.ShowTabBar;
+            ShowClose = Preferences.Pref.Prefs.Workspace.ShowTabBarClose;
         }
 
         public void UpdateMDIChildWindows(Form[] forms, Form activeForm)
@@ -26,7 +28,7 @@ namespace UV7_Edit.CustomControls
             {
                 if (!(forms[i].Disposing || forms[i].IsDisposed))
                 {
-                    MdiTab tab = new MdiTab(forms[i].Text, forms[i].Icon, forms[i], forms[i] == activeForm);
+                    MdiTab tab = new MdiTab(forms[i].Text, forms[i].Icon, forms[i], forms[i] == activeForm, showClose);
                     tab.Click += Tab_Click;
                     tab.Disposed += Tab_Closed;
                     flowLayoutPanel1.Controls.Add(tab);
@@ -60,6 +62,16 @@ namespace UV7_Edit.CustomControls
         {
             if (TabClosed != null)
                 TabClosed(sender, e);
+        }
+
+        private bool showClose;
+        public bool ShowClose
+        {
+            get => showClose;
+            set
+            {
+                showClose = value;
+            }
         }
     }
 }

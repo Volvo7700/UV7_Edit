@@ -129,14 +129,20 @@
   <data name="DesktopCompositing" xml:space="preserve">
     <value>Desktop Compositing</value>
   </data>
-  <data name="ShowSidebar" xml:space="preserve">
+  <data name="ShowSideBar" xml:space="preserve">
     <value>Show Sidebar</value>
   </data>
   <data name="ShowStartScreen" xml:space="preserve">
     <value>Show Start Screen</value>
   </data>
-  <data name="ShowStatusbar" xml:space="preserve">
+  <data name="ShowStatusBar" xml:space="preserve">
     <value>Show Statusbar</value>
+  </data>
+  <data name="ShowTabBar" xml:space="preserve">
+    <value>Show Tab Bar</value>
+  </data>
+  <data name="ShowTabBarClose" xml:space="preserve">
+    <value>Show Tab Close Button</value>
   </data>
   <data name="TopMost" xml:space="preserve">
     <value>Show as top most</value>

@@ -99,9 +99,9 @@ namespace UV7_Edit.Resources.Prefs {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show Sidebar ähnelt.
         /// </summary>
-        internal static string ShowSidebar {
+        internal static string ShowSideBar {
             get {
-                return ResourceManager.GetString("ShowSidebar", resourceCulture);
+                return ResourceManager.GetString("ShowSideBar", resourceCulture);
             }
         }
         
@@ -117,9 +117,27 @@ namespace UV7_Edit.Resources.Prefs {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show Statusbar ähnelt.
         /// </summary>
-        internal static string ShowStatusbar {
+        internal static string ShowStatusBar {
             get {
-                return ResourceManager.GetString("ShowStatusbar", resourceCulture);
+                return ResourceManager.GetString("ShowStatusBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Tab Bar ähnelt.
+        /// </summary>
+        internal static string ShowTabBar {
+            get {
+                return ResourceManager.GetString("ShowTabBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Tab Close Button ähnelt.
+        /// </summary>
+        internal static string ShowTabBarClose {
+            get {
+                return ResourceManager.GetString("ShowTabBarClose", resourceCulture);
             }
         }
         

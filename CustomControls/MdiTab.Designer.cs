@@ -39,9 +39,9 @@ namespace UV7_Edit.CustomControls
             // 
             this.button_close.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_close.Font = new System.Drawing.Font("Marlett", 7F);
-            this.button_close.Location = new System.Drawing.Point(62, 2);
+            this.button_close.Location = new System.Drawing.Point(67, 2);
             this.button_close.Name = "button_close";
-            this.button_close.Size = new System.Drawing.Size(25, 24);
+            this.button_close.Size = new System.Drawing.Size(20, 24);
             this.button_close.TabIndex = 0;
             this.button_close.Text = "r";
             this.button_close.UseVisualStyleBackColor = true;

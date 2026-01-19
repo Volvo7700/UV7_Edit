@@ -155,14 +155,18 @@ namespace UV7_Edit
                 m.BackgroundImage = Pref.Prefs.Workspace.BackImage;
             }
             
-            dirPanel.Visible = Pref.Prefs.Workspace.ShowSidebar;
-            mi_showSidebar.Checked = Pref.Prefs.Workspace.ShowSidebar;
+            dirPanel.Visible = Pref.Prefs.Workspace.ShowSideBar;
+            mi_showSidebar.Checked = Pref.Prefs.Workspace.ShowSideBar;
             
-            if (Pref.Prefs.Workspace.SidebarWidth >= dirPanel.MinimumSize.Width)
-                dirPanel.Width = Pref.Prefs.Workspace.SidebarWidth;
+            if (Pref.Prefs.Workspace.SideBarWidth >= dirPanel.MinimumSize.Width)
+                dirPanel.Width = Pref.Prefs.Workspace.SideBarWidth;
             
-            statusBar.Visible = Pref.Prefs.Workspace.ShowStatusbar;
-            mi_showStatusbar.Checked = Pref.Prefs.Workspace.ShowStatusbar;
+            statusBar.Visible = Pref.Prefs.Workspace.ShowStatusBar;
+            mi_showStatusbar.Checked = Pref.Prefs.Workspace.ShowStatusBar;
+
+            mdiTabBar1.Visible = Pref.Prefs.Workspace.ShowTabBar;
+            mdiTabBar1.ShowClose = Pref.Prefs.Workspace.ShowTabBarClose;
+
 
             switch (Pref.Prefs.DocumentView.ViewMode)
             {
@@ -195,15 +199,15 @@ namespace UV7_Edit
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(language);
             ComponentResourceManager resources = new ComponentResourceManager(this.GetType());
             resources.ApplyResources(this, "$this");
-            applyResources(resources, this.Controls, new CultureInfo(language));
+            ApplyResources(resources, this.Controls, new CultureInfo(language));
         }
 
-        private void applyResources(ComponentResourceManager resources, Control.ControlCollection ctls, CultureInfo cultureInfo)
+        private void ApplyResources(ComponentResourceManager resources, Control.ControlCollection ctls, CultureInfo cultureInfo)
         {
             foreach (Control ctl in ctls)
             {
                 resources.ApplyResources(ctl, ctl.Name, cultureInfo);
-                applyResources(resources, ctl.Controls, cultureInfo);
+                ApplyResources(resources, ctl.Controls, cultureInfo);
             }
         }
 
@@ -218,6 +222,12 @@ namespace UV7_Edit
             {
                 ApplyResourceToControl(child, cmp, cultureInfo);
             }
+        }
+
+        public void UpdateTabBarClose()
+        {
+            mdiTabBar1.ShowClose = Pref.Prefs.Workspace.ShowTabBarClose;
+            mdiTabBar1.UpdateMDIChildWindows(MdiChildren, ActiveMdiChild);
         }
         #endregion Config
 
@@ -355,7 +365,7 @@ namespace UV7_Edit
 
         private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
         {
-            Pref.Prefs.Workspace.SidebarWidth = dirPanel.Width;
+            Pref.Prefs.Workspace.SideBarWidth = dirPanel.Width;
         }
 
         private void dirPanel_OpenFileRequest(object sender, FileInfoEventArgs e)
@@ -366,7 +376,7 @@ namespace UV7_Edit
         private void dirPanel_Collapsed(object sender, EventArgs e)
         {
             mi_showStatusbar.Checked = false;
-            Pref.Prefs.Workspace.ShowSidebar = false;
+            Pref.Prefs.Workspace.ShowSideBar = false;
         }
 
         public void UpdateWorkFolderPath(string path)

@@ -12,7 +12,7 @@ namespace UV7_Edit.CustomControls
 {
     public partial class MdiTab : UserControl
     {
-        public MdiTab(string title, Icon icon, Form form, bool active)
+        public MdiTab(string title, Icon icon, Form form, bool active, bool showClose)
         {
             InitializeComponent();
             Title = title;
@@ -21,6 +21,8 @@ namespace UV7_Edit.CustomControls
             Form = form;
             if (active)
                 this.BackColor = SystemColors.Window;
+            if (showClose)
+                button_close.Visible = true;
         }
 
         public string Title
