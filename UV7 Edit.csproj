@@ -95,6 +95,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\MdiTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\MdiTab.Designer.cs">
+      <DependentUpon>MdiTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\MdiTabBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\MdiTabBar.Designer.cs">
+      <DependentUpon>MdiTabBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dev\BorderlessToolbar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -215,6 +227,7 @@
     <Compile Include="Preferences\PrefsUIBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\FormEventArgs.cs" />
     <Compile Include="Tools\ReflectionExtensions.cs" />
     <Compile Include="Resources\Misc.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -280,6 +293,12 @@
     </Compile>
     <Compile Include="Tools\MDIClientSupport.cs" />
     <Compile Include="Tools\BinaryFileChecker.cs" />
+    <EmbeddedResource Include="CustomControls\MdiTab.resx">
+      <DependentUpon>MdiTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\MdiTabBar.resx">
+      <DependentUpon>MdiTabBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_empty.resx">
       <DependentUpon>Form_empty.cs</DependentUpon>
     </EmbeddedResource>

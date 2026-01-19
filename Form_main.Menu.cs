@@ -270,6 +270,8 @@ namespace UV7_Edit
         #region Logic
         private void Form_main_MdiChildActivate(object sender, EventArgs e)
         {
+            mdiTabBar1.UpdateMDIChildWindows(MdiChildren, ActiveMdiChild);
+            
             toolBar_main.SuspendLayout();
             bool activeMdiExists = ActiveMdiChild != null;
             

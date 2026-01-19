@@ -31,7 +31,6 @@ namespace UV7_Edit
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
-            this.panel_toolBar = new System.Windows.Forms.Panel();
             this.toolBar_main = new System.Windows.Forms.ToolBar();
             this.tb_newFile = new System.Windows.Forms.ToolBarButton();
             this.tb_openFile = new System.Windows.Forms.ToolBarButton();
@@ -110,14 +109,8 @@ namespace UV7_Edit
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.dirPanel = new UV7_Edit.CustomControls.DirPanel();
             this.betterFolderBrowser = new WK.Libraries.BetterFolderBrowserNS.BetterFolderBrowser(this.components);
-            this.panel_toolBar.SuspendLayout();
+            this.mdiTabBar1 = new UV7_Edit.CustomControls.MdiTabBar();
             this.SuspendLayout();
-            // 
-            // panel_toolBar
-            // 
-            this.panel_toolBar.Controls.Add(this.toolBar_main);
-            resources.ApplyResources(this.panel_toolBar, "panel_toolBar");
-            this.panel_toolBar.Name = "panel_toolBar";
             // 
             // toolBar_main
             // 
@@ -634,14 +627,22 @@ namespace UV7_Edit
             this.betterFolderBrowser.RootFolder = "Application.StartupPath";
             this.betterFolderBrowser.Title = "Open Folder";
             // 
+            // mdiTabBar1
+            // 
+            resources.ApplyResources(this.mdiTabBar1, "mdiTabBar1");
+            this.mdiTabBar1.Name = "mdiTabBar1";
+            this.mdiTabBar1.TabClick += new System.EventHandler(this.MdiTabClicked);
+            this.mdiTabBar1.TabClosed += new System.EventHandler(this.MdiTabClosed);
+            // 
             // Form_main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.dirPanel);
-            this.Controls.Add(this.panel_toolBar);
             this.Controls.Add(this.statusBar);
+            this.Controls.Add(this.mdiTabBar1);
+            this.Controls.Add(this.toolBar_main);
             this.IsMdiContainer = true;
             this.Menu = this.mainMenu;
             this.Name = "Form_main";
@@ -650,13 +651,11 @@ namespace UV7_Edit
             this.Load += new System.EventHandler(this.Form_main_Load);
             this.MdiChildActivate += new System.EventHandler(this.Form_main_MdiChildActivate);
             this.Shown += new System.EventHandler(this.Form_main_Shown);
-            this.panel_toolBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_toolBar;
         private System.Windows.Forms.MainMenu mainMenu;
         private System.Windows.Forms.MenuItem mi_file;
         private System.Windows.Forms.MenuItem mi_new;
@@ -735,6 +734,7 @@ namespace UV7_Edit
         private System.Windows.Forms.ToolBarButton tb_sep2;
         private System.Windows.Forms.ToolBarButton tb_undo;
         private System.Windows.Forms.ToolBarButton tb_redo;
+        private CustomControls.MdiTabBar mdiTabBar1;
     }
 }
 
