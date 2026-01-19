@@ -104,10 +104,10 @@
     <Compile Include="Form_empty.Designer.cs">
       <DependentUpon>Form_empty.cs</DependentUpon>
     </Compile>
-    <Compile Include="ToolbarSingleButton.cs">
+    <Compile Include="CustomControls\ToolbarSingleButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ToolbarSingleButton.Designer.cs">
+    <Compile Include="CustomControls\ToolbarSingleButton.Designer.cs">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\CancelClosing.cs" />
@@ -398,7 +398,7 @@
     <EmbeddedResource Include="CustomControls\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ToolbarSingleButton.resx">
+    <EmbeddedResource Include="CustomControls\ToolbarSingleButton.resx">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />

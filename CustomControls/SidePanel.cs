@@ -14,9 +14,12 @@ namespace UV7_Edit.CustomControls
 {
     public partial class SidePanel : UserControl
     {
+        private Font marlettFont;
+        
         public SidePanel()
         {
             InitializeComponent();
+            marlettFont = new Font("Marlett", 7);
         }
 
         public string Title
@@ -71,6 +74,13 @@ namespace UV7_Edit.CustomControls
         {
             if (this.Collapsed != null)
                 this.Collapsed(this, EventArgs.Empty);
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            tsb_hide.Font = marlettFont;
+            tsb_hide.Invalidate();
         }
     }
 }

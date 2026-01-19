@@ -5,7 +5,7 @@ using UV7_Edit.Preferences;
 
 namespace UV7_Edit
 {
-    public class DwmCompositingControllableForm : Form
+    public abstract class DwmCompositingControllableForm : Form
     {
         [Flags]
         private enum DwmWindowAttribute : uint
@@ -61,6 +61,11 @@ namespace UV7_Edit
                 : DwmNCRenderingPolicy.DWMNCRP_DISABLED;
 
             DwmSetWindowAttribute(this.Handle, DwmWindowAttribute.DWMWA_NCRENDERING_POLICY, policy, sizeof(DwmNCRenderingPolicy));
+        }
+
+        public DwmCompositingControllableForm() : base()
+        {
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
     }
 }

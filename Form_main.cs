@@ -33,7 +33,6 @@ namespace UV7_Edit
             Version ver = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
 
-
             if (Pref.Prefs.WorkFolder.Exists)
                 watcher.Path = Pref.Prefs.WorkFolder.Path;
             else
@@ -84,6 +83,19 @@ namespace UV7_Edit
             SaveConfig();
         }
 
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+
+            Menu = mainMenu;
+        }
+
+        protected override void OnHandleDestroyed(EventArgs e)
+        {
+            this.Menu = null;
+            base.OnHandleDestroyed(e);
+        }
+
         private void Form_main_Load(object sender, EventArgs e)
         {
             // WinForms MDI MainMenu Bugfix
@@ -95,7 +107,7 @@ namespace UV7_Edit
             this.Size = Pref.Prefs.Window.Size;
 
             // In any case, an invisible empty form is created to make WinForms happy, which is closed and, when needed, replaced by startscreen right before the form is shown.
-            form_empty.Close();
+            form_empty.Hide();
             if (Pref.Prefs.Workspace.ShowStartScreen)
             {
                 ShowStartForm();
@@ -254,6 +266,7 @@ namespace UV7_Edit
             Form_edit f = new Form_edit(file);
             f.MdiParent = this;
             f.WindowState = FormWindowState.Maximized;
+            f.Doc.ContentChanged += FileSavedChanged;
             return f;
         }
 

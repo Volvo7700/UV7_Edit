@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.CustomControls
 {
     public partial class ToolbarSingleButton : UserControl
     {
@@ -68,6 +68,8 @@ namespace UV7_Edit
             //if (Image == null)
                 SendMessage(toolBar1.Handle, TB_SETIMAGELIST, IntPtr.Zero, IntPtr.Zero);
             SetSize();
+            toolBar1.Font = this.Font;
+            toolBar1.Invalidate();
         }
 
         private void SetSize()

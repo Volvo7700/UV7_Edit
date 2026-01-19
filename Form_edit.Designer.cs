@@ -51,8 +51,8 @@ namespace UV7_Edit
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.viewer);
-            this.splitContainer1.Size = new System.Drawing.Size(803, 450);
-            this.splitContainer1.SplitterDistance = 360;
+            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.SplitterDistance = 358;
             this.splitContainer1.TabIndex = 1;
             // 
             // editor
@@ -63,7 +63,7 @@ namespace UV7_Edit
             this.editor.Multiline = true;
             this.editor.Name = "editor";
             this.editor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.editor.Size = new System.Drawing.Size(360, 450);
+            this.editor.Size = new System.Drawing.Size(358, 450);
             this.editor.TabIndex = 0;
             this.editor.TextChanged += new System.EventHandler(this.EditorChanged);
             // 
@@ -76,14 +76,14 @@ namespace UV7_Edit
             this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewer.Location = new System.Drawing.Point(0, 0);
             this.viewer.Name = "viewer";
-            this.viewer.Size = new System.Drawing.Size(421, 450);
+            this.viewer.Size = new System.Drawing.Size(438, 450);
             this.viewer.TabIndex = 1;
             this.viewer.Text = null;
             // 
             // Form_edit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;

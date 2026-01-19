@@ -637,7 +637,7 @@ namespace UV7_Edit
             // Form_main
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.dirPanel);
             this.Controls.Add(this.panel_toolBar);

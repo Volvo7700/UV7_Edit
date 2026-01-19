@@ -308,6 +308,21 @@ namespace UV7_Edit
 
             toolBar_main.ResumeLayout();
         }
+
+        public void FileSavedChanged(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                if (this.ActiveMdiChild is Form_edit fe)
+                {
+                    if (!fe.Doc.Saved)
+                    {
+                        mi_save.Enabled = true;
+                        tb_saveFile.Enabled = true;
+                    }
+                }
+            }
+        }
         #endregion Logic
     }
 }

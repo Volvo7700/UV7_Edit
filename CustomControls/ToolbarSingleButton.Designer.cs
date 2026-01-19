@@ -1,5 +1,5 @@
 ﻿
-namespace UV7_Edit
+namespace UV7_Edit.CustomControls
 {
     partial class ToolbarSingleButton
     {

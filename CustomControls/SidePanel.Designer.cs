@@ -30,8 +30,8 @@ namespace UV7_Edit.CustomControls
         private void InitializeComponent()
         {
             this.panel_title = new System.Windows.Forms.Panel();
-            this.tsb_hide = new UV7_Edit.ToolbarSingleButton();
             this.label_title = new System.Windows.Forms.Label();
+            this.tsb_hide = new UV7_Edit.CustomControls.ToolbarSingleButton();
             this.panel_title.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,17 @@ namespace UV7_Edit.CustomControls
             this.panel_title.Size = new System.Drawing.Size(150, 32);
             this.panel_title.TabIndex = 1;
             // 
+            // label_title
+            // 
+            this.label_title.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_title.Location = new System.Drawing.Point(4, 4);
+            this.label_title.Name = "label_title";
+            this.label_title.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.label_title.Size = new System.Drawing.Size(142, 24);
+            this.label_title.TabIndex = 0;
+            this.label_title.Text = "SidePanel";
+            this.label_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // tsb_hide
             // 
             this.tsb_hide.Dock = System.Windows.Forms.DockStyle.Right;
@@ -58,17 +69,6 @@ namespace UV7_Edit.CustomControls
             this.tsb_hide.Text = "r";
             this.tsb_hide.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
             this.tsb_hide.Click += new System.EventHandler(this.button_hide_Click);
-            // 
-            // label_title
-            // 
-            this.label_title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_title.Location = new System.Drawing.Point(4, 4);
-            this.label_title.Name = "label_title";
-            this.label_title.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.label_title.Size = new System.Drawing.Size(142, 24);
-            this.label_title.TabIndex = 0;
-            this.label_title.Text = "SidePanel";
-            this.label_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // SidePanel
             // 
