@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using UV7_Edit.CustomControls;
 using UV7_Edit.Preferences;
 using UV7_Edit.Tools;
 
@@ -359,6 +360,34 @@ namespace UV7_Edit
         {
             if (Directory.Exists(path))
                 watcher.Path = path;
+        }
+
+        private void MdiTabClicked(object sender, EventArgs e)
+        {
+            if (sender is MdiTab mt)
+            {
+                foreach (Form f in this.MdiChildren)
+                {
+                    if (f == mt.Form)
+                    {
+                        f.Activate();
+                    }
+                }
+            }
+        }
+
+        private void MdiTabClosed(object sender, EventArgs e)
+        {
+            if (sender is MdiTab mt)
+            {
+                foreach (Form f in this.MdiChildren)
+                {
+                    if (f == mt.Form)
+                    {
+                        f.Close();
+                    }
+                }
+            }
         }
     }
 }
