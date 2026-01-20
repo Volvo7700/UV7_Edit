@@ -228,6 +228,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\FormEventArgs.cs" />
+    <Compile Include="Tools\MdiTabHideAttribute.cs" />
     <Compile Include="Tools\ReflectionExtensions.cs" />
     <Compile Include="Resources\Misc.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
+using UV7_Edit.Tools;
 
 namespace UV7_Edit.CustomControls
 {
@@ -28,10 +23,13 @@ namespace UV7_Edit.CustomControls
             {
                 if (!(forms[i].Disposing || forms[i].IsDisposed))
                 {
-                    MdiTab tab = new MdiTab(forms[i].Text, forms[i].Icon, forms[i], forms[i] == activeForm, showClose);
-                    tab.Click += Tab_Click;
-                    tab.Disposed += Tab_Closed;
-                    flowLayoutPanel1.Controls.Add(tab);
+                    if (forms[i].GetType().GetCustomAttribute<MdiTabHideAttribute>() == null)
+                    {
+                        MdiTab tab = new MdiTab(forms[i].Text, forms[i].Icon, forms[i], forms[i] == activeForm, showClose);
+                        tab.Click += Tab_Click;
+                        tab.Disposed += Tab_Closed;
+                        flowLayoutPanel1.Controls.Add(tab);
+                    }
                 }
             }
 
