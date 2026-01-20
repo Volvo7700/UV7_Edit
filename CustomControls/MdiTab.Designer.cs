@@ -45,6 +45,7 @@ namespace UV7_Edit.CustomControls
             this.button_close.TabIndex = 0;
             this.button_close.Text = "r";
             this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Visible = false;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
             // label_name
@@ -81,6 +82,7 @@ namespace UV7_Edit.CustomControls
             this.Controls.Add(this.label_name);
             this.Controls.Add(this.pictureBox_icon);
             this.Controls.Add(this.button_close);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "MdiTab";
             this.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.Size = new System.Drawing.Size(87, 28);

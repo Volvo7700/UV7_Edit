@@ -83,10 +83,10 @@ namespace UV7_Edit.Preferences
 
         private void SaveConfig()
         {
-            foreach (KeyValuePair<string, Panel> pair in categoryPanels)
-            {
-                PrefsUIBuilder.SaveUI(pair.Value, categoryObjects[pair.Key]);
-            }
+            //foreach (KeyValuePair<string, Panel> pair in categoryPanels)
+            //{
+            //    PrefsUIBuilder.SaveUI(pair.Value, categoryObjects[pair.Key]);
+            //}
             Pref.Save();
         }
 
