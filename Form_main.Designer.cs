@@ -631,6 +631,7 @@ namespace UV7_Edit
             // 
             resources.ApplyResources(this.mdiTabBar1, "mdiTabBar1");
             this.mdiTabBar1.Name = "mdiTabBar1";
+            this.mdiTabBar1.ShowClose = true;
             this.mdiTabBar1.TabClick += new System.EventHandler(this.MdiTabClicked);
             this.mdiTabBar1.TabClosed += new System.EventHandler(this.MdiTabClosed);
             // 

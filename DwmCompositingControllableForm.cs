@@ -5,7 +5,11 @@ using UV7_Edit.Preferences;
 
 namespace UV7_Edit
 {
+#if DEBUG
+    public class DwmCompositingControllableForm : Form
+#else
     public abstract class DwmCompositingControllableForm : Form
+#endif
     {
         [Flags]
         private enum DwmWindowAttribute : uint
