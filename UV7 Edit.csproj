@@ -300,6 +300,9 @@
     <EmbeddedResource Include="CustomControls\MdiTabBar.resx">
       <DependentUpon>MdiTabBar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_edit.de.resx">
+      <DependentUpon>Form_edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_empty.resx">
       <DependentUpon>Form_empty.cs</DependentUpon>
     </EmbeddedResource>

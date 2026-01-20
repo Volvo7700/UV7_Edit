@@ -29,6 +29,7 @@ namespace UV7_Edit
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_edit));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.editor = new System.Windows.Forms.TextBox();
             this.viewer = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
@@ -40,56 +41,41 @@ namespace UV7_Edit
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             this.splitContainer1.Panel1.Controls.Add(this.editor);
             // 
             // splitContainer1.Panel2
             // 
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.Controls.Add(this.viewer);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 358;
-            this.splitContainer1.TabIndex = 1;
             // 
             // editor
             // 
-            this.editor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.editor.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editor.Location = new System.Drawing.Point(0, 0);
-            this.editor.Multiline = true;
+            resources.ApplyResources(this.editor, "editor");
             this.editor.Name = "editor";
-            this.editor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.editor.Size = new System.Drawing.Size(358, 450);
-            this.editor.TabIndex = 0;
             this.editor.TextChanged += new System.EventHandler(this.EditorChanged);
             // 
             // viewer
             // 
-            this.viewer.AutoScroll = true;
+            resources.ApplyResources(this.viewer, "viewer");
             this.viewer.BackColor = System.Drawing.SystemColors.Window;
             this.viewer.BaseStylesheet = null;
             this.viewer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewer.Location = new System.Drawing.Point(0, 0);
             this.viewer.Name = "viewer";
-            this.viewer.Size = new System.Drawing.Size(438, 450);
-            this.viewer.TabIndex = 1;
-            this.viewer.Text = null;
             // 
             // Form_edit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Name = "Form_edit";
             this.ShowIcon = false;
-            this.Text = "New Document";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_edit_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
