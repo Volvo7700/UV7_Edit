@@ -324,6 +324,7 @@ namespace UV7_Edit
                     }
                 }
             }
+            mdiTabBar1.UpdateMDIChildWindows(MdiChildren, ActiveMdiChild);
         }
         #endregion Logic
     }

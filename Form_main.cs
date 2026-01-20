@@ -277,7 +277,7 @@ namespace UV7_Edit
             Form_edit f = new Form_edit(file);
             f.MdiParent = this;
             f.WindowState = FormWindowState.Maximized;
-            f.Doc.ContentChanged += FileSavedChanged;
+            f.Doc.SavedChanged += FileSavedChanged;
             return f;
         }
 
@@ -326,6 +326,7 @@ namespace UV7_Edit
                             MessageBoxIcon.Error, 
                             MessageBoxDefaultButton.Button1);
                         if (result == DialogResult.Retry) goto retry;
+                        else return;
                     }
 
                 }
