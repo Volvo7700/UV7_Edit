@@ -83,7 +83,10 @@ namespace UV7_Edit
 
         private void FileSaveAll(object sender, EventArgs e)
         {
-
+            foreach (Form_edit f in Application.OpenForms.OfType<Form_edit>())
+            {
+                Save(f);
+            }
         }
 
         private void FileStartScreen(object sender, EventArgs e)
