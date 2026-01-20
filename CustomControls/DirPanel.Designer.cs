@@ -54,6 +54,7 @@ namespace UV7_Edit.CustomControls
             this.treeListView.Size = new System.Drawing.Size(150, 298);
             this.treeListView.TabIndex = 3;
             this.treeListView.UseCompatibleStateImageBehavior = false;
+            this.treeListView.UseHotControls = false;
             this.treeListView.View = System.Windows.Forms.View.Details;
             this.treeListView.VirtualMode = true;
             this.treeListView.ItemActivate += new System.EventHandler(this.treeListView_ItemActivate);
