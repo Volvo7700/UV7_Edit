@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace UV7_Edit
 {
@@ -7,6 +8,7 @@ namespace UV7_Edit
         public Form_start()
         {
             InitializeComponent();
+            this.Icon = Icon.FromHandle(Properties.Resources.program16.GetHicon());
         }
 
         private void Form_start_Resize(object sender, EventArgs e)

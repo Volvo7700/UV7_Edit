@@ -57,8 +57,7 @@ namespace UV7_Edit.CustomControls
             this.label_name.MaximumSize = new System.Drawing.Size(200, 200);
             this.label_name.MinimumSize = new System.Drawing.Size(20, 20);
             this.label_name.Name = "label_name";
-            this.label_name.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.label_name.Size = new System.Drawing.Size(30, 20);
+            this.label_name.Size = new System.Drawing.Size(26, 20);
             this.label_name.TabIndex = 1;
             this.label_name.Text = "Tab";
             this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -70,6 +69,7 @@ namespace UV7_Edit.CustomControls
             this.pictureBox_icon.Location = new System.Drawing.Point(0, 2);
             this.pictureBox_icon.Name = "pictureBox_icon";
             this.pictureBox_icon.Size = new System.Drawing.Size(21, 24);
+            this.pictureBox_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_icon.TabIndex = 2;
             this.pictureBox_icon.TabStop = false;
             this.pictureBox_icon.Click += new System.EventHandler(this.ControlClick);

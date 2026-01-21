@@ -29,6 +29,7 @@ namespace UV7_Edit
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_start));
             this.button_newFolder = new System.Windows.Forms.Button();
             this.button_openFile = new System.Windows.Forms.Button();
             this.button_openFolder = new System.Windows.Forms.Button();
@@ -145,6 +146,7 @@ namespace UV7_Edit
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(842, 539);
             this.Controls.Add(this.panel_start);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_start";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

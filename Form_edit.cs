@@ -35,6 +35,8 @@ namespace UV7_Edit
             Doc.ContentChanged += ContentChanged;
             Doc.SavedChanged += SavedChanged;
 
+            this.Icon = FileSystemIconHelper.GetFileTypeIcon(file);
+
             // MDI Optimization
             this.DoubleBuffered = true;
             this.SetStyle(

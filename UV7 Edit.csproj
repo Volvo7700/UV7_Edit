@@ -122,6 +122,11 @@
     <Compile Include="CustomControls\ToolbarSingleButton.Designer.cs">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CancelClosing.cs" />
     <Compile Include="Tools\ClosingCanceller.cs" />
     <Compile Include="DwmCompositingControllableForm.cs">
@@ -184,6 +189,7 @@
       <DependentUpon>DirPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Document.cs" />
+    <Compile Include="Tools\FileSystemIconHelper.cs" />
     <Compile Include="Tools\FileInfoEventArgs.cs" />
     <Compile Include="Form_about.cs">
       <SubType>Form</SubType>
@@ -367,14 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Resources\Misc.de.resx" />
     <EmbeddedResource Include="Resources\Misc.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -480,6 +481,11 @@
     <None Include="icon\background_missing.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="icon\File.png" />
+    <None Include="icon\FileMD.png" />
+    <None Include="icon\FileTXT.png" />
+    <None Include="icon\program16.png" />
+    <None Include="icon\program.png" />
     <Content Include="program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
