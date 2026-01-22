@@ -241,7 +241,7 @@ namespace UV7_Edit
         #endregion Dev
 
         #region ToolBar
-        private void toolBar_main_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
+        private void aeroToolBar_main_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
         {
             if (e.Button == tb_newFile)
             {
@@ -274,8 +274,8 @@ namespace UV7_Edit
         private void Form_main_MdiChildActivate(object sender, EventArgs e)
         {
             mdiTabBar1.UpdateMDIChildWindows(MdiChildren, ActiveMdiChild);
-            
-            toolBar_main.SuspendLayout();
+
+            aeroToolBar_main.SuspendLayout();
             bool activeMdiExists = ActiveMdiChild != null;
             
             mi_saveAs.Enabled = false;
@@ -311,7 +311,7 @@ namespace UV7_Edit
                 tb_saveAll.Enabled = true;
             }
 
-            toolBar_main.ResumeLayout();
+            aeroToolBar_main.ResumeLayout();
         }
 
         public void FileSavedChanged(object sender, EventArgs e)

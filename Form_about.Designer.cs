@@ -38,6 +38,7 @@ namespace UV7_Edit
             this.label_bitness = new System.Windows.Forms.Label();
             this.label_desc = new System.Windows.Forms.Label();
             this.textBox_credits = new System.Windows.Forms.TextBox();
+            this.button_licenses = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,11 +120,24 @@ namespace UV7_Edit
             this.textBox_credits.TabIndex = 7;
             this.textBox_credits.Text = resources.GetString("textBox_credits.Text");
             // 
+            // button_licenses
+            // 
+            this.button_licenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_licenses.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button_licenses.Location = new System.Drawing.Point(319, 348);
+            this.button_licenses.Name = "button_licenses";
+            this.button_licenses.Size = new System.Drawing.Size(75, 23);
+            this.button_licenses.TabIndex = 8;
+            this.button_licenses.Text = "Licenses";
+            this.button_licenses.UseVisualStyleBackColor = true;
+            this.button_licenses.Click += new System.EventHandler(this.button_licenses_Click);
+            // 
             // Form_about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(516, 389);
+            this.Controls.Add(this.button_licenses);
             this.Controls.Add(this.textBox_credits);
             this.Controls.Add(this.label_desc);
             this.Controls.Add(this.label_bitness);
@@ -157,5 +171,6 @@ namespace UV7_Edit
         private System.Windows.Forms.Label label_bitness;
         private System.Windows.Forms.Label label_desc;
         private System.Windows.Forms.TextBox textBox_credits;
+        private System.Windows.Forms.Button button_licenses;
     }
 }

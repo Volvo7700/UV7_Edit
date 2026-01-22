@@ -66,6 +66,7 @@
       <HintPath>packages\System.Collections.Immutable.10.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Formats.Nrbf, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Formats.Nrbf.10.0.0\lib\net462\System.Formats.Nrbf.dll</HintPath>
     </Reference>
@@ -95,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\AeroToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\AeroToolBar.Designer.cs">
+      <DependentUpon>AeroToolBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\MdiTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +128,12 @@
     </Compile>
     <Compile Include="CustomControls\ToolbarSingleButton.Designer.cs">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_licenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_licenses.Designer.cs">
+      <DependentUpon>Form_licenses.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\CancelClosing.cs" />
     <Compile Include="Tools\ClosingCanceller.cs" />
@@ -229,6 +242,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\FormEventArgs.cs" />
     <Compile Include="Tools\MdiTabHideAttribute.cs" />
+    <Compile Include="Tools\NativeToolStripRenderer.cs" />
     <Compile Include="Tools\ReflectionExtensions.cs" />
     <Compile Include="Resources\Misc.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -294,6 +308,9 @@
     </Compile>
     <Compile Include="Tools\MDIClientSupport.cs" />
     <Compile Include="Tools\BinaryFileChecker.cs" />
+    <EmbeddedResource Include="CustomControls\AeroToolBar.resx">
+      <DependentUpon>AeroToolBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\MdiTab.resx">
       <DependentUpon>MdiTab.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_empty.resx">
       <DependentUpon>Form_empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_licenses.resx">
+      <DependentUpon>Form_licenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_start.resx">
       <DependentUpon>Form_start.cs</DependentUpon>

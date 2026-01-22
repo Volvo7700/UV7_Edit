@@ -117,34 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox_credits.Text" xml:space="preserve">
-    <value>License: GNU General Public License v3
-
-Credits:
-_________________________________________________________
-
-ObjectListView (GNU General Public License v3)
-Copyright © 2006-2016 Philip Piper
-https://objectlistview.sourceforge.net/cs/index.html
-
-Free FatCow-Farm Fresh IconsFarm-Fresh v3.92 
-Copyright © Fatcow Web Hosting
-(formerly http://www.fatcow.com/free-icons )
-
-BetterFolderBrowser (MIT License)
-Copyright © WillyKimura
-https://github.com/Willy-Kimura/BetterFolderBrowser
-
-HtmlRenderer (BSD-3-Clause)
-Copyright © Arthur Teplitzki 
-https://codeplexarchive.org/project/HtmlRenderer
-
-MarkdownDeep (Apache License v2.0)
-Copyright © 2010-2017 Topten Software
-https://www.toptensoftware.com/markdowndeep/
-
-DropDownButton.NativeToolStripRenderer (MIT License)
-Copyright © 2013 Alexander Ellingsen
-https://github.com/AlexxEG/DropDownButton/blob/master/NativeToolStripRenderer.cs</value>
-  </data>
 </root>
