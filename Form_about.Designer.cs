@@ -44,99 +44,59 @@ namespace UV7_Edit
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::UV7_Edit.Properties.Resources.branding;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(516, 138);
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // button_ok
             // 
-            this.button_ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ok.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button_ok.Location = new System.Drawing.Point(400, 348);
+            resources.ApplyResources(this.button_ok, "button_ok");
             this.button_ok.Name = "button_ok";
-            this.button_ok.Size = new System.Drawing.Size(75, 23);
-            this.button_ok.TabIndex = 1;
-            this.button_ok.Text = "OK";
             this.button_ok.UseVisualStyleBackColor = true;
             this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
             // 
             // label_version
             // 
-            this.label_version.Location = new System.Drawing.Point(40, 162);
+            resources.ApplyResources(this.label_version, "label_version");
             this.label_version.Name = "label_version";
-            this.label_version.Size = new System.Drawing.Size(150, 18);
-            this.label_version.TabIndex = 2;
-            this.label_version.Text = "Version xy";
-            this.label_version.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label_language
             // 
-            this.label_language.Location = new System.Drawing.Point(196, 162);
+            resources.ApplyResources(this.label_language, "label_language");
             this.label_language.Name = "label_language";
-            this.label_language.Size = new System.Drawing.Size(121, 18);
-            this.label_language.TabIndex = 3;
-            this.label_language.Text = "Language";
-            this.label_language.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label_creator
             // 
-            this.label_creator.Location = new System.Drawing.Point(43, 346);
+            resources.ApplyResources(this.label_creator, "label_creator");
             this.label_creator.Name = "label_creator";
-            this.label_creator.Size = new System.Drawing.Size(349, 23);
-            this.label_creator.TabIndex = 4;
-            this.label_creator.Text = "Made 2025-2026 by UV7 / Volvo7700";
-            this.label_creator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label_bitness
             // 
-            this.label_bitness.Location = new System.Drawing.Point(323, 162);
+            resources.ApplyResources(this.label_bitness, "label_bitness");
             this.label_bitness.Name = "label_bitness";
-            this.label_bitness.Size = new System.Drawing.Size(150, 18);
-            this.label_bitness.TabIndex = 5;
-            this.label_bitness.Text = "32bit / 64bit AnyCPU";
             // 
             // label_desc
             // 
-            this.label_desc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_desc.Location = new System.Drawing.Point(0, 138);
+            resources.ApplyResources(this.label_desc, "label_desc");
             this.label_desc.Name = "label_desc";
-            this.label_desc.Size = new System.Drawing.Size(516, 24);
-            this.label_desc.TabIndex = 6;
-            this.label_desc.Text = "Win32 Desktop Markdown Editor";
-            this.label_desc.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox_credits
             // 
-            this.textBox_credits.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_credits.Location = new System.Drawing.Point(43, 197);
-            this.textBox_credits.Multiline = true;
+            resources.ApplyResources(this.textBox_credits, "textBox_credits");
             this.textBox_credits.Name = "textBox_credits";
-            this.textBox_credits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_credits.Size = new System.Drawing.Size(430, 129);
-            this.textBox_credits.TabIndex = 7;
-            this.textBox_credits.Text = resources.GetString("textBox_credits.Text");
             // 
             // button_licenses
             // 
-            this.button_licenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_licenses.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button_licenses.Location = new System.Drawing.Point(319, 348);
+            resources.ApplyResources(this.button_licenses, "button_licenses");
             this.button_licenses.Name = "button_licenses";
-            this.button_licenses.Size = new System.Drawing.Size(75, 23);
-            this.button_licenses.TabIndex = 8;
-            this.button_licenses.Text = "Licenses";
             this.button_licenses.UseVisualStyleBackColor = true;
             this.button_licenses.Click += new System.EventHandler(this.button_licenses_Click);
             // 
             // Form_about
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(516, 389);
             this.Controls.Add(this.button_licenses);
             this.Controls.Add(this.textBox_credits);
             this.Controls.Add(this.label_desc);
@@ -148,13 +108,9 @@ namespace UV7_Edit
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(532, 428);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(532, 428);
             this.Name = "Form_about";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
