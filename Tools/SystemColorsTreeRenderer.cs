@@ -10,7 +10,7 @@ namespace UV7_Edit.Tools
     {
         protected override void DrawLines(Graphics g, Rectangle r, Pen p, Branch br, int glyphMidVertical)
         {
-            base.DrawLines(g, r, new Pen(SystemColors.ControlText, 1), br, glyphMidVertical);
+            base.DrawLines(g, r, new Pen(SystemColors.ControlDark, 1), br, glyphMidVertical);
         }
     }
 }
