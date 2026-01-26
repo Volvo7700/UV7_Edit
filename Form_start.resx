@@ -117,4 +117,253 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label_newFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 38</value>
+  </data>
+  <data name="&gt;&gt;label_openFile.Name" xml:space="preserve">
+    <value>label_openFile</value>
+  </data>
+  <data name="&gt;&gt;button_openFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_openFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label_openFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel_start.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 150</value>
+  </data>
+  <data name="panel_start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>456, 239</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form_start</value>
+  </data>
+  <data name="&gt;&gt;label_newFolder.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label_newFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 48</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label_newFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_openFile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;button_newFile.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="&gt;&gt;button_newFolder.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_openFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 38</value>
+  </data>
+  <data name="&gt;&gt;label_openFolder.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="label_newFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 150</value>
+  </data>
+  <data name="&gt;&gt;label_newFolder.Name" xml:space="preserve">
+    <value>label_newFolder</value>
+  </data>
+  <data name="label_newFile.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label_newFile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel_start.Name" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="&gt;&gt;button_openFile.Name" xml:space="preserve">
+    <value>button_openFile</value>
+  </data>
+  <data name="&gt;&gt;label_newFile.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="label_newFolder.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;button_newFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label_openFile.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="&gt;&gt;label_newFolder.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="button_openFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label_openFolder.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="button_newFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="&gt;&gt;label_newFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_openFolder.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label_newFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label_newFolder.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;button_openFolder.Name" xml:space="preserve">
+    <value>button_openFolder</value>
+  </data>
+  <data name="label_openFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 150</value>
+  </data>
+  <data name="label_openFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label_newFile.Name" xml:space="preserve">
+    <value>label_newFile</value>
+  </data>
+  <data name="label_openFile.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;button_newFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label_newFolder.Text" xml:space="preserve">
+    <value>New Folder...</value>
+  </data>
+  <data name="panel_start.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label_openFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 48</value>
+  </data>
+  <data name="&gt;&gt;button_newFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel_start.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label_newFile.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;button_openFolder.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="button_newFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 150</value>
+  </data>
+  <data name="button_openFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 150</value>
+  </data>
+  <data name="&gt;&gt;button_openFile.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="&gt;&gt;panel_start.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="button_newFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button_openFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label_openFile.Text" xml:space="preserve">
+    <value>Open File...</value>
+  </data>
+  <data name="&gt;&gt;panel_start.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button_newFolder.Name" xml:space="preserve">
+    <value>button_newFolder</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;label_openFolder.Name" xml:space="preserve">
+    <value>label_openFolder</value>
+  </data>
+  <data name="button_openFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="label_openFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 48</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="button_newFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 38</value>
+  </data>
+  <data name="label_openFolder.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="label_openFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;label_openFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_openFolder.Text" xml:space="preserve">
+    <value>Open Folder...</value>
+  </data>
+  <data name="label_openFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;button_newFolder.Parent" xml:space="preserve">
+    <value>panel_start</value>
+  </data>
+  <data name="button_openFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="&gt;&gt;button_newFile.Name" xml:space="preserve">
+    <value>button_newFile</value>
+  </data>
+  <data name="button_newFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="label_newFile.Text" xml:space="preserve">
+    <value>New File</value>
+  </data>
+  <data name="&gt;&gt;label_openFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label_newFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 48</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>842, 539</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9522.24687, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label_newFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button_openFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 38</value>
+  </data>
+  <data name="button_newFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label_openFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

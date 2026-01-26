@@ -9,6 +9,81 @@ namespace UV7_Edit
 {
     public partial class Form_main
     {
+        public ToolBarButton tb_newFile;
+        public ToolBarButton tb_openFile;
+        public ToolBarButton tb_saveFile;
+        public ToolBarButton tb_saveAll;
+        public ToolBarButton tb_sep1;
+        public ToolBarButton tb_newFolder;
+        public ToolBarButton tb_openFolder;
+        public ToolBarButton tb_sep2;
+        public ToolBarButton tb_undo;
+        public ToolBarButton tb_redo;
+
+        private void InitializeToolBar()
+        {
+            //
+            // tb_newFile
+            //
+            tb_newFile = new ToolBarButton();
+            tb_newFile.Name = "NewFile";
+            //
+            // tb_openFile
+            //
+            tb_openFile = new ToolBarButton();
+            tb_openFile.Name = "OpenFile";
+            //
+            // tb_saveFile
+            //
+            tb_saveFile = new ToolBarButton();
+            tb_saveFile.Name = "SaveFile";
+            //
+            // tb_saveAll
+            //
+            tb_saveAll = new ToolBarButton();
+            tb_saveAll.Name = "SaveAll";
+            //
+            // tb_sep1
+            //
+            tb_sep1 = new ToolBarButton();
+            tb_sep1.Style = ToolBarButtonStyle.Separator;
+            //
+            // tb_newFolder
+            //
+            tb_newFolder = new ToolBarButton();
+            tb_newFolder.Name = "NewFolder";
+            //
+            // tb_openFolder
+            //
+            tb_openFolder = new ToolBarButton();
+            tb_openFolder.Name = "OpenFolder";
+            //
+            // tb_sep2
+            //
+            tb_sep2 = new ToolBarButton();
+            tb_sep2.Style = ToolBarButtonStyle.Separator;
+            //
+            // tb_undo
+            //
+            tb_undo = new ToolBarButton();
+            tb_undo.Name = "Undo";
+            //
+            // tb_redo
+            //
+            tb_redo = new ToolBarButton();
+            tb_redo.Name = "Redo";
+
+            aeroToolBar_main.ImageList = imageList_toolBar;
+            ToolBarButton[] buttons = { tb_newFile, tb_openFile, tb_saveFile, tb_sep1, tb_newFolder, tb_openFolder, tb_sep2, tb_undo, tb_redo };
+            foreach (ToolBarButton button in buttons)
+            {
+                button.Text = Resources.ToolBar.ResourceManager.GetString(button.Name);
+                button.ImageKey = button.Name;
+            }
+            aeroToolBar_main.SetButtons(buttons);
+            aeroToolBar_main.ButtonClick += aeroToolBar_main_ButtonClick;
+        }
+
         #region File
         public void FileNew(object sender, EventArgs e)
         {

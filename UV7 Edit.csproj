@@ -135,12 +135,18 @@
     <Compile Include="Form_licenses.Designer.cs">
       <DependentUpon>Form_licenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\ToolBar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolBar.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CancelClosing.cs" />
     <Compile Include="Tools\ClosingCanceller.cs" />
     <Compile Include="DwmCompositingControllableForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_main.Menu.cs">
+      <DependentUpon>Form_main.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Preferences\ApplyTimeAttribute.cs" />
@@ -329,6 +335,9 @@
     <EmbeddedResource Include="Form_licenses.resx">
       <DependentUpon>Form_licenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_start.de.resx">
+      <DependentUpon>Form_start.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_start.resx">
       <DependentUpon>Form_start.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +455,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ToolbarSingleButton.resx">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ToolBar.de.resx" />
+    <EmbeddedResource Include="Resources\ToolBar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ToolBar.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

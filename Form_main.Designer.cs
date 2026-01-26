@@ -100,16 +100,6 @@ namespace UV7_Edit
             this.betterFolderBrowser = new WK.Libraries.BetterFolderBrowserNS.BetterFolderBrowser(this.components);
             this.mdiTabBar1 = new UV7_Edit.CustomControls.MdiTabBar();
             this.aeroToolBar_main = new UV7_Edit.Tools.AeroToolBar();
-            this.tb_newFile = new System.Windows.Forms.ToolBarButton();
-            this.tb_openFile = new System.Windows.Forms.ToolBarButton();
-            this.tb_saveFile = new System.Windows.Forms.ToolBarButton();
-            this.tb_saveAll = new System.Windows.Forms.ToolBarButton();
-            this.tb_sep1 = new System.Windows.Forms.ToolBarButton();
-            this.tb_newFolder = new System.Windows.Forms.ToolBarButton();
-            this.tb_openFolder = new System.Windows.Forms.ToolBarButton();
-            this.tb_sep2 = new System.Windows.Forms.ToolBarButton();
-            this.tb_undo = new System.Windows.Forms.ToolBarButton();
-            this.tb_redo = new System.Windows.Forms.ToolBarButton();
             this.SuspendLayout();
             // 
             // imageList_toolBar
@@ -574,46 +564,6 @@ namespace UV7_Edit
             this.aeroToolBar_main.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
             this.aeroToolBar_main.Theme = UV7_Edit.Tools.ToolbarTheme.Toolbar;
             // 
-            // tb_newFile
-            // 
-            this.tb_newFile.Name = "tb_newFile";
-            // 
-            // tb_openFile
-            // 
-            this.tb_openFile.Name = "tb_openFile";
-            // 
-            // tb_saveFile
-            // 
-            this.tb_saveFile.Name = "tb_saveFile";
-            // 
-            // tb_saveAll
-            // 
-            this.tb_saveAll.Name = "tb_saveAll";
-            // 
-            // tb_sep1
-            // 
-            this.tb_sep1.Name = "tb_sep1";
-            // 
-            // tb_newFolder
-            // 
-            this.tb_newFolder.Name = "tb_newFolder";
-            // 
-            // tb_openFolder
-            // 
-            this.tb_openFolder.Name = "tb_openFolder";
-            // 
-            // tb_sep2
-            // 
-            this.tb_sep2.Name = "tb_sep2";
-            // 
-            // tb_undo
-            // 
-            this.tb_undo.Name = "tb_undo";
-            // 
-            // tb_redo
-            // 
-            this.tb_redo.Name = "tb_redo";
-            // 
             // Form_main
             // 
             resources.ApplyResources(this, "$this");
@@ -705,16 +655,6 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem menuItem2;
         private CustomControls.MdiTabBar mdiTabBar1;
         private UV7_Edit.Tools.AeroToolBar aeroToolBar_main;
-        private System.Windows.Forms.ToolBarButton tb_newFile;
-        private System.Windows.Forms.ToolBarButton tb_openFile;
-        private System.Windows.Forms.ToolBarButton tb_saveFile;
-        private System.Windows.Forms.ToolBarButton tb_saveAll;
-        private System.Windows.Forms.ToolBarButton tb_sep1;
-        private System.Windows.Forms.ToolBarButton tb_newFolder;
-        private System.Windows.Forms.ToolBarButton tb_openFolder;
-        private System.Windows.Forms.ToolBarButton tb_sep2;
-        private System.Windows.Forms.ToolBarButton tb_undo;
-        private System.Windows.Forms.ToolBarButton tb_redo;
     }
 }
 

@@ -1,26 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using UV7_Edit.Tools;
-using static System.Windows.Forms.ToolBar;
 
 namespace UV7_Edit.Tools
 {
     public partial class AeroToolBar : UserControl
     {
         NativeToolStripRenderer renderer;
+        public event ToolBarButtonClickEventHandler ButtonClick;
 
         public AeroToolBar()
         {
             InitializeComponent();
+            buttons = new List<ToolBarButton>();
             toolBar.HandleCreated += (s, e) =>
             {
                 SendMessage(toolBar.Handle, TB_SETSTYLE, IntPtr.Zero, new IntPtr(style));
+                //UpdateButtons();
             };
             renderer = new NativeToolStripRenderer(Theme);
+            toolBar.ButtonClick += toolbar_ButtonClick;
+            toolBar.Wrappable = false;
         }
 
         private ToolbarTheme theme;
@@ -34,7 +37,18 @@ namespace UV7_Edit.Tools
             }
         }
 
-        public ToolBarButtonCollection Buttons => toolBar.Buttons;
+        private List<ToolBarButton> buttons;
+        public List<ToolBarButton> Buttons
+        {
+            get => buttons;
+            set
+            {
+                buttons = value;
+                if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                    return;
+                UpdateButtons();
+            }
+        }
 
         public ImageList ImageList
         {
@@ -66,8 +80,31 @@ namespace UV7_Edit.Tools
             {
                 base.OnPaintBackground(e);
             }
+        }
 
-            //e.Graphics.FillRectangle(new LinearGradientBrush(new Point(0, 0), new Point(e.ClipRectangle.Right, e.ClipRectangle.Bottom), SystemColors.Window, SystemColors.AppWorkspace), e.ClipRectangle);
+        private void UpdateButtons()
+        {
+            toolBar.Buttons.Clear();
+            toolBar.Buttons.AddRange(Buttons.ToArray());
+        }
+
+        public void SetButtons(ToolBarButton[] buttons)
+        {
+            toolBar.Buttons.Clear();
+            toolBar.Buttons.AddRange(buttons);
+        }
+
+        private void toolbar_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
+        {
+            OnButtonClick(sender, e);
+        }
+
+        private void OnButtonClick(object sender, ToolBarButtonClickEventArgs e)
+        {
+            if (ButtonClick != null)
+            {
+                ButtonClick.Invoke(sender, e);
+            }
         }
     }
 }
