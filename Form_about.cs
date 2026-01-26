@@ -1,5 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
 
 namespace UV7_Edit
@@ -21,6 +24,18 @@ namespace UV7_Edit
         private void button_ok_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button_licenses_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(Path.Combine(Application.StartupPath, "Licenses"));
+            }
+            catch (Win32Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

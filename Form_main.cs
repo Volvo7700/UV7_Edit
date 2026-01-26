@@ -21,6 +21,8 @@ namespace UV7_Edit
         public Form_main()
         {
             InitializeComponent();
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+                InitializeToolBar();
             form_empty = new Form_empty();
             form_empty.MdiParent = this;
             form_empty.WindowState = FormWindowState.Maximized;
