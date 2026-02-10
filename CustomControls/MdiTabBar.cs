@@ -10,8 +10,8 @@ namespace UV7_Edit.CustomControls
         public MdiTabBar()
         {
             InitializeComponent();
-            Visible = Preferences.Pref.Prefs.Workspace.ShowTabBar;
-            ShowClose = Preferences.Pref.Prefs.Workspace.ShowTabBarClose;
+            Visible = Preferences.Pref.Prefs.Window.ShowTabBar;
+            ShowClose = Preferences.Pref.Prefs.Window.ShowTabBarClose;
         }
 
         public void UpdateMDIChildWindows(Form[] forms, Form activeForm)

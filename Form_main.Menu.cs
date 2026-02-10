@@ -222,13 +222,13 @@ namespace UV7_Edit
         private void ViewShowSidebar(object sender, EventArgs e)
         {
             mi_showSidebar.Checked = !mi_showSidebar.Checked;
-            Pref.Prefs.Workspace.ShowSideBar = mi_showSidebar.Checked;
+            Pref.Prefs.Window.ShowSideBar = mi_showSidebar.Checked;
         }
 
         private void ViewShowStatusbar(object sender, EventArgs e)
         {
             mi_showStatusbar.Checked = !mi_showStatusbar.Checked;
-            Pref.Prefs.Workspace.ShowStatusBar = mi_showStatusbar.Checked;
+            Pref.Prefs.Window.ShowStatusBar = mi_showStatusbar.Checked;
         }
         #endregion View
 

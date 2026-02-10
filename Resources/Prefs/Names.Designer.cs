@@ -142,6 +142,24 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Tool Bar ähnelt.
+        /// </summary>
+        internal static string ShowToolBar {
+            get {
+                return ResourceManager.GetString("ShowToolBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tool Bar Size ähnelt.
+        /// </summary>
+        internal static string ToolBarSize {
+            get {
+                return ResourceManager.GetString("ToolBarSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show as top most ähnelt.
         /// </summary>
         internal static string TopMost {

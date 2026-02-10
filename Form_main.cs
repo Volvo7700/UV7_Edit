@@ -148,28 +148,30 @@ namespace UV7_Edit
         {
             // Window
             this.TopMost = Pref.Prefs.Window.TopMost;
-            
+
+            aeroToolBar_main.Visible = Pref.Prefs.Window.ShowToolBar;
+            aeroToolBar_main.Height = (int)Pref.Prefs.Window.ToolBarSize + 6;
+
+            mdiTabBar1.Visible = Pref.Prefs.Window.ShowTabBar;
+            mdiTabBar1.ShowClose = Pref.Prefs.Window.ShowTabBarClose;
+
+            dirPanel.Visible = Pref.Prefs.Window.ShowSideBar;
+            mi_showSidebar.Checked = Pref.Prefs.Window.ShowSideBar;
+
+            if (Pref.Prefs.Window.SideBarWidth >= dirPanel.MinimumSize.Width)
+                dirPanel.Width = Pref.Prefs.Window.SideBarWidth;
+
+            statusBar.Visible = Pref.Prefs.Window.ShowStatusBar;
+            mi_showStatusbar.Checked = Pref.Prefs.Window.ShowStatusBar;
+
             // Workspace
-            
             foreach (MdiClient m in this.Controls.OfType<MdiClient>())
             {
                 m.BackColor = Pref.Prefs.Workspace.BackColor;
                 m.BackgroundImage = Pref.Prefs.Workspace.BackImage;
             }
-            
-            dirPanel.Visible = Pref.Prefs.Workspace.ShowSideBar;
-            mi_showSidebar.Checked = Pref.Prefs.Workspace.ShowSideBar;
-            
-            if (Pref.Prefs.Workspace.SideBarWidth >= dirPanel.MinimumSize.Width)
-                dirPanel.Width = Pref.Prefs.Workspace.SideBarWidth;
-            
-            statusBar.Visible = Pref.Prefs.Workspace.ShowStatusBar;
-            mi_showStatusbar.Checked = Pref.Prefs.Workspace.ShowStatusBar;
 
-            mdiTabBar1.Visible = Pref.Prefs.Workspace.ShowTabBar;
-            mdiTabBar1.ShowClose = Pref.Prefs.Workspace.ShowTabBarClose;
-
-
+            // Document View Mode
             switch (Pref.Prefs.DocumentView.ViewMode)
             {
                 case DocumentViewMode.Both:
@@ -228,7 +230,7 @@ namespace UV7_Edit
 
         public void UpdateTabBarClose()
         {
-            mdiTabBar1.ShowClose = Pref.Prefs.Workspace.ShowTabBarClose;
+            mdiTabBar1.ShowClose = Pref.Prefs.Window.ShowTabBarClose;
             mdiTabBar1.UpdateMDIChildWindows(MdiChildren, ActiveMdiChild);
         }
         #endregion Config
@@ -368,7 +370,7 @@ namespace UV7_Edit
 
         private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
         {
-            Pref.Prefs.Workspace.SideBarWidth = dirPanel.Width;
+            Pref.Prefs.Window.SideBarWidth = dirPanel.Width;
         }
 
         private void dirPanel_OpenFileRequest(object sender, FileInfoEventArgs e)
@@ -379,7 +381,7 @@ namespace UV7_Edit
         private void dirPanel_Collapsed(object sender, EventArgs e)
         {
             mi_showStatusbar.Checked = false;
-            Pref.Prefs.Workspace.ShowSideBar = false;
+            Pref.Prefs.Window.ShowSideBar = false;
         }
 
         public void UpdateWorkFolderPath(string path)

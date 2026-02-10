@@ -144,6 +144,12 @@
   <data name="ShowTabBarClose" xml:space="preserve">
     <value>Show Tab Close Button</value>
   </data>
+  <data name="ShowToolBar" xml:space="preserve">
+    <value>Show Tool Bar</value>
+  </data>
+  <data name="ToolBarSize" xml:space="preserve">
+    <value>Tool Bar Size</value>
+  </data>
   <data name="TopMost" xml:space="preserve">
     <value>Show as top most</value>
   </data>

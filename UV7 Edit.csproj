@@ -135,6 +135,7 @@
     <Compile Include="Form_licenses.Designer.cs">
       <DependentUpon>Form_licenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preferences\CustomEnums.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

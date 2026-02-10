@@ -150,6 +150,12 @@
   <data name="ShowTabBarClose" xml:space="preserve">
     <value>Tab-Schließschaltfläche anzeigen</value>
   </data>
+  <data name="ShowToolBar" xml:space="preserve">
+    <value>Werkzeugleiste anzeigen</value>
+  </data>
+  <data name="ToolBarSize" xml:space="preserve">
+    <value>Werkzeugleistengröße</value>
+  </data>
   <data name="TopMost" xml:space="preserve">
     <value>Als oberstes anzeigen</value>
   </data>

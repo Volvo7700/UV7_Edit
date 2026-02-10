@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Serialization;
 using UV7_Edit.CustomControls;
+using UV7_Edit.Tools;
 
 namespace UV7_Edit.Preferences
 {
@@ -110,6 +111,153 @@ namespace UV7_Edit.Preferences
                     foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
                     {
                         f.TopMost = value;
+                    }
+                }
+            }
+
+            private bool showToolBar = true;
+            [LocalizedDisplayName("ShowToolBar")]
+            [LocalizedDescription("ShowToolBar")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowToolBar
+            {
+                get => showToolBar;
+                set
+                {
+                    showToolBar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (AeroToolBar a in f.Controls.OfType<AeroToolBar>())
+                        {
+                            a.Visible = value;
+                        }
+                    }
+                }
+            }
+
+            private IconSize toolBarSize = IconSize.Normal;
+            [LocalizedDisplayName("ToolBarSize")]
+            [LocalizedDescription("ToolBarSize")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public IconSize ToolBarSize
+            {
+                get => toolBarSize;
+                set
+                {
+                    toolBarSize = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (AeroToolBar a in f.Controls.OfType<AeroToolBar>())
+                        {
+                            a.Height = (int)value + 6;
+                            switch (value)
+                            {
+                                case IconSize.Small:
+                                    //a.ImageList = ;
+                                    break;
+                                case IconSize.Normal:
+                                    //a.ImageList = ;
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            private bool showTabBar = true;
+            [LocalizedDisplayName("ShowTabBar")]
+            [LocalizedDescription("ShowTabBar")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowTabBar
+            {
+                get => showTabBar;
+                set
+                {
+                    showTabBar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (MdiTabBar m in f.Controls.OfType<MdiTabBar>())
+                        {
+                            m.Visible = value;
+                        }
+                    }
+                }
+            }
+
+            private bool showTabBarClose = true;
+            [LocalizedDisplayName("ShowTabBarClose")]
+            [LocalizedDescription("ShowTabBarClose")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowTabBarClose
+            {
+                get => showTabBarClose;
+                set
+                {
+                    showTabBarClose = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        f.UpdateTabBarClose();
+                    }
+                }
+            }
+
+            private bool showSideBar = true;
+            [LocalizedDisplayName("ShowSideBar")]
+            [LocalizedDescription("ShowSideBar")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowSideBar
+            {
+                get => showSideBar;
+                set
+                {
+                    showSideBar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
+                        {
+                            d.Visible = value;
+                        }
+                    }
+                }
+            }
+
+            private int sideBarWidth = 200;
+            [LocalizedDisplayName("SideBarWidth")]
+            [LocalizedDescription("SideBarWidth")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            [Visible(false)]
+            public int SideBarWidth
+            {
+                get => sideBarWidth;
+                set
+                {
+                    sideBarWidth = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
+                        {
+                            d.Width = value;
+                        }
+                    }
+                }
+            }
+
+            private bool showStatusBar = true;
+            [LocalizedDisplayName("ShowStatusBar")]
+            [LocalizedDescription("ShowStatusBar")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowStatusBar
+            {
+                get => showStatusBar;
+                set
+                {
+                    showStatusBar = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (StatusBar s in f.Controls.OfType<StatusBar>())
+                        {
+                            s.Visible = value;
+                        }
                     }
                 }
             }
@@ -217,106 +365,6 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
-
-            private bool showSideBar = true;
-            [LocalizedDisplayName("ShowSideBar")]
-            [LocalizedDescription("ShowSideBar")]
-            [ApplyTime(ApplyTimeState.Immediate)]
-            public bool ShowSideBar
-            {
-                get => showSideBar;
-                set
-                {
-                    showSideBar = value;
-                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
-                    {
-                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
-                        {
-                            d.Visible = value;
-                        }
-                    }
-                }
-            }
-
-            private int sideBarWidth = 200;
-            [LocalizedDisplayName("SideBarWidth")]
-            [LocalizedDescription("SideBarWidth")]
-            [ApplyTime(ApplyTimeState.Immediate)]
-            [Visible(false)]
-            public int SideBarWidth
-            {
-                get => sideBarWidth;
-                set
-                {
-                    sideBarWidth = value;
-                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
-                    {
-                        foreach (DirPanel d in f.Controls.OfType<DirPanel>())
-                        {
-                            d.Width = value;
-                        }
-                    }
-                }
-            }
-
-            private bool showStatusBar = true;
-            [LocalizedDisplayName("ShowStatusBar")]
-            [LocalizedDescription("ShowStatusBar")]
-            [ApplyTime(ApplyTimeState.Immediate)]
-            public bool ShowStatusBar
-            {
-                get => showStatusBar;
-                set
-                {
-                    showStatusBar = value;
-                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
-                    {
-                        foreach (StatusBar s in f.Controls.OfType<StatusBar>())
-                        {
-                            s.Visible = value;
-                        }
-                    }
-                }
-            }
-
-            private bool showTabBar = true;
-            [LocalizedDisplayName("ShowTabBar")]
-            [LocalizedDescription("ShowTabBar")]
-            [ApplyTime(ApplyTimeState.Immediate)]
-            public bool ShowTabBar
-            {
-                get => showTabBar;
-                set
-                {
-                    showTabBar = value;
-                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
-                    {
-                        foreach (MdiTabBar m in f.Controls.OfType<MdiTabBar>())
-                        {
-                            m.Visible = value;
-                        }
-                    }
-                }
-            }
-
-            private bool showTabBarClose = true;
-            [LocalizedDisplayName("ShowTabBarClose")]
-            [LocalizedDescription("ShowTabBarClose")]
-            [ApplyTime(ApplyTimeState.Immediate)]
-            public bool ShowTabBarClose
-            {
-                get => showTabBarClose;
-                set
-                {
-                    showTabBarClose = value;
-                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
-                    {
-                        f.UpdateTabBarClose();
-                    }
-                }
-            }
-
-
         }
 
         [LocalizedCategory("DocumentView")]
