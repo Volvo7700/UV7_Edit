@@ -68,6 +68,7 @@ namespace UV7_Edit.CustomControls
             this.pictureBox_icon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox_icon.Location = new System.Drawing.Point(0, 2);
             this.pictureBox_icon.Name = "pictureBox_icon";
+            this.pictureBox_icon.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.pictureBox_icon.Size = new System.Drawing.Size(21, 24);
             this.pictureBox_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_icon.TabIndex = 2;
