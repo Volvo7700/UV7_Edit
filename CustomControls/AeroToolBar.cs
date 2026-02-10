@@ -37,7 +37,11 @@ namespace UV7_Edit.Tools
             }
         }
 
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         private List<ToolBarButton> buttons;
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<ToolBarButton> Buttons
         {
             get => buttons;
