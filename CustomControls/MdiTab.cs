@@ -19,10 +19,35 @@ namespace UV7_Edit.CustomControls
             if (icon != null)
                 Icon = icon.ToBitmap();
             Form = form;
-            if (active)
-                this.BackColor = SystemColors.Window;
             if (showClose)
                 button_close.Visible = true;
+            
+            if (title.Last<char>().Equals('*'))
+            {
+                if (active)
+                {
+                    this.BackColor = SystemColors.GradientActiveCaption;
+                    this.ForeColor = SystemColors.ActiveCaptionText;
+                }   
+                else
+                {
+                    this.BackColor = SystemColors.GradientInactiveCaption;
+                    this.ForeColor = SystemColors.InactiveCaptionText;
+                }
+            }
+            else
+            {
+                if (active)
+                {
+                    this.BackColor = SystemColors.Window;
+                    this.ForeColor = SystemColors.ControlText;
+                }   
+                else
+                {
+                    this.BackColor = SystemColors.Control;
+                    this.ForeColor = SystemColors.GrayText;
+                }
+            }
         }
 
         public string Title
