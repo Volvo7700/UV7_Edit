@@ -341,13 +341,13 @@ namespace UV7_Edit
             retry:
             try
             {
-                FileStream stream = f.Doc.File.OpenWrite();
-                StreamWriter writer = new StreamWriter(stream);
-                writer.Write(f.Doc.Content);
-                writer.Close();
+                using (StreamWriter writer = new StreamWriter(f.Doc.File.FullName))
+                {
+                    writer.Write(f.Doc.Content);
 
-                f.Doc.Save(f.Doc.File.FullName);
-                return true;
+                    f.Doc.Save(f.Doc.File.FullName);
+                    return true;
+                }
             }
             catch (Exception ex)
             {
