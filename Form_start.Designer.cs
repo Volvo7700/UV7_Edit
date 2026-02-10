@@ -44,24 +44,24 @@ namespace UV7_Edit
             // 
             // button_newFolder
             // 
-            resources.ApplyResources(this.button_newFolder, "button_newFolder");
             this.button_newFolder.Image = global::UV7_Edit.Properties.Resources.folder_add;
+            resources.ApplyResources(this.button_newFolder, "button_newFolder");
             this.button_newFolder.Name = "button_newFolder";
             this.button_newFolder.UseVisualStyleBackColor = true;
             this.button_newFolder.Click += new System.EventHandler(this.NewFolder);
             // 
             // button_openFile
             // 
-            resources.ApplyResources(this.button_openFile, "button_openFile");
             this.button_openFile.Image = global::UV7_Edit.Properties.Resources.page_go;
+            resources.ApplyResources(this.button_openFile, "button_openFile");
             this.button_openFile.Name = "button_openFile";
             this.button_openFile.UseVisualStyleBackColor = true;
             this.button_openFile.Click += new System.EventHandler(this.OpenFile);
             // 
             // button_openFolder
             // 
-            resources.ApplyResources(this.button_openFolder, "button_openFolder");
             this.button_openFolder.Image = global::UV7_Edit.Properties.Resources.folder_go;
+            resources.ApplyResources(this.button_openFolder, "button_openFolder");
             this.button_openFolder.Name = "button_openFolder";
             this.button_openFolder.UseVisualStyleBackColor = true;
             this.button_openFolder.Click += new System.EventHandler(this.OpenFolder);
@@ -102,8 +102,8 @@ namespace UV7_Edit
             // 
             // button_newFile
             // 
-            resources.ApplyResources(this.button_newFile, "button_newFile");
             this.button_newFile.Image = global::UV7_Edit.Properties.Resources.page_add;
+            resources.ApplyResources(this.button_newFile, "button_newFile");
             this.button_newFile.Name = "button_newFile";
             this.button_newFile.UseVisualStyleBackColor = true;
             this.button_newFile.Click += new System.EventHandler(this.NewFile);
@@ -112,12 +112,11 @@ namespace UV7_Edit
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Controls.Add(this.panel_start);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_start";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.SizeChanged += new System.EventHandler(this.Form_start_SizeChanged);
             this.Resize += new System.EventHandler(this.Form_start_Resize);
             this.panel_start.ResumeLayout(false);
             this.ResumeLayout(false);

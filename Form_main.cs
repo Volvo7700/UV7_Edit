@@ -99,8 +99,10 @@ namespace UV7_Edit
             base.OnHandleDestroyed(e);
         }
 
-        private void Form_main_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
+            base.OnLoad(e);
+
             // WinForms MDI MainMenu Bugfix
             // Due to bugs in WinForms' MainMenu and MDI implementation, a maximized MDI child must exist on initialization and the MDI container cannot be maximized  on initialization.
             
@@ -261,7 +263,8 @@ namespace UV7_Edit
                 Form_start fs = new Form_start();
                 fs.MdiParent = this;
                 fs.WindowState = FormWindowState.Maximized;
-                fs.BackColor = Pref.Prefs.Workspace.BackColor;
+                //fs.BackColor = System.Drawing.Color.Magenta;
+                //fs.BackColor = Color.Transparent;
                 fs.Show();
             }
         }
@@ -414,6 +417,11 @@ namespace UV7_Edit
                     }
                 }
             }
+        }
+
+        private void Something(object sender, EventArgs e)
+        {
+            
         }
     }
 }

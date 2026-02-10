@@ -135,6 +135,11 @@
     <Compile Include="Form_licenses.Designer.cs">
       <DependentUpon>Form_licenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\ToolBar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -513,6 +518,7 @@
     <None Include="icon\background_missing.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
     <None Include="icon\File.png" />
     <None Include="icon\FileMD.png" />
     <None Include="icon\FileTXT.png" />
