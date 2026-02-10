@@ -1045,7 +1045,7 @@
     <value>dirPanel</value>
   </data>
   <data name="&gt;&gt;dirPanel.Type" xml:space="preserve">
-    <value>UV7_Edit.CustomControls.DirPanel, UV7 Edit, Version=0.2.9537.42952, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.CustomControls.DirPanel, UV7 Edit, Version=0.2.9537.43121, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dirPanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1075,7 +1075,7 @@
     <value>mdiTabBar1</value>
   </data>
   <data name="&gt;&gt;mdiTabBar1.Type" xml:space="preserve">
-    <value>UV7_Edit.CustomControls.MdiTabBar, UV7 Edit, Version=0.2.9537.42952, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.CustomControls.MdiTabBar, UV7 Edit, Version=0.2.9537.43121, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mdiTabBar1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1099,7 +1099,7 @@
     <value>aeroToolBar_main</value>
   </data>
   <data name="&gt;&gt;aeroToolBar_main.Type" xml:space="preserve">
-    <value>UV7_Edit.Tools.AeroToolBar, UV7 Edit, Version=0.2.9537.42952, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.Tools.AeroToolBar, UV7 Edit, Version=0.2.9537.43121, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;aeroToolBar_main.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1608,6 +1608,6 @@
     <value>Form_main</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9537.42952, Culture=neutral, PublicKeyToken=null</value>
+    <value>UV7_Edit.DwmCompositingControllableForm, UV7 Edit, Version=0.2.9537.43121, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
