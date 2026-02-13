@@ -9,22 +9,26 @@
 </p>
 
 ### Implemented Features:
-* Editor/Viewer Split View
-* Basic loading/saving of files
+* Markdown Editor with Editor/Viewer Split View
+* Selectable hierarchical folder *(notebook-ish)* treeview
+* Multiple document interface (MDI)
 * Localization support, translations for English and German
+* Flexible config framework
 
 ### Currently WIP:
-* Config framework
-* Selectable folder *(notebook)* treeview
-* Language switching
+* Config entry descriptions
+* StatusBar functionality
+* Global stylesheet saving to file
+* Folder treeview context menu for adding, modifying and deleting files and folders
 
 ### Planned features:
 * **Update this list**
+* Undo/Redo support
+* Language switching (currently automatic)
 * WYSIWYG Editor
-* Replacement for Internet Explorer-based WebBrowser control
 * Editor with syntax highlighting
 * folder-based stylesheets
-* German Localization
+* Mono support (probably already functional)
 * more coming soon
 
 ### Feature ideas (currently not (yet) planned):
