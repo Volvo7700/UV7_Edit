@@ -29,12 +29,15 @@ namespace UV7_Edit
             form_empty.Show();
 
             LoadConfig();
-#if DEBUG
-            mi_dev.Visible = true;
-#endif
 
             Version ver = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
+
+#if DEBUG
+            mi_dev.Visible = true;
+            this.Text += " Beta";
+            this.Icon = Properties.Resources.IconDebug;
+#endif
 
             if (Pref.Prefs.WorkFolder.Exists)
                 watcher.Path = Pref.Prefs.WorkFolder.Path;

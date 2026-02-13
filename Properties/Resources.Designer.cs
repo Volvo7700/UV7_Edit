@@ -151,6 +151,26 @@ namespace UV7_Edit.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        /// </summary>
+        public static System.Drawing.Icon IconDebug {
+            get {
+                object obj = ResourceManager.GetObject("IconDebug", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        /// </summary>
+        public static System.Drawing.Icon IconRelease {
+            get {
+                object obj = ResourceManager.GetObject("IconRelease", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap page {
@@ -183,9 +203,9 @@ namespace UV7_Edit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap program {
+        public static System.Drawing.Bitmap program16 {
             get {
-                object obj = ResourceManager.GetObject("program", resourceCulture);
+                object obj = ResourceManager.GetObject("program16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +213,9 @@ namespace UV7_Edit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap program16 {
+        public static System.Drawing.Bitmap program32 {
             get {
-                object obj = ResourceManager.GetObject("program16", resourceCulture);
+                object obj = ResourceManager.GetObject("program32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -36,7 +36,10 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
-  <PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <ApplicationIcon>beta.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <ApplicationIcon>program.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
@@ -209,6 +212,7 @@
       <DependentUpon>DirPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Document.cs" />
+    <Compile Include="Tools\FileHelper.cs" />
     <Compile Include="Tools\FileSystemIconHelper.cs" />
     <Compile Include="Tools\FileInfoEventArgs.cs" />
     <Compile Include="Form_about.cs">
@@ -524,6 +528,7 @@
     <None Include="icon\FileTXT.png" />
     <None Include="icon\program16.png" />
     <None Include="icon\program.png" />
+    <None Include="beta.ico" />
     <Content Include="program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
