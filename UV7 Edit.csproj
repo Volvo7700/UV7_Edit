@@ -58,6 +58,7 @@
     <Reference Include="Microsoft.Bcl.HashCode, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.HashCode.6.0.0\lib\net462\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
       <HintPath>packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
     </Reference>
@@ -212,7 +213,7 @@
       <DependentUpon>DirPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Document.cs" />
-    <Compile Include="Tools\FileHelper.cs" />
+    <Compile Include="Tools\FileSystemHelper.cs" />
     <Compile Include="Tools\FileSystemIconHelper.cs" />
     <Compile Include="Tools\FileInfoEventArgs.cs" />
     <Compile Include="Form_about.cs">
@@ -328,6 +329,9 @@
     <EmbeddedResource Include="CustomControls\AeroToolBar.resx">
       <DependentUpon>AeroToolBar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\DirPanel.de.resx">
+      <DependentUpon>DirPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\MdiTab.resx">
       <DependentUpon>MdiTab.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +411,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_tempCss.resx">
       <DependentUpon>Form_tempCss.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form_tempCss1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -529,6 +535,14 @@
     <None Include="icon\program16.png" />
     <None Include="icon\program.png" />
     <None Include="beta.ico" />
+    <None Include="icon\folder_add16.png" />
+    <None Include="icon\folder_go16.png" />
+    <None Include="icon\page_add16.png" />
+    <None Include="icon\page_go16.png" />
+    <None Include="icon\page_save16.png" />
+    <None Include="icon\properties16.png" />
+    <None Include="icon\disk.png" />
+    <None Include="icon\disk_multiple.png" />
     <Content Include="program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

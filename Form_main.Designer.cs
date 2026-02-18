@@ -100,6 +100,7 @@ namespace UV7_Edit
             this.betterFolderBrowser = new WK.Libraries.BetterFolderBrowserNS.BetterFolderBrowser(this.components);
             this.mdiTabBar1 = new UV7_Edit.CustomControls.MdiTabBar();
             this.aeroToolBar_main = new UV7_Edit.Tools.AeroToolBar();
+            this.imageList_toolBar16 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // imageList_toolBar
@@ -564,6 +565,17 @@ namespace UV7_Edit
             this.aeroToolBar_main.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
             this.aeroToolBar_main.Theme = UV7_Edit.Tools.ToolbarTheme.Toolbar;
             // 
+            // imageList_toolBar16
+            // 
+            this.imageList_toolBar16.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_toolBar16.ImageStream")));
+            this.imageList_toolBar16.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_toolBar16.Images.SetKeyName(0, "NewFile");
+            this.imageList_toolBar16.Images.SetKeyName(1, "OpenFile");
+            this.imageList_toolBar16.Images.SetKeyName(2, "SaveFile");
+            this.imageList_toolBar16.Images.SetKeyName(3, "SaveAll");
+            this.imageList_toolBar16.Images.SetKeyName(4, "NewFolder");
+            this.imageList_toolBar16.Images.SetKeyName(5, "OpenFolder");
+            // 
             // Form_main
             // 
             resources.ApplyResources(this, "$this");
@@ -655,6 +667,7 @@ namespace UV7_Edit
         private System.Windows.Forms.MenuItem menuItem2;
         private CustomControls.MdiTabBar mdiTabBar1;
         private UV7_Edit.Tools.AeroToolBar aeroToolBar_main;
+        private System.Windows.Forms.ImageList imageList_toolBar16;
     }
 }
 

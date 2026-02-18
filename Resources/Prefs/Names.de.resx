@@ -135,6 +135,12 @@
   <data name="Language" xml:space="preserve">
     <value>Sprache</value>
   </data>
+  <data name="ShowDeleteConfirmation" xml:space="preserve">
+    <value>Beim unwiderruflichen Löschen nach Bestätigung fragen</value>
+  </data>
+  <data name="ShowRecycleConfirmation" xml:space="preserve">
+    <value>Beim Recyceln nach Bestätigung fragen</value>
+  </data>
   <data name="ShowSideBar" xml:space="preserve">
     <value>Seitenleiste anzeigen</value>
   </data>
@@ -158,6 +164,9 @@
   </data>
   <data name="TopMost" xml:space="preserve">
     <value>Als oberstes anzeigen</value>
+  </data>
+  <data name="UseRecycleBin" xml:space="preserve">
+    <value>Papierkorb benutzen</value>
   </data>
   <data name="ViewMode" xml:space="preserve">
     <value>Darstellungsmodus</value>

@@ -129,6 +129,12 @@
   <data name="DesktopCompositing" xml:space="preserve">
     <value>Desktop Compositing</value>
   </data>
+  <data name="ShowDeleteConfirmation" xml:space="preserve">
+    <value>Ask for confirmation before permanently deleting</value>
+  </data>
+  <data name="ShowRecycleConfirmation" xml:space="preserve">
+    <value>Ask for confirmation before recycling</value>
+  </data>
   <data name="ShowSideBar" xml:space="preserve">
     <value>Show Sidebar</value>
   </data>
@@ -152,6 +158,9 @@
   </data>
   <data name="TopMost" xml:space="preserve">
     <value>Show as top most</value>
+  </data>
+  <data name="UseRecycleBin" xml:space="preserve">
+    <value>Use Recycle Bin</value>
   </data>
   <data name="ViewMode" xml:space="preserve">
     <value>View Mode</value>

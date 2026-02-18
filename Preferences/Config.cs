@@ -22,6 +22,7 @@ namespace UV7_Edit.Preferences
     {
         public ConfigGeneral General { get; set; } = new ConfigGeneral();
         public ConfigWindow Window { get; set; } = new ConfigWindow();
+        public ConfigNavigationTree NavigationTree { get; set; } = new ConfigNavigationTree();
         public ConfigWorkspace Workspace { get; set; } = new ConfigWorkspace();
         public ConfigDocumentView DocumentView { get; set; } = new ConfigDocumentView();
         public ConfigEditor Editor { get; set; } = new ConfigEditor();
@@ -153,10 +154,10 @@ namespace UV7_Edit.Preferences
                             switch (value)
                             {
                                 case IconSize.Small:
-                                    //a.ImageList = ;
+                                    f.ToolBarSmall();
                                     break;
                                 case IconSize.Normal:
-                                    //a.ImageList = ;
+                                    f.ToolBarNormal();
                                     break;
                             }
                         }
@@ -261,6 +262,25 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
+        }
+
+        [LocalizedCategory("NavigationTree")]
+        public class ConfigNavigationTree : ConfigElement
+        {
+            [LocalizedDisplayName("UseRecycleBin")]
+            [LocalizedDescription("UseRecycleBin")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool UseRecycleBin { get; set; } = true;
+
+            [LocalizedDisplayName("ShowRecycleConfirmation")]
+            [LocalizedDescription("ShowRecycleConfirmation")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowRecycleConfirmation { get; set; } = false;
+
+            [LocalizedDisplayName("ShowDeleteConfirmation")]
+            [LocalizedDescription("ShowDeleteConfirmation")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowDeleteConfirmation { get; set; } = true;
         }
 
         [LocalizedCategory("Workspace")]
@@ -514,6 +534,8 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
+
+
 
             [XmlIgnore]
             public bool Exists => Directory.Exists(path);

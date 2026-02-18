@@ -74,7 +74,7 @@ namespace UV7_Edit
             tb_redo.Name = "Redo";
 
             aeroToolBar_main.ImageList = imageList_toolBar;
-            ToolBarButton[] buttons = { tb_newFile, tb_openFile, tb_saveFile, tb_sep1, tb_newFolder, tb_openFolder, tb_sep2, tb_undo, tb_redo };
+            ToolBarButton[] buttons = { tb_newFile, tb_openFile, tb_saveFile, tb_saveAll, tb_sep1, tb_newFolder, tb_openFolder, tb_sep2, tb_undo, tb_redo };
             foreach (ToolBarButton button in buttons)
             {
                 button.Text = Resources.ToolBar.ResourceManager.GetString(button.Name);

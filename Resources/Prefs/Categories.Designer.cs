@@ -77,5 +77,14 @@ namespace UV7_Edit.Resources.Prefs {
                 return ResourceManager.GetString("Localization", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Navigation Tree ähnelt.
+        /// </summary>
+        internal static string NavigationTree {
+            get {
+                return ResourceManager.GetString("NavigationTree", resourceCulture);
+            }
+        }
     }
 }

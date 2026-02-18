@@ -129,6 +129,9 @@
   <data name="Localization" xml:space="preserve">
     <value>Lokalisierung</value>
   </data>
+  <data name="NavigationTree" xml:space="preserve">
+    <value>Navigationsbaum</value>
+  </data>
   <data name="Window" xml:space="preserve">
     <value>Fenster</value>
   </data>

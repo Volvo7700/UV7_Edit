@@ -117,15 +117,101 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="fileIcons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="mi_folderDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="mi_sep5.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFileADOC.Name" xml:space="preserve">
+    <value>mi_folderNewFileADOC</value>
+  </data>
+  <data name="mi_folderNewFileTXT.Text" xml:space="preserve">
+    <value>Text File</value>
+  </data>
+  <data name="&gt;&gt;cm_dpFile.Name" xml:space="preserve">
+    <value>cm_dpFile</value>
+  </data>
+  <data name="mi_fileOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFileTXT.Name" xml:space="preserve">
+    <value>mi_folderNewFileTXT</value>
+  </data>
+  <data name="&gt;&gt;fileIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_fileRename.Name" xml:space="preserve">
+    <value>mi_fileRename</value>
+  </data>
+  <data name="&gt;&gt;mi_sep0.Name" xml:space="preserve">
+    <value>mi_sep0</value>
+  </data>
+  <data name="mi_folderNewFileMD.Text" xml:space="preserve">
+    <value>Markdown File</value>
+  </data>
+  <data name="&gt;&gt;cm_dpFolder.Name" xml:space="preserve">
+    <value>cm_dpFolder</value>
+  </data>
+  <data name="&gt;&gt;mi_folderRename.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;olvc_name.Name" xml:space="preserve">
+    <value>olvc_name</value>
+  </data>
+  <data name="&gt;&gt;mi_fileRename.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_folderNewFolder.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="&gt;&gt;mi_folderDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_folderNewFileADOC.Text" xml:space="preserve">
+    <value>AsciiDoc File</value>
+  </data>
+  <data name="mi_sep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="olvc_name.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;treeListView.Name" xml:space="preserve">
+    <value>treeListView</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="mi_folderNew.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mi_emptyNewFileADOC.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mi_folderProperties.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="mi_fileProperties.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="&gt;&gt;mi_fileProperties.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="fileIcons.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABC
-        CwAAAk1TRnQBSQFMAgEBBAEAAZgBAAGYAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABE
+        CwAAAk1TRnQBSQFMAgEBBAEAARQBAQFIAQEBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -173,7 +259,239 @@
         AQMBgAEDAYABAwEAAQEBgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAgABgAED
         AYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAQABAQGAAQMBgAEDAYABAwEAAQEBgAED
         AYABAwGAAQMBAAEDAYABAwGAAQMBgAIDAf8BgAEHAYABBwGAAQcC/wGAAQ8BgAEPAYABDwL/AYABHwGA
-        AR8BgAEfCw==
+        AR8BgAEfFgAL
 </value>
   </data>
+  <data name="&gt;&gt;treeListView.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.TreeListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;mi_sep1.Name" xml:space="preserve">
+    <value>mi_sep1</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFileMD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_folderDelete.Name" xml:space="preserve">
+    <value>mi_folderDelete</value>
+  </data>
+  <data name="&gt;&gt;treeListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFileMD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_sep4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFileTXT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_fileOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeListView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mi_folderProperties.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_emptyNewFileADOC.Text" xml:space="preserve">
+    <value>AsciiDoc File</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="treeListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>UV7_Edit.CustomControls.SidePanel, UV7 Edit, Version=0.2.9545.37432, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cm_dpEmpty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_sep1.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;mi_sep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_sep6.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="treeListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 411</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFileADOC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNew.Name" xml:space="preserve">
+    <value>mi_folderNew</value>
+  </data>
+  <data name="&gt;&gt;mi_sep5.Name" xml:space="preserve">
+    <value>mi_sep5</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFileTXT.Name" xml:space="preserve">
+    <value>mi_emptyNewFileTXT</value>
+  </data>
+  <data name="mi_emptyNewFileMD.Text" xml:space="preserve">
+    <value>Markdown File</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFileADOC.Name" xml:space="preserve">
+    <value>mi_emptyNewFileADOC</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFileADOC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_fileDelete.Name" xml:space="preserve">
+    <value>mi_fileDelete</value>
+  </data>
+  <data name="&gt;&gt;mi_sep6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep2.Name" xml:space="preserve">
+    <value>mi_sep2</value>
+  </data>
+  <data name="&gt;&gt;mi_sep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNew.Name" xml:space="preserve">
+    <value>mi_emptyNew</value>
+  </data>
+  <data name="&gt;&gt;cm_dpFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_fileDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;mi_fileProperties.Name" xml:space="preserve">
+    <value>mi_fileProperties</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFolder.Name" xml:space="preserve">
+    <value>mi_emptyNewFolder</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="treeListView.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mi_folderOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="&gt;&gt;mi_folderOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_sep4.Name" xml:space="preserve">
+    <value>mi_sep4</value>
+  </data>
+  <data name="mi_sep0.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;mi_sep6.Name" xml:space="preserve">
+    <value>mi_sep6</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DirPanel</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 443</value>
+  </data>
+  <data name="&gt;&gt;mi_sep1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_fileDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFileTXT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_fileOpen.Name" xml:space="preserve">
+    <value>mi_fileOpen</value>
+  </data>
+  <data name="&gt;&gt;mi_folderOpen.Name" xml:space="preserve">
+    <value>mi_folderOpen</value>
+  </data>
+  <data name="&gt;&gt;mi_emptyNewFileMD.Name" xml:space="preserve">
+    <value>mi_emptyNewFileMD</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFolder.Name" xml:space="preserve">
+    <value>mi_folderNewFolder</value>
+  </data>
+  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;fileIcons.Name" xml:space="preserve">
+    <value>fileIcons</value>
+  </data>
+  <data name="mi_emptyNew.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="mi_emptyNewFileTXT.Text" xml:space="preserve">
+    <value>Text File</value>
+  </data>
+  <data name="&gt;&gt;mi_folderRename.Name" xml:space="preserve">
+    <value>mi_folderRename</value>
+  </data>
+  <data name="mi_sep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;mi_sep0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mi_emptyNewFolder.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="&gt;&gt;cm_dpEmpty.Name" xml:space="preserve">
+    <value>cm_dpEmpty</value>
+  </data>
+  <data name="mi_folderRename.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="mi_fileRename.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="treeListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="&gt;&gt;mi_sep3.Name" xml:space="preserve">
+    <value>mi_sep3</value>
+  </data>
+  <data name="&gt;&gt;cm_dpFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_folderNewFileMD.Name" xml:space="preserve">
+    <value>mi_folderNewFileMD</value>
+  </data>
+  <data name="&gt;&gt;mi_folderProperties.Name" xml:space="preserve">
+    <value>mi_folderProperties</value>
+  </data>
+  <data name="&gt;&gt;olvc_name.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <metadata name="cm_dpEmpty.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>342, 16</value>
+  </metadata>
+  <metadata name="fileIcons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de</value>
+  </metadata>
+  <metadata name="cm_dpFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>232, 16</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cm_dpFolder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 13</value>
+  </metadata>
 </root>

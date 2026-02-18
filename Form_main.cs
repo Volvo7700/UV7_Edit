@@ -55,8 +55,7 @@ namespace UV7_Edit
             watcher.Created += OnFileSystemEvent;
             watcher.Deleted += OnFileSystemEvent;
             watcher.Renamed += OnFileSystemEvent;
-
-            watcher.Path = Application.StartupPath;
+            
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
@@ -167,6 +166,11 @@ namespace UV7_Edit
             statusBar.Visible = Pref.Prefs.Window.ShowStatusBar;
             mi_showStatusbar.Checked = Pref.Prefs.Window.ShowStatusBar;
 
+            if (Pref.Prefs.Window.ToolBarSize == IconSize.Small)
+            {
+                ToolBarSmall();
+            }
+
             // Workspace
             foreach (MdiClient m in this.Controls.OfType<MdiClient>())
             {
@@ -245,9 +249,11 @@ namespace UV7_Edit
             {
                 dirPanel.Invoke(new MethodInvoker(delegate
                 {
+                    //dirPanel.UpdateElement(e);
                     dirPanel.UpdateData();
                 }));
             }
+            //else dirPanel.UpdateElement(e);
             else dirPanel.UpdateData();
         }
         #endregion File System Events
@@ -419,6 +425,16 @@ namespace UV7_Edit
                     }
                 }
             }
+        }
+
+        public void ToolBarSmall()
+        {
+            aeroToolBar_main.ImageList = imageList_toolBar16;
+        }
+
+        public void ToolBarNormal()
+        {
+            aeroToolBar_main.ImageList = imageList_toolBar;
         }
     }
 }

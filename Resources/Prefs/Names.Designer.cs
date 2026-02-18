@@ -97,6 +97,24 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ask for confirmation before permanently deleting ähnelt.
+        /// </summary>
+        internal static string ShowDeleteConfirmation {
+            get {
+                return ResourceManager.GetString("ShowDeleteConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ask for confirmation before recycling ähnelt.
+        /// </summary>
+        internal static string ShowRecycleConfirmation {
+            get {
+                return ResourceManager.GetString("ShowRecycleConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Show Sidebar ähnelt.
         /// </summary>
         internal static string ShowSideBar {
@@ -165,6 +183,15 @@ namespace UV7_Edit.Resources.Prefs {
         internal static string TopMost {
             get {
                 return ResourceManager.GetString("TopMost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Use Recycle Bin ähnelt.
+        /// </summary>
+        internal static string UseRecycleBin {
+            get {
+                return ResourceManager.GetString("UseRecycleBin", resourceCulture);
             }
         }
         

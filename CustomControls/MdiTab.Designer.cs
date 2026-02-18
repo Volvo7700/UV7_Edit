@@ -42,7 +42,7 @@ namespace UV7_Edit.CustomControls
             this.button_close.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_close.Location = new System.Drawing.Point(67, 2);
             this.button_close.Name = "button_close";
-            this.button_close.Size = new System.Drawing.Size(20, 24);
+            this.button_close.Size = new System.Drawing.Size(20, 20);
             this.button_close.TabIndex = 0;
             this.button_close.Text = "r";
             this.button_close.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@ namespace UV7_Edit.CustomControls
             this.pictureBox_icon.Location = new System.Drawing.Point(0, 2);
             this.pictureBox_icon.Name = "pictureBox_icon";
             this.pictureBox_icon.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.pictureBox_icon.Size = new System.Drawing.Size(21, 24);
+            this.pictureBox_icon.Size = new System.Drawing.Size(21, 20);
             this.pictureBox_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_icon.TabIndex = 2;
             this.pictureBox_icon.TabStop = false;
@@ -85,9 +85,10 @@ namespace UV7_Edit.CustomControls
             this.Controls.Add(this.pictureBox_icon);
             this.Controls.Add(this.button_close);
             this.Margin = new System.Windows.Forms.Padding(0);
+            this.MaximumSize = new System.Drawing.Size(250, 24);
             this.Name = "MdiTab";
             this.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.Size = new System.Drawing.Size(87, 28);
+            this.Size = new System.Drawing.Size(87, 24);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
