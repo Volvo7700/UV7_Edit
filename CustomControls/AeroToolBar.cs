@@ -39,19 +39,14 @@ namespace UV7_Edit.Tools
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         private List<ToolBarButton> buttons;
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public List<ToolBarButton> Buttons
         {
             get => buttons;
-            set
-            {
-                buttons = value;
-                if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
-                    return;
-                UpdateButtons();
-            }
         }
 
         public ImageList ImageList
@@ -84,12 +79,6 @@ namespace UV7_Edit.Tools
             {
                 base.OnPaintBackground(e);
             }
-        }
-
-        private void UpdateButtons()
-        {
-            toolBar.Buttons.Clear();
-            toolBar.Buttons.AddRange(Buttons.ToArray());
         }
 
         public void SetButtons(ToolBarButton[] buttons)
