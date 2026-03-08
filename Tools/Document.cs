@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using UV7_Edit.Plugins;
+using UV7_Edit_FileTypePlugin;
 
 namespace UV7_Edit.Tools
 {
@@ -25,11 +27,16 @@ namespace UV7_Edit.Tools
         public bool Modified { get; private set; }
         public bool Saved => !Modified && FileValid;
 
+        public IFileTypeSupport FileType { get; private set; }
+
         public Document(FileInfo file)
         {
             File = file;
             Content = String.Empty;
             Modified = false;
+
+            if (file != null)
+                 FileType = FileTypes.GetTypeByExtension(file.Extension);
 
             OnSavedChanged();
         }

@@ -1,9 +1,9 @@
-﻿using MarkdownDeep;
-using System;
+﻿using System;
 using System.IO;
 using System.Windows.Forms;
 using UV7_Edit.Preferences;
 using UV7_Edit.Tools;
+using UV7_Edit_FileTypePlugin;
 
 namespace UV7_Edit
 {
@@ -100,17 +100,24 @@ namespace UV7_Edit
         }
 
         private readonly string errorStr = "<head><title>Error</title></head><body><h1>Error</h1><p>The markdown data could not be parsed.<br><br>Detailed Error:<br><code>{0}</code></p></body>";
-        private string ConvertMDtoHTML(string mdInput)
+        private string ConvertToHTML(string input)
         {
-            Markdown md = new Markdown();
+            if (Doc.FileType != null)
+            {
+                IFormatConverter converter = Doc.FileType.Converter;
 
-            try
-            {
-                return md.Transform(mdInput);
+                try
+                {
+                    return converter.ConvertToHtml(input);
+                }
+                catch (Exception ex)
+                {
+                    return String.Format(errorStr, ex);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                return String.Format(errorStr, ex);
+                return String.Format(errorStr, "File Type not determined");
             }
         }
 
@@ -123,7 +130,7 @@ namespace UV7_Edit
         private void UpdateViewer()
         {
             //viewer.DocumentText = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertMDtoHTML(editor.Text)}</body></html>";
-            viewer.Text = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertMDtoHTML(editor.Text)}</body></html>";
+            viewer.Text = $"<html><head><style type=\"text/css\">{style}</style></head><body>{ConvertToHTML(editor.Text)}</body></html>";
         }
         #endregion Preview
 

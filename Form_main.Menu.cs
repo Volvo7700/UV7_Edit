@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using UV7_Edit.Plugins;
 using UV7_Edit.Preferences;
 
 namespace UV7_Edit
@@ -312,6 +313,17 @@ namespace UV7_Edit
         private void DevChangeLang(object sender, EventArgs e)
         {
             changeLanguage("de-DE");
+        }
+
+        private void DevPlugins(object sender, EventArgs e)
+        {
+            Form_plugins fp = new Form_plugins();
+            fp.Show();
+        }
+
+        private void DevLoadAssemblies(object sender, EventArgs e)
+        {
+            FileTypes.Load();
         }
         #endregion Dev
 
