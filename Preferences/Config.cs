@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -164,6 +163,43 @@ namespace UV7_Edit.Preferences
                     }
                 }
             }
+
+            private ToolbarTheme toolBarTheme = ToolbarTheme.Toolbar;
+            [LocalizedDisplayName("ToolBarTheme")]
+            [LocalizedDescription("ToolBarTheme")]
+            public ToolbarTheme ToolBarTheme
+            {
+                get => toolBarTheme;
+                set
+                {
+                    toolBarTheme = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (AeroToolBar a in f.Controls.OfType<AeroToolBar>())
+                        {
+                            a.Theme = value;
+                        }
+                    }
+                }
+            }
+
+            private Color toolBarTextColor;
+            public Color ToolBarTextColor
+            {
+                get => toolBarTextColor;
+                set
+                {
+                    toolBarTextColor = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (AeroToolBar a in f.Controls.OfType<AeroToolBar>())
+                        {
+                            a.ForeColor = value;
+                        }
+                    }
+                }
+            }
+
 
             private bool showTabBar = true;
             [LocalizedDisplayName("ShowTabBar")]
@@ -545,7 +581,7 @@ namespace UV7_Edit.Preferences
         }
     }
 
-    public class ConfigElement
+    public abstract class ConfigElement
     {
 
     }

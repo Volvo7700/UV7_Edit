@@ -67,7 +67,7 @@ namespace UV7_Edit
 
             //mdiClient.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
-            Tools.MDIClientSupport.SetBevel(this, false);            
+            MDIClientSupport.SetBevel(this, false);
         }
 
         #region Form
@@ -153,6 +153,7 @@ namespace UV7_Edit
 
             aeroToolBar_main.Visible = Pref.Prefs.Window.ShowToolBar;
             aeroToolBar_main.Height = (int)Pref.Prefs.Window.ToolBarSize + 6;
+            aeroToolBar_main.Theme = Pref.Prefs.Window.ToolBarTheme;
 
             mdiTabBar1.Visible = Pref.Prefs.Window.ShowTabBar;
             mdiTabBar1.ShowClose = Pref.Prefs.Window.ShowTabBarClose;

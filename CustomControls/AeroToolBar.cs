@@ -34,6 +34,14 @@ namespace UV7_Edit.Tools
             {
                 theme = value;
                 renderer = new NativeToolStripRenderer(value);
+                string tb_str = renderer.Theme.ToString();
+                //Color foreColor = ColorHelper.GetThemeTextColor(this.Handle, renderer.Theme.ToString(), 1, 1);
+                Color foreColor = renderer.GetItemTextColorSimple();
+                if (!foreColor.Equals(Color.FromArgb(0)))
+                {
+                    this.ForeColor = foreColor;
+                }
+                this.Invalidate();
             }
         }
 

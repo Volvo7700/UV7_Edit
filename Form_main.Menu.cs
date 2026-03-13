@@ -313,6 +313,11 @@ namespace UV7_Edit
         {
             changeLanguage("de-DE");
         }
+
+        private void DevColorDialog(object sender, EventArgs e)
+        {
+
+        }
         #endregion Dev
 
         #region ToolBar

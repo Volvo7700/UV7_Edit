@@ -248,7 +248,29 @@ namespace UV7_Edit.CustomControls
 
         private void FolderNewFolder(object sender, EventArgs e)
         {
+            if (treeListView.SelectedObject is DirectoryInfo dirInfo)
+            {
+                // FileSystemHelper.CreateDirectory(dirInfo)
+                // New Folder Name Generation --> Explorer Methode?
+                // Plugin-Support
+                // 
+                string newFolderName = FileSystemHelper.CreateDirectory(dirInfo);
+                object newFolderObj;
+                try
+                {
+                    newFolderObj = from obj in treeListView.Objects.OfType<DirectoryInfo>()
+                                          where obj.Name.Equals(newFolderName)
+                                          select obj;
+                    if (newFolderObj != null)
+                    {
+                        treeListView.EditModel(newFolderObj);
+                    }
+                }
+                catch
+                {
 
+                }
+            }
         }
 
         private void FolderNewFileADOC(object sender, EventArgs e)

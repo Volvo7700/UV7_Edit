@@ -92,6 +92,7 @@ namespace UV7_Edit
             this.mi_something = new System.Windows.Forms.MenuItem();
             this.mi_devChangeLang = new System.Windows.Forms.MenuItem();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.statusBar = new System.Windows.Forms.StatusBar();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -481,7 +482,8 @@ namespace UV7_Edit
             this.mi_sep5,
             this.mi_something,
             this.mi_devChangeLang,
-            this.menuItem1});
+            this.menuItem1,
+            this.menuItem3});
             resources.ApplyResources(this.mi_dev, "mi_dev");
             // 
             // mi_cssStyler
@@ -511,6 +513,12 @@ namespace UV7_Edit
             this.menuItem1.Index = 4;
             resources.ApplyResources(this.menuItem1, "menuItem1");
             this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Index = 5;
+            resources.ApplyResources(this.menuItem3, "menuItem3");
+            this.menuItem3.Click += new System.EventHandler(this.DevColorDialog);
             // 
             // statusBar
             // 
@@ -560,6 +568,7 @@ namespace UV7_Edit
             // aeroToolBar_main
             // 
             resources.ApplyResources(this.aeroToolBar_main, "aeroToolBar_main");
+            this.aeroToolBar_main.ForeColor = System.Drawing.Color.Black;
             this.aeroToolBar_main.ImageList = null;
             this.aeroToolBar_main.Name = "aeroToolBar_main";
             this.aeroToolBar_main.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
@@ -668,6 +677,7 @@ namespace UV7_Edit
         private CustomControls.MdiTabBar mdiTabBar1;
         private UV7_Edit.Tools.AeroToolBar aeroToolBar_main;
         private System.Windows.Forms.ImageList imageList_toolBar16;
+        private System.Windows.Forms.MenuItem menuItem3;
     }
 }
 

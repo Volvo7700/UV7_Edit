@@ -110,6 +110,44 @@ namespace UV7_Edit.Tools
             }
         }
 
+        public static string CreateDirectory(DirectoryInfo dirInfo)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMsgBox(ex);
+                return null;
+            }
+            return ExplorerFolderHelper.CreateExplorerStyleFolder(dirInfo.FullName);
+        }
+
+        public static void CreateDirectory(DirectoryInfo dirInfo, string directoryName)
+        {
+            try
+            {
+                FileSystem.CreateDirectory(Path.Combine(dirInfo.FullName, directoryName));
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMsgBox(ex);
+            }
+        }
+
+        public static void CreateFile(DirectoryInfo dirInfo, string fileName)
+        {
+            try
+            {
+                File.Create(Path.Combine(dirInfo.FullName, fileName));
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMsgBox(ex);
+            }
+        }
+
         public static void DeleteDirectory(DirectoryInfo dirInfo, bool shift)
         {
             UIOption ui = UIOption.OnlyErrorDialogs;

@@ -30,6 +30,7 @@ namespace UV7_Edit
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.colorSlider1 = new UV7_Edit.Preferences.ColorSlider();
             this.SuspendLayout();
             // 
             // textBox1
@@ -46,11 +47,22 @@ namespace UV7_Edit
             this.textBox1.WordWrap = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // colorSlider1
+            // 
+            this.colorSlider1.ColorLeft = System.Drawing.Color.Black;
+            this.colorSlider1.ColorRight = System.Drawing.Color.White;
+            this.colorSlider1.Location = new System.Drawing.Point(74, 162);
+            this.colorSlider1.Name = "colorSlider1";
+            this.colorSlider1.Size = new System.Drawing.Size(150, 30);
+            this.colorSlider1.TabIndex = 1;
+            this.colorSlider1.Value = ((byte)(255));
+            // 
             // Form_tempCss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(418, 503);
+            this.Controls.Add(this.colorSlider1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form_tempCss";
             this.Text = "[DEV] CSS Input";
@@ -62,5 +74,6 @@ namespace UV7_Edit
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private Preferences.ColorSlider colorSlider1;
     }
 }

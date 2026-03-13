@@ -33,6 +33,7 @@ namespace UV7_Edit.Preferences
             this.button_selectFont = new System.Windows.Forms.Button();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.panel_color = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_selectFont
@@ -53,11 +54,22 @@ namespace UV7_Edit.Preferences
             resources.ApplyResources(this.panel_color, "panel_color");
             this.panel_color.Name = "panel_color";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::UV7_Edit.Properties.Resources.update;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ColorEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel_color);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_selectFont);
             this.Name = "ColorEditor";
             this.ResumeLayout(false);
@@ -69,5 +81,6 @@ namespace UV7_Edit.Preferences
         private System.Windows.Forms.Button button_selectFont;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Panel panel_color;
+        private System.Windows.Forms.Button button1;
     }
 }

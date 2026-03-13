@@ -437,6 +437,24 @@ namespace UV7_Edit.Tools
             return renderer.GetColor(ColorProperty.TextColor);
         }
 
+        public Color GetItemTextColorSimple()
+        {
+            try
+            {
+                if (renderer != null)
+                {
+                    int partId = (int)MenuParts.BarItem;
+                    renderer.SetParameters(MenuClass, partId, (int)MenuPopupItemStates.Normal);
+                    return renderer.GetColor(ColorProperty.TextColor);
+                }
+            }
+            catch
+            {
+                
+            }
+            return Color.FromArgb(0);
+        }
+
         protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
         {
             if (EnsureRenderer())
