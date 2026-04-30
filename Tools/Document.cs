@@ -64,6 +64,15 @@ namespace UV7_Edit.Tools
             }
         }
 
+        public void ChangeFileType(IFileTypeSupport newFileType)
+        {
+            if (!newFileType.Equals(FileType))
+            {
+                FileType = newFileType;
+                OnFileTypeChanged();
+            }
+        }
+
         public bool FileValid
         {
             get
@@ -89,6 +98,15 @@ namespace UV7_Edit.Tools
             if (SavedChanged != null)
             {
                 SavedChanged.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        public event EventHandler FileTypeChanged;
+        private void OnFileTypeChanged()
+        {
+            if (FileTypeChanged != null)
+            {
+                FileTypeChanged.Invoke(this, EventArgs.Empty);
             }
         }
     }

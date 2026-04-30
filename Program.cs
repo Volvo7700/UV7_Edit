@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using UV7_Edit.Plugins;
 using UV7_Edit.Preferences;
 
 namespace UV7_Edit
@@ -18,6 +19,7 @@ namespace UV7_Edit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Pref.Load();
+            FileTypes.Load();
             Application.VisualStyleState = Pref.Prefs.General.VisualStyleState;
             Application.Run(new Form_main());
         }

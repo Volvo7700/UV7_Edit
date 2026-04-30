@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using UV7_Edit.CustomControls;
 using UV7_Edit.Preferences;
 using UV7_Edit.Tools;
+using UV7_Edit_FileTypePlugin;
 
 namespace UV7_Edit
 {
@@ -28,6 +29,7 @@ namespace UV7_Edit
             form_empty.Show();
 
             LoadConfig();
+            LoadPlugins();
 
             Version ver = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += $" {ver.Major}.{ver.Minor}";
@@ -66,7 +68,7 @@ namespace UV7_Edit
 
             //mdiClient.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
-            Tools.MDIClientSupport.SetBevel(this, false);            
+            MDIClientSupport.SetBevel(this, false);            
         }
 
         #region Form
@@ -240,6 +242,32 @@ namespace UV7_Edit
             mdiTabBar1.UpdateMDIChildWindows(MdiChildren, ActiveMdiChild);
         }
         #endregion Config
+
+        #region Plugins
+        public void LoadPlugins()
+        {
+            string filter = "";
+            for (int i = 0; i < Plugins.FileTypes.Types.Length; i++)
+            {
+                IFileTypeSupport f = Plugins.FileTypes.Types[i];
+                if (i > 0)
+                {
+                    filter += "|";
+                }
+                filter += f.FileFormat + "|";
+                for (int j = 0; j < f.FileExtensions.Length; j++)
+                {
+                    if (j > 0)
+                    {
+                        filter += ", ";
+                    }
+                    filter += "*" + f.FileExtensions[j];
+                }
+                mi_fileType.MenuItems.Add(new MenuItem(f.FileFormat, FormatFileType) { Tag = f.FileFormat });
+            }
+            openFileDialog.Filter = filter;
+        }
+        #endregion Plugins
 
         #region File System Events
         private void OnFileSystemEvent(object sender, FileSystemEventArgs e)

@@ -7,6 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using UV7_Edit.Preferences;
 using UV7_Edit.Tools;
+using BrightIdeasSoftware;
 
 namespace UV7_Edit.CustomControls
 {
@@ -38,6 +39,8 @@ namespace UV7_Edit.CustomControls
             }
         }
 
+        FileSystemInfo selectRowInfo = null;
+
         public DirPanel()
         {
             InitializeComponent();
@@ -58,8 +61,6 @@ namespace UV7_Edit.CustomControls
 
             UpdateData();
         }
-
-        object selectRowObject = null;
 
         public void UpdateData()
         {
@@ -89,22 +90,24 @@ namespace UV7_Edit.CustomControls
                     return "File";
                 };
 
-                //if (selectRowObject != null)
-                //{
-                //    if (selectRowObject is DirectoryInfo selDirInfo)
-                //    {
-                //        treeListView.SelectedObject = from fsi in treeListView.Objects.Cast<DirectoryInfo>()
-                //                                      where fsi.FullName.Equals(selDirInfo.FullName)
-                //                                      select fsi;
-                //    }
-                //    else if (selectRowObject is FileInfo selFileInfo)
-                //    {
-                //        treeListView.SelectedObject = from fsi in treeListView.Objects.Cast<FileInfo>()
-                //                                      where fsi.FullName.Equals(selFileInfo.FullName)
-                //                                      select fsi;
-                //    }
-                //    selectRowObject = null;
-                //}
+                if (selectRowInfo != null)
+                {
+                    if (selectRowInfo is DirectoryInfo selDirInfo)
+                    {
+                        //treeListView.SelectedObject = from fsi in treeListView.Objects.Cast<DirectoryInfo>()
+                        //                              where fsi.FullName.Equals(selDirInfo.FullName)
+                        //                              select fsi;
+                        object selObj = treeListView.Objects.Cast<DirectoryInfo>().FirstOrDefault(fsi => fsi.FullName.Equals(selectRowInfo.FullName));
+                        treeListView.SelectedObject = selObj;
+                    }
+                    else if (selectRowInfo is FileInfo selFileInfo)
+                    {
+                        treeListView.SelectedObject = from fsi in treeListView.Objects.Cast<FileInfo>()
+                                                      where fsi.FullName.Equals(selFileInfo.FullName)
+                                                      select fsi;
+                    }
+                    selectRowInfo = null;
+                }
             }
         }
 
@@ -215,16 +218,30 @@ namespace UV7_Edit.CustomControls
 
         private void treeListView_CellEditFinished(object sender, BrightIdeasSoftware.CellEditEventArgs e)
         {
-            if (!e.Cancel)
+            if (!e.Cancel && !e.NewValue.Equals(e.Value))
             {
                 if (e.RowObject is DirectoryInfo oldDirInfo)
                 {
-                    selectRowObject = treeListView.SelectedObject; 
+                    try
+                    {
+                        selectRowInfo = new DirectoryInfo(e.NewValue.ToString());
+                    }
+                    catch
+                    {
+
+                    }
                     FileSystemHelper.RenameDirectory(oldDirInfo, (string)e.NewValue);
                 }
                 else if (e.RowObject is FileInfo oldFileInfo)
                 {
-                    selectRowObject = treeListView.SelectedObject;
+                    try
+                    {
+                        selectRowInfo = new FileInfo(e.NewValue.ToString());
+                    }
+                    catch
+                    {
+
+                    }
                     FileSystemHelper.RenameFile(oldFileInfo, (string)e.NewValue);
                 }
             }

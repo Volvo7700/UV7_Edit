@@ -13,18 +13,34 @@ namespace UV7_Edit.Plugins
         public static string Path { get; } = System.IO.Path.Combine(Application.StartupPath, "FileTypes");
         public static void Load()
         {
+            List<IFileTypeSupport> types = new List<IFileTypeSupport>();
             foreach (FileInfo f in new DirectoryInfo(Path).GetFiles())
             {
                 if (f.Extension == ".dll")
                 {
-                    LoadedAssemblies.Add(Assembly.LoadFile(f.FullName));
+                    Assembly asm = Assembly.LoadFile(f.FullName);
+                    LoadedAssemblies.Add(asm);
+                    types.AddRange(PluginTools.GetFileTypeSupports(asm));
                 }
             }
+            Types = types.ToArray();
         }
 
         public static IFileTypeSupport[] Types { get; private set; } = { };
 
         public static List<Assembly> LoadedAssemblies { get; private set; } = new List<Assembly>();
+
+        public static IFileTypeSupport GetTypeByFormat(string format)
+        {
+            foreach (IFileTypeSupport fileType in Types)
+            {
+                if (fileType.FileFormat.Equals(format))
+                {
+                    return fileType;
+                }
+            }
+            return null;
+        }
 
         public static IFileTypeSupport GetTypeByExtension(string extension)
         {

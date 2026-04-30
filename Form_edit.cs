@@ -34,6 +34,7 @@ namespace UV7_Edit
             Doc = new Document(file);
             Doc.ContentChanged += ContentChanged;
             Doc.SavedChanged += SavedChanged;
+            Doc.FileTypeChanged += FileTypeChanged;
 
             this.Icon = FileSystemIconHelper.GetFileTypeIcon(file);
 
@@ -84,6 +85,10 @@ namespace UV7_Edit
             {
                 this.Text += "*";
             }
+        }
+        private void FileTypeChanged(object sender, EventArgs e)
+        {
+            UpdateViewer();
         }
 
         private void UpdateEditor()
@@ -193,6 +198,10 @@ namespace UV7_Edit
             }
         }
 
+        public void ChangeFileType(IFileTypeSupport fileType)
+        {
+            Doc.ChangeFileType(fileType);
+        }
 
         public void CancelClosing()
         {

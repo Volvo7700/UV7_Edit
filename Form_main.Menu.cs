@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using UV7_Edit.Plugins;
 using UV7_Edit.Preferences;
+using UV7_Edit_FileTypePlugin;
 
 namespace UV7_Edit
 {
@@ -214,7 +215,7 @@ namespace UV7_Edit
         #region Edit
         private void EditPrefs(object sender, EventArgs e)
         {
-            Preferences.Form_preferences f = new Preferences.Form_preferences();
+            Form_preferences f = new Preferences.Form_preferences();
             f.ShowDialog(this);
         }
         #endregion Edit
@@ -232,6 +233,43 @@ namespace UV7_Edit
             Pref.Prefs.Window.ShowStatusBar = mi_showStatusbar.Checked;
         }
         #endregion View
+
+        #region Format
+        private void FormatLineWrap(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormatFont(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormatFileType(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                if (ActiveMdiChild is Form_edit f)
+                {
+                    if (sender is MenuItem m)
+                    {
+                        ChangeFileType(f, FileTypes.GetTypeByFormat(m.Tag.ToString()));
+                        
+                        foreach (MenuItem om in m.Parent.MenuItems)
+                        {
+                            om.Checked = false;
+                        }
+                        m.Checked = true;
+                    }
+                }
+            }
+        }
+
+        private void ChangeFileType(Form_edit f, IFileTypeSupport fileType)
+        {
+            f.ChangeFileType(fileType);
+        }
+        #endregion Format
 
         #region Editor
         #endregion Editor
@@ -373,6 +411,10 @@ namespace UV7_Edit
             mi_save.Enabled = false;
             tb_saveFile.Enabled = false;
 
+            mi_font.Enabled = false;
+            mi_lineWrap.Enabled = false;
+            mi_fileType.Enabled = false;
+
             if (activeMdiExists)
             {
                 mi_close.Enabled = true;
@@ -385,6 +427,25 @@ namespace UV7_Edit
 
                     mi_save.Enabled = !fe.Doc.Saved;
                     tb_saveFile.Enabled = !fe.Doc.Saved;
+
+                    mi_font.Enabled = true;
+                    mi_lineWrap.Enabled = true;
+                    mi_fileType.Enabled = true;
+
+                    if (fe.Doc.FileType != null)
+                    {
+                        foreach (MenuItem m in mi_fileType.MenuItems)
+                        {
+                            if (m.Tag.ToString().Equals(fe.Doc.FileType.FileFormat))
+                            {
+                                m.Checked = true;
+                            }
+                            else
+                            {
+                                m.Checked = false;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -392,7 +453,7 @@ namespace UV7_Edit
             mi_saveAll.Enabled = false;
             tb_saveAll.Enabled = false;
 
-            if (Application.OpenForms.OfType<Form_edit>().Count<Form_edit>() > 0)
+            if (Application.OpenForms.OfType<Form_edit>().Count() > 0)
             {
                 mi_saveAll.Enabled = true;
                 tb_saveAll.Enabled = true;
