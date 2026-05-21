@@ -429,7 +429,7 @@
     <EmbeddedResource Include="Form_tempCss.resx">
       <DependentUpon>Form_tempCss.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Form_tempCss1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Form_tempCss.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

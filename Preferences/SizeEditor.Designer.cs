@@ -63,7 +63,7 @@ namespace UV7_Edit.Preferences
             // SizeEditor
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.nud_height);
             this.Controls.Add(this.label_height);
             this.Controls.Add(this.nud_width);

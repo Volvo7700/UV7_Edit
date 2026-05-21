@@ -52,6 +52,7 @@ namespace UV7_Edit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(418, 503);
             this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form_tempCss";
             this.Text = "[DEV] CSS Input";
             this.ResumeLayout(false);

@@ -30,8 +30,8 @@ namespace UV7_Edit.CustomControls
         private void InitializeComponent()
         {
             this.panel_title = new System.Windows.Forms.Panel();
-            this.label_title = new System.Windows.Forms.Label();
             this.tsb_hide = new UV7_Edit.CustomControls.ToolbarSingleButton();
+            this.label_title = new System.Windows.Forms.Label();
             this.panel_title.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,9 +42,21 @@ namespace UV7_Edit.CustomControls
             this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_title.Location = new System.Drawing.Point(0, 0);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Padding = new System.Windows.Forms.Padding(4);
+            this.panel_title.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_title.Size = new System.Drawing.Size(150, 32);
             this.panel_title.TabIndex = 1;
+            // 
+            // tsb_hide
+            // 
+            this.tsb_hide.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tsb_hide.Font = new System.Drawing.Font("Marlett", 7F);
+            this.tsb_hide.Location = new System.Drawing.Point(119, 4);
+            this.tsb_hide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tsb_hide.Name = "tsb_hide";
+            this.tsb_hide.Size = new System.Drawing.Size(27, 24);
+            this.tsb_hide.TabIndex = 2;
+            this.tsb_hide.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+            this.tsb_hide.Click += new System.EventHandler(this.button_hide_Click);
             // 
             // label_title
             // 
@@ -57,24 +69,12 @@ namespace UV7_Edit.CustomControls
             this.label_title.Text = "SidePanel";
             this.label_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tsb_hide
-            // 
-            this.tsb_hide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tsb_hide.Font = new System.Drawing.Font("Marlett", 7F);
-            this.tsb_hide.Location = new System.Drawing.Point(119, 4);
-            this.tsb_hide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tsb_hide.Name = "tsb_hide";
-            this.tsb_hide.Size = new System.Drawing.Size(27, 24);
-            this.tsb_hide.TabIndex = 2;
-            this.tsb_hide.Text = "r";
-            this.tsb_hide.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
-            this.tsb_hide.Click += new System.EventHandler(this.button_hide_Click);
-            // 
             // SidePanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.panel_title);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "SidePanel";
             this.Size = new System.Drawing.Size(150, 330);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SidePanel_MouseDown);

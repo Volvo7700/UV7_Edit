@@ -63,7 +63,7 @@ namespace UV7_Edit.Preferences
             // FontEditor
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label_font);
             this.Controls.Add(this.label_fontSize);
             this.Controls.Add(this.button_selectFont);

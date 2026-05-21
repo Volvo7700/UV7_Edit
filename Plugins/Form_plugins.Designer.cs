@@ -55,9 +55,9 @@ namespace UV7_Edit.Plugins
             // 
             // fastObjectListView1
             // 
-            resources.ApplyResources(this.fastObjectListView1, "fastObjectListView1");
             this.fastObjectListView1.AllColumns.Add(this.olvc_name);
             this.fastObjectListView1.AllColumns.Add(this.olvc_ver);
+            resources.ApplyResources(this.fastObjectListView1, "fastObjectListView1");
             this.fastObjectListView1.CellEditUseWholeCell = false;
             this.fastObjectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvc_name,
@@ -65,7 +65,6 @@ namespace UV7_Edit.Plugins
             this.fastObjectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.fastObjectListView1.HideSelection = false;
             this.fastObjectListView1.Name = "fastObjectListView1";
-            this.fastObjectListView1.OverlayText.Text = resources.GetString("resource.Text");
             this.fastObjectListView1.ShowGroups = false;
             this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
             this.fastObjectListView1.View = System.Windows.Forms.View.Details;
@@ -124,15 +123,15 @@ namespace UV7_Edit.Plugins
             // 
             // label_fileTypes
             // 
-            resources.ApplyResources(this.label_fileTypes, "label_fileTypes");
             this.label_fileTypes.AutoEllipsis = true;
             this.label_fileTypes.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_fileTypes, "label_fileTypes");
             this.label_fileTypes.Name = "label_fileTypes";
             // 
             // label_fileTypesDesc
             // 
-            resources.ApplyResources(this.label_fileTypesDesc, "label_fileTypesDesc");
             this.label_fileTypesDesc.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_fileTypesDesc, "label_fileTypesDesc");
             this.label_fileTypesDesc.Name = "label_fileTypesDesc";
             // 
             // tableLayoutPanel1
@@ -147,41 +146,41 @@ namespace UV7_Edit.Plugins
             // 
             // label_companyDesc
             // 
-            resources.ApplyResources(this.label_companyDesc, "label_companyDesc");
             this.label_companyDesc.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_companyDesc, "label_companyDesc");
             this.label_companyDesc.Name = "label_companyDesc";
             // 
             // label_versionDesc
             // 
-            resources.ApplyResources(this.label_versionDesc, "label_versionDesc");
             this.label_versionDesc.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_versionDesc, "label_versionDesc");
             this.label_versionDesc.Name = "label_versionDesc";
             // 
             // label_company
             // 
-            resources.ApplyResources(this.label_company, "label_company");
             this.label_company.AutoEllipsis = true;
             this.label_company.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_company, "label_company");
             this.label_company.Name = "label_company";
             // 
             // label_version
             // 
-            resources.ApplyResources(this.label_version, "label_version");
             this.label_version.AutoEllipsis = true;
             this.label_version.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_version, "label_version");
             this.label_version.Name = "label_version";
             // 
             // label_desc
             // 
-            resources.ApplyResources(this.label_desc, "label_desc");
             this.label_desc.AutoEllipsis = true;
             this.label_desc.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_desc, "label_desc");
             this.label_desc.Name = "label_desc";
             // 
             // label_title
             // 
-            resources.ApplyResources(this.label_title, "label_title");
             this.label_title.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.label_title, "label_title");
             this.label_title.Name = "label_title";
             // 
             // Form_plugins

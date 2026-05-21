@@ -128,10 +128,18 @@
     <value>6</value>
   </data>
   <data name="button_reset.Text" xml:space="preserve">
-    <value>Zurücksetzen</value>
+    <value>Zurücks.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_reset.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="panel_prefs.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="treeListView_categories.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

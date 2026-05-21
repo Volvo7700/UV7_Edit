@@ -295,6 +295,7 @@ namespace UV7_Edit.CustomControls
             // DirPanel
             // 
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.treeListView);
             this.Name = "DirPanel";
             this.Title = "DirPanel";
