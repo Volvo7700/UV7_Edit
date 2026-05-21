@@ -11,6 +11,7 @@ namespace UV7_Edit.Plugins
         {
             InitializeComponent();
             fastObjectListView1.SetObjects(FileTypes.LoadedAssemblies);
+            label_pluginsCount.Text = FileTypes.LoadedAssemblies.Count.ToString();
         }
 
         private void fastObjectListView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)

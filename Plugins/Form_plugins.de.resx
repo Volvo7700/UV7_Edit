@@ -117,37 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BinaryFileExtText" xml:space="preserve">
-    <value>Die ausgewählte Datei scheint eine binäre Datei oder Systemdatei mit der Dateiendung "{0}" zu sein.
-Das Öffnen dieser Datei kann Probleme wie Einfrieren, Abstürze und Speicherlecks verursachen!
-Soll wirklich fortgefahren werden?</value>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Deaktivieren</value>
   </data>
-  <data name="BinaryFileExtTitle" xml:space="preserve">
-    <value>Binäre oder System-Dateiendung</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label_pluginsCountDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 23</value>
   </data>
-  <data name="DirPanelTitleDirectoryNotFound" xml:space="preserve">
-    <value>[Verzeichnis nicht gefunden]</value>
+  <data name="label_pluginsCountDesc.Text" xml:space="preserve">
+    <value>Geladene Plugins:</value>
   </data>
-  <data name="DirPanelTitleError" xml:space="preserve">
-    <value>[Fehler]</value>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Aktivieren</value>
   </data>
-  <data name="FilterAllFiles" xml:space="preserve">
-    <value>Alle Dateien</value>
+  <data name="label_fileTypesDesc.Text" xml:space="preserve">
+    <value>Unterstützte Dateitypen:</value>
   </data>
-  <data name="NewDocument" xml:space="preserve">
-    <value>Neues Dokument</value>
-  </data>
-  <data name="ResetPrefsText" xml:space="preserve">
-    <value>Sollen wirklich alle Einstellungen auf Standardwerte zurückgesetzt werden?
-Dies erfordert einen sofortigen Programmneustart.</value>
-  </data>
-  <data name="ResetPrefsTitle" xml:space="preserve">
-    <value>Einstellungen zurücksetzen</value>
-  </data>
-  <data name="UnsavedChangesText" xml:space="preserve">
-    <value>Sollen die Änderungen an {0} gespeichert werden?</value>
-  </data>
-  <data name="UnsavedChangesTitle" xml:space="preserve">
-    <value>Ungespeicherte Änderungen</value>
+  <data name="label_companyDesc.Text" xml:space="preserve">
+    <value>Autor / Firma</value>
   </data>
 </root>

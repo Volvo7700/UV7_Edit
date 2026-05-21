@@ -99,6 +99,15 @@ namespace UV7_Edit.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die All Files ähnelt.
+        /// </summary>
+        internal static string FilterAllFiles {
+            get {
+                return ResourceManager.GetString("FilterAllFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die New Document ähnelt.
         /// </summary>
         internal static string NewDocument {

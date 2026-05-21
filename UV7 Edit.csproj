@@ -371,6 +371,9 @@
     <EmbeddedResource Include="Form_start.resx">
       <DependentUpon>Form_start.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\Form_plugins.de.resx">
+      <DependentUpon>Form_plugins.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Plugins\Form_plugins.resx">
       <DependentUpon>Form_plugins.cs</DependentUpon>
     </EmbeddedResource>
