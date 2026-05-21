@@ -322,6 +322,33 @@ namespace UV7_Edit.Preferences
                 set { BackColor = ColorTranslator.FromHtml(value); }
             }
 
+            private bool showBackImage = true;
+            [LocalizedDisplayName("ShowBackImage")]
+            [LocalizedDescription("ShowBackImage")]
+            [ApplyTime(ApplyTimeState.Immediate)]
+            public bool ShowBackImage
+            {
+                get => showBackImage;
+                set
+                {
+                    showBackImage = value;
+                    foreach (Form_main f in Application.OpenForms.OfType<Form_main>())
+                    {
+                        foreach (MdiClient m in f.Controls.OfType<MdiClient>())
+                        {
+                            if (value)
+                            {
+                                m.BackgroundImage = BackImage;
+                            }
+                            else
+                            {
+                                m.BackgroundImage = null;
+                            }
+                        }
+                    }
+                }
+            }
+
             [Visible(false)]
             [XmlIgnore]
             public Bitmap BackImage
