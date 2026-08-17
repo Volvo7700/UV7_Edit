@@ -129,6 +129,15 @@
   <data name="DesktopCompositing" xml:space="preserve">
     <value>Desktop Compositing</value>
   </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="ShowBackImage" xml:space="preserve">
+    <value>Show Background Image</value>
+  </data>
   <data name="ShowDeleteConfirmation" xml:space="preserve">
     <value>Ask for confirmation before permanently deleting</value>
   </data>

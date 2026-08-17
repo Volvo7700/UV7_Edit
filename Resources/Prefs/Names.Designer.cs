@@ -97,6 +97,33 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Font ähnelt.
+        /// </summary>
+        internal static string Font {
+            get {
+                return ResourceManager.GetString("Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Language ähnelt.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Background Image ähnelt.
+        /// </summary>
+        internal static string ShowBackImage {
+            get {
+                return ResourceManager.GetString("ShowBackImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ask for confirmation before permanently deleting ähnelt.
         /// </summary>
         internal static string ShowDeleteConfirmation {

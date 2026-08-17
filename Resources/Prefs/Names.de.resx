@@ -135,6 +135,9 @@
   <data name="Language" xml:space="preserve">
     <value>Sprache</value>
   </data>
+  <data name="ShowBackImage" xml:space="preserve">
+    <value>Hintergrundbild anzeigen</value>
+  </data>
   <data name="ShowDeleteConfirmation" xml:space="preserve">
     <value>Beim unwiderruflichen Löschen nach Bestätigung fragen</value>
   </data>

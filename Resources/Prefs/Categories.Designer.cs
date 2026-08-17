@@ -61,11 +61,29 @@ namespace UV7_Edit.Resources.Prefs {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Document  View ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Config ähnelt.
+        /// </summary>
+        internal static string Config {
+            get {
+                return ResourceManager.GetString("Config", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Document View ähnelt.
         /// </summary>
         internal static string DocumentView {
             get {
                 return ResourceManager.GetString("DocumentView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die General ähnelt.
+        /// </summary>
+        internal static string General {
+            get {
+                return ResourceManager.GetString("General", resourceCulture);
             }
         }
         
@@ -84,6 +102,24 @@ namespace UV7_Edit.Resources.Prefs {
         internal static string NavigationTree {
             get {
                 return ResourceManager.GetString("NavigationTree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Window ähnelt.
+        /// </summary>
+        internal static string Window {
+            get {
+                return ResourceManager.GetString("Window", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Workspace ähnelt.
+        /// </summary>
+        internal static string Workspace {
+            get {
+                return ResourceManager.GetString("Workspace", resourceCulture);
             }
         }
     }

@@ -117,13 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Config" xml:space="preserve">
+    <value>Config</value>
+  </data>
   <data name="DocumentView" xml:space="preserve">
-    <value>Document  View</value>
+    <value>Document View</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
   </data>
   <data name="Localization" xml:space="preserve">
     <value>Localization / Language</value>
   </data>
   <data name="NavigationTree" xml:space="preserve">
     <value>Navigation Tree</value>
+  </data>
+  <data name="Window" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="Workspace" xml:space="preserve">
+    <value>Workspace</value>
   </data>
 </root>

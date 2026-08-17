@@ -54,13 +54,14 @@ namespace UV7_Edit.Preferences
                     string desc = prop.GetCustomAttributes(typeof(LocalizedDescriptionAttribute), true)
                         .Cast<LocalizedDescriptionAttribute>()
                         .FirstOrDefault()?.Description ?? "";
-                    
+
                     Label lbl = new Label
                     {
                         Text = displayName,
                         Left = 10,
                         Top = y + 3,
-                        Width = 150
+                        Width = 150,
+                        AutoEllipsis = true
                     };
 
                     ApplyTimeState? applyTime = prop.GetCustomAttributes(typeof(ApplyTimeAttribute), true)
