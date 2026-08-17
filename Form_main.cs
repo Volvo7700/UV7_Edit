@@ -259,12 +259,13 @@ namespace UV7_Edit
                 {
                     if (j > 0)
                     {
-                        filter += ", ";
+                        filter += "; ";
                     }
                     filter += "*" + f.FileExtensions[j];
                 }
                 mi_fileType.MenuItems.Add(new MenuItem(f.FileFormat, FormatFileType) { Tag = f.FileFormat });
             }
+            filter += $"|{ Resources.Misc.FilterAllFiles }|*.*";
             openFileDialog.Filter = filter;
         }
         #endregion Plugins

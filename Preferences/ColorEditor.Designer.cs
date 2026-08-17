@@ -56,7 +56,7 @@ namespace UV7_Edit.Preferences
             // ColorEditor
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.panel_color);
             this.Controls.Add(this.button_selectFont);
             this.Name = "ColorEditor";

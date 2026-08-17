@@ -8,7 +8,7 @@ namespace UV7_Edit.Preferences
 {
     public static class Defaults
     {
-        public static readonly Font FontUI = new Font("Microsoft Sans Serif", 8);
+        public static readonly Font FontUI = new Font("Segoe UI", 9);
         public static readonly Font FontEditor = new Font("Consolas", 10);
     }
 }

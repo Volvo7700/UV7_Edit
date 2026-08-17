@@ -42,7 +42,7 @@ namespace UV7_Edit.Preferences
             this.nud_x.Dock = System.Windows.Forms.DockStyle.Left;
             this.nud_x.Location = new System.Drawing.Point(58, 0);
             this.nud_x.Name = "nud_x";
-            this.nud_x.Size = new System.Drawing.Size(60, 20);
+            this.nud_x.Size = new System.Drawing.Size(60, 23);
             this.nud_x.TabIndex = 0;
             this.nud_x.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nud_x.ValueChanged += new System.EventHandler(this.Nud_ValueChanged);
@@ -52,7 +52,7 @@ namespace UV7_Edit.Preferences
             this.label_x.Dock = System.Windows.Forms.DockStyle.Left;
             this.label_x.Location = new System.Drawing.Point(0, 0);
             this.label_x.Name = "label_x";
-            this.label_x.Size = new System.Drawing.Size(58, 21);
+            this.label_x.Size = new System.Drawing.Size(58, 23);
             this.label_x.TabIndex = 1;
             this.label_x.Text = "X";
             this.label_x.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -62,7 +62,7 @@ namespace UV7_Edit.Preferences
             this.label_y.Dock = System.Windows.Forms.DockStyle.Left;
             this.label_y.Location = new System.Drawing.Point(118, 0);
             this.label_y.Name = "label_y";
-            this.label_y.Size = new System.Drawing.Size(58, 21);
+            this.label_y.Size = new System.Drawing.Size(58, 23);
             this.label_y.TabIndex = 2;
             this.label_y.Text = "Y";
             this.label_y.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -72,21 +72,22 @@ namespace UV7_Edit.Preferences
             this.nud_y.Dock = System.Windows.Forms.DockStyle.Left;
             this.nud_y.Location = new System.Drawing.Point(176, 0);
             this.nud_y.Name = "nud_y";
-            this.nud_y.Size = new System.Drawing.Size(60, 20);
+            this.nud_y.Size = new System.Drawing.Size(60, 23);
             this.nud_y.TabIndex = 3;
             this.nud_y.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nud_y.ValueChanged += new System.EventHandler(this.Nud_ValueChanged);
             // 
             // PointEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.nud_y);
             this.Controls.Add(this.label_y);
             this.Controls.Add(this.nud_x);
             this.Controls.Add(this.label_x);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PointEditor";
-            this.Size = new System.Drawing.Size(325, 21);
+            this.Size = new System.Drawing.Size(325, 23);
             ((System.ComponentModel.ISupportInitialize)(this.nud_x)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_y)).EndInit();
             this.ResumeLayout(false);
