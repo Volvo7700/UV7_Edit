@@ -1,6 +1,6 @@
 ﻿
 namespace UV7_Edit
-{
+    {
     partial class Form_main
     {
         /// <summary>

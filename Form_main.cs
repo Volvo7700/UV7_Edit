@@ -73,16 +73,16 @@ namespace UV7_Edit
 
         #region Form
 
-        // MDI Optimization
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                var cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000; // WS_EX_COMPOSITED
-                return cp;
-            }
-        }
+        //// MDI Optimization - do not use, causes manfunctions in mdi child title bar button drawing
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        var cp = base.CreateParams;
+        //        cp.ExStyle |= 0x02000000; // WS_EX_COMPOSITED
+        //        return cp;
+        //    }
+        //}
 
         private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
         {
