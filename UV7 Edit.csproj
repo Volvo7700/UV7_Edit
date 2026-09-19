@@ -143,9 +143,6 @@
     <Compile Include="Plugins\Form_plugins.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plugins\Form_plugins.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Plugins\Form_plugins.Designer.cs">
       <DependentUpon>Form_plugins.cs</DependentUpon>
     </Compile>
@@ -262,7 +259,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_tempCss.Designer.cs">
-      <DependentUpon>Form_tempCss.cs</DependentUpon>
+      <DependentUpon>Form_tempCss.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Preferences\CustomAttributes.cs" />
     <Compile Include="Preferences\Config.cs" />
@@ -349,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\MdiTabBar.resx">
       <DependentUpon>MdiTabBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ToolbarSingleButton.resx">
+      <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_about.de.resx">
       <DependentUpon>Form_about.cs</DependentUpon>
@@ -481,9 +483,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\ToolbarSingleButton.resx">
-      <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\ToolBar.de.resx" />
     <EmbeddedResource Include="Resources\ToolBar.resx">
