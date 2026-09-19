@@ -16,10 +16,10 @@
 * Flexible config framework
 
 ### Currently WIP:
+* Directory treeview context menu for adding, modifying and deleting files and folders
 * Config entry descriptions
 * StatusBar functionality
 * Global stylesheet saving to file
-* Folder treeview context menu for adding, modifying and deleting files and folders
 
 ### Planned features:
 * **Update this list**
