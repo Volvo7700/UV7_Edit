@@ -30,44 +30,45 @@ namespace UV7_Edit.CustomControls
         private void InitializeComponent()
         {
             this.panel_title = new System.Windows.Forms.Panel();
-            this.tsb_hide = new UV7_Edit.CustomControls.ToolbarSingleButton();
-            this.label_title = new System.Windows.Forms.Label();
+            this.aeroToolBar_title = new UV7_Edit.CustomControls.SingleButtonAeroToolBar();
+            this.aeroToolBar_close = new UV7_Edit.CustomControls.SingleButtonAeroToolBar();
             this.panel_title.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_title
             // 
-            this.panel_title.Controls.Add(this.tsb_hide);
-            this.panel_title.Controls.Add(this.label_title);
+            this.panel_title.Controls.Add(this.aeroToolBar_title);
+            this.panel_title.Controls.Add(this.aeroToolBar_close);
             this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_title.Location = new System.Drawing.Point(0, 0);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_title.Size = new System.Drawing.Size(150, 32);
             this.panel_title.TabIndex = 1;
             // 
-            // tsb_hide
+            // aeroToolBar_title
             // 
-            this.tsb_hide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tsb_hide.Font = new System.Drawing.Font("Marlett", 7F);
-            this.tsb_hide.Location = new System.Drawing.Point(119, 4);
-            this.tsb_hide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tsb_hide.Name = "tsb_hide";
-            this.tsb_hide.Size = new System.Drawing.Size(27, 24);
-            this.tsb_hide.TabIndex = 2;
-            this.tsb_hide.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
-            this.tsb_hide.Click += new System.EventHandler(this.button_hide_Click);
+            this.aeroToolBar_title.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aeroToolBar_title.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aeroToolBar_title.ImageList = null;
+            this.aeroToolBar_title.Location = new System.Drawing.Point(0, 0);
+            this.aeroToolBar_title.Name = "aeroToolBar_title";
+            this.aeroToolBar_title.Size = new System.Drawing.Size(123, 32);
+            this.aeroToolBar_title.TabIndex = 3;
+            this.aeroToolBar_title.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+            this.aeroToolBar_title.Theme = UV7_Edit.Tools.ToolbarTheme.Toolbar;
             // 
-            // label_title
+            // aeroToolBar_close
             // 
-            this.label_title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_title.Location = new System.Drawing.Point(4, 4);
-            this.label_title.Name = "label_title";
-            this.label_title.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.label_title.Size = new System.Drawing.Size(142, 24);
-            this.label_title.TabIndex = 0;
-            this.label_title.Text = "SidePanel";
-            this.label_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aeroToolBar_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.aeroToolBar_close.Font = new System.Drawing.Font("Marlett", 7F);
+            this.aeroToolBar_close.ImageList = null;
+            this.aeroToolBar_close.Location = new System.Drawing.Point(123, 0);
+            this.aeroToolBar_close.Name = "aeroToolBar_close";
+            this.aeroToolBar_close.Size = new System.Drawing.Size(27, 32);
+            this.aeroToolBar_close.TabIndex = 4;
+            this.aeroToolBar_close.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+            this.aeroToolBar_close.Theme = UV7_Edit.Tools.ToolbarTheme.Toolbar;
+            this.aeroToolBar_close.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.aeroToolBar_close_ButtonClick);
             // 
             // SidePanel
             // 
@@ -88,7 +89,7 @@ namespace UV7_Edit.CustomControls
         #endregion
 
         private System.Windows.Forms.Panel panel_title;
-        private System.Windows.Forms.Label label_title;
-        private ToolbarSingleButton tsb_hide;
+        private CustomControls.SingleButtonAeroToolBar aeroToolBar_title;
+        private CustomControls.SingleButtonAeroToolBar aeroToolBar_close;
     }
 }

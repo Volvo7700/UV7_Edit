@@ -9,32 +9,39 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using UV7_Edit.Tools;
 
 namespace UV7_Edit.CustomControls
 {
     public partial class SidePanel : UserControl
     {
-        private Font marlettFont;
-        
         public SidePanel()
         {
             InitializeComponent();
-            marlettFont = new Font("Marlett", 7);
+            
+            ToolBarButton tbb_title = new ToolBarButton("SidePanel");
+            ToolBarButton tbb_close = new ToolBarButton("r");
+
+            aeroToolBar_title.SetButtons(new[] { tbb_title });
+            aeroToolBar_close.SetButtons(new[] { tbb_close });
         }
 
         public string Title
         {
             get
             {
-                return label_title.Text;
+                if (aeroToolBar_close.Buttons.Count > 0)
+                    return aeroToolBar_title.Buttons[0].Text;
+                return null;
             }
             set
             {
-                label_title.Text = value;
+                if (aeroToolBar_close.Buttons.Count > 0)
+                    aeroToolBar_title.Buttons[0].Text = value;
             }
         }
 
-        private void button_hide_Click(object sender, EventArgs e)
+        private void aeroToolBar_close_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
         {
             Hide();
             OnCollapsed();
@@ -42,6 +49,7 @@ namespace UV7_Edit.CustomControls
 
         bool drag = false;
         int dragOffset = 0;
+
         private void SidePanel_MouseDown(object sender, MouseEventArgs e)
         {
             if ((this.Width - e.X) < 5)
@@ -55,7 +63,7 @@ namespace UV7_Edit.CustomControls
         {
             if (drag)
             {
-                
+
                 drag = false;
             }
         }
@@ -74,13 +82,6 @@ namespace UV7_Edit.CustomControls
         {
             if (this.Collapsed != null)
                 this.Collapsed(this, EventArgs.Empty);
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            tsb_hide.Font = marlettFont;
-            tsb_hide.Invalidate();
         }
     }
 }

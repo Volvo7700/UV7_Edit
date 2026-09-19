@@ -120,6 +120,9 @@
     <Compile Include="CustomControls\MdiTabBar.Designer.cs">
       <DependentUpon>MdiTabBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\SingleButtonAeroToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Dev\BorderlessToolbar.cs">
       <SubType>Component</SubType>
     </Compile>

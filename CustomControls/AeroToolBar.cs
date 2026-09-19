@@ -26,6 +26,11 @@ namespace UV7_Edit.Tools
             toolBar.Wrappable = false;
         }
 
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+        }
+
         private ToolbarTheme theme;
         public ToolbarTheme Theme
         {
@@ -99,5 +104,6 @@ namespace UV7_Edit.Tools
                 ButtonClick.Invoke(sender, e);
             }
         }
+
     }
 }

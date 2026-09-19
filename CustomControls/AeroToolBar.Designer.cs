@@ -59,6 +59,6 @@ namespace UV7_Edit.Tools
 
         #endregion
 
-        private System.Windows.Forms.ToolBar toolBar;
+        protected System.Windows.Forms.ToolBar toolBar;
     }
 }
