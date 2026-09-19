@@ -176,7 +176,9 @@ namespace UV7_Edit
             foreach (MdiClient m in this.Controls.OfType<MdiClient>())
             {
                 m.BackColor = Pref.Prefs.Workspace.BackColor;
-                m.BackgroundImage = Pref.Prefs.Workspace.BackImage;
+
+                if (Pref.Prefs.Workspace.ShowBackImage)
+                    m.BackgroundImage = Pref.Prefs.Workspace.BackImage;
             }
 
             // Document View Mode
@@ -417,7 +419,7 @@ namespace UV7_Edit
 
         private void dirPanel_Collapsed(object sender, EventArgs e)
         {
-            mi_showStatusbar.Checked = false;
+            mi_showSidebar.Checked = false;
             Pref.Prefs.Window.ShowSideBar = false;
         }
 
