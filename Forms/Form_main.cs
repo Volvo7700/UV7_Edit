@@ -10,7 +10,7 @@ using UV7_Edit.Preferences;
 using UV7_Edit.Tools;
 using UV7_Edit_FileTypePlugin;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     public partial class Form_main : DwmCompositingControllableForm, CancelClosing
     {

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     public partial class Form_tempCss : DwmCompositingControllableForm
     {

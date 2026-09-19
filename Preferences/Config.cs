@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Serialization;
 using UV7_Edit.CustomControls;
+using UV7_Edit.Forms;
 using UV7_Edit.Tools;
 
 namespace UV7_Edit.Preferences

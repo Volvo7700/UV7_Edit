@@ -3,11 +3,12 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using UV7_Edit.Forms;
 using UV7_Edit.Plugins;
 using UV7_Edit.Preferences;
 using UV7_Edit_FileTypePlugin;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     public partial class Form_main
     {
@@ -254,7 +255,7 @@ namespace UV7_Edit
                     if (sender is MenuItem m)
                     {
                         ChangeFileType(f, FileTypes.GetTypeByFormat(m.Tag.ToString()));
-                        
+
                         foreach (MenuItem om in m.Parent.MenuItems)
                         {
                             om.Checked = false;
@@ -402,7 +403,7 @@ namespace UV7_Edit
 
             aeroToolBar_main.SuspendLayout();
             bool activeMdiExists = ActiveMdiChild != null;
-            
+
             mi_saveAs.Enabled = false;
             mi_print.Enabled = false;
             mi_pageSetup.Enabled = false;

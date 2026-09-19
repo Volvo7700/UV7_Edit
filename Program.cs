@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using UV7_Edit.Forms;
 using UV7_Edit.Plugins;
 using UV7_Edit.Preferences;
 

@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UV7_Edit.Preferences;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
 #if DEBUG
     public class DwmCompositingControllableForm : Form

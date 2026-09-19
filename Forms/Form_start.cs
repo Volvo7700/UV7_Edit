@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     public partial class Form_start : DwmCompositingControllableForm
     {

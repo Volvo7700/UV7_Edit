@@ -1,5 +1,5 @@
 ﻿
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     partial class Form_start
     {

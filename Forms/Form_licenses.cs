@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     public partial class Form_licenses : Form
     {

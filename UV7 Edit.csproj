@@ -42,6 +42,9 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <ApplicationIcon>program.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>beta.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BetterFolderBrowser, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\BetterFolderBrowser.1.2.0\lib\BetterFolderBrowser.dll</HintPath>
@@ -120,10 +123,10 @@
     <Compile Include="Dev\BorderlessToolbar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form_empty.cs">
+    <Compile Include="Forms\Form_empty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_empty.Designer.cs">
+    <Compile Include="Forms\Form_empty.Designer.cs">
       <DependentUpon>Form_empty.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\ToolbarSingleButton.cs">
@@ -132,11 +135,17 @@
     <Compile Include="CustomControls\ToolbarSingleButton.Designer.cs">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_licenses.cs">
+    <Compile Include="Forms\Form_licenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_licenses.Designer.cs">
+    <Compile Include="Forms\Form_licenses.Designer.cs">
       <DependentUpon>Form_licenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_tempCss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_tempCss.Designer.cs">
+      <DependentUpon>Form_tempCss.cs</DependentUpon>
     </Compile>
     <Compile Include="Plugins\AssemblyTools.cs" />
     <Compile Include="Plugins\FileTypes.cs" />
@@ -161,10 +170,10 @@
     <Compile Include="Tools\ArrayPrinter.cs" />
     <Compile Include="Tools\CancelClosing.cs" />
     <Compile Include="Tools\ClosingCanceller.cs" />
-    <Compile Include="DwmCompositingControllableForm.cs">
+    <Compile Include="Forms\DwmCompositingControllableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_main.Menu.cs">
+    <Compile Include="Forms\Form_main.Menu.cs">
       <DependentUpon>Form_main.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -225,22 +234,22 @@
     <Compile Include="Tools\FileSystemHelper.cs" />
     <Compile Include="Tools\FileSystemIconHelper.cs" />
     <Compile Include="Tools\FileInfoEventArgs.cs" />
-    <Compile Include="Form_about.cs">
+    <Compile Include="Forms\Form_about.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_about.Designer.cs">
+    <Compile Include="Forms\Form_about.Designer.cs">
       <DependentUpon>Form_about.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_edit.cs">
+    <Compile Include="Forms\Form_edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_edit.Designer.cs">
+    <Compile Include="Forms\Form_edit.Designer.cs">
       <DependentUpon>Form_edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_main.cs">
+    <Compile Include="Forms\Form_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_main.Designer.cs">
+    <Compile Include="Forms\Form_main.Designer.cs">
       <DependentUpon>Form_main.cs</DependentUpon>
     </Compile>
     <Compile Include="Preferences\Form_preferences.cs">
@@ -249,19 +258,11 @@
     <Compile Include="Preferences\Form_preferences.Designer.cs">
       <DependentUpon>Form_preferences.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_start.cs">
+    <Compile Include="Forms\Form_start.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_start.Designer.cs">
+    <Compile Include="Forms\Form_start.Designer.cs">
       <DependentUpon>Form_start.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_tempCss.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_tempCss.Designer.cs">
-      <DependentUpon>Form_tempCss.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Preferences\CustomAttributes.cs" />
     <Compile Include="Preferences\Config.cs" />
@@ -352,26 +353,29 @@
     <EmbeddedResource Include="CustomControls\ToolbarSingleButton.resx">
       <DependentUpon>ToolbarSingleButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_about.de.resx">
+    <EmbeddedResource Include="Forms\Form_about.de.resx">
       <DependentUpon>Form_about.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_edit.de.resx">
+    <EmbeddedResource Include="Forms\Form_edit.de.resx">
       <DependentUpon>Form_edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_empty.resx">
+    <EmbeddedResource Include="Forms\Form_empty.resx">
       <DependentUpon>Form_empty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_licenses.resx">
+    <EmbeddedResource Include="Forms\Form_licenses.resx">
       <DependentUpon>Form_licenses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_main.resx">
+    <EmbeddedResource Include="Forms\Form_main.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_start.de.resx">
+    <EmbeddedResource Include="Forms\Form_start.de.resx">
       <DependentUpon>Form_start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_start.resx">
+    <EmbeddedResource Include="Forms\Form_start.resx">
       <DependentUpon>Form_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_tempCss.resx">
+      <DependentUpon>Form_tempCss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plugins\Form_plugins.de.resx">
       <DependentUpon>Form_plugins.cs</DependentUpon>
@@ -415,23 +419,18 @@
     <EmbeddedResource Include="CustomControls\DirPanel.resx">
       <DependentUpon>DirPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_about.resx">
+    <EmbeddedResource Include="Forms\Form_about.resx">
       <DependentUpon>Form_about.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_edit.resx">
+    <EmbeddedResource Include="Forms\Form_edit.resx">
       <DependentUpon>Form_edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_main.de.resx">
+    <EmbeddedResource Include="Forms\Form_main.de.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences\Form_preferences.resx">
       <DependentUpon>Form_preferences.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_tempCss.resx">
-      <DependentUpon>Form_tempCss.cs</DependentUpon>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Form_tempCss.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -5,7 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
-namespace UV7_Edit
+namespace UV7_Edit.Forms
 {
     public partial class Form_about : DwmCompositingControllableForm
     {

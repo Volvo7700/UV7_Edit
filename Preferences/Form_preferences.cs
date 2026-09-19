@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using UV7_Edit.Forms;
 
 namespace UV7_Edit.Preferences
 {
