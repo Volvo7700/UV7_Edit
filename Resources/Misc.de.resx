@@ -137,6 +137,12 @@ Soll wirklich fortgefahren werden?</value>
   <data name="NewDocument" xml:space="preserve">
     <value>Neues Dokument</value>
   </data>
+  <data name="PluginLoadErrorText" xml:space="preserve">
+    <value>Eines oder mehrere Plugins konnten nicht geladen werden. Detaillierte Fehlerinformationen:</value>
+  </data>
+  <data name="PluginLoadErrorTitle" xml:space="preserve">
+    <value>Plugin-Ladefehler</value>
+  </data>
   <data name="ResetPrefsText" xml:space="preserve">
     <value>Sollen wirklich alle Einstellungen auf Standardwerte zurückgesetzt werden?
 Dies erfordert einen sofortigen Programmneustart.</value>

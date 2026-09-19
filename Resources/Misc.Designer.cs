@@ -117,6 +117,24 @@ namespace UV7_Edit.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die One or more plugins could not be loaded. Detailed error information: ähnelt.
+        /// </summary>
+        internal static string PluginLoadErrorText {
+            get {
+                return ResourceManager.GetString("PluginLoadErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Plugin load error ähnelt.
+        /// </summary>
+        internal static string PluginLoadErrorTitle {
+            get {
+                return ResourceManager.GetString("PluginLoadErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Do you really want to reset all preferences to defaults?
         ///This requires an immediate program restart. ähnelt.
         /// </summary>

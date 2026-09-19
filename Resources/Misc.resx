@@ -137,6 +137,12 @@ Do you really want to proceed?</value>
   <data name="NewDocument" xml:space="preserve">
     <value>New Document</value>
   </data>
+  <data name="PluginLoadErrorText" xml:space="preserve">
+    <value>One or more plugins could not be loaded. Detailed error information:</value>
+  </data>
+  <data name="PluginLoadErrorTitle" xml:space="preserve">
+    <value>Plugin load error</value>
+  </data>
   <data name="ResetPrefsText" xml:space="preserve">
     <value>Do you really want to reset all preferences to defaults?
 This requires an immediate program restart.</value>
