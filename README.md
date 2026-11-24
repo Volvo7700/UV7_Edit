@@ -1,4 +1,4 @@
-# ![UV7 Edit](https://raw.githubusercontent.com/Volvo7700/UV7_Edit/refs/heads/master/icon/branding.png)
+# ![UV7 Edit](https://raw.githubusercontent.com/Volvo7700/UV7_Edit/UV7_Edit/refs/heads/master/icon/branding.png)
 ## Markdown Editor for Windows, based on Winforms/C# 
 
 <p>
