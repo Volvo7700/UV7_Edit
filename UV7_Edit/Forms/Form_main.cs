@@ -267,7 +267,8 @@ namespace UV7_Edit.Forms
                 }
                 mi_fileType.MenuItems.Add(new MenuItem(f.FileFormat, FormatFileType) { Tag = f.FileFormat });
             }
-            filter += $"|{ Resources.Misc.FilterAllFiles }|*.*";
+            if (!string.IsNullOrEmpty(filter)) filter += "|";
+            filter += $"{ Resources.Misc.FilterAllFiles }|*.*";
             openFileDialog.Filter = filter;
         }
         #endregion Plugins
