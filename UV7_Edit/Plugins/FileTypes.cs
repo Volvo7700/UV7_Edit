@@ -13,7 +13,26 @@ namespace UV7_Edit.Plugins
         public static string Path { get; } = System.IO.Path.Combine(Application.StartupPath, "FileTypes");
         public static void Load()
         {
+            ImageList.ImageSize = new System.Drawing.Size(16, 16);
+            ImageList.Images.Add("Folder", Properties.Resources.folder16);
+
             List<IFileTypeSupport> types = new List<IFileTypeSupport>();
+            
+            retry:
+            if (!Directory.Exists(Path))
+            {
+                DialogResult result = MessageBox.Show("Plugins Directory could not be found. Therefore, no plugins can be loaded. Retry?", "Plugins load error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                {
+                    goto retry;
+                }
+                if (result == DialogResult.Cancel)
+                {
+                    Application.Exit();
+                }
+                return;
+            }
+
             foreach (FileInfo f in new DirectoryInfo(Path).GetFiles())
             {
                 if (f.Extension == ".dll")
@@ -25,8 +44,6 @@ namespace UV7_Edit.Plugins
             }
             Types = types.ToArray();
 
-            ImageList.ImageSize = new System.Drawing.Size(16, 16);
-            ImageList.Images.Add("Folder", Properties.Resources.folder16);
             foreach (IFileTypeSupport fileType in Types)
             {
                 ImageList.Images.Add(fileType.FileFormat, fileType.FileIcon);
